@@ -73,18 +73,24 @@
 		 *==========================================
 		 */
 		//将scss编译成CSS Task
-		gulp.task('sass',function(){
-			var processors = [px2rem({remUnit:config.remUnit})];
-			return gulp.src(paths.source.scss+'*.scss')
-				.pipe(changed(paths.source.root,{extension:'.scss'}))
-				.pipe(plumber())
-				.pipe(sass())
-				.pipe(sourcemaps.init())
-				.pipe(autoprefixer({
-					browsers:['last 3 versions'],
-					cascade: false
-				}));
-		});;
+		gulp.task('sass', function() {
+	        var processors = [px2rem({ remUnit: config.remUnit })];
+	        return gulp.src(paths.source.scss + '*.scss')
+	            .pipe(changed(paths.source.root, { extension: '.scss' }))
+	            .pipe(plumber())
+	            .pipe(sass())
+	            .pipe(sourcemaps.init())
+	            .pipe(autoprefixer({
+	                browsers: ['last 3 versions'],
+	                cascade: false
+	            }))
+	            .pipe(postcss(processors))
+	            .pipe(sourcemaps.write(paths.root))
+	            .pipe(gulp.dest(paths.source.styles))
+	            .pipe(browserSync.reload({
+	                stream: true
+	            }));
+	    });
 		//js语法检测 Task
 		gulp.task('hint',function(){
 			return gulp.src(paths.source.scripts+'**/*.js')
@@ -105,7 +111,7 @@
 		});
 		//文件修改监听 Task
 		gulp.task('watch',['liveload','sass','hint'],function(){
-			gulp.watch(paths.source.scss+'**/*.scss',['scss']);
+			gulp.watch(paths.source.scss+'**/*.scss',['sass']);
 			gulp.watch(paths.source.root+'**/*.html',browserSync.reload);
 			gulp.watch(paths.source.scripts+'**/*.js',browserSync.reload);
 		});
