@@ -1,0 +1,74 @@
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+html{ -webkit-tap-highlight-color:transparent;}
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+
+#navbar{
+    max-width: 750px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;height: 95px;
+    position: fixed; bottom: 0;
+    border-top: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 -15px 80px #ccc;
+    .link{
+        float: left;
+        display: block;
+        width: 33.333%;
+        height:95px ;
+        position: relative;
+        -webkit-tap-highlight-color:transparent;
+    }
+    
+    .home{
+        position: absolute;
+        left: 100px;top: 25px;
+        width: 50px;height: 50px;
+        background: url("../imgs/icons/home.png") no-repeat;
+        background-size: cover;
+    }
+    .shopping-basket{
+         position: absolute;
+        left: 100px;top: 25px;
+        width: 50px;height: 50px;
+        background: url("../imgs/icons/shopping-basket.png") no-repeat;
+        background-size: cover;
+    }
+    .mine{
+         position: absolute;
+         left: 100px;top: 25px;
+        width: 50px;height: 50px;
+        background: url("../imgs/icons/mine.png") no-repeat;
+        background-size: cover;
+    }
+    .selected{
+        background-position: 0px 0px;
+    }
+}

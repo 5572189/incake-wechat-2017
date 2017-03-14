@@ -13,6 +13,7 @@
 	<title>INCAKE | 首页</title>
 	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
 	<link rel="stylesheet" href="assets/css/index.css"/>
 </head>
 	<body>
@@ -76,7 +77,7 @@
 			<!--筛选遮罩-->
 			<div id="idscreen">
 				<a href="javascript:;" class="all">全部</a>
-				<a href="javascript:;" class="love">情人节</a>
+				<a href="javascript:;" class="love active">情人节</a>
 				<div class="screen">
 					<dl>
 						<dt><img src="assets/imgs/index/screen.png"/></dt>
@@ -97,11 +98,11 @@
 						<div class="pic">
 							<a href="javascript:;" class="box-item">
 								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"><img src="assets/imgs/index/like.png"/></span>
+								<span class="collect selected"></span>
 							</a>
 							<div class="box-text">
 								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2  <span class="rotate">|</span> &nbsp; 标签3</p>
+								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2 &nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
 								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
 								<a href="javascript:;" class="icon-add">
 									<img src="assets/imgs/icons/icon_add_bg.png"/>
@@ -113,11 +114,11 @@
 						<div class="pic">
 							<a href="javascript:;" class="box-item">
 								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"><img src="assets/imgs/index/like.png"/></span>
+								<span class="collect"></span>
 							</a>
 							<div class="box-text">
 								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2  <span class="rotate">|</span> &nbsp; 标签3</p>
+								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
 								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
 								<a href="javascript:;" class="icon-add">
 									<img src="assets/imgs/icons/icon_add_bg.png"/>
@@ -131,11 +132,11 @@
 						<div class="pic">
 							<a href="javascript:;" class="box-item">
 								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"><img src="assets/imgs/index/like.png"/></span>
+								<span class="collect"></span>
 							</a>
 							<div class="box-text">
 								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2  <span class="rotate">|</span> &nbsp; 标签3</p>
+								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
 								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
 								<a href="javascript:;" class="icon-add">
 									<img src="assets/imgs/icons/icon_add_bg.png"/>
@@ -147,11 +148,11 @@
 						<div class="pic">
 							<a href="javascript:;" class="box-item">
 								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"><img src="assets/imgs/index/like.png"/></span>
+								<span class="collect"></span>
 							</a>
 							<div class="box-text">
 								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2  <span class="rotate">|</span> &nbsp; 标签3</p>
+								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
 								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
 								<a href="javascript:;" class="icon-add">
 									<img src="assets/imgs/icons/icon_add_bg.png"/>
@@ -162,12 +163,12 @@
 					<div class="box">
 						<div class="pic">
 							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"><img src="assets/imgs/index/like.png"/></span>
+								<img src="assets/imgs/index/cake.png" class="cake-kind"class="like"/>
+								<span class="collect"></span>
 							</a>
 							<div class="box-text">
 								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2  <span class="rotate">|</span> &nbsp; 标签3</p>
+								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
 								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
 								<a href="javascript:;" class="icon-add">
 									<img src="assets/imgs/icons/icon_add_bg.png"/>
@@ -177,18 +178,23 @@
 					</div>
 				</div>
 			</div>	
-			
+			<div id="loading">
+				<div>
+					<img src="assets/imgs/icons/loading.gif"/>
+				</div>
+				
+			</div>
 			<script id="tplList" type="text/html">
 				{{each list as item i}}
 				<div class="box">
 					<div class="pic">
 						<a href="{{item.link}}" class="box-item">
 							<img src="{{item.img}}" class="cake-kind"/>
-							<span class="collect"><img src="{{item.spanimg}}"/></span>
+							<span class="collect"></span>
 						</a>
 						<div class="box-text">
 							<p class="change">{{item.name.cn}}<span>{{item.name.en}}</span></p>
-							<p class="label">{{item.label.one}} &nbsp;<span class="rotate">|</span> &nbsp; {{item.label.two}}  <span class="rotate">|</span> &nbsp; {{item.label.three}}</p>
+							<p class="label">{{item.label.one}} &nbsp;<span class="rotate">|</span> &nbsp; {{item.label.two}}&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; {{item.label.three}}</p>
 							<p class="price"><span class="span-price">￥{{item.price}} &nbsp;</span><span class="rotate">|</span><span>{{item.pound}}</span></p>
 							<a href="{{item.textlink}}" class="icon-add">
 								<img src="{{item.textimg}}"/>
@@ -206,24 +212,24 @@
 					<div class="list-one">
 						<p>商品</p>
 						<ul>
-							<li><a href="javascript:;">全部</a></li>
+							<li><a href="javascript:;" class="own">全部</a></li>
 						</ul>
 					</div>
 					<div class="list-two">
 						<p>口味</p>
 						<ul>
-							<li><a href="javascript:;">鲜奶</a></li>
-							<li><a href="javascript:;" class="coffee">咖啡</a></li>
-							<li><a href="javascript:;">芝士</a></li>
-							<li><a href="javascript:;">慕斯</a></li>
+							<li><a href="javascript:;" class="kind">鲜奶</a></li>
+							<li><a href="javascript:;" class="coffee kind">咖啡</a></li>
+							<li><a href="javascript:;" class="kind">芝士</a></li>
+							<li><a href="javascript:;" class="kind">慕斯</a></li>
 						</ul>
 					</div>
 					<div class="list-three">
 						<p>更多</p>
 						<ul>
-							<li><a href="javascript:;">星座</a></li>
-							<li><a href="javascript:;">水果</a></li>
-							<li><a href="javascript:;" class="loves">情人节</a></li>
+							<li><a href="javascript:;" class="kind">星座</a></li>
+							<li><a href="javascript:;" class="kind">水果</a></li>
+							<li><a href="javascript:;" class="loves kind">情人节</a></li>
 						</ul>
 					</div>
 				</div>
@@ -232,12 +238,12 @@
 			<!--底部-->
 			<div id="navbar">
 			<a href="javascript:;" class="link ">
-				<div class="home"></div>
+				<div class="home selected"></div>
 			</a>
 			<a href="javascript:;" class="link">
 				<div class="shopping-basket"></div>
 			</a>
-			<a href="login.html" class="link">
+			<a href="javascript:;" class="link">
 				<div class="mine"></div>
 			</a>
 		</div>
