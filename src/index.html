@@ -94,95 +94,14 @@
 							<img src="assets/imgs/index/01.png"/>
 						</a>
 					</div>
-					<div class="box">
-						<div class="pic">
-							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect selected"></span>
-							</a>
-							<div class="box-text">
-								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2 &nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
-								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
-								<a href="javascript:;" class="icon-add">
-									<img src="assets/imgs/icons/icon_add_bg.png"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="box">
-						<div class="pic">
-							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"></span>
-							</a>
-							<div class="box-text">
-								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
-								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
-								<a href="javascript:;" class="icon-add">
-									<img src="assets/imgs/icons/icon_add_bg.png"/>
-								</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="box-right">
-					<div class="box">
-						<div class="pic">
-							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"></span>
-							</a>
-							<div class="box-text">
-								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
-								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
-								<a href="javascript:;" class="icon-add">
-									<img src="assets/imgs/icons/icon_add_bg.png"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="box">
-						<div class="pic">
-							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"/>
-								<span class="collect"></span>
-							</a>
-							<div class="box-text">
-								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
-								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
-								<a href="javascript:;" class="icon-add">
-									<img src="assets/imgs/icons/icon_add_bg.png"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="box">
-						<div class="pic">
-							<a href="javascript:;" class="box-item">
-								<img src="assets/imgs/index/cake.png" class="cake-kind"class="like"/>
-								<span class="collect"></span>
-							</a>
-							<div class="box-text">
-								<p class="change">百变魔方<span>Rubikl Cube</span></p>
-								<p class="label">标签1 &nbsp;<span class="rotate">|</span> &nbsp; 标签2&nbsp;&nbsp;<span class="rotate">|</span> &nbsp; 标签3</p>
-								<p class="price"><span class="span-price">￥198 &nbsp;</span><span class="rotate">|</span><span>1.5磅</span></p>
-								<a href="javascript:;" class="icon-add">
-									<img src="assets/imgs/icons/icon_add_bg.png"/>
-								</a>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>	
 			<div id="loading">
 				<div>
 					<img src="assets/imgs/icons/loading.gif"/>
 				</div>
-				
 			</div>
 			<script id="tplList" type="text/html">
 				{{each list as item i}}
@@ -234,11 +153,34 @@
 					</div>
 				</div>
 			</div>
+			<!--城市定位-->
+			<div class="city-shade">
+				<div class="city">
+					<div class="city-one">
+						<h4>请选择配送城市</h4>
+						<p>当前城市：<a href="jvavascript:;" class="citySelected">上海</a></p>
+					</div>
+					<div class="city-two">
+						<ul>
+							<li><a href="javascript:;" >北京</a></li>
+							<li><a href="javascript:;" >南京</a></li>
+							<li><a href="javascript:;" >杭州</a></li>
+							<li><a href="javascript:;" >青岛</a></li>
+							<li><a href="javascript:;" >扬州</a></li>
+							<li><a href="javascript:;" >福州</a></li>
+							<li><a href="javascript:;" >苏州</a></li>
+							<li><a href="javascript:;" >昆山</a></li>
+							<li><a href="javascript:;" >厦门</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+				
 			
 			<!--底部-->
 			<div id="navbar">
 			<a href="javascript:;" class="link ">
-				<div class="home selected"></div>
+				<div class="home"></div>
 			</a>
 			<a href="javascript:;" class="link">
 				<div class="shopping-basket"></div>
@@ -247,6 +189,12 @@
 				<div class="mine"></div>
 			</a>
 		</div>
+		
+		
+			<!--城市定位-->
+			
+		
+		
 		</div>
 	</body>
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>

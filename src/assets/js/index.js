@@ -1,5 +1,4 @@
-;
-(function($, window, document) {
+;(function($, window, document) {
 
 	$(function() {
 		//加载图片
@@ -36,6 +35,13 @@
 			});
 			$("body").off(".mask");
 		});
+		
+		$(".city-shade").click(function() {
+			$(".city").animate({ right: '-550px' }, function() {
+				$(".city-shade").fadeOut();
+			});
+			$("body").off(".mask");
+		});
 
 		//筛选全部点击
 		$(".all").click(function() {
@@ -63,9 +69,11 @@
 		});
 
 		//筛选列表点击
-		$(".kind").click(function() {
-			$(".love").html($(this).html()).addClass("active").css("text-align", "left");;
-			$(".all").removeClass("border")
+		$("#shade").on('click','.kind',function() {
+			$(this).addClass("loves");
+			$(".kind").not(this).removeClass("loves");
+			$(".love").html($(this).html()).addClass("active").css("text-align", "left");
+			$(".all").removeClass("border");
 			var num = $("#idscreen").find('a');
 			if(num.length == 1) {
 				$("<a href='javascript:;'class='love active'/></a>").appendTo("#idscreen");
@@ -82,6 +90,29 @@
 				$(this).addClass("selected");
 			}
 		});
+		
+		//城市定位
+		$(".location").click(function(){
+			$(".city-shade").fadeIn(function(){
+				$(".city").animate({ right: '0px' });
+			});
+			$("body").on('touchmove.mask', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+			});
+		});
+		$(".city a").click(function(){
+			$("#showCity").html($(this).html());
+			$(this).addClass("citySelected");
+			$(".city a").not(this).removeClass("citySelected");
+			$(".city").animate({right:"-550px"},function(){
+				$("#city-list").fadeOut();
+			});
+			$("body").off(".mask");
+		});
+		
+		
+		
 	});
 
 	//scroll事件
