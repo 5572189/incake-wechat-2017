@@ -1,0 +1,163 @@
+body{
+    background:  #f5f5f5;
+}
+#nav{
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    overflow: hidden;
+    background: #fff;
+    ul{
+        list-style: none;
+        li{
+            float: left;
+            position: relative;
+            width: 187px;
+            height: 78px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .active{
+            color: #e9546b;
+            border-bottom: 2px solid #e9546b;
+        }
+    }
+}
+
+.data{
+    margin-top: 40px;
+    background: #fff;
+    ul:first-child{
+        list-style: none;
+        border: none;
+        border-top: 1px solid #e9546b;
+        li{
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto; 
+        }
+        .cake{
+            border-bottom: 1px solid #dcdcdc;
+            p:first-child{
+                 display: flex;
+                 justify-content: space-between;
+                font-size: 24px;
+                margin: 30px 60px;
+                span:nth-of-type(2){
+                    color: #e9546b;
+                }
+                
+            }
+            ul{
+                list-style: none;
+                li.cake-li:last-child{
+                    border-bottom: 1px solid #dcdcdc;
+                }
+                .two{
+                    border-bottom: 1px solid #dcdcdc;
+                }
+                li.cake-li{
+                    width: 710px;
+                    margin: 0 auto;
+                    position: relative;
+                    border-top: 1px solid #dcdcdc;
+                    a{
+                        display: block;
+                        width: 120px;
+                        height: 120px;
+                        margin: 20px 40px;
+                    }
+                    p:nth-of-type(1){
+                        position: absolute;
+                        top: 30px;
+                        left: 190px;
+                        
+                        span:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 395px;
+                        }
+                    }
+                    p:nth-of-type(2){
+                        position: absolute;
+                        top: 70px;
+                        left: 190px;
+                        span:nth-of-type(1){
+                            color: #b5b5b5;
+                        }
+                        span:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 465px;
+                        }
+                    }
+                }
+                .price{
+                    height: 120px;
+                    p:first-child{
+                       position: relative;
+                       .num{
+                           position: absolute;
+                           left: 260px;
+                           top: 25px;
+                       }
+                       span:nth-of-type(2){
+                           position: absolute;
+                           left: 450px;
+                           top: 25px;
+                       }
+                       span:nth-of-type(3){
+                           color: #e9546b;
+                           position: absolute;
+                           left: 550px;
+                           top: 25px;
+                       }
+                    }
+                    p:last-child{
+                        position: relative;
+                        left: 0px;
+                        top: 45px;
+                        color: #b4b4b4;
+                        .total{
+                            position: absolute;
+                            top: 0;
+                            left: 160px;
+                        }
+                        .privilege{
+                            position: absolute;
+                            top: 0;
+                            left: 347px;
+                        }
+                        .paid{
+                            position: absolute;
+                            top: 0;
+                            left: 540px;
+                        }
+                    }
+                }
+            }
+        }
+        .time{
+            position: relative;
+            height: 125px;
+            line-height: 125px;
+            .span-time{
+                margin-left: 60px;
+            }
+            a{
+                position: absolute;
+                top: 25px;
+                right: 40px;
+                display: block;
+                text-decoration: none;
+                width: 180px;
+                height: 70px;
+                border: 2px solid #e9546b;
+                text-align: center;
+                line-height: 70px;
+                color: #e9546b;
+            }
+        }
+    }
+}

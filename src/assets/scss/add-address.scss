@@ -1,0 +1,203 @@
+body{
+    background: #f5f5f5;
+}
+#add-address{
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    ul{
+        list-style: none;
+        .inp{
+            position: absolute;
+            right: 85px;
+            top: 35px;
+            width:400px ;
+            height: 60px;
+            border: none;
+            text-align: right;
+            outline-style: none;
+        }
+    }
+    ul:nth-of-type(1){
+        li{
+            position: relative;
+            height: 100px;
+            border-bottom: 1px solid #dcdcdc;
+            span:nth-of-type(1){
+                position: absolute;
+                left: 30px;
+                top: 35px;
+                color: #c8c8c8;
+            }
+        }
+    }
+    .city{
+        li{
+            position: relative;
+            height: 110px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+        li:nth-of-type(1){
+            ul{
+                list-style: none;
+                .city-select{
+                    border-right: 1px solid #dcdcdc;
+                }
+                li{
+                    width: 248px;
+                    float: left;
+                    height: 110px;
+                    border-bottom: none;
+                    a{
+                        display: block;
+                        width: 218px;
+                        height: 110px;
+                        margin-left: 30px;
+                        font-size: 26px;
+                        line-height: 110px;
+                        text-decoration: none;
+                        color:#000000 ;
+                        background: url("../imgs/add-address/down.png") no-repeat;
+                        background-position-x: 170px;
+                        background-position-y: center;
+                        background-size: 25px 15px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+#select_contact{
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: 110px;
+    background: #fff;
+    overflow: hidden;
+    .data{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: 1px solid #dcdcdc;
+        }
+        .data span{
+            display: block;
+            width: 248px;
+            height: 110px;
+            line-height: 110px;
+            padding-left: 30px;
+            border-right: 1px solid #dcdcdc;
+            background: url("../imgs/add-address/down.png") no-repeat;
+            background-position-x: 200px; 
+            background-position-y: center;
+            background-size: 25px 15px;
+        }
+        .data span:last-child{
+            border: none;
+        }
+}
+.address{
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: 110px;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid #dcdcdc;
+    span{
+        line-height: 110px;
+        padding-left: 30px;
+        color: #dcdcdc;
+    }
+    input{
+        position: absolute;
+        right: 85px;
+        top: 35px;
+        width:400px ;
+        height: 60px;
+        border: none;
+        text-align: right;
+        outline-style: none;
+    }
+}
+#center{
+    margin-top: 20px;
+    position: relative;
+    ul{
+        list-style: none;
+        li{
+            width: 250px;
+            height: 100px;
+            line-height: 100px;
+            float: left;
+        
+        }
+        .delivery-area{
+            margin-left: 30px;
+            font-size: 24px;
+            text-indent: 35px;
+            a{
+                width: 250px;
+                height: 100px;
+                display: block;
+                background: url("../imgs/add-address/location.png") no-repeat center left;
+                background-size: 30px 40px;
+                text-decoration: none;
+                color: #3c78c8;
+            }
+        }
+        .default-address{
+            position: absolute;
+            right: 30px;
+            top: 0;
+            
+            a{
+                width: 250px;
+                height: 100px;
+                line-height: 103px;
+                display: block;
+                text-indent: 50px;
+                margin-left: 30px;
+                font-size: 24px;
+                text-decoration: none;
+                color: #000000;
+                background: url("../imgs/add-address/gray.png") no-repeat center left;
+                background-size: 40px 40px;
+            }
+            .active{
+                background: url("../imgs/add-address/like.png") no-repeat center left;
+                background-size: 40px 40px;
+            }
+        }
+    }
+}
+
+
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    overflow: hidden;
+    
+    background: #e9546b;
+    a{
+        display: block;
+        max-width: 750px;
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+    }
+}
+
+

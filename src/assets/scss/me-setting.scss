@@ -1,0 +1,32 @@
+body{
+    background: #f5f5f5;
+}
+.me-setting{
+    max-width: 750px;
+    width: 100%;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+    background: #fff;
+    font-size: 25.78px;
+    a{
+        display: block;
+        position: relative;
+        max-width: 750px;
+        width: 100%;
+        height: 100px;
+        padding-left: 60px;
+        text-decoration: none;
+        color: black;
+        line-height: 100px;
+        border-bottom:1px solid #dcdcdc ;
+        
+    }
+    .links{
+        background: url("../imgs/icons/setting.png") no-repeat;
+        background-size: 15px 28px;
+        background-position-x: 690px;
+        background-position-y: 35px;
+    }
+    
+}

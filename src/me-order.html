@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+	
+	<title>INCAKE | 全部</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
+	<link rel="stylesheet" href="assets/css/me-order.css"/>
+</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li class="active">全部</li>
+				<li>待支付</li>
+				<li>待发货</li>
+				<li>待评价</li>
+			</ul>
+		</div>
+		<div id="content">
+			
+		</div>
+		<script id="tplList" type="text/html">
+			{{each list as item i}}
+				<div class="data">
+					<ul>
+						<li class="cake">
+							<p><span>{{item.ordernumber}}</span><span>完成</span></p>
+							<ul>
+								<li class="cake-li">
+									<a href="javascript:;"><img src="{{item.textimg}}"/></a>
+									<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+									<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
+								</li>
+								<li class="cake-li two">
+									<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
+									<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+									<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
+								</li>
+								<li class="price">
+									<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
+									<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>{{item.paid.yj}}</span></span></p>
+								</li>
+							</ul>
+						</li>
+						<li class="time">
+							<span class="span-time">配送时间：2017-09-08  <span>11：11</span></span>
+							<a href="javascript:;">追加评论</a>
+						</li>
+					</ul>
+				</div>
+			{{/each}}
+		</script>
+		<!--<div class="data">
+			<ul>
+				<li class="cake">
+					<p><span>ABC23443214</span><span>完成</span></p>
+					<ul>
+						<li class="cake-li">
+							<a href="javascript:;"><img src="assets/imgs/me-order/cake02.png"/></a>
+							<p><span>爱丁保之恋</span> <span>￥169.00</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span>x1</span></p>
+						</li>
+						<li class="cake-li">
+							<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
+							<p><span>爱丁保之恋</span> <span>￥169.00</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span>x1</span></p>
+						</li>
+						<li class="price">
+							<p><span>共计两件商品</span><span>应付：</span><span>￥338.00</span></p>
+							<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>189.00</span></span></p>
+						</li>
+					</ul>
+				</li>
+				<li class="time">
+					<span class="span-time">配送时间：2017-09-08  <span>11：11</span></span>
+					<a href="javascript:;">追加评论</a>
+				</li>
+			</ul>
+		</div>-->
+		
+		
+		
+	</body>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+		.script('assets/plugins/artTemplate/dist/template.js').wait()
+		.script('assets/jquery/jquery-1.8.3.min.js').wait()
+		.script('assets/plugins/swiper/js/swiper.min.js').wait()
+		.script('assets/plugins/underscore/underscore-min.js').wait()
+		.script('assets/js/me-order.js').wait();
+	</script>

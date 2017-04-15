@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+		<script src="assets/plugins/lib-flexible/flexible.js"></script>
+		<link rel="apple-touch-icon" href="favicon.png">
+		<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+
+		<title>INCAKE | 增加收货地址</title>
+		<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+		<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+		<link rel="stylesheet" href="assets/plugins/iosselect/iosSelect.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+		<link rel="stylesheet" href="assets/css/add-address.css" />
+	</head>
+
+	<body>
+		<div id="add-address">
+			<ul>
+				<li>
+					<span>收货人</span>
+					<input class="inp" type="text" value="张三" />
+				</li>
+				<li>
+					<span>移动电话</span>
+					<input class="inp" type="text" value="138888888888" />
+				</li>
+				<li>
+					<span>固定电话</span>
+					<input class="inp" type="text" />
+				</li>
+			</ul>
+		</div>
+
+		<div class="form-item item-line" id="select_contact">
+			<div class="pc-box">
+				<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
+				<input type="hidden" name="contact_city_code" id="contact_city_code" value="" data-city-name="">
+				<span class="data" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="show_contact"><span>四川省</span> <span>成都市</span> <span>青羊区</span></span>
+			</div>
+		</div>
+		<div class="address">
+			<span>详细地址</span><input type="text" />
+		</div>
+		<div id="center">
+			<ul>
+				<li class="delivery-area">
+					<a href="javascript:;">查看配送范围</a>
+				</li>
+				<li class="default-address">
+					<a href="javascript:;" class="active">设为默认地址</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<a href="javascript:;">提交</a>
+		</div>
+
+	</body>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/jquery/jquery-1.8.3.min.js').wait()
+			.script('assets/plugins/swiper/js/swiper.min.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/plugins/iosselect/adaptive.js').wait()
+			.script('assets/plugins/iosselect/iscroll.js').wait()
+			.script('assets/plugins/iosselect/iosSelect.js').wait()
+			.script('assets/plugins/iosselect/areaData_v2.js').wait()
+			.script('assets/js/add-address.js').wait();
+	</script>

@@ -11,6 +11,7 @@
 		var swiper = new Swiper('.swiper-container', {
 			pagination: '.swiper-pagination',
 			paginationClickable: true,
+			loop : true,
 			spaceBetween: 30,
 			centeredSlides: true,
 			autoplay: 2500,
@@ -30,14 +31,14 @@
 
 		//点击筛选，出现遮罩
 		$("#shade").click(function() {
-			$(".list").animate({ right: '-550px' }, function() {
+			$(".list").animate({ right: '-100%' }, function() {
 				$("#shade").fadeOut();
 			});
 			$("body").off(".mask");
 		});
 		
 		$(".city-shade").click(function() {
-			$(".city").animate({ right: '-550px' }, function() {
+			$(".city").animate({ right: '-100%' }, function() {
 				$(".city-shade").fadeOut();
 			});
 			$("body").off(".mask");
@@ -143,7 +144,6 @@
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
-			spanimg: 'assets/imgs/index/like.png',
 			name: {
 				cn: '百变魔方',
 				en: 'Rubikl Cube'
@@ -160,7 +160,6 @@
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
-			spanimg: 'assets/imgs/index/like.png',
 			name: {
 				cn: '百变魔方',
 				en: 'Rubikl Cube'
@@ -177,7 +176,6 @@
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
-			spanimg: 'assets/imgs/index/like.png',
 			name: {
 				cn: '百变魔方',
 				en: 'Rubikl Cube'
@@ -194,7 +192,6 @@
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
-			spanimg: 'assets/imgs/index/like.png',
 			name: {
 				cn: '百变魔方',
 				en: 'Rubikl Cube'

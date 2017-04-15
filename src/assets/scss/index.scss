@@ -33,7 +33,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         position: absolute;
         top: 50%;
         left: 30px;
-        width: 120px;
+        width: 150px;
         height: 30px;
         color: #f0f0f0;
         text-align: center;
@@ -44,7 +44,7 @@ $loc-triangle-bgcolor: #f0f0f0;
             image: url('../imgs/icons/location_bg.png');
             repeat: no-repeat;
             position: left top;
-            size: 25px 30px;
+            size: 25px 30px; 
         }
 
         &:after {
@@ -182,7 +182,7 @@ $loc-triangle-bgcolor: #f0f0f0;
        display: block;
        position: absolute;
        left: 170px;top: 10px;
-       width: 140px;height: 55px;
+       width: 170px;height: 55px;
        border: 1px solid #b4b4b4;/*no*/
        border-radius:50px ;text-decoration: none;
        color:#b4b4b4 ;
@@ -199,7 +199,7 @@ $loc-triangle-bgcolor: #f0f0f0;
        border-color:#e9546b;
        background: url("../imgs/index/del.png") no-repeat;
        background-size:35px 35px ;
-       background-position: 100px 10px;
+       background-position: 120px 10px;
    }
    .screen{
        position: absolute;right: 0;top: 0px;text-align: center;
@@ -258,6 +258,10 @@ $loc-triangle-bgcolor: #f0f0f0;
                     background: url("../imgs/index/live.png") no-repeat;
                     background-size: cover;
                     
+                }
+                .selected{
+                    background: url("../imgs/index/like.png") no-repeat;
+                    background-size: cover;
                 }
             }
             .box-text{
@@ -337,7 +341,10 @@ $loc-triangle-bgcolor: #f0f0f0;
                     top: 20px;
                     background: url("../imgs/index/live.png") no-repeat;
                     background-size: cover;
-                   
+                }
+                .selected{
+                    background: url("../imgs/index/like.png") no-repeat;
+                    background-size: cover;
                 }
             }
             .box-text{
@@ -402,7 +409,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         height: 100%;
         background: #f2f2f2;
         position: absolute;
-        top: 90px;
+        top: 0;
         right: -550px;
         z-index: 9999;
         .list-one,.list-three{
@@ -466,7 +473,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         height: 100%;
         background: #f2f2f2;
         position: absolute;
-        top: 90px;
+        top: 0;
         right: -550px;
         z-index: 9999;
         div{
