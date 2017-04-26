@@ -20,46 +20,49 @@
 	</head>
 
 	<body>
-		<div id="add-address">
-			<ul>
-				<li>
-					<span>收货人</span>
-					<input class="inp" type="text" value="张三" />
-				</li>
-				<li>
-					<span>移动电话</span>
-					<input class="inp" type="text" value="138888888888" />
-				</li>
-				<li>
-					<span>固定电话</span>
-					<input class="inp" type="text" />
-				</li>
-			</ul>
-		</div>
-
-		<div class="form-item item-line" id="select_contact">
-			<div class="pc-box">
-				<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
-				<input type="hidden" name="contact_city_code" id="contact_city_code" value="" data-city-name="">
-				<span class="data" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="show_contact"><span>四川省</span> <span>成都市</span> <span>青羊区</span></span>
+		<div class="layout">
+			<div id="add-address">
+				<ul>
+					<li>
+						<span>收货人</span>
+						<input class="inp" type="text" value="张三" />
+					</li>
+					<li>
+						<span>移动电话</span>
+						<input class="inp" type="text" value="138888888888" />
+					</li>
+					<li>
+						<span>固定电话</span>
+						<input class="inp" type="text" />
+					</li>
+				</ul>
+			</div>
+	
+			<div class="form-item item-line" id="select_contact">
+				<div class="pc-box">
+					<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
+					<input type="hidden" name="contact_city_code" id="contact_city_code" value="" data-city-name="">
+					<span class="data" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="show_contact"><span>四川省</span> <span>成都市</span> <span>青羊区</span></span>
+				</div>
+			</div>
+			<div class="address">
+				<span>详细地址</span><input type="text" />
+			</div>
+			<div id="center">
+				<ul>
+					<li class="delivery-area">
+						<a href="javascript:;">查看配送范围</a>
+					</li>
+					<li class="default-address">
+						<a href="javascript:;" class="active">设为默认地址</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer">
+				<a href="javascript:;">提交</a>
 			</div>
 		</div>
-		<div class="address">
-			<span>详细地址</span><input type="text" />
-		</div>
-		<div id="center">
-			<ul>
-				<li class="delivery-area">
-					<a href="javascript:;">查看配送范围</a>
-				</li>
-				<li class="default-address">
-					<a href="javascript:;" class="active">设为默认地址</a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer">
-			<a href="javascript:;">提交</a>
-		</div>
+		
 
 	</body>
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>

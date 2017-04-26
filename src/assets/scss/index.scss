@@ -243,11 +243,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 height: 350px;
                 background: #f0f0f0;
                 position: relative;
-                .cake-kind{
-                    position: absolute;
-                    top: 60px;
-                    left: 30px;
-                }
                 .collect{
                     display: block;
                     width: 50px;
@@ -327,11 +322,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 height: 350px;
                 background: #f0f0f0;
                 position: relative;
-                .cake-kind{
-                    position: absolute;
-                    top: 60px;
-                    left: 30px;
-                }
                 .collect{
                     display: block;
                     width: 50px;
@@ -418,7 +408,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         }
         .list-two{
             width: 515px;
-            height: 250px;
+            padding-bottom: 50px;
         }
         div{
             
@@ -428,8 +418,13 @@ $loc-triangle-bgcolor: #f0f0f0;
                 margin-top: 50px;
             }
             ul{list-style: none;
-            width: 515px;height: 200px;
+            width: 515px;
             text-align: left;
+            &:after{
+                content: "";
+                display: block;
+                clear: both;
+            }
                 li{float: left;
                     width: 140px;
                     height: 50px;
