@@ -86,27 +86,41 @@
 			$shopping_cart = $(".shopping-cart"),
 			$shopping = $(".shopping"),
 			$shopping_here = $(".shopping-here"),
+			$delete = $(".delete"),
 			flage = true;
 		
+		
+		$delete.click(function(){
+			$(this).closest('li').remove();
+		})
+		
 		$surprised_here.click(function() {
+			$this = $(this);
 			$shade.fadeIn(function(){
 				$(".shade-list").animate({ right: '0' });
 			});
-			
+			$confirm.click(function() {
+				if(!flage){
+					$shopping_cart.fadeIn(function(){
+						$shopping.fadeIn();
+					});
+				}else{
+					$(".shade-list").animate({ right: '-100%' },function(){
+						$shade.fadeOut();
+					});
+				}
+				$this.css("opacity","1");
+			});
 		});
-		
-		$confirm.click(function() {
-			if(!flage){
-				$shopping_cart.fadeIn(function(){
-					$shopping.fadeIn();
-				});
-			}else{
+		$shade.click(function(e){
+			if(e.target === $shade[0]){
 				$(".shade-list").animate({ right: '-100%' },function(){
 					$shade.fadeOut();
 				});
 			}
-			
 		});
+		
+
 		$shopping_here.click(function(){
 			$shopping_here.fadeOut(function(){
 				$shopping_cart.fadeOut();
@@ -124,61 +138,24 @@
 		});
 	})();
 //	优惠购遮罩
-	(function(){
-		var $privilege = $(".privilege"),
-			$privilege_commodity = $(".privilege-commodity"),
-			$favorable = $(".favorable"),
-			$btn = $(".btn");
-		$favorable.click(function(){
-			$privilege.fadeIn(function(){
-				$privilege_commodity.animate({ right: '0' });
-			});
-		});
-		$btn.click(function(){
-			$privilege_commodity.animate({ right: '-100%' }, function() {
-				$privilege.fadeOut();
-			});
-		})
-	})();
+//	(function(){
+//		var $privilege = $(".privilege"),
+//			$privilege_commodity = $(".privilege-commodity"),
+//			$favorable = $(".favorable"),
+//			$btn = $(".btn");
+//		$favorable.click(function(){
+//			$privilege.fadeIn(function(){
+//				$privilege_commodity.animate({ right: '0' });
+//			});
+//		});
+//		$btn.click(function(){
+//			$privilege_commodity.animate({ right: '-100%' }, function() {
+//				$privilege.fadeOut();
+//			});
+//		})
+//	})();
 	
-//	图片裁剪
-	;(function () {
-      var $image = $('#image');
-      var minAspectRatio = 0.5;
-      var maxAspectRatio = 1.5;
 
-      $image.cropper({
-        ready: function () {
-          var containerData = $image.cropper('getContainerData');
-          var cropBoxData = $image.cropper('getCropBoxData');
-          var aspectRatio = cropBoxData.width / cropBoxData.height;
-          var newCropBoxWidth;
-
-          if (aspectRatio < minAspectRatio || aspectRatio > maxAspectRatio) {
-            newCropBoxWidth = cropBoxData.height * ((minAspectRatio + maxAspectRatio) / 2);
-
-            $image.cropper('setCropBoxData', {
-              left: (containerData.width - newCropBoxWidth) / 2,
-              width: newCropBoxWidth
-            });
-          }
-        },
-        cropmove: function () {
-          var cropBoxData = $image.cropper('getCropBoxData');
-          var aspectRatio = cropBoxData.width / cropBoxData.height;
-
-          if (aspectRatio < minAspectRatio) {
-            $image.cropper('setCropBoxData', {
-              width: cropBoxData.height * minAspectRatio
-            });
-          } else if (aspectRatio > maxAspectRatio) {
-            $image.cropper('setCropBoxData', {
-              width: cropBoxData.height * maxAspectRatio
-            });
-          }
-        }
-      });
-    })();
 //	裁剪
 	(function(){
 		var $image = $('#image'),
@@ -187,7 +164,8 @@
  			$imagesrc = $(".imagesrc");
 	 			
 	 	$image.cropper({
-			aspectRatio:1/1,
+	 		aspectRatio: 1 / 1,
+        	autoCropArea: 1,
 			movable: false,
 	        zoomable: false,
 	        rotatable: false,
@@ -232,8 +210,8 @@
 	    });
 	  	$(".tailor").click(function(){
 	  		var img = $image.cropper('getCroppedCanvas', {
-	        width: 134,
-	        height: 134
+	        width: 600,
+	        height: 600
 	    	}).toDataURL('image/jpeg');
 	    	$imagesrc.attr("src",img);
 	    	$(".container").fadeOut();

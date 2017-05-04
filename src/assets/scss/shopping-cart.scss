@@ -58,11 +58,19 @@ body{
                 } 
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 362px;
+                    left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
-                    
+                }
+                >span:nth-of-type(4){
+                    display: block;
+                    position: absolute;
+                    left: 430px;
+                    top: 14px;
+                    width: 26px;
+                    height: 32px;
+                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
                 }
             }
             >p:nth-of-type(2){
@@ -172,13 +180,22 @@ body{
                 } 
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 300px;
+                    left: 330px;
                     display: inline-block;
                     width: 150px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
                     
+                }
+                >span:nth-of-type(4){
+                    display: block;
+                    position: absolute;
+                    left: 430px;
+                    top: 14px;
+                    width: 26px;
+                    height: 32px;
+                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
                 }
             }
             >p:nth-of-type(2){
@@ -228,6 +245,7 @@ body{
                 width: 160px;
                 height: 50px;
                 color: #fff;
+                opacity: 0.5;
                 text-align: center;
                 line-height: 50px;
                 background: #e9546b;
@@ -243,21 +261,6 @@ body{
                 span:last-child{
                     margin-left: 50px;
                 }
-            }
-            a:nth-of-type(3){
-                position: absolute;
-                right: 0;
-                top: 105px;
-                display: block;
-                width: 160px;
-                height: 48px;
-                color: #e9546b;
-                text-align: center;
-                line-height: 48px;
-                border-top: 1px solid #e9546b;
-                border-left: 1px solid #e9546b;
-                border-bottom: 1px solid #e9546b;
-                border-radius: 50px 0 0 50px;
             }
         }
     }
@@ -309,11 +312,20 @@ body{
                 } 
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 362px;
+                    left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
                     
+                }
+                >span:nth-of-type(4){
+                    display: block;
+                    position: absolute;
+                    left: 430px;
+                    top: 14px;
+                    width: 26px;
+                    height: 32px;
+                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
                 }
             }
             >p:nth-of-type(2){
@@ -370,86 +382,6 @@ body{
                 border-bottom: 1px solid #e9546b;
                 border-radius: 50px 0 0 50px;
             }
-        }
-    }
-    .standard{
-        height: 220px;
-        position: relative;
-        >p:nth-of-type(1){
-            position: absolute;
-            left: 10px;
-            top: 40px;
-            >span:nth-of-type(1){
-                font-family: "黑体";
-                font-size: 26px;
-            }  
-            >span:nth-of-type(2){
-                position: absolute;
-                top: 30px;
-                left: 0;
-                font-family: "黑体";
-                font-size: 14px;
-            } 
-            >span:nth-of-type(3){
-                position: absolute;
-                left: 362px;
-                top: 15px;
-                font-family: "黑体";
-                font-size: 28px;
-                
-            }
-        }
-        >p:nth-of-type(2){
-            position: absolute;
-            left: 10px;
-            top: 100px;
-            font-size: 22px;
-            color: #b4b4b4;
-        }
-        >p:nth-of-type(3){
-            position: absolute;
-            left: 10px;
-            top: 150px;
-            border: 1px solid #dcdcdc;
-            display: block;
-            width: 225px;
-            height: 40px;
-            span{
-                 display: inline-block;
-            }
-            span:nth-of-type(1){
-               
-                width: 40px;
-                height: 40px;
-                text-align: center;
-                line-height:40px;
-                border-right:1px solid #dcdcdc ;
-            }
-            span:nth-of-type(2){
-                width: 140px;
-                height: 40px;
-                text-align: center;
-                line-height: 40px;
-                border-right:1px solid #dcdcdc ;
-            }
-            span:nth-of-type(3){
-                width: 40px;
-                text-align: center;
-                line-height: 40px;
-            }
-        }
-        a{
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 210px;
-            height: 220px;
-            background: #e9546b;
-            color: #fff;
-            text-align: center;
-            line-height: 220px;
-            font-size: 26px;
         }
     }
     .commodity{
@@ -512,11 +444,20 @@ body{
                 } 
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 362px;
+                    left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
                     
+                }
+                >span:nth-of-type(4){
+                    display: block;
+                    position: absolute;
+                    left: 430px;
+                    top: 14px;
+                    width: 26px;
+                    height: 32px;
+                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
                 }
             }
             >p:nth-of-type(2){
@@ -588,7 +529,7 @@ body{
         li{
             float: left;
             font-size: 24px;
-            width: 187.5px;
+            width: 375px;
             height: 95px;
             text-align: center;
             line-height: 140px;
@@ -602,6 +543,7 @@ body{
 .swiper-container{
     background: #fff;
     height: 500px;
+    margin-bottom: 250px;
 }
 .swiper-slide {
     width: 290px;
@@ -636,13 +578,13 @@ body{
     }
 }
 .close{
+    position: fixed;
+    bottom: 95px;
+    left: auto;
     width: 750px;
     height: 90px;
     border-top: 1px solid #dcdcdc;
     background: #fff;
-    position: relative;
-    margin-top: 40px;
-    margin-bottom: 95px;
     line-height: 90px;
     >span:nth-of-type(1){
        position: absolute;

@@ -13,8 +13,7 @@
 	<title>INCAKE | 购物车</title>
 	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/cropper.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/cropper/cropper.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
 	<link rel="stylesheet" href="assets/css/shopping-cart.css"/>
 	<link rel="shortcut icon" href="favicon.ico" /> 
@@ -27,56 +26,48 @@
 					<li>
 						<span class="pitch-on"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus01">-</span><span class="number01">1</span><span class="add01">+</span></p>
-						<a href="javascript:;"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
+						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
 					</li>
 					<li>
 						<span class="pitch-on"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189+￥30</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus02">-</span><span class="number02">1</span><span class="add02">+</span></p>
 						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
-						<a href="javascript:;" class="favorable">优惠购</a>
 					</li>
 				</ul>
 				<ul class="convention">
 					<li>
 						<span class="pitch-on"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus03">-</span><span class="number03">1</span><span class="add03">+</span></p>
-						<a href="javascript:;"class="favorable">优惠购</a>
 					</li>
 					<li>
 						<span class="pitch-on active"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus04">-</span><span class="number04">1</span><span class="add04">+</span></p>
 					</li>
 				</ul>
-				<div class="standard">
-					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
-					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-					<p><span class="minus05">-</span><span class="number05">1</span><span class="add05">+</span></p>
-					<a href="javascript:;">删除</a>
-				</div>
 				<ul class="commodity">
 					<li>
 						<span class="active"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
 					</li>
 					<li>
 						<span></span>
 						<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus07">-</span><span class="number07">1</span><span class="add07">+</span></p>
 					</li>
@@ -84,8 +75,6 @@
 			</div>
 			<div class="other">
 				<ul>
-					<li>甜品</li>
-					<li>鲜花</li>
 					<li class="active">数字蜡烛</li>
 					<li>餐盘</li>
 				</ul>
@@ -226,7 +215,7 @@
 		</div>
 		
 		<!--优惠展开-->
-		<div class="privilege">
+		<!--<div class="privilege">
 			<div class="privilege-commodity">
 				<p>优惠购商品:</p>
 				<ul>
@@ -249,7 +238,7 @@
 				</ul>
 				<a href="javascript:;"class="btn">确&nbsp;&nbsp;定</a>
 			</div>
-		</div>
+		</div>-->
 	</body>
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>
 	<script>
@@ -260,7 +249,7 @@
 		.script('assets/plugins/underscore/underscore-min.js').wait()
 		.script('assets/plugins/maxlength/jquery.plugin.min.js').wait()
 		.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
-		.script('assets/cropper/cropper.js').wait()
+		.script('assets/plugins/cropper/cropper.js').wait()
 		.script('assets/js/shopping-cart.js');
 	</script>
 </html>
