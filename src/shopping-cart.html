@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+	
+	<title>INCAKE | 购物车</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cropper.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/cropper/cropper.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
+	<link rel="stylesheet" href="assets/css/shopping-cart.css"/>
+	<link rel="shortcut icon" href="favicon.ico" /> 
+</head>
+	<body>
+		<div id="layout">
+			
+			<div id="cake_list">
+				<ul class="surprised">
+					<li>
+						<span class="pitch-on"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus01">-</span><span class="number01">1</span><span class="add01">+</span></p>
+						<a href="javascript:;"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
+					</li>
+					<li>
+						<span class="pitch-on"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189+￥30</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus02">-</span><span class="number02">1</span><span class="add02">+</span></p>
+						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
+						<a href="javascript:;" class="favorable">优惠购</a>
+					</li>
+				</ul>
+				<ul class="convention">
+					<li>
+						<span class="pitch-on"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus03">-</span><span class="number03">1</span><span class="add03">+</span></p>
+						<a href="javascript:;"class="favorable">优惠购</a>
+					</li>
+					<li>
+						<span class="pitch-on active"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus04">-</span><span class="number04">1</span><span class="add04">+</span></p>
+					</li>
+				</ul>
+				<div class="standard">
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus05">-</span><span class="number05">1</span><span class="add05">+</span></p>
+					<a href="javascript:;">删除</a>
+				</div>
+				<ul class="commodity">
+					<li>
+						<span class="active"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
+					</li>
+					<li>
+						<span></span>
+						<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span></p>
+						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+						<p><span class="minus07">-</span><span class="number07">1</span><span class="add07">+</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="other">
+				<ul>
+					<li>甜品</li>
+					<li>鲜花</li>
+					<li class="active">数字蜡烛</li>
+					<li>餐盘</li>
+				</ul>
+				
+			</div>
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+		            		<img src="assets/imgs/shopping-cart/cake.png"/>
+		            	</a>
+		            	<div>
+		            		<p>芒果拿破仑</p>
+		            		<p>Mango Napoleon</p>
+		            		<p>￥189/1.5磅</p>
+		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+		            		<img src="assets/imgs/shopping-cart/cake.png"/>
+		            	</a>
+		            	<div>
+		            		<p>芒果拿破仑</p>
+		            		<p>Mango Napoleon</p>
+		            		<p>￥189/1.5磅</p>
+		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+		            		<img src="assets/imgs/shopping-cart/cake.png"/>
+		            	</a>
+		            	<div>
+		            		<p>芒果拿破仑</p>
+		            		<p>Mango Napoleon</p>
+		            		<p>￥189/1.5磅</p>
+		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+		            		<img src="assets/imgs/shopping-cart/cake.png"/>
+		            	</a>
+		            	<div>
+		            		<p>芒果拿破仑</p>
+		            		<p>Mango Napoleon</p>
+		            		<p>￥189/1.5磅</p>
+		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="javascript:;">
+		            		<img src="assets/imgs/shopping-cart/cake.png"/>
+		            	</a>
+		            	<div>
+		            		<p>芒果拿破仑</p>
+		            		<p>Mango Napoleon</p>
+		            		<p>￥189/1.5磅</p>
+		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+		            	</div>
+		            </div>
+		        </div>
+		        <!-- Add Pagination -->
+		    </div>
+		    <div class="close">
+		    	<span>已选<span>1</span>件商品</span>
+		    	<span>共<span><span>￥</span><span>189</span>.00</span></span>
+		    	<a href="javascript:;">去结算</a>
+		    </div>
+			
+			
+			<!--底部-->
+			<div id="navbar">
+				<a href="index.html" class="link">
+					<div class="home"></div>
+				</a>
+				<a href="javascript:;" class="link">
+					<div class="shopping-basket active"></div>
+				</a>
+				<a href="me.html" class="link">
+					<div class="mine"></div>
+				</a>
+			</div>
+		</div>
+		<!--加入购物车-->
+		<div class="shopping-cart">
+			<div class="shopping">
+				<p>Incake想对您说：</p>
+				<p>您挑选的是惊喜款蛋糕，但是还没</p>
+				<p>有添加惊喜哟，快去打包惊喜吧！</p>
+				<a href="javascript:;" class="shopping-here">惊喜在这里!</a>
+			</div>
+		</div>
+		<!--惊喜遮罩-->
+		<div id="shade">
+			<div class="shade-list">
+				<p>想要的惊喜在这里:</p>
+				<p>想要给惊喜的Ta，Ta是谁？</p>
+				<ul>
+					<li class="active">朋友</li><li>亲人</li>
+					<li>恋人</li><li>领导</li>
+					<li>客户</li><li>Baby</li>
+					<li class="shade-other01">其它</li>
+					<input class="last-li last-li01" type="text" name="" id="" value="" />
+				</ul>
+				<p>想在什么场景给Ta惊喜？</p>
+				<ul>
+					<li class="active">生日/祝寿</li><li>聚会</li>
+					<li>浪漫约会</li><li>商业合作</li>
+					<li>探病慰问</li><li>开业典庆</li><li>致歉</li>
+					<li class="shade-other shade-other02">其它</li>
+					<input class="last-li last-li02" type="text" name="" id="" value="" />
+				</ul>
+				<p>填写您的惊喜定制需求：</p>
+				<div>
+					<textarea class="txt-summary" placeholder="请写下您想要的惊喜，我们为您达成！"></textarea>
+				</div>
+				<p>有照片有惊喜！（非必填）</p>
+				<div id="div"class="import-image">
+					<img src="assets/imgs/shopping-cart/head.png" class="imagesrc"/>
+					<input class="inputFile" type="file" name="" id="file" value="" />
+				</div>
+				<p>点击图标上传图片</p>
+				<a href="javascript:;" style="display: none;">删除</a>
+				<div class="confirm">
+					<a href="javascript:;">确定</a>
+				</div>
+			</div>
+		</div>
+		<!--图片裁剪-->
+		<div class="container">
+	  		<div class="img-container">
+		        <img  id="image" src="assets/imgs/shopping-cart/head.png"//>
+		    </div>	
+		    <a href="javascript:;" class="reupload-image">取消</a>
+		    <a href="javascript:;" class="tailor">完成</a>
+		</div>
+		
+		<!--优惠展开-->
+		<div class="privilege">
+			<div class="privilege-commodity">
+				<p>优惠购商品:</p>
+				<ul>
+					<li>
+						<span class="active"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p>芒果拿破仑</p>
+						<p>Mango Napoleon</p>
+						<p>1/束</p>
+						<p>￥30</p>
+					</li>
+					<li>
+						<span class="active"></span>
+						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+						<p>芒果拿破仑</p>
+						<p>Mango Napoleon</p>
+						<p>1/束</p>
+						<p>￥30</p>
+					</li>
+				</ul>
+				<a href="javascript:;"class="btn">确&nbsp;&nbsp;定</a>
+			</div>
+		</div>
+	</body>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+		.script('assets/plugins/artTemplate/dist/template.js').wait()
+		.script('assets/jquery/jquery-1.8.3.min.js').wait()
+		.script('assets/plugins/swiper/js/swiper.min.js').wait()
+		.script('assets/plugins/underscore/underscore-min.js').wait()
+		.script('assets/plugins/maxlength/jquery.plugin.min.js').wait()
+		.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
+		.script('assets/cropper/cropper.js').wait()
+		.script('assets/js/shopping-cart.js');
+	</script>
+</html>
