@@ -1,10 +1,78 @@
 ;(function($, window, document) {
-	 var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 'auto',
-        paginationClickable: true,
-        spaceBetween: 30
+
+    $(function(){
+		var swiper01 = new Swiper('.swiper-container01', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView: 'auto',
+	        paginationClickable: true,
+	        spaceBetween: 10,
+	        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+	    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	   	});
+	     var swiper02 = new Swiper('.swiper-container02', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView: 'auto',
+	        paginationClickable: true,
+	        spaceBetween: 10,
+	        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+	    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	    });
+    	Cake();
     });
+    function Cake(){
+    	
+    	var $number_swiper=$("#number-swiper");
+    	var $tableware=$("#tableware");
+    	var data = {
+	    	list :[{
+	    		aimg:"assets/imgs/shopping-cart/soldout_bg.png",
+	    		img:"assets/imgs/shopping-cart/cake.png",
+	    		name:'芒果拿破仑',
+	    		nameEn:"Mango Napoleon",
+	    		cost:'189',
+	    		price:'1.5',
+	    		linkimg:"assets/imgs/shopping-cart/shopping.png"
+	    	},{
+	    		aimg:"assets/imgs/shopping-cart/soldout_bg.png",
+	    		img:"assets/imgs/shopping-cart/cake.png",
+	    		name:'芒果拿破仑',
+	    		nameEn:"Mango Napoleon",
+	    		cost:'189',
+	    		price:'1.5',
+	    		linkimg:"assets/imgs/shopping-cart/shopping.png"
+	    	},{
+	    		aimg:"assets/imgs/shopping-cart/soldout_bg.png",
+	    		img:"assets/imgs/shopping-cart/cake.png",
+	    		name:'芒果拿破仑',
+	    		nameEn:"Mango Napoleon",
+	    		cost:'189',
+	    		price:'1.5',
+	    		linkimg:"assets/imgs/shopping-cart/shopping.png"
+	    	},{
+	    		aimg:"assets/imgs/shopping-cart/soldout_bg.png",
+	    		img:"assets/imgs/shopping-cart/cake.png",
+	    		name:'芒果拿破仑',
+	    		nameEn:"Mango Napoleon",
+	    		cost:'189',
+	    		price:'1.5',
+	    		linkimg:"assets/imgs/shopping-cart/shopping.png"
+	    	},{
+	    		aimg:"assets/imgs/shopping-cart/soldout_bg.png",
+	    		img:"assets/imgs/shopping-cart/cake.png",
+	    		name:'芒果拿破仑',
+	    		nameEn:"Mango Napoleon",
+	    		cost:'189',
+	    		price:'1.5',
+	    		linkimg:"assets/imgs/shopping-cart/shopping.png"
+	    	}]
+	    };
+	    var tplnumber = template('tplnumber', data);
+	    var tplTableware = template('tplTableware', data);
+	    $number_swiper.html(tplnumber);
+	    $tableware.html(tplTableware);
+    };
+    
+    
 	$('.txt-summary').maxlength({
         max: 100,
         feedbackText: '还可输入{r}字'
@@ -14,10 +82,14 @@
 		$other = $(".other ul li"),
 		$commodity = $(".commodity li>span"),
 		$privilege = $(".privilege ul li>span");
-		
+	$(".swiper-container02").css("display","none");	
 	$other.click(function(){
-		$(this).addClass("active").siblings().removeClass("active");
+		var $this = $(this);
+        itemIndex = $this.index();
+		$this.addClass("active").siblings().removeClass("active");
+		 $('.lists').eq(itemIndex).show().siblings('.lists').hide();
 	});
+	
 	$privilege.click(function(){
 		if(!$(this).hasClass("active")){
 			$(this).addClass("active");
@@ -133,8 +205,14 @@
 		$shade_other01.click(function(){
 			$last_li01.focus();
 		});
+		$last_li01.focus(function(){
+			$shade_other01.addClass("active").siblings().removeClass("active");
+		});
 		$shade_other02.click(function(){
 			$last_li02.focus();
+		});
+		$last_li02.focus(function(){
+			$shade_other02.addClass("active").siblings().removeClass("active");
 		});
 	})();
 //	优惠购遮罩
@@ -220,5 +298,5 @@
 	  		$(".container").fadeOut();
 	  	})
 			
-	})()
+	})();
 })(jQuery, window, document);

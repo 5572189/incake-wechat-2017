@@ -140,7 +140,7 @@
 		};
 
 		var data = [{
-			link: 'javascript:;',
+			link: 'detail.html',
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
@@ -156,7 +156,7 @@
 			price: '189',
 			pound: '1.5磅'
 		}, {
-			link: 'javascript:;',
+			link: 'detail.html',
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
@@ -172,7 +172,7 @@
 			price: '189',
 			pound: '1.5磅'
 		}, {
-			link: 'javascript:;',
+			link: 'detail.html',
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',
@@ -188,7 +188,7 @@
 			price: '189',
 			pound: '1.5磅'
 		}, {
-			link: 'javascript:;',
+			link: 'detail.html',
 			textlink: 'javascript:;',
 			textimg: 'assets/imgs/icons/icon_add_bg.png',
 			img: 'assets/imgs/index/cake.png',

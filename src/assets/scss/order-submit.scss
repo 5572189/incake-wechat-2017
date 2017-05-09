@@ -67,6 +67,7 @@ body{
                     position: absolute;
                     top: 30px;
                     left: 5px;
+                    width: 200px;
                     font-family: "黑体";
                     font-size: 14px;
                 } 
@@ -159,6 +160,7 @@ body{
                     position: absolute;
                     top: 30px;
                     left: 5px;
+                    width: 200px;
                     font-family: "黑体";
                     font-size: 14px;
                 } 
@@ -209,6 +211,7 @@ body{
                     position: absolute;
                     top: 30px;
                     left: 5px;
+                    width: 200px;
                     font-family: "黑体";
                     font-size: 14px;
                 } 
@@ -293,7 +296,7 @@ body{
         line-height: 125px;
         text-indent: 25px;
         >span{
-            color: #d9d9d9;
+            color: #b4b4b4;
             span:nth-of-type(1){
                 margin-left: 30px;
             }
@@ -328,7 +331,7 @@ body{
             left: 160px;
             width: 500px;
             text-align: right;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }
     ul{
@@ -403,7 +406,7 @@ body{
         span{
             position: absolute;
             left: 545px;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }
 }
@@ -427,7 +430,7 @@ body{
         >span{
             position: absolute;
             left: 545px;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }
     .bill-privately{
@@ -503,7 +506,7 @@ body{
             left: 360px;
             width: 300px;
             text-align: right;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }  
     .birthday-write{
@@ -543,7 +546,7 @@ body{
         span{
             position: absolute;
             left: 550px;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }  
     .birthday-card-write{
@@ -560,6 +563,7 @@ body{
             border: 1px solid #dcdcdc;
             border-radius: 10px;
             outline: none;
+            resize: none;
             line-height: 50px;
         }
         >span{
@@ -587,7 +591,7 @@ body{
         span{
             position: absolute;
             left: 550px;
-            color: #d9d9d9;
+            color: #b4b4b4;
         }
     }  
     .order-comment-write{
@@ -597,6 +601,8 @@ body{
         margin: 0 auto;
         padding-bottom: 70px;  
         textarea{
+            max-width: 690px;
+            max-height:205px ;
             width: 690px;
             height: 205px;
             text-indent: 20px;
@@ -604,6 +610,7 @@ body{
             border: 1px solid #dcdcdc;
             border-radius: 10px;
             outline: none;
+            resize: none;
             line-height: 50px;
         }  
         >span{
@@ -1243,6 +1250,7 @@ body{
             font-size: 30px; /* px */
             color: #303242;
             text-align: center;
+            border-top: 1px solid #303242;
         }
         
         a {

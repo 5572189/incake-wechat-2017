@@ -10,7 +10,7 @@
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
 	
-	<title>INCAKE | 购物车</title>
+	<title>INCAKE | 订单提交</title>
 	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
@@ -21,7 +21,7 @@
 </head>
 	<body>
 		<div id="layout">
-			
+			<!--蛋糕款式-->
 			<div id="cake_list" class="clearfix">
 				<!--惊喜款-->
 				<ul class="surprised" id="surprised-ul"></ul>
@@ -186,145 +186,144 @@
 		    	<a href="javascript:;">去结算</a>
 		    </div>
 			
-		</div>
-		<!--母亲节弹框-->
-		<div class="mother-shade">
-			<div class="mother-popup">
-				<a href="javascript:;" class="mother-delate"></a>
-				<textarea class="mother-word" name="" placeholder="母亲节写上送给妈妈的话吧！"></textarea>
-				<a href="javascript:;" class="mother-confirm">确认</a>
-			</div>
-		</div>
-		<!--升级弹框-->	
-		<div class="upgrade-shade">
-			<div class="upgrade-popup">
-				<a href="javascript:;" class="upgrade-delate"></a>
-				<p>亲，你选择的是惊喜款蛋糕，需要将常<br/>规兑换卡升级成惊喜卡才可以支付哦！</p>
-				<a href="javascript:;">不升级,改用其他支付</a>
-				<a href="javascript:;">升级</a>
-			</div>
-		</div>	
-		<!--查看惊喜弹框-->
-		<div class="surprised-shade">
-			<div class="surprised-popup">
-				<p>想要给惊喜（<span>朋友</span>）</p>
-				<p>想在（<span>生日/祝寿</span>）场景下给Ta惊喜</p>
-				<div class="surprised-comment">
-					<span>备注：</span>
-					<div>
-						非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容
-					</div>
+			<!--母亲节弹框-->
+			<div class="mother-shade">
+				<div class="mother-popup">
+					<a href="javascript:;" class="mother-delate"></a>
+					<textarea class="mother-word" name="" placeholder="母亲节写上送给妈妈的话吧！"></textarea>
+					<a href="javascript:;" class="mother-confirm">确认</a>
 				</div>
-				<span>照片:</span>
-				<a href="javascript:;"><img src="assets/imgs/order-submit/head.png"/></a>
-				<a href="javascript:;" class="surprised-confirm">确定</a>
 			</div>
-		</div>
-		<!--优惠券弹框-->
-		<div class="discount-shade">
-			<div class="discount-popup">
-				<p>优惠券:</p>
-				<ul class="clearfix" id="discount-ul"></ul>
-				<script id="tplDiscount" type="text/html">
-					{{each list as item i}}
-						{{if item.active}}
-							<li class="active">
+			<!--升级弹框-->	
+			<div class="upgrade-shade">
+				<div class="upgrade-popup">
+					<a href="javascript:;" class="upgrade-delate"></a>
+					<p>亲，你选择的是惊喜款蛋糕，需要将常<br/>规兑换卡升级成惊喜卡才可以支付哦！</p>
+					<a href="javascript:;">不升级,改用其他支付</a>
+					<a href="javascript:;">升级</a>
+				</div>
+			</div>	
+			<!--查看惊喜弹框-->
+			<div class="surprised-shade">
+				<div class="surprised-popup">
+					<p>想要给惊喜（<span>朋友</span>）</p>
+					<p>想在（<span>生日/祝寿</span>）场景下给Ta惊喜</p>
+					<div class="surprised-comment">
+						<span>备注：</span>
+						<div>
+							非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容非真正内容
+						</div>
+					</div>
+					<span>照片:</span>
+					<a href="javascript:;"><img src="assets/imgs/order-submit/head.png"/></a>
+					<a href="javascript:;" class="surprised-confirm">确定</a>
+				</div>
+			</div>
+			<!--优惠券弹框-->
+			<div class="discount-shade">
+				<div class="discount-popup">
+					<p>优惠券:</p>
+					<ul class="clearfix" id="discount-ul"></ul>
+					<script id="tplDiscount" type="text/html">
+						{{each list as item i}}
+							{{if item.active}}
+								<li class="active">
+									<p>蛋糕<span>{{item.cost}}</span>元优惠券</p>
+									<a href="javascript:;"></a>
+								</li>
+							{{/if}}
+							<li>
 								<p>蛋糕<span>{{item.cost}}</span>元优惠券</p>
 								<a href="javascript:;"></a>
 							</li>
-						{{/if}}
-						<li>
-							<p>蛋糕<span>{{item.cost}}</span>元优惠券</p>
-							<a href="javascript:;"></a>
-						</li>
-					{{/each}}
-				</script>
-				<p>优惠码:</p>
-				<ul>
-					<li><input type="text" placeholder="优惠券/团购券编号/建行热购卡会员号" /></li>
-					<li><a href="javascript:;">点击验证</a></li>
-				</ul>
-				<p>代金券:</p>
-				<ul class="clearfix" id="cash-coupon"></ul>
-				<script id="tplCashcoupon" type="text/html">
-					{{each list as item i}}
-						{{if item.active}}
-							<li class="active">
+						{{/each}}
+					</script>
+					<p>优惠码:</p>
+					<ul>
+						<li><input type="text" placeholder="优惠券/团购券编号/建行热购卡会员号" /></li>
+						<li><a href="javascript:;">点击验证</a></li>
+					</ul>
+					<p>代金券:</p>
+					<ul class="clearfix" id="cash-coupon"></ul>
+					<script id="tplCashcoupon" type="text/html">
+						{{each list as item i}}
+							{{if item.active}}
+								<li class="active">
+									<p>￥<span>{{item.price}}</span></p>
+									<a href="javascript:;"></a>
+								</li>
+							{{/if}}
+							<li>
 								<p>￥<span>{{item.price}}</span></p>
 								<a href="javascript:;"></a>
 							</li>
-						{{/if}}
-						<li>
-							<p>￥<span>{{item.price}}</span></p>
-							<a href="javascript:;"></a>
-						</li>
-					{{/each}}
-				</script>				
-				<a href="javascript:;" class="popup-confirm">确&nbsp;&nbsp;定</a>
+						{{/each}}
+					</script>				
+					<a href="javascript:;" class="popup-confirm">确&nbsp;&nbsp;定</a>
+				</div>
 			</div>
-		</div>
-		<!--添加地址-->
-		<div class="address-shade">
-			<div id="address-div">
-				<ul>
-					<li class="active">
+			<!--添加地址-->
+			<div class="address-shade">
+				<div id="address-div">
+					<ul>
+						<li class="active">
+								<a href="javascript:;"></a>
+								<div>
+									<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
+									<p>[默认]上海市静安区广中西路777弄99号506室</p>
+								</div>
+								<a href="javascript:;" class="amend"></a>
+						</li>
+						<li>
 							<a href="javascript:;"></a>
 							<div>
 								<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
 								<p>[默认]上海市静安区广中西路777弄99号506室</p>
 							</div>
 							<a href="javascript:;" class="amend"></a>
+						</li>
+					</ul>
+				</div>
+				<div id="add-address">
+					<a href="javascript:;">添加新的收货地址</a>
+				</div>
+			</div>
+			<!--修改地址-->	
+			<div class="modification-address">
+				<ul>
+					<li>
+						<span>收货人</span>
+						<input type="text" name="" id="" value="" placeholder="姓名"/>
 					</li>
 					<li>
-						<a href="javascript:;"></a>
-						<div>
-							<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
-							<p>[默认]上海市静安区广中西路777弄99号506室</p>
-						</div>
-						<a href="javascript:;" class="amend"></a>
+						<span>联系电话</span>
+						<input type="text" name="" id="" value="" placeholder="手机号"/>
 					</li>
+					<li>
+						<a href="javascript:;"><span>选择城市</span>
+							<input type="hidden" name="city_id" id="cityId" value="">  
+							<span id="city-span">请选择</span>
+						</a>
+						
+					</li>
+					<li>
+						<a href="javascript:;"><span>选择区域</span>
+							<input type="hidden" name="region_id" id="regionId" value="">  
+							<span id="region-span">请选择</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;"><span>详细地址</span>
+							<input type="hidden" name="address_id" id="addressId" value="">  
+							<span id="address-span">街道/小区/写字楼</span>
+						</a>
+					</li>
+					<li><input type="text" name="" id="" value="" placeholder="楼号/单元/门牌号"/></li>
 				</ul>
+				<a href="javascript:;" class="save">保存并使用</a>
 			</div>
-			<div id="add-address">
-				<a href="javascript:;">添加新的收货地址</a>
-			</div>
-		</div>
-		<!--修改地址-->	
-		<div class="modification-address">
-			<ul>
-				<li>
-					<span>收货人</span>
-					<input type="text" name="" id="" value="" placeholder="姓名"/>
-				</li>
-				<li>
-					<span>联系电话</span>
-					<input type="text" name="" id="" value="" placeholder="手机号"/>
-				</li>
-				<li>
-					<a href="javascript:;"><span>选择城市</span>
-						<input type="hidden" name="city_id" id="cityId" value="">  
-						<span id="city-span">请选择</span>
-					</a>
-					
-				</li>
-				<li>
-					<a href="javascript:;"><span>选择区域</span>
-						<input type="hidden" name="region_id" id="regionId" value="">  
-						<span id="region-span">请选择</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;"><span>详细地址</span>
-						<input type="hidden" name="address_id" id="addressId" value="">  
-						<span id="address-span">街道/小区/写字楼</span>
-					</a>
-				</li>
-				<li><input type="text" name="" id="" value="" placeholder="楼号/单元/门牌号"/></li>
-			</ul>
-			<a href="javascript:;" class="save">保存并使用</a>
-		</div>
-		<!--支付方式-->	
-		<div class="action-sheet" id="paymentAction">
+			<!--支付方式-->	
+			<div class="action-sheet" id="paymentAction">
 			<div class="action-header">
 				<p class="title">选择支付方式</p>
 				<a href="javascript:;" class="btn-cancel">取消</a>
@@ -365,18 +364,21 @@
 		</div>
 		
 		
+		</div>
+
+		
 			
 			
 			
 		<!--加入购物车-->
-			<!--<div>
+		<!--<div>
 				<textarea class="txt-summary" placeholder="请写下您想要的惊喜，我们为您达成！"></textarea>
 			</div>
 			<p>有照片有惊喜！（非必填）</p>
 			<div id="div"class="import-image">
 				<img src="assets/imgs/shopping-cart/head.png" class="imagesrc"/>
 				<input class="inputFile" type="file" name="" id="file" value="" />
-			</div>-->
+		</div>-->
 		<!--图片裁剪-->
 		<!--<div class="container">
 	  		<div class="img-container">

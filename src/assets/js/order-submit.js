@@ -7,7 +7,20 @@
 		
 		fnInitPayment();
 	});
+	function touchmove(){
+		$("body").on('touchmove.mask', function(event) {
+			//去掉默认
+			event.preventDefault();
+			//终止事件的传播
+			event.stopPropagation();
+		});
+	}
+	function removeTouchmove(){
+		//解绑事件：
+		$("body").off(".mask");
+	}
 	
+
 //	母亲节留言弹框,惊喜弹框
 	function mother(){
 		var $mother = $(".mother"),
@@ -33,12 +46,14 @@
 			$discount_shade.fadeIn(function(){
 				$discount_popup.animate({ right: '0' });
 			});
+			touchmove();
 		});
 //		优惠券弹框隐藏
 		$popup_confirm.click(function(){
 			$discount_popup.animate({ right: '-550px' },function(){
 				$discount_shade.fadeOut();
 			});
+			removeTouchmove();
 		});
 //		弹框里优惠券绑定事件
 		$discount_ul.on('click','li',function(){
@@ -54,21 +69,25 @@
 			$surprised_shade.fadeIn(function(){
 				$surprised_popup.fadeIn();
 			});
+			touchmove();
 		});
 		$surprised_confirm.click(function(){
 			$surprised_popup.fadeOut(function(){
 				$surprised_shade.fadeOut();
 			});
+			removeTouchmove();
 		});
 		$mother.click(function(){
 			$mother_shade.fadeIn(function(){
 				$mother_popup.fadeIn();
 			});
+			touchmove();
 		});
 		$mother_delate.click(function(){
 			$mother_popup.fadeOut(function(){
 				$mother_shade.fadeOut();
 			});
+			removeTouchmove();
 		});
 		$mother_confirm.click(function(){
 			$mother_popup.fadeOut(function(){

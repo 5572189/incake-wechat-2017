@@ -76,69 +76,47 @@
 			<div class="other">
 				<ul>
 					<li class="active">数字蜡烛</li>
-					<li>餐盘</li>
+					<li >餐盘</li>
 				</ul>
 				
 			</div>
-			<div class="swiper-container">
-		        <div class="swiper-wrapper">
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
-		            		<img src="assets/imgs/shopping-cart/cake.png"/>
-		            	</a>
-		            	<div>
-		            		<p>芒果拿破仑</p>
-		            		<p>Mango Napoleon</p>
-		            		<p>￥189/1.5磅</p>
-		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
-		            	</div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
-		            		<img src="assets/imgs/shopping-cart/cake.png"/>
-		            	</a>
-		            	<div>
-		            		<p>芒果拿破仑</p>
-		            		<p>Mango Napoleon</p>
-		            		<p>￥189/1.5磅</p>
-		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
-		            	</div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
-		            		<img src="assets/imgs/shopping-cart/cake.png"/>
-		            	</a>
-		            	<div>
-		            		<p>芒果拿破仑</p>
-		            		<p>Mango Napoleon</p>
-		            		<p>￥189/1.5磅</p>
-		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
-		            	</div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
-		            		<img src="assets/imgs/shopping-cart/cake.png"/>
-		            	</a>
-		            	<div>
-		            		<p>芒果拿破仑</p>
-		            		<p>Mango Napoleon</p>
-		            		<p>￥189/1.5磅</p>
-		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
-		            	</div>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
-		            		<img src="assets/imgs/shopping-cart/cake.png"/>
-		            	</a>
-		            	<div>
-		            		<p>芒果拿破仑</p>
-		            		<p>Mango Napoleon</p>
-		            		<p>￥189/1.5磅</p>
-		            		<a href="javascript:;"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
-		            	</div>
-		            </div>
-		        </div>
-		        <!-- Add Pagination -->
+			<div class="swiper-container swiper-container01 lists">
+		        <div class="swiper-wrapper "id="number-swiper"></div>
+		        <script id="tplnumber" type="text/html">
+			    	{{each list as item i}}
+			    		<div class="swiper-slide">
+			    			<a href="javascript:;">
+			            		<img src="{{item.img}}"/>
+			            	</a>
+			            	<div>
+			            		<p>{{item.name}}</p>
+			            		<p>{{item.nameEn}}</p>
+			            		<p>￥{{item.cost}}/{{item.price}}磅</p>
+			            		<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+			            	</div>
+			    		</div>
+			    	{{/each}}
+			    </script>
+		    </div>
+		    
+		    <div class="swiper-container swiper-container02 lists">
+		    	
+		        <div class="swiper-wrapper" id="tableware"></div>
+		    	<script id="tplTableware" type="text/html">
+			    	{{each list as item i}}
+			    		<div class="swiper-slide">
+			    			<a href="javascript:;">
+			            		<img src="{{item.aimg}}"/>
+			            	</a>
+			            	<div>
+			            		<p>{{item.name}}</p>
+			            		<p>{{item.nameEn}}</p>
+			            		<p>￥{{item.cost}}/{{item.price}}磅</p>
+			            		<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+			            	</div>
+			    		</div>
+			    	{{/each}}
+			    </script>
 		    </div>
 		    <div class="close">
 		    	<span>已选<span>1</span>件商品</span>
