@@ -1,0 +1,170 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.login-page,
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.pwdreset-wrapper {
+	background-color: #fff;
+}
+
+.page-header {
+    width: 750px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+.page-container {
+    width: 100%;
+    background-color: #fff;
+    .form-wrapper {
+        width: 590px;
+    	margin: 0 auto;
+    	list-style-type: none;
+    	padding: 10px 0;
+    	&.register-form{
+    		padding-top: 50px;
+    	}
+        li {
+            width: 100%;
+            height: 80px;
+            margin-top: 30px;
+            color: #505050;
+            &.no-margin {
+            	margin-top: 0;
+            }
+            input {
+            	width: 100%;
+            	height: 80px;
+            	line-height: 80px;
+            	text-indent: 28px;
+            	border: none;
+            	-webkit-appearance: none;
+            	outline: none;
+            	border-bottom: 1px solid #dcdcdc; /* no */
+            	font-size: 30px; /* px */
+            	&:focus {
+            		border-bottom-color: #e9546b;
+            	}
+            	&.txt-imgcode,
+	            &.txt-msgcode {
+	            	float: left;
+	            	width: 340px;
+	            }
+            }
+            a {
+            	display: inline-block;
+            	font-size: 24px; /* px */
+            	color: #3c78c8;
+            	line-height: 80px;
+            	&.forget-password,
+            	&.fast-login,
+            	&.account-login {
+            		float: right;
+            	}
+            	&.voice-password {
+            		text-decoration: underline;
+            	}
+            	&.btn {
+            		width: 100%;
+            		height: 80px;
+            		color: #fff;
+            		text-align: center;
+            		font-size: 30px; /* px */
+            		border-radius: 5px;
+            	}
+            	&.btn-login,
+            	&.btn-register,
+            	&.btn-nextstep {
+            		background-color: #e9546b;
+            	}
+            	&.btn-reg {
+            		background-color: #f8cbd2;
+            	}
+            	&.btn-msgcode {
+            		float: right;
+					width: 240px;
+					height: 80px;
+					text-align: center;
+					color: #fff;
+					background-color: #caa5a5;
+					border-radius: 5px;
+            	}
+	            &.imgcode {
+	            	float: right;
+	            	width: 238px;
+	            	height: 78px;
+	            	border: 1px solid #dcdcdc;
+	            	overflow: hidden;
+	            	img {
+	            		width: 100%;
+	            	}
+	            }
+            }
+            span {
+            	display: inline-block;
+            	font-size: 24px; /* px */
+            	color: #323232;
+            	line-height: 80px;
+            	&.auto-login {
+            		float: left;
+            		padding-left: 56px;
+            		cursor: pointer;
+            		background: {
+            			image: url('../imgs/icons/icon_rect_ckbox.png');
+            			repeat: no-repeat;
+            			size: 40px 40px;
+            			position: left center;
+            		}
+            		&.checked {
+            			background-image: url('../imgs/icons/icon_rect_ckbox_checked.png');
+            		}
+            	}
+            	&.tip,
+            	&.account-login {
+            		float: right;
+            	}
+            }
+        }
+
+    }
+}
+
+.page-footer {
+	width: 100%;
+	border-top: 1px solid #303242; /* no */
+	.wechat-login {
+		width: 90px;
+		margin: 0 auto;
+		padding-top: 30px;
+		.img {
+			display: block;
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+		}
+		.text {
+			padding-top: 16px;
+			font-size: 20px; /* px */
+			text-align: center;
+			color: #303242;
+		}
+	}
+}
