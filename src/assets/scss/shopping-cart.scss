@@ -297,6 +297,27 @@ body{
                 height: 160px;
                 
             }
+            >a:nth-of-type(2){
+                position: absolute;
+                right: 0;
+                top: 160px;
+                display: block;
+                width: 160px;
+                height: 50px;
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+                opacity: 0.5;
+                border-radius: 50px 0 0 50px;
+                >input{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+            }
             >p:nth-of-type(1){
                 position: absolute;
                 left: 270px;
@@ -807,6 +828,18 @@ body{
             margin-top: 10px;
             margin-left: 180px;
         }
+        .delete-picture{
+            display: none;
+            width: 150px;
+            height: 50px;
+            border: 1px solid #a0a0a0;
+            margin:0 auto ;
+            text-align: center;
+            line-height: 50px;
+            color: #a5a5a5;
+            border-radius:50px ;
+            margin-top: 20px;
+        }
     }
 }
 .container{
@@ -984,6 +1017,64 @@ body{
             color: #fff;
             font-size: 30px;
             background: #ea6378;
+        }
+    }
+}
+.picture-shade{
+    position: fixed;
+    display: none;
+    top: 0;left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, .8);  
+    .picture{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -350px;
+        width: 600px;
+        height: 700px;
+        border: 1px solid #e7566d;border-radius: 10px;
+        background: url("../imgs/order-submit/image_cake_wrapper.jpg") no-repeat;
+        background-size: 600px 600px;
+    }
+    .picture-img{
+        position: absolute;
+        left: 108px;
+        top: 108px;
+        width: 384px;
+        height: 384px;
+        
+    }
+    a{
+        display: block;
+        width: 150px;
+        height: 44px;
+        text-align: center;
+        line-height: 44px;
+        border: 1px solid #e7566d;;
+    }
+    a:nth-of-type(1){
+        position: absolute;
+        left: 130px;
+        bottom: 30px;
+        background-color: #e7566d;
+        color: #fff;
+    }
+    a:nth-of-type(2){
+        position: absolute;
+        left: 320px;
+        bottom: 30px;
+        color: #e7566d;
+        input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }

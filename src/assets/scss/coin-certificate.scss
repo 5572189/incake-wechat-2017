@@ -1,0 +1,503 @@
+.coin-certificate-layout{
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto;
+    .cake-exchange{
+        position: relative;
+        max-width: 750px;
+        width: 100%;
+        height: 1137px;
+        margin: 0 auto;
+        background: url("../imgs/coin-certificate/coin-certificateBg.png") no-repeat;
+        background-size: cover;
+        .center{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -315px;
+            margin-top: -187.5px;
+            width: 630px;
+            height: 370px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.6);
+            .head{
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 25px;
+                color: #fff;
+                background: #6d5455;
+                border-radius: 10px 10px 0 0;
+            }
+            p{
+                input{
+                    width: 320px;
+                    height: 60px;
+                    outline: none;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+            p:nth-of-type(1){
+                margin-left: 60px;
+                margin-top: 40px;
+            }
+            p:nth-of-type(2){
+                margin-left: 60px;
+                margin-top: 20px;
+            }
+            p:nth-of-type(3){
+                font-size: 18px;
+                color: #e7566d;
+                text-align: center;
+                margin-top: 30px;
+            }
+            .foot{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                a{
+                    float: left;
+                    display: block;
+                    width: 50%;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 25px;
+                }
+                a:nth-of-type(1){
+                    background: #f2b4be;
+                    border-bottom-left-radius: 10px;
+                }
+                a:nth-of-type(2){
+                    background: #e7566d;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+    }
+    
+    .coin-certificate{
+        max-width: 750px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        ul{
+            list-style: none;
+            li{
+                width: 350px;
+                height: 490px;
+                float: left;
+                margin: 0 10px;
+                border: 1px solid #dcdcdc;
+                box-shadow: 0 0 5px #dcdcdc;
+                border-radius: 10px;
+                margin-top: 20px;
+                overflow: hidden;
+                position: relative;
+                a:nth-of-type(1){
+                    position: relative;
+                    display: block;
+                    width: 350px;
+                    height: 350px;
+                }
+                a:nth-of-type(2){
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 350px;
+                    height: 60px;
+                    color: #fff;
+                    background-color: #45525d;
+                    text-align: center;
+                    line-height: 60px;
+                    font-size: 24px;
+                }
+                >p:nth-of-type(1){
+                    span:nth-of-type(1){
+                        position: absolute;
+                        left: 10px;
+                        top: 370px;
+                        font-size: 24px;
+                    }
+                    span:nth-of-type(2){
+                        position: absolute;
+                        left: 10px;
+                        top: 400px;
+                        font-size: 14px;
+                    }
+                }
+                >p:nth-of-type(2){
+                    >span{
+                        position: absolute;
+                        left: 220px;
+                        top: 385px;
+                        font-size: 18px;
+                        >span{
+                            font-size: 24px;
+                            color: #e9546b;
+                        }
+                    }
+                }
+            }
+            li.active{
+                a:nth-of-type(1):after{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: url("../imgs/coin-certificate/a-Bg.png") no-repeat;
+                    background-size: cover;
+                    z-index: 99;
+                }
+                a:nth-of-type(2){
+                    background: #b4c6d1;
+                }
+            }
+            li.hide{
+                display: none;
+            }
+        }
+    }
+    p:nth-of-type(1){
+       margin: 30px auto;
+        a{
+            position: relative;
+            display: block;
+            width: 220px;
+            height: 50px;
+            margin: 0 auto;
+            text-indent: 50px;
+            line-height: 50px;
+            border: 1px solid #515d67;
+            border-radius: 20px;
+            color: #515d67;
+            &:after{
+                position: absolute;
+                top: 18px;
+                left: 165px;
+                display: block;
+                width: 15px;
+                height: 18px;
+                content: '';
+                background: url("../imgs/icons/icon_db_arrow_down.png") no-repeat;
+                background-size: cover;
+                z-index: 99;
+            }
+        }
+        .active{
+            &:after{
+                position: absolute;
+                top: 18px;
+                left: 165px;
+                display: block;
+                width: 15px;
+                height: 18px;
+                content: '';
+                background: url("../imgs/icons/icon_db_arrow_up.png") no-repeat;
+                background-size: cover;
+                z-index: 99;
+            }
+        }
+    }
+    .mountings{
+        position: relative;
+        width: 710px;
+        margin:  90px auto;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 50px;
+        text-align: center;
+        
+        span{
+            position: absolute;
+            left: 280px;
+            top: -50px;
+            display: block;
+            width:150px;
+            background: #fff;
+            line-height: 100px;
+            font-size: 24px;
+            color: #45515e;
+        }
+    }
+    .cake-mountings{
+        max-width: 750px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-bottom: 100px;
+        ul{
+            list-style: none;
+            padding-bottom: 50px;
+            li{
+                width: 350px;
+                height: 490px;
+                float: left;
+                margin: 0 10px;
+                border: 1px solid #dcdcdc;
+                box-shadow: 0 0 5px #dcdcdc;
+                border-radius: 10px;
+                margin-top: 20px;
+                overflow: hidden;
+                position: relative;
+                a:nth-of-type(1){
+                    position: relative;
+                    display: block;
+                    width: 350px;
+                    height: 350px;
+                }
+                a:nth-of-type(2){
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 350px;
+                    height: 60px;
+                    color: #fff;
+                    background-color: #45525d;
+                    text-align: center;
+                    line-height: 60px;
+                    font-size: 24px;
+                }
+                >p:nth-of-type(1){
+                    span:nth-of-type(1){
+                        position: absolute;
+                        left: 10px;
+                        top: 370px;
+                        font-size: 24px;
+                    }
+                    span:nth-of-type(2){
+                        position: absolute;
+                        left: 10px;
+                        top: 400px;
+                        font-size: 14px;
+                    }
+                }
+                >p:nth-of-type(2){
+                    >span{
+                        position: absolute;
+                        left: 220px;
+                        top: 385px;
+                        font-size: 18px;
+                        >span{
+                            font-size: 24px;
+                            color: #e9546b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.layout{
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    display: none;
+}
+.settlement{
+    position: fixed;
+    bottom: 0;
+    display: block;
+    max-width: 750px;
+    width: 100%;
+    height: 90px;
+    background-color: #e9546b;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    color: #fff;
+    z-index: 998;
+}
+.dish-shade{
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 750px;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    .dish{
+        position: absolute;
+        left: 0;
+        bottom: -340px;
+        width: 750px;
+        background-color:rgba(255,255,255,0.9);
+        height: 340px;
+        >p{
+            text-align: center;
+            margin-top: 70px;
+            font-size: 24px;
+        }
+        ul{
+            list-style: none;
+            li{
+                float: left;
+                margin-right: 25px;
+            }
+            li:nth-of-type(1){
+                width: 50px;
+                height: 50px;
+                background: #b5c6d1;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 42px;
+                color: #fff;
+                font-size: 50px;
+                margin-left: 180px;
+            }
+            li:nth-of-type(2){
+                width: 245px;
+                height: 60px;
+                input{
+                    width: 245px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    background: #fff;
+                }
+            }
+            li:nth-of-type(3){
+                width: 50px;
+                height: 50px;
+                background: #45515d;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 42px;
+                color: #fff;
+                font-size: 50px;
+            }
+        }
+        a:nth-of-type(1){
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            background: #f1b4be;
+            color: #fff;
+        }
+        a:nth-of-type(2){
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            background: #e9546b;
+            color: #fff;
+        }
+    }
+}
+.candle-shade{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 750px;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    .candle{
+        position: absolute;
+        bottom: -670px;
+        width: 100%;
+        height: 670px;
+        background: #f1eee9;
+        >p{
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+        ul{
+            list-style: none;
+            float: left;
+            width: 375px;
+            height: 71px;
+            margin-bottom: 20px;
+            li{float: left;margin-right: 15px;}
+            li:nth-of-type(1){
+                width: 71px;
+                height: 71px;
+                margin-left: 30px;
+            }
+            li:nth-of-type(2){
+                width: 50px;
+                height: 50px;
+                background: #b5c6d1;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 42px;
+                color: #fff;
+                font-size: 50px;
+                margin-top: 10px;
+            }
+            li:nth-of-type(3){
+                width: 100px;
+                height: 50px;
+                border: 1px solid #000000;
+                margin-top: 10px;
+                input{
+                    width: 100px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    background: #fff;
+                }
+            }
+            li:nth-of-type(4){
+                width: 50px;
+                height: 50px;
+                background: #45515d;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 42px;
+                color: #fff;
+                font-size: 50px;
+                margin-top: 10px;
+            }
+        }
+        a:nth-of-type(1){
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            background: #f1b4be;
+            color: #fff;
+        }
+        a:nth-of-type(2){
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            background: #e9546b;
+            color: #fff;
+        }
+    }
+}

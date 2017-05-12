@@ -47,6 +47,7 @@
 						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 						<p><span class="minus03">-</span><span class="number03">1</span><span class="add03">+</span></p>
+						<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
 					</li>
 					<li>
 						<span class="pitch-on active"></span>
@@ -138,6 +139,17 @@
 				</a>
 			</div>
 		</div>
+		
+		<!--预览-->
+		<div class="picture-shade">
+			<div class="picture">
+				<div class="picture-img">
+					<img src="assets/imgs/order-submit/head.png" class="imagesrc"/>
+				</div>
+				<a href="javascript:;" class="picture-close">关闭</a>
+				<a href="javascript:;">重新上传<input class="inputFile" type="file" name="" id="file" /></a>
+			</div>
+		</div>
 		<!--加入购物车-->
 		<div class="shopping-cart">
 			<div class="shopping">
@@ -177,7 +189,7 @@
 					<input class="inputFile" type="file" name="" id="file" value="" />
 				</div>
 				<p>点击图标上传图片</p>
-				<a href="javascript:;" style="display: none;">删除</a>
+				<a href="javascript:;" class="delete-picture">删除</a>
 				<div class="confirm">
 					<a href="javascript:;">确定</a>
 				</div>
@@ -217,17 +229,18 @@
 				<a href="javascript:;"class="btn">确&nbsp;&nbsp;定</a>
 			</div>
 		</div>-->
+<script src="assets/plugins/LABjs/LAB.min.js"></script>
+		<script>
+			$LAB
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/jquery/jquery-1.8.3.min.js').wait()
+			.script('assets/plugins/swiper/js/swiper.min.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/plugins/maxlength/jquery.plugin.min.js').wait()
+			.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
+			.script('assets/plugins/cropper/cropper.js').wait()
+			.script('assets/js/shopping-cart.js');
+		</script>
 	</body>
-	<script src="assets/plugins/LABjs/LAB.min.js"></script>
-	<script>
-		$LAB
-		.script('assets/plugins/artTemplate/dist/template.js').wait()
-		.script('assets/jquery/jquery-1.8.3.min.js').wait()
-		.script('assets/plugins/swiper/js/swiper.min.js').wait()
-		.script('assets/plugins/underscore/underscore-min.js').wait()
-		.script('assets/plugins/maxlength/jquery.plugin.min.js').wait()
-		.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
-		.script('assets/plugins/cropper/cropper.js').wait()
-		.script('assets/js/shopping-cart.js');
-	</script>
+
 </html>

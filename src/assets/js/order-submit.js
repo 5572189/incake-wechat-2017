@@ -55,6 +55,13 @@
 			});
 			removeTouchmove();
 		});
+		$discount_shade.click(function(e){
+			if(e.target==$discount_shade[0]){
+				$discount_popup.animate({ right: '-550px' },function(){
+					$discount_shade.fadeOut();
+				});
+			}
+		});
 //		弹框里优惠券绑定事件
 		$discount_ul.on('click','li',function(){
 			$(this).addClass("active").siblings().removeClass("active");
@@ -218,11 +225,6 @@
 	$none.click(function(){
 		$address_shade.animate({"top":0})
 	});
-	$add_address.click(function(){
-		$address_shade.animate({"top":"-100%"});
-		$none.hide();
-		$have.show();
-	});
 	$have.click(function(){
 		$address_shade.animate({"top":0});
 	})
@@ -230,13 +232,102 @@
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
 	});
+	//画影
+	var $picture_shade=$(".picture-shade"),
+		$picture=$(".picture"),
+		$picture_close=$(".picture-close"),
+		$convention=$(".convention");
+	$convention.on("click",".drawing",function(){
+		$picture_shade.fadeIn(function(){
+			$picture.fadeIn();
+		});
+		touchmove();
+	});
+	$picture_close.click(function(){
+		$picture_shade.fadeOut();
+		removeTouchmove();
+	});
+	//	裁剪
+	(function(){
+		var $image = $('#image'),
+  			$file = $("#file"),
+ 			$page = $("body"),
+ 			$imagesrc = $(".imagesrc");
+	 			
+	 	$image.cropper({
+	 		aspectRatio: 1 / 1,
+        	autoCropArea: 1,
+			movable: false,
+	        zoomable: false,
+	        rotatable: false,
+	        scalable: false,
+	        background:false,
+	        modal:false,
+        	minContainerHeight:500
+		});
+		$page.on('click', '.inputFile, .reupload-image', function(e) {
+	        $inputImage = $(this);
+	        var URL = window.URL || window.webkitURL;
+	        var blobURL;
+		
+	        if (URL) {
+	            $inputImage.change(function() {
+	                var files = this.files;
+	                var file;
+					$(".container").fadeIn();
+	                if (!$image.data('cropper')) {
+	                    return;
+	                }
+	
+	                if (files && files.length) {
+	                    file = files[0];
+	
+	                    if (/^image\/\w+$/.test(file.type)) {
+	                        blobURL = URL.createObjectURL(file);
+	                        $image.one('built.cropper', function() {
+	
+	                            // Revoke when load complete
+	                            URL.revokeObjectURL(blobURL);
+	                        }).cropper('reset').cropper('replace', blobURL);
+	                        $inputImage.val('');
+	                        // show imgcropper container
+	                        //$imgCropper.show();
+	                    } else {
+	                        window.alert('Please choose an image file.');
+	                    }
+	                }
+	            });
+	        }
+	    });
+	  	$(".tailor").click(function(){
+	  		var img = $image.cropper('getCroppedCanvas', {
+	        width: 600,
+	        height: 600
+	    	}).toDataURL('image/jpeg');
+	    	$imagesrc.attr("src",img);
+	    	$(".container").fadeOut();
+	  	});
+	  	$(".reupload-image").click(function(){
+	  		$(".container").fadeOut();
+	  	})
+			
+	})();
+	
+	
+	
 //	地址修改
+	$add_address.click(function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		$modification_address.animate({"top":"0"});
+	});
 	$amend.click(function(event){
 		event.preventDefault();
 		event.stopPropagation();
 		$modification_address.animate({"top":"0"})
 	});
 	$save.click(function(){
+		$address_shade.animate({"top":"-100%"});
 		$modification_address.animate({"top":"-100%"});
 	});
 //	生日牌选择

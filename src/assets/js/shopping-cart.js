@@ -205,11 +205,12 @@
 		$shade_other01.click(function(){
 			$last_li01.focus();
 		});
-		$last_li01.focus(function(){
-			$shade_other01.addClass("active").siblings().removeClass("active");
-		});
+		
 		$shade_other02.click(function(){
 			$last_li02.focus();
+		});
+		$last_li01.focus(function(){
+			$shade_other01.addClass("active").siblings().removeClass("active");
 		});
 		$last_li02.focus(function(){
 			$shade_other02.addClass("active").siblings().removeClass("active");
@@ -239,7 +240,11 @@
 		var $image = $('#image'),
   			$file = $("#file"),
  			$page = $("body"),
- 			$imagesrc = $(".imagesrc");
+ 			$imagesrc = $(".imagesrc"),
+ 			$uploading=$(".uploading"),
+ 			$picture_shade=$(".picture-shade"),
+ 			$picture=$(".picture"),
+ 			$picture_close=$(".picture-close");
 	 			
 	 	$image.cropper({
 	 		aspectRatio: 1 / 1,
@@ -293,10 +298,26 @@
 	    	}).toDataURL('image/jpeg');
 	    	$imagesrc.attr("src",img);
 	    	$(".container").fadeOut();
+	    	$uploading.text("预览");
 	  	});
 	  	$(".reupload-image").click(function(){
 	  		$(".container").fadeOut();
-	  	})
-			
+	  	});
+	  	
+	  	
+	  	$(".tailor").click(function(){
+	  		if($(".uploading").text()==='预览'){
+		  		$uploading.click(function(){
+		  			$picture_shade.fadeIn(function(){
+		  				$picture.fadeIn();
+		  			})
+		  		});
+		  		$picture_close.click(function(){
+		  			$picture_shade.fadeOut();
+		  		});
+		  	}
+	  	});
+	  
 	})();
+	
 })(jQuery, window, document);

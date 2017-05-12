@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+	
+	<title>INCAKE | 蛋糕卡升级</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/cake-card-upgrade.css"/>
+</head>
+	<body>
+		<div class="cake-card-layout">
+			<div class="hade clearfix">
+				<div class="cake">
+					<span>蛋糕卡升级</span>
+					<span>CARD</span>
+				</div>
+				<div class="upgrade">
+					UPGRADE
+				</div>
+			</div>
+			<div class="doll">
+				<span>+</span><span>￥69</span><span>就得到价值200元的翻糖玩偶!</span>
+			</div>
+			<div class="centre">
+				<p>一对一定制的人偶小像，</p>
+				<p>是藏在蛋糕之中的惊喜。</p>
+				<p>上传图片，专人沟通，</p>
+				<p>打造只属于你的匠心之作，</p>
+				<p>不止甜蜜，更是只属于你的专属礼物</p>
+			</div>
+			<div class="footer">
+				<div>
+					<p><span>请输入蛋糕卡ID的后五位</span><input type="text"  /></p>
+				</div>
+				<div>
+					<p><span>蛋糕卡密码</span><input type="text"  /></p>
+				</div>
+				
+				<p class="add checked"><span>+69元</span><span>您只需要支付69元，即可升级成惊喜卡</span></p>
+				<p>蛋糕卡ID输入错误，请重新输入!</p>
+				<a href="javascript:;" class="pay">去支付</a>
+			</div>
+		</div>
+		
+		<div class="shade-upgrade">
+			<div class="upgrade-succeed">
+				<p><span></span><span>恭喜你升级成功!</span></p>
+				<a href="javascript:;" class="confirm">确定</a>
+			</div>
+		</div>
+	</body>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+		.script('assets/jquery/jquery-1.8.3.min.js').wait()
+		.script('assets/js/cake-card-upgrade.js');
+	</script>
+</html>
