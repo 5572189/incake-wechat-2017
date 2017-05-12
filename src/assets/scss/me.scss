@@ -7,13 +7,13 @@ body{
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    background: #fff;
     
 }
-#center-top,#center,#center-bottom,#setting{margin-top: 40px;}
+#center-top,#center,#center-bottom,#setting{margin-top: 40px;background: #fff;}
 //头部
 #header{
     height: 170px;
+    background: #fff;
     .head{
         float: left;
         position: relative;

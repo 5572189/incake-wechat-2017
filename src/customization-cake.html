@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+		<script src="assets/plugins/lib-flexible/flexible.js"></script>
+		<link rel="apple-touch-icon" href="favicon.png">
+		<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+		
+		<title>INCAKE | 翻糖定制</title>
+		<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+		<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/customization-cake.css"/>
+		<link rel="shortcut icon" href="favicon.ico" /> 
+	</head>
+	<body>
+		<div class="customization-layout">
+			<div class="head">
+				<a href="javascript:;">
+					<img src="assets/imgs/customization-layout/customization.png"/>
+					<p>翻糖SUGAR</p>
+					<p>定制CUSTOMIZATION</p>
+				</a>
+				<div>
+					<p>每个人心中都有一个关于蛋糕的梦想吧？打造只属于自己的私人定制，那是清甜柔软的翻糖DIY，那是我们爱上生活的最初的理由。</p>
+				</div>
+			</div>
+			<div class="center">
+				<p>我的翻糖蛋糕定制申请</p>
+				<div class="require">
+					<span>定制详情：</span>
+					<textarea name="" rows="" cols=""placeholder="请写下您的要求"></textarea>
+				</div>
+				<div class="information">
+					<p><span>联系人:</span><input type="text"placeholder="请输入您的姓名"/></p>
+					<div class="clearfix"><span>手机号:</span>
+						<p>
+							<input type="text" name="" id="" value="" placeholder="请输入您的手机号"/>
+							<a href="javascript:;">获取验证码</a>
+						</p>
+					</div>
+					<p><span>验证码:</span><input type="text"/></p>
+				</div>
+			</div>
+			<div class="rule">
+				<dl>
+					<dt>定制蛋糕规则：</dt>
+					<dd>1、提交信息后由客服主动联系您确定蛋糕细节</dd>
+					<dd>2、定制蛋糕细节确认完毕由客服代下单,客户登录账户支付订单费用。</dd>
+					<dd>3、高级翻糖定制1800元起,单层定制需4天，多层定制需7天时间（从订单成功支付后次日起计算）</dd>
+				</dl>
+			</div>
+			<div class="foot">
+				<a href="javascript:;">提&nbsp;&nbsp;交</a>
+			</div>
+			<!--图形验证码弹框-->
+			<div class="verify-pop-up">
+				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
+				<p>请您输入图形验证码</p>
+			</div>
+			<!--手机号弹框-->
+			<div class="phone-pop-up">
+				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
+				<p>请您输入正确的手机号</p>
+			</div>
+			<!--要求弹框-->
+			<div class="require-pop-up">
+				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
+				<p>您还没有写下您的要求哦</p>
+			</div>
+		</div>
+		<script src="assets/plugins/LABjs/LAB.min.js"></script>
+		<script>
+			$LAB
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/jquery/jquery-1.8.3.min.js').wait();
+		</script>
+	</body>
+</html>
