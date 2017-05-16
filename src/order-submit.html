@@ -307,39 +307,50 @@
 				</div>
 			</div>
 			<!--修改地址-->	
-			<div class="modification-address">
-				<ul>
-					<li>
-						<span>收货人</span>
-						<input type="text" name="" id="" value="" placeholder="姓名"/>
-					</li>
-					<li>
-						<span>联系电话</span>
-						<input type="text" name="" id="" value="" placeholder="手机号"/>
-					</li>
-					<li>
-						<a href="javascript:;"><span>选择城市</span>
-							<input type="hidden" name="city_id" id="cityId" value="">  
-							<span id="city-span">请选择</span>
-						</a>
-						
-					</li>
-					<li>
-						<a href="javascript:;"><span>选择区域</span>
-							<input type="hidden" name="region_id" id="regionId" value="">  
-							<span id="region-span">请选择</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;"><span>详细地址</span>
-							<input type="hidden" name="address_id" id="addressId" value="">  
-							<span id="address-span">街道/小区/写字楼</span>
-						</a>
-					</li>
-					<li><input type="text" name="" id="" value="" placeholder="楼号/单元/门牌号"/></li>
-				</ul>
-				<a href="javascript:;" class="save">保存并使用</a>
+			<div class="add-address-layout">
+				<div id="add-address-head">
+					<ul>
+						<li>
+							<span>收货人</span>
+							<input class="inp" type="text" value="张三" />
+						</li>
+						<li>
+							<span>移动电话</span>
+							<input class="inp" type="text" value="138888888888" />
+						</li>
+						<li>
+							<span>固定电话</span>
+							<input class="inp" type="text" />
+						</li>
+					</ul>
+				</div>
+		
+				<div class="form-item item-line" id="selectContact">
+					<div class="pc-box">
+						<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
+						<input type="hidden" name="contact_city_code" id="contact_city_code" value="" data-city-name="">
+						<span class="data" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="showContact"><span>四川省</span> <span>成都市</span> <span>青羊区</span></span>
+					</div>
+				</div>
+				<div class="address">
+					<span>详细地址</span><input type="text" />
+				</div>
+				<div id="center">
+					<ul>
+						<li class="delivery-area">
+							<a href="javascript:;">查看配送范围</a>
+						</li>
+						<li class="default-address">
+							<a href="javascript:;" class="active">设为默认地址</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="javascript:;">提交</a>
+				</div>
 			</div>
+			
+				
 			<!--支付方式-->	
 			<div class="action-sheet" id="paymentAction">
 			<div class="action-header">

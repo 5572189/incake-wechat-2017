@@ -448,7 +448,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         margin-top: 100px;
         max-width: 750px;
         background: #fafafa;
-        height: 510px;
+        height: 600px;
         width: 100%;
         a{
             display: block;
@@ -460,6 +460,9 @@ $loc-triangle-bgcolor: #f0f0f0;
             background: url("../imgs/detail/hierarchy.png") no-repeat;
             background-size: 100% 100%;
         }
+        img{
+            margin-top: 90px;
+        }
     }
    
 }
@@ -470,6 +473,7 @@ $loc-triangle-bgcolor: #f0f0f0;
     margin: 0 auto;
     overflow: hidden;
     background: #fff;
+    padding-bottom: 100px;
     ul{
         list-style: none;
         padding-top: 40px;

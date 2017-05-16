@@ -220,14 +220,32 @@
 		$address_shade=$(".address-shade"),
 		$add_address=$("#add-address"),
 		$amend = $(".amend"),
+		$add_layout =$(".add-address-layout"),
 		$modification_address=$(".modification-address"),
-		$save = $(".save");
+		$save = $(".save"),
+		$foot =$(".footer");
 	$none.click(function(){
 		$address_shade.animate({"top":0})
 	});
 	$have.click(function(){
 		$address_shade.animate({"top":0});
-	})
+	});
+//	修改地址
+	$amend.click(function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		$add_layout.animate({"top":0});
+	});
+	$add_address.click(function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		$add_layout.animate({"top":0});
+	});
+//	提交
+	$foot.click(function(){
+		$address_shade.animate({"top":"-100%"});
+		$add_layout.animate({"top":"-100%"});
+	});
 	$("#address-div ul").on("click","li",function(){
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
@@ -320,11 +338,6 @@
 		event.preventDefault();
 		event.stopPropagation();
 		$modification_address.animate({"top":"0"});
-	});
-	$amend.click(function(event){
-		event.preventDefault();
-		event.stopPropagation();
-		$modification_address.animate({"top":"0"})
 	});
 	$save.click(function(){
 		$address_shade.animate({"top":"-100%"});
@@ -574,82 +587,56 @@
 	    });
 	    
 	})();
+
 //	城市选择
-	;(function(){
-		window.adaptive.desinWidth = 750;
-        window.adaptive.init();
-	    var city_span = document.querySelector('#city-span');
-	    var cityId = document.querySelector('#cityId');
-	    city_span.addEventListener('click', function () {
-	    	
-	        var bankSelect = new IosSelect(1, 
-	            [city],
-	            {
-	            	
-	                title: '城市选择',
-	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
-	                cssUnit: 'rem',
-	                callback: function (selectOneObj) {
-	                    cityId.value = selectOneObj.id;
-	                    city_span.innerHTML = selectOneObj.value;
-	                    city_span.dataset['id'] = selectOneObj.id;
-	                    city_span.dataset['value'] = selectOneObj.value;
-	                }
-	        });
+	(function(){
+		$(".default-address").on("click","a",function(){
+			if($(this).hasClass("active")){
+				$(this).removeClass("active");
+			}else{
+				$(this).addClass("active");
+			}
+		});
+		
+		(function() {
+			window.adaptive.desinWidth = 750;
+	        window.adaptive.init();
 	        
-	    });
-	    
+			var selectContactDom = $('#selectContact');
+			var showContactDom = $('#showContact');
+			var contactProvinceCodeDom = $('#contact_province_code');
+			var contactCityCodeDom = $('#contact_city_code');
+			selectContactDom.bind('click', function() {
+				var sccode = showContactDom.attr('data-city-code');
+				var scname = showContactDom.attr('data-city-name');
+	
+				var oneLevelId = showContactDom.attr('data-province-code');
+				var twoLevelId = showContactDom.attr('data-city-code');
+				var threeLevelId = showContactDom.attr('data-district-code');
+				var iosSelect = new IosSelect(3, 
+					[iosProvinces, iosCitys, iosCountys], 
+					{
+						title: '地址选择',
+	                    itemHeight: 0.933333,
+	                    headerHeight: 1.18,
+	                	cssUnit: 'rem',
+						relation: [1, 1, 0],
+						oneLevelId: oneLevelId,
+						twoLevelId: twoLevelId,
+						threeLevelId: threeLevelId,
+						callback: function(selectOneObj, selectTwoObj, selectThreeObj) {
+							contactProvinceCodeDom.val(selectOneObj.id);
+							contactProvinceCodeDom.attr('data-province-name', selectOneObj.value);
+							contactCityCodeDom.val(selectTwoObj.id);
+							contactCityCodeDom.attr('data-city-name', selectTwoObj.value);
+		
+							showContactDom.attr('data-province-code', selectOneObj.id);
+							showContactDom.attr('data-city-code', selectTwoObj.id);
+							showContactDom.attr('data-district-code', selectThreeObj.id);
+							showContactDom.html('<span>' + selectOneObj.value + '</span><span> ' + selectTwoObj.value + ' </span><span>' + selectThreeObj.value + '</span>');
+						}
+				});
+			});
+		})();
 	})();
-//	区域
-	;(function(){
-		window.adaptive.desinWidth = 750;
-        window.adaptive.init();
-	    var region_span = document.querySelector('#region-span');
-	    var regionId = document.querySelector('#regionId');
-	    region_span.addEventListener('click', function () {
-	        var bankSelect = new IosSelect(1, 
-	            [region],
-	            {
-	            	
-	                title: '城市选择',
-	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
-	                cssUnit: 'rem',
-	                callback: function (selectOneObj) {
-	                    regionId.value = selectOneObj.id;
-	                    region_span.innerHTML = selectOneObj.value;
-	                    region_span.dataset['id'] = selectOneObj.id;
-	                    region_span.dataset['value'] = selectOneObj.value;
-	                }
-	        });
-	    });
-	})();
-//	街道
-	;(function(){
-		window.adaptive.desinWidth = 750;
-        window.adaptive.init();
-	    var address_span = document.querySelector('#address-span');
-	    var addressId = document.querySelector('#addressId');
-	    address_span.addEventListener('click', function () {
-	        var bankSelect = new IosSelect(1, 
-	            [address],
-	            {
-	            	
-	                title: '城市选择',
-	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
-	                cssUnit: 'rem',
-	                callback: function (selectOneObj) {
-	                    addressId.value = selectOneObj.id;
-	                    address_span.innerHTML = selectOneObj.value;
-	                    address_span.dataset['id'] = selectOneObj.id;
-	                    address_span.dataset['value'] = selectOneObj.value;
-	                }
-	        });
-	    });
-	})();	
 })(jQuery, window, document);

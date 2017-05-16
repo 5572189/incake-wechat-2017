@@ -1,0 +1,116 @@
+.ui-ios-overlay {
+	z-index: 99999;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 2.666667rem;
+	height: 2.666667rem;
+	margin-left: -1.333333rem;
+	margin-top: -1.333333rem;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
+	background: rgba(0, 0, 0, .8);
+	border-radius: .266667rem
+}
+
+.ui-ios-overlay .title {
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+	position: absolute;
+	bottom: .4rem;
+	left: 0;
+	width: 100%
+}
+
+[data-dpr="1"] .ui-ios-overlay .title {
+	font-size: 13px
+}
+
+[data-dpr="2"] .ui-ios-overlay .title {
+	font-size: 26px
+}
+
+[data-dpr="3"] .ui-ios-overlay .title {
+	font-size: 39px
+}
+
+.ui-ios-overlay img {
+	display: block;
+	margin: 20% auto 0
+}
+
+.ui-ios-overlay .spinner {
+	left: 50%!important;
+	top: 40%!important
+}
+
+.ios-overlay-show {
+	-webkit-animation-name: a;
+	-webkit-animation-duration: .75s;
+	-moz-animation-name: a;
+	-moz-animation-duration: .75s;
+	-ms-animation-name: a;
+	-ms-animation-duration: .75s;
+	-o-animation-name: a;
+	-o-animation-duration: .75s;
+	animation-name: a;
+	animation-duration: .75s
+}
+
+@-webkit-keyframes a {
+	0% {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes a {
+	0% {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+.ios-overlay-hide {
+	-webkit-animation-name: b;
+	-webkit-animation-duration: .75s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name: b;
+	-moz-animation-duration: .75s;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-name: b;
+	-ms-animation-duration: .75s;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-name: b;
+	-o-animation-duration: .75s;
+	-o-animation-fill-mode: forwards;
+	animation-name: b;
+	animation-duration: .75s;
+	animation-fill-mode: forwards
+}
+
+@-webkit-keyframes b {
+	0% {
+		opacity: 1
+	}
+	to {
+		opacity: 0
+	}
+}
+
+@keyframes b {
+	0% {
+		opacity: 1
+	}
+	to {
+		opacity: 0
+	}
+}
+
+
+/*# sourceMappingURL=iosOverlay.css.map */

@@ -33,28 +33,28 @@
 	
 	//数量增加减少
 	(function(){
-		var $add = $(".add"),
-			$subtract = $(".subtract"),
+		var $add = $(".dish-add"),
+			$subtract = $(".dish-subtract"),
 			num = 0;
 		
 		$add.click(function(){
-			amout = parseInt($(".number").val());
+			amout = parseInt($(".dish-number").val());
 			amout++;
 			if(amout > 1){
 				$subtract.removeClass('disabled').css("background","#45515e");
 			}
-			$(".number").val(amout);
+			$(".dish-number").val(amout);
 		});
 		$subtract.click(function(){
 			if($(this).hasClass("disabled")){
 				return false;
 			}
-			amout = parseInt($(".number").val());
+			amout = parseInt($(".dish-number").val());
 			amout--;
 			if(amout <= 1){
 				$(this).addClass('disabled').css("background","#b5c6d1");
 			}
-			$(".number").val(amout);
+			$(".dish-number").val(amout);
 		})
 	})();
 	

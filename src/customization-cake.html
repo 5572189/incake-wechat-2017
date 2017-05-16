@@ -12,8 +12,7 @@
 		
 		<title>INCAKE | 翻糖定制</title>
 		<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-		<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/plugins/iOS-Overlay/css/iosOverlay.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/customization-cake.css"/>
 		<link rel="shortcut icon" href="favicon.ico" /> 
@@ -40,11 +39,11 @@
 					<p><span>联系人:</span><input type="text"placeholder="请输入您的姓名"/></p>
 					<div class="clearfix"><span>手机号:</span>
 						<p>
-							<input type="text" name="" id="" value="" placeholder="请输入您的手机号"/>
-							<a href="javascript:;">获取验证码</a>
+							<input type="text" class="txt-mobile" placeholder="请输入您的手机号"/>
+							<a href="javascript:;" class="btn-vcode">获取验证码</a>
 						</p>
 					</div>
-					<p><span>验证码:</span><input type="text"/></p>
+					<p><span>验证码:</span><input type="text" class="txt-vcode"/></p>
 				</div>
 			</div>
 			<div class="rule">
@@ -56,29 +55,17 @@
 				</dl>
 			</div>
 			<div class="foot">
-				<a href="javascript:;">提&nbsp;&nbsp;交</a>
-			</div>
-			<!--图形验证码弹框-->
-			<div class="verify-pop-up">
-				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
-				<p>请您输入图形验证码</p>
-			</div>
-			<!--手机号弹框-->
-			<div class="phone-pop-up">
-				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
-				<p>请您输入正确的手机号</p>
-			</div>
-			<!--要求弹框-->
-			<div class="require-pop-up">
-				<span><img src="assets/imgs/icons/icon_mistake.png"/></span>
-				<p>您还没有写下您的要求哦</p>
+				<a href="javascript:;" class="btn-login">提&nbsp;&nbsp;交</a>
 			</div>
 		</div>
 		<script src="assets/plugins/LABjs/LAB.min.js"></script>
 		<script>
 			$LAB
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
-			.script('assets/jquery/jquery-1.8.3.min.js').wait();
+			.script('assets/jquery/jquery-1.8.3.min.js').wait()
+			.script('assets/plugins/iOS-Overlay/js/iosOverlay.js').wait()
+			.script('assets/plugins/iOS-Overlay/js/spin.min.js').wait()
+			.script('assets/js/customization-cake.js').wait();
 		</script>
 	</body>
 </html>
