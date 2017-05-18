@@ -216,25 +216,74 @@
 			$shade_other02.addClass("active").siblings().removeClass("active");
 		});
 	})();
-//	优惠购遮罩
-//	(function(){
-//		var $privilege = $(".privilege"),
-//			$privilege_commodity = $(".privilege-commodity"),
-//			$favorable = $(".favorable"),
-//			$btn = $(".btn");
-//		$favorable.click(function(){
-//			$privilege.fadeIn(function(){
-//				$privilege_commodity.animate({ right: '0' });
-//			});
-//		});
-//		$btn.click(function(){
-//			$privilege_commodity.animate({ right: '-100%' }, function() {
-//				$privilege.fadeOut();
-//			});
-//		})
-//	})();
-	
 
+
+	
+	    
+		(function(){
+		var $image = $('#image01'),
+  			$file = $("#file01"),
+ 			$page01 = $("body"),
+ 			$imagesrc01 = $(".imagesrc01");
+	 			
+	 	$image.cropper({
+	 		aspectRatio: 1 / 1,
+        	autoCropArea: 1,
+			movable: false,
+	        zoomable: false,
+	        rotatable: false,
+	        scalable: false,
+	        background:false,
+	        modal:false,
+        	minContainerHeight:500
+		});
+		$page01.on('click', '.inputFile01', function(e) {
+	        $inputImage = $(this);
+	        var URL = window.URL || window.webkitURL;
+	        var blobURL;
+	        if (URL) {
+	            $inputImage.change(function() {
+	                var files = this.files;
+	                var file;
+					$(".container01").fadeIn();
+	                if (!$image.data('cropper')) {
+	                    return;
+	                }
+	
+	                if (files && files.length) {
+	                    file = files[0];
+	
+	                    if (/^image\/\w+$/.test(file.type)) {
+	                        blobURL = URL.createObjectURL(file);
+	                        $image.one('built.cropper', function() {
+	
+	                            // Revoke when load complete
+	                            URL.revokeObjectURL(blobURL);
+	                        }).cropper('reset').cropper('replace', blobURL);
+	                        $inputImage.val('');
+	                        // show imgcropper container
+	                        //$imgCropper.show();
+	                    } else {
+	                        window.alert('Please choose an image file.');
+	                    }
+	                }
+	            });
+	        }
+	    });
+	    
+	  	$(".tailor01").click(function(){
+	  		var img = $image.cropper('getCroppedCanvas', {
+	        width: 600,
+	        height: 600
+	    	}).toDataURL('image/jpeg');
+	    	$(".container01").fadeOut();
+	    	$imagesrc01.attr("src",img);
+	  	});
+	  	$(".reupload-image01").click(function(){
+	  		$(".containe01").fadeOut();
+	  	});
+	  
+	})();  
 //	裁剪
 	(function(){
 		var $image = $('#image'),
@@ -257,11 +306,10 @@
 	        modal:false,
         	minContainerHeight:500
 		});
-		$page.on('click', '.inputFile, .reupload-image', function(e) {
+		$page.on('click', '.inputFile', function(e) {
 	        $inputImage = $(this);
 	        var URL = window.URL || window.webkitURL;
 	        var blobURL;
-		
 	        if (URL) {
 	            $inputImage.change(function() {
 	                var files = this.files;
@@ -291,6 +339,7 @@
 	            });
 	        }
 	    });
+	    
 	  	$(".tailor").click(function(){
 	  		var img = $image.cropper('getCroppedCanvas', {
 	        width: 600,

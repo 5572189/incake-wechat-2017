@@ -333,16 +333,7 @@
 	
 	
 	
-//	地址修改
-	$add_address.click(function(event){
-		event.preventDefault();
-		event.stopPropagation();
-		$modification_address.animate({"top":"0"});
-	});
-	$save.click(function(){
-		$address_shade.animate({"top":"-100%"});
-		$modification_address.animate({"top":"-100%"});
-	});
+
 //	生日牌选择
 	;(function(){
 		window.adaptive.desinWidth = 750;

@@ -322,10 +322,10 @@
 .dish-shade{
     position: fixed;
     display: none;
-    left: 0;
     top: 0;
     width: 750px;
     height: 100%;
+    margin: 0 auto;
     background: rgba(0,0,0,0.7);
     z-index: 999;
     .dish{
@@ -408,11 +408,11 @@
 }
 .candle-shade{
     position: fixed;
-    left: 0;
     top: 0;
     display: none;
     width: 750px;
     height: 100%;
+    margin: 0 auto;
     background: rgba(0,0,0,0.7);
     z-index: 999;
     .candle{

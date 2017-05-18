@@ -22,13 +22,15 @@
 		});
 	});
 	$certificate.on("click","li",function(){
-		if(!$(this).hasClass("active")){
-			$(this).addClass("active");
-			$(this).find(".immediately").text("取消购买");
-		}else{
-			$(this).removeClass("active");
-			$(this).find(".immediately").text("立即购买");
-		}
+		$(this).addClass("active").find(".immediately").text("取消购买");
+		$(this).siblings().removeClass("active").find(".immediately").text("立即购买");
+//		if(!$(this).hasClass("active")){
+//			$(this).addClass("active");
+//			$(this).find(".immediately").text("取消购买");
+//		}else{
+//			$(this).removeClass("active");
+//			$(this).find(".immediately").text("立即购买");
+//		}
 	});
 	
 	//数量增加减少
