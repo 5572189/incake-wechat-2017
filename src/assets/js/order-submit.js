@@ -30,6 +30,7 @@
 			$mother_confirm=$(".mother-confirm"),
 			$mother_word = $(".mother-word"),
 			$birthdayWrite = $(".birthdayWrite"),
+			$orderWrite = $(".orderWrite"),
 			$surprise=$(".surprise");
 			$surprised_shade=$(".surprised-shade"),
 			$surprised_popup=$(".surprised-popup"),
@@ -109,26 +110,24 @@
 	    	max: 50,
 	    	feedbackText: '还可输入{r}字'
 	    });
+	    $orderWrite.maxlength({
+	    	max: 200,
+	    	feedbackText: '还可输入{r}字'
+	    });
 	    var data = {
 	    	list :[{
 	    		cost:'30',
-	    		price:'10',
 	    		active:true
 	    	},{
-	    		cost:'30',
-	    		price:'10'
+	    		cost:'30'
 	    	},{
-	    		cost:'30',
-	    		price:'10'
+	    		cost:'30'
 	    	},{
-	    		cost:'30',
-	    		price:'10'
+	    		cost:'30'
 	    	}]
 	    };
 	    var discount_ul = template('tplDiscount', data);
-	    var cash_coupon = template('tplCashcoupon', data);
 	    $discount_ul.html(discount_ul);
-	    $cash_coupon.html(cash_coupon);
 	}
 //	蛋糕款式渲染
 	function intiData(){
@@ -253,7 +252,6 @@
 	//画影
 	var $picture_shade=$(".picture-shade"),
 		$picture=$(".picture"),
-		$picture_close=$(".picture-close"),
 		$convention=$(".convention");
 	$convention.on("click",".drawing",function(){
 		$picture_shade.fadeIn(function(){
@@ -261,9 +259,37 @@
 		});
 		touchmove();
 	});
-	$picture_close.click(function(){
-		$picture_shade.fadeOut();
-		removeTouchmove();
+	$picture_shade.click(function(e){
+		if(e.target==$picture_shade[0]){
+			$picture_shade.fadeOut();
+			removeTouchmove();
+		}
+	});
+//	蛋糕卡
+	var $cake_conversion = $(".cake-conversion"),
+		$cake_number = $(".cake-number"),
+		$cakeCard = $(".cakeCard").find("a");
+		$cake_add = $(".cake-add"),
+		$cake_card = $(".cake-card"),
+		$cake_complete = $(".cake-complete");
+	$cakeCard.click(function(){
+		$cake_card.fadeIn();
+	});
+	
+	$cake_card.click(function(e){
+		if(e.target == $cake_card[0]){
+			$cake_card.fadeOut();
+		}
+	})
+	$cake_conversion.click(function(){
+		var number = $cake_number.val();
+		$cake_add.append("<li>"+number+"<span></span></li>");
+	});
+	$cake_add.on('click','span',function(){
+		$(this).parent().remove();
+	});
+	$cake_complete.click(function(){
+		$cake_card.fadeOut();
 	});
 	//	裁剪
 	(function(){
@@ -373,6 +399,7 @@
 		var $oPaymentAction = $('#paymentAction'),
 			$oBtnPayment = $('#btnPayment'),
 			$payShow = $(".payShow"),
+			$cake = $(".cake-card"),
 			tl = new TimelineLite();
 
 		// 切换支付方式
@@ -418,11 +445,7 @@
 				y: '100%',
 				ease: Linear.easeOut
 			});
-			if($oBtnPayment.html()==='兑换卡支付'){
-				$payShow.show()
-			}else{
-				$payShow.hide();
-			}
+			
 		});
 	}
 //	发票选择

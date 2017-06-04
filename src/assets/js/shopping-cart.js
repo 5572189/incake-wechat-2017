@@ -220,7 +220,7 @@
 
 	
 	    
-		(function(){
+	(function(){
 		var $image = $('#image01'),
   			$file = $("#file01"),
  			$page01 = $("body"),
@@ -293,7 +293,8 @@
  			$uploading=$(".uploading"),
  			$picture_shade=$(".picture-shade"),
  			$picture=$(".picture"),
- 			$picture_close=$(".picture-close");
+ 			$picture_close=$(".picture-close"),
+ 			pid="0";
 	 			
 	 	$image.cropper({
 	 		aspectRatio: 1 / 1,
@@ -308,6 +309,7 @@
 		});
 		$page.on('click', '.inputFile', function(e) {
 	        $inputImage = $(this);
+	        pid=$inputImage.closest('li').attr('pid');
 	        var URL = window.URL || window.webkitURL;
 	        var blobURL;
 	        if (URL) {
@@ -347,25 +349,28 @@
 	    	}).toDataURL('image/jpeg');
 	    	$imagesrc.attr("src",img);
 	    	$(".container").fadeOut();
-	    	$uploading.text("预览");
+	    var currentli=$('.convention').children('li[pid='+pid+']');
+	    currentli.attr("viewImage",img);
+	    currentli.find('.uploading').text('预览');
 	  	});
 	  	$(".reupload-image").click(function(){
 	  		$(".container").fadeOut();
 	  	});
-	  	
-	  	
-	  	$(".tailor").click(function(){
-	  		if($(".uploading").text()==='预览'){
-		  		$uploading.click(function(){
-		  			$picture_shade.fadeIn(function(){
-		  				$picture.fadeIn();
-		  			})
-		  		});
-		  		$picture_close.click(function(){
-		  			$picture_shade.fadeOut();
-		  		});
-		  	}
-	  	});
+	  	$(".uploading").click(function(){
+	  		var $this=$(this);
+	  		if($this.text()==='预览'){
+	  			$(".picture-img").children().removeAttr('src');
+	  			var viewimage =$this.closest('li').attr('viewimage');
+	  			$(".picture-img").children().attr('src',viewimage);
+	  			$picture_shade.fadeIn(function(){
+	  				$picture.fadeIn();
+	  			});
+	  		}
+		});
+		  	
+	 	$picture_close.click(function(){
+  			$picture_shade.fadeOut();
+  		});
 	  
 	})();
 	

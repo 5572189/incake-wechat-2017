@@ -39,7 +39,18 @@ body{
                 display: block;
                 width: 160px;
                 height: 160px;
-                
+                &.active:after{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-image: url("../imgs/shopping-cart/soldout_bg.png");
+                    background-repeat: no-repeat;
+                    background-size: 160px 160px;
+                }
             }
             >p:nth-of-type(1){
                 position: absolute;
@@ -295,6 +306,18 @@ body{
                 display: block;
                 width: 160px;
                 height: 160px;
+                &.active:after{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-image: url("../imgs/shopping-cart/soldout_bg.png");
+                    background-repeat: no-repeat;
+                    background-size: 160px 160px;
+                }
                 
             }
             >a:nth-of-type(2){

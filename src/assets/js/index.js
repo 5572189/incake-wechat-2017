@@ -113,7 +113,41 @@
 		});
 		
 		
-		
+		//蛋糕规则弹框
+		$(".poundage").on('click','li',function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+		$(".close").click(function(){
+			$(".norms-shade").fadeOut();
+		});
+		$("#main").on('click','.icon-add',function(){
+			$(".norms-shade").fadeIn();
+		});
+		(function(){
+			var $add = $(".add"),
+				$subtract = $(".subtract"),
+				num = 0;
+			
+			$add.click(function(){
+				amout = parseInt($(".number").text());
+				amout++;
+				if(amout > 1){
+					$subtract.removeClass('disabled').css({"background":"#e7566c","color":"#fff"});
+				}
+				$(".number").text(amout);
+			});
+			$subtract.click(function(){
+				if($(this).hasClass("disabled")){
+					return false;
+				}
+				amout = parseInt($(".number").text());
+				amout--;
+				if(amout <= 1){
+					$(this).addClass('disabled').css({"background":"#f1f1f1","color":"#e7566c"});
+				}
+				$(".number").text(amout);
+			})
+		})();
 	});
 
 	//scroll事件
@@ -223,4 +257,5 @@
 		$boxRight.append(_html);
 	}
 
+	
 })(jQuery, window, document);

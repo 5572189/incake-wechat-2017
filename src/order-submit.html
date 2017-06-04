@@ -93,21 +93,21 @@
 					<span class="data" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="show_contact"><span></span> <span></span> <span>请选择</span></span>
 				</a>
 			</div>
-			<!--支付方式-->
-			<div class="pay-method">
-				<a herf="javascript:;">支付方式 
-					<span  class="btn btn-payment" id="btnPayment" paytype="wechat">不需要</span>
-				</a>
-				<ul class="payShow">
-					<li><input type="text"placeholder="请输入蛋糕卡ID的后5位"/></li>
-					<li><input type="text"placeholder="请输入蛋糕卡密码"/></li>
-					<li><a href="javascript:;">兑换</a></li>
-				</ul>
+			<!--蛋糕卡-->
+			<div class="cakeCard">
+				<a herf="javascript:;">蛋糕卡<span>请选择</span></a>
 			</div>
 			<!--优惠券-->
 			<div class="discount-coupon">
 				<a herf="javascript:;">优惠券/码<span>请选择</span></a>
 			</div>
+			<!--支付方式-->
+			<div class="pay-method">
+				<a herf="javascript:;">支付方式 
+					<span  class="btn btn-payment" id="btnPayment" paytype="wechat">不需要</span>
+				</a>
+			</div>
+			
 			<!--发票-->
 			<div class="bill">
 				<a herf="javascript:;">发票
@@ -167,8 +167,7 @@
 					<span id="orderComment-span">不需要</span>
 				</a>
 				<div class="order-comment-write">
-					<textarea name="" placeholder="给INCAKE留言"></textarea>
-					<span>可输入200字</span>
+					<textarea  placeholder="给INCAKE留言" class="orderWrite"></textarea>
 				</div>
 			</div>
 			<!--订单信息-->
@@ -192,8 +191,6 @@
 					<div class="picture-img">
 						<img src="assets/imgs/order-submit/head.png" class="imagesrc"/>
 					</div>
-					<a href="javascript:;" class="picture-close">关闭</a>
-					<a href="javascript:;">重新上传<input class="inputFile" type="file" name="" id="file" /></a>
 				</div>
 			</div>
 			<!--图片裁剪-->
@@ -260,23 +257,7 @@
 					<ul>
 						<li><input type="text" placeholder="优惠券/团购券编号/建行热购卡会员号" /></li>
 						<li><a href="javascript:;">点击验证</a></li>
-					</ul>
-					<p>代金券:</p>
-					<ul class="clearfix" id="cash-coupon"></ul>
-					<script id="tplCashcoupon" type="text/html">
-						{{each list as item i}}
-							{{if item.active}}
-								<li class="active">
-									<p>￥<span>{{item.price}}</span></p>
-									<a href="javascript:;"></a>
-								</li>
-							{{/if}}
-							<li>
-								<p>￥<span>{{item.price}}</span></p>
-								<a href="javascript:;"></a>
-							</li>
-						{{/each}}
-					</script>				
+					</ul>		
 					<a href="javascript:;" class="popup-confirm">确&nbsp;&nbsp;定</a>
 				</div>
 			</div>
@@ -300,6 +281,31 @@
 							</div>
 							<a href="javascript:;" class="amend"></a>
 						</li>
+						<li>
+							<a href="javascript:;"></a>
+							<div>
+								<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
+								<p>[默认]上海市静安区广中西路777弄99号506室</p>
+							</div>
+							<a href="javascript:;" class="amend"></a>
+						</li>
+						<li>
+							<a href="javascript:;"></a>
+							<div>
+								<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
+								<p>[默认]上海市静安区广中西路777弄99号506室</p>
+							</div>
+							<a href="javascript:;" class="amend"></a>
+						</li>
+						<li>
+							<a href="javascript:;"></a>
+							<div>
+								<p><span>张三</span>&nbsp;&nbsp;<span>13703399999</span></p>
+								<p>[默认]上海市静安区广中西路777弄99号506室</p>
+							</div>
+							<a href="javascript:;" class="amend"></a>
+						</li>
+						
 					</ul>
 				</div>
 				<div id="add-address">
@@ -353,46 +359,62 @@
 				
 			<!--支付方式-->	
 			<div class="action-sheet" id="paymentAction">
-			<div class="action-header">
-				<p class="title">选择支付方式</p>
-				<a href="javascript:;" class="btn-cancel">取消</a>
-				<a href="javascript:;" class="btn-ok">确定</a>
+				<div class="action-header">
+					<p class="title">选择支付方式</p>
+					<a href="javascript:;" class="btn-cancel">取消</a>
+					<a href="javascript:;" class="btn-ok">确定</a>
+				</div>
+				<div class="action-container">
+					<ul class="list">
+						<li paytype="wechat" class="active">
+							<p class="name">微信支付</p>
+							<p class="note">微信支付立享9折</p>
+						</li>
+						<li paytype="alipay">
+							<p class="name">支付宝(不支持)</p>
+							<p class="note">支付宝支付立享9折</p>
+						</li>
+						<li paytype="99bill">
+							<p class="name">快钱</p>
+							<p class="note">快钱支付立享9折</p>
+						</li>
+						<li paytype="e-card">
+							<p class="name">锦江e卡通</p>
+							<p class="note">锦江e卡通支付立享9折</p>
+						</li>
+						<li paytype="cmb">
+							<p class="name">招商银行</p>
+							<p class="note">招商银行支付立享9折</p>
+						</li>
+						<li paytype="cash">
+							<p class="name">货到付款</p>
+							<p class="note">货到付款不享9折优惠</p>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="action-container">
-				<ul class="list">
-					<li paytype="wechat" class="active">
-						<p class="name">微信支付</p>
-						<p class="note">微信支付立享9折</p>
-					</li>
-					<li paytype="alipay">
-						<p class="name">支付宝(不支持)</p>
-						<p class="note">支付宝支付立享9折</p>
-					</li>
-					<li paytype="99bill">
-						<p class="name">快钱</p>
-						<p class="note">快钱支付立享9折</p>
-					</li>
-					<li paytype="e-card">
-						<p class="name">锦江e卡通</p>
-						<p class="note">锦江e卡通支付立享9折</p>
-					</li>
-					<li paytype="cmb">
-						<p class="name">招商银行</p>
-						<p class="note">招商银行支付立享9折</p>
-					</li>
-					<li paytype="cash">
-						<p class="name">货到付款</p>
-						<p class="note">货到付款不享9折优惠</p>
-					</li>
-					<li paytype="pos">
-						<p class="name">兑换卡支付</p>
-						<p class="note">兑换卡支付立享9折优惠</p>
-					</li>
-				</ul>
+			<!--蛋糕卡-->
+			<div class="cake-card">
+				<div class="cake-card-payShow">
+					<p><span>蛋糕卡</span><span class="cake-complete">完成</span></p>
+					<ul class="cake-add clearfix">
+						<li>12345<span></span></li><li>12345<span></span></li>
+					</ul>
+					<ul class="clearfix">
+						<li><input class="cake-number" type="text"placeholder="请输入蛋糕卡ID的后5位"/></li>
+						<li><input type="text"placeholder="请输入蛋糕卡密码"/><a class="cake-conversion" href="javascript:;">兑换</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		
-		
+			<!--蛋糕卡错误提示-->
+			<div class="cake-card-error">
+				<div class="error-hint">
+					<p>亲，你的蛋糕卡不可用。如有疑问，</p>
+					<p>请联系客服  <span>4000 921 5757</span></p>
+					<a href="javascript:;">拨打</a>
+					<a href="javascript:;">确定</a>
+				</div>
+			</div>
 		</div>
 
 	

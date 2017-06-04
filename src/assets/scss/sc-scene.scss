@@ -6,11 +6,12 @@
     overflow: hidden;
     .head{
         width: 750px;
+        height: auto;
         >a{
             position: relative;
             display: block;
             width: 750px;
-            height: 340px;
+            height: 520px;
         }
         >div{
             width: 690px;
@@ -25,7 +26,7 @@
         width: 690px;
         margin: 50px auto;
         border-bottom: 1px solid #dcdcdc;
-        padding-bottom: 90px;
+        padding-bottom: 60px;
         >p{
             font-size: 26px;
             text-align: center;
@@ -128,6 +129,11 @@
                     outline: none;
                 }
             }
+            p:nth-of-type(3){
+                margin-left: 180px;
+                margin-top: 20px;
+                color: #e95454;
+            }
         }
     }
     .rule{
@@ -135,14 +141,9 @@
         height: auto;
         margin: 0 auto;
         padding-bottom: 150px;
-        dt{
-            color: #45515e;
+        p{
+            text-align: center;
             font-size: 22px;
-        }
-        dd{
-            font-size: 22px;
-            margin: 10px 0;
-            color: #787878;
         }
     }
     .foot{
