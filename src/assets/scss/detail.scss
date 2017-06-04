@@ -233,7 +233,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         .last_li{
             position: relative;
             height: 130px;
-            border: none;
+            border-bottom: 1px solid #f0f0f0;
             p{
                 font-size: 25px;
                 margin: 15px;
@@ -244,7 +244,7 @@ $loc-triangle-bgcolor: #f0f0f0;
                 li:first-child,li:last-child{
                     width: 50px;
                     height: 50px;
-                    line-height: 50px;
+                    line-height: 40px;
                     text-align: center;
                     border-radius: 100%;
                     background: #e6e6e6;
