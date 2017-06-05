@@ -51,21 +51,25 @@
 		});
 //		优惠券弹框隐藏
 		$popup_confirm.click(function(){
-			$discount_popup.animate({ right: '-550px' },function(){
+			$discount_popup.animate({ right: '-100%' },function(){
 				$discount_shade.fadeOut();
 			});
 			removeTouchmove();
 		});
 		$discount_shade.click(function(e){
 			if(e.target==$discount_shade[0]){
-				$discount_popup.animate({ right: '-550px' },function(){
+				$discount_popup.animate({ right: '-100%' },function(){
 					$discount_shade.fadeOut();
 				});
 			}
 		});
 //		弹框里优惠券绑定事件
 		$discount_ul.on('click','li',function(){
-			$(this).addClass("active").siblings().removeClass("active");
+			if(!$(this).hasClass("active")){
+				$(this).addClass("active").siblings().removeClass("active");
+			}else{
+				$(this).removeClass("active");
+			}
 			
 		});
 		$cash_coupon.on('click','li',function(){
