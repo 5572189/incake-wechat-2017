@@ -155,11 +155,18 @@ body{
         .order,.coupon,.like{
             a:last-child{
                 display: block;
-                width: 110px;
+                width: 100%;
                 height: 100px;
                 position: absolute;
                 right: 0;
                 top: 0;
+                img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 110px;
+                    height: 98px;
+                }
             }
         }
     }
@@ -205,11 +212,18 @@ body{
         .integral,.gift{
             a:last-child{
                 display: block;
-                width: 110px;
+                width: 100%;
                 height: 100px;
                 position: absolute;
                 right: 0;
                 top: 0;
+                img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 110px;
+                    height: 98px;
+                }
             }
         }
     }
@@ -244,11 +258,18 @@ body{
             }
             a:last-child{
                 display: block;
-                width: 110px;
+                width: 100%;
                 height: 100px;
                 position: absolute;
                 right: 0;
                 top: 0;
+                img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 110px;
+                    height: 98px;
+                }
             }
         }
     }

@@ -134,7 +134,6 @@ body{
                 text-align: center;
                 line-height: 50px;
                 background: #e9546b;
-                opacity: 0.5;
                 border-radius: 50px 0 0 50px;
                 span:first-child{
                     position: absolute;
@@ -258,7 +257,6 @@ body{
                 width: 160px;
                 height: 50px;
                 color: #fff;
-                opacity: 0.5;
                 text-align: center;
                 line-height: 50px;
                 background: #e9546b;
@@ -577,7 +575,7 @@ body{
         li{
             float: left;
             font-size: 24px;
-            width: 187.5px;
+            width: 50%;
             height: 95px;
             text-align: center;
             line-height: 140px;
