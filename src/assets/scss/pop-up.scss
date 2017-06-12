@@ -16,13 +16,26 @@
         border: 1px solid #e7566d;
         overflow: hidden;
         border-radius: 10px;
-        p{
-            font-size: 22px;
-            text-align: center;
+        >div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 446px;
+            height: 220px;
+            p{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                font-size: 22px;
+                width: 100%;
+                text-align: center;
+            }
         }
-        p:first-child{
-            margin-top: 80px;
-        }
+        
         a{
             display: block;
             float: left;

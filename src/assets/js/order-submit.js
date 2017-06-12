@@ -43,7 +43,7 @@
 			$cash_coupon=$("#cash-coupon"),
 			$popup_confirm=$(".popup-confirm");
 //		优惠券点击弹框	
-		$discount_coupon.click(function(){
+		$discount_coupon.on('click','a',function(){
 			$discount_shade.fadeIn(function(){
 				$discount_popup.animate({ right: '0' });
 			});

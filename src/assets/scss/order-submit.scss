@@ -336,6 +336,7 @@ body{
     }
 }
 .discount-coupon{
+    position: relative;
     max-width:750px ;
     width: 100%;
     background: #fff;
@@ -360,6 +361,15 @@ body{
         }
     }
 }
+.discount-active:after{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display:block;
+        content: "";
+        width: 100%;
+        height: 125px;
+    }
 .cakeCard{
     max-width:750px ;
     width: 100%;
@@ -434,26 +444,34 @@ body{
         display: none;
         padding-bottom: 30px;
         p{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 60px;
             margin: 20px 0;
             font-size: 22px;
             span{
                 color: #dcdcdc;
+                line-height: 70px;
                 margin-left: 40px;
             }
             input{
+                position: absolute;
+                right: 80px;
                 width: 448px;
                 height: 60px;
                 border-radius: 10px;
-                margin-left: 35px;
                 outline: none;
                 color: #dcdcdc;
                 text-indent: 20px;
+                border: 1px solid #dcdcdc;
             }
             select{
+                position: absolute;
+                right: 80px;
                 width: 450px;
                 height: 60px;
                 border-radius: 10px;
-                margin-left: 30px;
                 outline: none;
                 text-indent: 20px;
             }
