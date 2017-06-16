@@ -17,12 +17,29 @@
 			autoplay: 2500,
 			autoplayDisableOnInteraction: false
 		});
+		
+//		var tl = new TimelineLite();
 
 		//筛选
 		$(".screen").click(function() {
-			$("#shade").fadeIn(function() {
-				$(".list").animate({ right: '0px' });
+			$("#shade").fadeIn(200, function(){
+				$(".list").css({ 
+					'-webkit-transform': 'translateX(0%)',
+					'transform': 'translateX(0%)'
+				});
 			});
+			
+			/*tl.clear();
+			tl.to(".list", 0.5, {
+				'transition': '',
+				'-webkit-transform': 'translateX(0%)',
+				'transform': 'translateX(0%)',
+				ease: Power1.easeOut,
+				onStart: function() {
+					$("#shade").fadeIn(200);
+				}
+			});*/
+			
 			$("body").on('touchmove.mask', function(event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -31,16 +48,36 @@
 
 		//点击筛选，出现遮罩
 		$("#shade").click(function() {
-			$(".list").animate({ right: '-100%' }, function() {
-				$("#shade").fadeOut();
+			$(".list").css({ 
+				'-webkit-transform': 'translateX(100%)',
+				'transform': 'translateX(100%)'
 			});
+			$("#shade").fadeOut(800);
+			
+			/*tl.clear();
+			tl.to(".list", 0.5, {
+				'-webkit-transform': 'translateX(100%)',
+				'transform': 'translateX(100%)',
+				ease: Power1.easeOut,
+				onComplete: function() {
+					$("#shade").fadeOut(200);
+				}
+			});*/
+			
 			$("body").off(".mask");
 		});
 		
 		$(".city-shade").click(function() {
-			$(".city").animate({ right: '-100%' }, function() {
-				$(".city-shade").fadeOut();
+//			$(".city").animate({ right: '-100%' }, function() {
+//				$(".city-shade").fadeOut();
+//			});
+
+			$(".city").css({ 
+				'-webkit-transform': 'translateX(100%)',
+				'transform': 'translateX(100%)'
 			});
+			$(".city-shade").fadeOut(800);
+			
 			$("body").off(".mask");
 		});
 
@@ -53,7 +90,8 @@
 		//筛选列表全部点击
 		$(".own").click(function() {
 			$(".all").addClass("border");
-			$(".love").removeClass("active").css("text-align", "center");
+			$(".love").remove();
+//			$(".love").removeClass("active").css("text-align", "center");
 		});
 
 		//筛选点击绑定
@@ -73,12 +111,12 @@
 		$("#shade").on('click','.kind',function() {
 			$(this).addClass("loves");
 			$(".kind").not(this).removeClass("loves");
-			$(".love").html($(this).html()).addClass("active").css("text-align", "left");
+			$(".love").html('<span>'+$(this).html()+'</span>').addClass("active").css("text-align", "left");
 			$(".all").removeClass("border");
 			var num = $("#idscreen").find('a');
 			if(num.length == 1) {
 				$("<a href='javascript:;'class='love active'/></a>").appendTo("#idscreen");
-				$(".love").html($(this).html());
+				$(".love").html('<span>'+$(this).html()+'</span>');
 				$(".all").removeClass("border");
 			}
 		});
@@ -94,8 +132,14 @@
 		
 		//城市定位
 		$(".location").click(function(){
-			$(".city-shade").fadeIn(function(){
-				$(".city").animate({ right: '0px' });
+//			$(".city-shade").fadeIn(function(){
+//				$(".city").animate({ right: '0px' });
+//			});
+			$(".city-shade").fadeIn(200, function(){
+				$(".city").css({ 
+					'-webkit-transform': 'translateX(0%)',
+					'transform': 'translateX(0%)'
+				});
 			});
 			$("body").on('touchmove.mask', function(event) {
 				event.preventDefault();
@@ -106,9 +150,15 @@
 			$("#showCity").html($(this).html());
 			$(this).addClass("citySelected");
 			$(".city a").not(this).removeClass("citySelected");
-			$(".city").animate({right:"-550px"},function(){
-				$("#city-list").fadeOut();
+//			$(".city").animate({right:"-550px"},function(){
+//				$("#city-list").fadeOut();
+//			});
+			$(".city").css({ 
+				'-webkit-transform': 'translateX(100%)',
+				'transform': 'translateX(100%)'
 			});
+			$(".city-shade").fadeOut(800);
+			
 			$("body").off(".mask");
 		});
 		
