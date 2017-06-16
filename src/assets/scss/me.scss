@@ -60,11 +60,18 @@ body{
         }
         div:last-child{
             position: absolute;
-            top: 40px;right: 0;
+            top: 0;right: 0;
             a{
                 display: block;
-                width: 66px;
-                height: 88px;
+                width: 10rem;
+                height: 170px;
+                img{
+                    position: absolute;
+                    right: 0;
+                    top: 45px;
+                    width:66px ;
+                    height: 88px;
+                }
             }
         }
     }

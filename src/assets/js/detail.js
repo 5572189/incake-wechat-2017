@@ -37,7 +37,7 @@
 			amout = parseInt($(".number").val());
 			amout++;
 			if(amout > 1){
-				$subtract.removeClass('disabled').css("background","#45515e");
+				$subtract.removeClass('disabled').addClass('active');
 			}
 			$(".number").val(amout);
 		});
@@ -48,13 +48,16 @@
 			amout = parseInt($(".number").val());
 			amout--;
 			if(amout <= 1){
-				$(this).addClass('disabled').css("background","#e6e6e6");
+				$(this).addClass('disabled').removeClass('active');
 			}
 			$(".number").val(amout);
 		})
 	})();
 	//收藏
 	$(".heart").click(function(){
+		if($(this).hasClass("heart-shade")){
+			return false;
+		}
 		if(!$(this).hasClass("active")){
 			$(this).addClass("active");
 		}else{

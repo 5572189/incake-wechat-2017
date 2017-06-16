@@ -47,14 +47,12 @@
 			$discount_shade.fadeIn(function(){
 				$discount_popup.animate({ right: '0' });
 			});
-			touchmove();
 		});
 //		优惠券弹框隐藏
 		$popup_confirm.click(function(){
 			$discount_popup.animate({ right: '-100%' },function(){
 				$discount_shade.fadeOut();
 			});
-			removeTouchmove();
 		});
 		$discount_shade.click(function(e){
 			if(e.target==$discount_shade[0]){
@@ -246,8 +244,8 @@
 	});
 //	提交
 	$foot.click(function(){
-		$address_shade.animate({"top":"-100%"});
-		$add_layout.animate({"top":"-100%"});
+		$address_shade.animate({"top":"-200%"});
+		$add_layout.animate({"top":"-200%"});
 	});
 	$("#address-div ul").on("click","li",function(){
 		$(this).addClass("active");
@@ -266,8 +264,9 @@
 	$picture_shade.click(function(e){
 		if(e.target==$picture_shade[0]){
 			$picture_shade.fadeOut();
-			removeTouchmove();
+			
 		}
+		removeTouchmove();
 	});
 //	蛋糕卡
 	var $cake_conversion = $(".cake-conversion"),

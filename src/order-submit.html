@@ -9,7 +9,7 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 订单提交</title>
 	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="assets/plugins/iosselect/iosSelect.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
 	<link rel="stylesheet" href="assets/css/order-submit.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
 	<body>
 		<div id="layout">
@@ -41,7 +41,7 @@
 							{{if item.motherDay}}
 								<a href="{{item.link}}" class="mother">母亲节</a>
 							{{/if}}
-						</li>	
+						</li>
 					{{/each}}
 				</script>
 				<!--常规款-->
@@ -54,11 +54,11 @@
 							<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
 							{{if item.drawing}}
 								<a href="{{item.link}}" class="drawing">画影</a>
-							{{/if}}	
+							{{/if}}
 							{{if item.mother}}
 								<a href="{{item.link}}" class="mother">母亲节</a>
 							{{/if}}
-						</li>	
+						</li>
 					{{/each}}
 				</script>
 				<!--小商品-->
@@ -69,7 +69,7 @@
 							<a href="{{item.link}}"><img src="{{item.img}}"/></a>
 							<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
 							<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
-						</li>	
+						</li>
 					{{/each}}
 				</script>
 			</div>
@@ -86,7 +86,7 @@
 				<a href="javascript:;"></a>
 			</div>
 			<!--送达时间-->
-			<div class="time" id="select_contact">
+			<div class="time time-shade" id="select_contact">
 				<a herf="javascript:;">送达时间
 					<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
 					<input type="hidden" name="contact_city_code" id="contact_city_code" value="" data-city-name="">
@@ -103,15 +103,15 @@
 			</div>
 			<!--支付方式-->
 			<div class="pay-method">
-				<a herf="javascript:;">支付方式 
+				<a herf="javascript:;">支付方式
 					<span  class="btn btn-payment" id="btnPayment" paytype="wechat">不需要</span>
 				</a>
 			</div>
-			
+
 			<!--发票-->
 			<div class="bill">
 				<a herf="javascript:;">发票
-					<input type="hidden"  id="billId" value="">  
+					<input type="hidden"  id="billId" value="">
 					<span id="showbill">不需要</span>
 				</a>
 				<div class="bill-privately">
@@ -144,7 +144,7 @@
 			<!--生日牌-->
 			<div class="birthday">
 				<a herf="javascript:;"class="pc-box">生日牌
-					<input type="hidden" name="birthday_id" id="birthdayId" value="">  
+					<input type="hidden" name="birthday_id" id="birthdayId" value="">
 					<span id="showbirthday">不需要</span>
 				</a>
 				<div class="birthday-write">
@@ -154,7 +154,7 @@
 			<!--生日贺卡-->
 			<div class="birthday-card">
 				<a herf="javascript:;">生日贺卡
-					<input type="hidden" name="birthday_id" id="birthdayinput" value="">  
+					<input type="hidden" name="birthday_id" id="birthdayinput" value="">
 					<span id="birthdayCard">不需要</span>
 				</a>
 				<div class="birthday-card-write">
@@ -164,7 +164,7 @@
 			<!--订单备注-->
 			<div class="order-comment">
 				<a herf="javascript:;">订单备注
-					<input type="hidden" name="birthday_id" id="orderComment" value="">  
+					<input type="hidden" name="birthday_id" id="orderComment" value="">
 					<span id="orderComment-span">不需要</span>
 				</a>
 				<div class="order-comment-write">
@@ -185,7 +185,7 @@
 		    	<span>共<span><span>￥</span><span>189</span>.00</span></span>
 		    	<a href="javascript:;">去结算</a>
 		    </div>
-			
+
 			<!--画影-->
 			<div class="picture-shade">
 				<div class="picture">
@@ -198,10 +198,10 @@
 			<div class="container">
 		  		<div class="img-container">
 			        <img  id="image" src="assets/imgs/shopping-cart/head.png"//>
-			    </div>	
+			    </div>
 			    <a href="javascript:;" class="reupload-image">取消</a>
 			    <a href="javascript:;" class="tailor">完成</a>
-			</div>	
+			</div>
 			<!--母亲节弹框-->
 			<div class="mother-shade">
 				<div class="mother-popup">
@@ -210,7 +210,7 @@
 					<a href="javascript:;" class="mother-confirm">确认</a>
 				</div>
 			</div>
-			<!--升级弹框-->	
+			<!--升级弹框-->
 			<div class="upgrade-shade">
 				<div class="upgrade-popup">
 					<a href="javascript:;" class="upgrade-delate"></a>
@@ -218,7 +218,7 @@
 					<a href="javascript:;">不升级,改用其他支付</a>
 					<a href="javascript:;">升级</a>
 				</div>
-			</div>	
+			</div>
 			<!--查看惊喜弹框-->
 			<div class="surprised-shade">
 				<div class="surprised-popup">
@@ -258,7 +258,7 @@
 					<ul>
 						<li><input type="text" placeholder="优惠券/团购券编号/建行热购卡会员号" /></li>
 						<li><a href="javascript:;">点击验证</a></li>
-					</ul>		
+					</ul>
 					<a href="javascript:;" class="popup-confirm">确&nbsp;&nbsp;定</a>
 				</div>
 			</div>
@@ -306,14 +306,14 @@
 							</div>
 							<a href="javascript:;" class="amend"></a>
 						</li>
-						
+
 					</ul>
 				</div>
 				<div id="add-address">
 					<a href="javascript:;">添加新的收货地址</a>
 				</div>
 			</div>
-			<!--修改地址-->	
+			<!--修改地址-->
 			<div class="add-address-layout">
 				<div id="add-address-head">
 					<ul>
@@ -331,7 +331,7 @@
 						</li>
 					</ul>
 				</div>
-		
+
 				<div class="form-item item-line" id="selectContact">
 					<div class="pc-box">
 						<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
@@ -356,9 +356,9 @@
 					<a href="javascript:;">提交</a>
 				</div>
 			</div>
-			
-				
-			<!--支付方式-->	
+
+
+			<!--支付方式-->
 			<div class="action-sheet" id="paymentAction">
 				<div class="action-header">
 					<p class="title">选择支付方式</p>
@@ -418,7 +418,7 @@
 			</div>
 		</div>
 
-	
+
 	</body>
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>
 	<script>

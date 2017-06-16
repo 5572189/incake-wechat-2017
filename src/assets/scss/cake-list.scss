@@ -1,0 +1,427 @@
+.layout{
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    #flower-list{
+        overflow: hidden;
+        list-style: none;
+        margin:12px;
+        li:nth-child(2n){
+            margin-left: 15px;
+        }
+        li{
+            position: relative;
+            float: left;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            width: 350px;
+            margin: 10px 0;
+            overflow: hidden;
+            a:nth-of-type(1){
+                display: block;
+                width: 350px;
+                height: 350px;
+            }
+            a:nth-of-type(2){
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url("../imgs/flower-list/live.png") no-repeat;
+                background-size: 50px 50px;
+            }
+            a.active{
+               background: url("../imgs/flower-list/like.png") no-repeat;
+               background-size: 50px 50px; 
+            }
+            p:nth-of-type(1){
+                margin: 15px;
+                span:first-child{
+                    font-size: 26px;
+                }
+                span:last-child{
+                    font-size: 14px;
+                }
+            }
+            p:nth-of-type(2){
+                margin: 15px;
+                font-size: 18px;
+                color: #dcdcdc;
+            }
+            p:nth-of-type(3){
+                margin: 15px;
+                span{
+                    font-size: 14px;
+                }
+            }
+            >span{
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 75px;
+                height: 75px;
+                background: url("../imgs/flower-list/car.png") no-repeat;
+                background-size: 75px 75px;
+            }
+        }
+    }
+    .flower-shade{
+        display: none;
+        position: fixed;
+        top: 0;
+        margin: 0 auto;
+        max-width:750px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 9999;
+        >div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -350px;
+            margin-top: -400px;
+            width: 700px;
+            height: 490px;
+            background-color: #fff;
+            border-radius: 10px;
+            p:nth-of-type(1){
+                font-size: 26px;
+                text-align: center;
+                margin-top: 50px;
+            }
+            ul:nth-of-type(1){
+                list-style: none;
+                margin-left: 40px;
+                margin-top: 45px;
+                li{
+                    float: left;
+                    margin: 0 10px;
+                    width: 140px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    background-color: #f1f1f1;
+                    color: #ed8997;
+                }
+                li.active{
+                    border: 1px solid #e96478;
+                    background: url("../imgs/index/norms.png") no-repeat;
+                    background-size: 45px 45px;
+                    background-position: 100% 100%;
+                }
+            }
+            ul:nth-of-type(2){
+                list-style: none;
+                margin-left: 160px;
+                margin-top: 60px;
+                li{
+                    float: left;
+                    margin: 0 10px;
+                }
+                li:nth-of-type(1){
+                    font-size: 26px;
+                    line-height: 56px;
+                }
+                li:nth-of-type(2){
+                    width: 57px;
+                    height: 56px;
+                    background: url("../imgs/index/subtract-gay.png") no-repeat;
+                    background-size: 57px 56px;
+                }
+                li:nth-of-type(4){
+                    width: 57px;
+                    height: 56px;
+                    background: url("../imgs/index/add.png") no-repeat;
+                    background-size: 57px 56px;
+                }
+                li:nth-of-type(3){
+                    width: 100px;
+                    height: 56px;
+                    background-color: #f1f1f1;
+                    text-align: center;
+                    line-height: 56px;
+                    color: #e7566c;
+                }
+                li.active{
+                    background: url("../imgs/index/subtract.jpg") no-repeat;
+                    background-size: 57px 56px;
+                }
+            }
+            a{
+                display: block;
+                width: 210px;
+                height: 60px;
+                background-color: #e7566c;
+                color: #fff;
+                text-align: center;
+                line-height: 60px;
+                font-size: 24px;
+                border-radius: 5px;
+            }
+            a:nth-of-type(1){
+                position: absolute;
+                left: 130px;
+                bottom: 50px;
+            }
+            a:nth-of-type(2){
+                position: absolute;
+                left: 360px;
+                bottom: 50px;
+            }
+            .flower-close{
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                display: block;
+                width: 25px;
+                height: 25px;
+                background: url("../imgs/index/close.png") no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+.norms-shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    .norms {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -325px;
+        margin-top: -400px;
+        width: 650px;
+        height: 580px;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        .no-sc{
+            list-style: none;
+            li{
+                margin-left: 60px;
+            }
+        }
+        .headline {
+            margin-top: 30px;
+            margin-left: 200px;
+            list-style: none;
+            font-size: 30px;
+            li {
+                float: left;
+                background-color: #f1f1f1;
+                border-radius: 10px;
+                width: 135px;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+            }
+            li.active {
+                background-color: #e7566c;
+                color: #fff;
+            }
+        }
+        .parcel {
+            position:relative;
+            width: 1300px;
+            overflow: hidden;
+            .surprised {
+                width: 650px;
+                float: left;
+                ul {
+                    padding: 0 22px;
+                }
+                ul:first-child {
+                    list-style: none;
+                    margin-left: 10px;
+                    margin-top: 30px;
+                    font-size: 30px;
+                    li {
+                        position: relative;
+                        float: left;
+                        background-color: #f1f1f1;
+                        border-radius: 10px;
+                        margin: 0 5px;
+                        width: 135px;
+                        height: 60px;
+                        text-align: center;
+                        line-height: 60px;
+                        color: #e7566c;
+                    }
+                    li.active {
+                        border: 1px solid #e96478;
+                        background: url("../imgs/index/norms.png") no-repeat;
+                        background-size: 45px 45px;
+                        background-position: 100% 100%;
+                    }
+                }
+                ul:nth-of-type(2) {
+                    margin-top: 20px;
+                    margin-left: 45px;
+                    font-size: 22px;
+                    li {
+                        margin: 30px 0;
+                    }
+                }
+                ul:nth-of-type(3) {
+                    list-style: none;
+                    margin-left: 110px;
+                    li {
+                        float: left;
+                        margin: 0 10px;
+                    }
+                    li {
+                        font-size: 30px;
+                        line-height: 56px;
+                    }
+                    li:nth-of-type(2) {
+                        width: 57px;
+                        height: 56px;
+                        background: url("../imgs/index/subtract-gay.png") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                    li:nth-of-type(3) {
+                        width: 110px;
+                        height: 56px;
+                        text-align: center;
+                        line-height: 56px;
+                        background-color: #f1f1f1;
+                        color: #e96478;
+                    }
+                    li:nth-of-type(4) {
+                        width: 57px;
+                        height: 56px;
+                        background: url("../imgs/index/add.png") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                    li.active {
+                        background: url("../imgs/index/subtract.jpg") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                }
+            }
+            .normal {
+                width: 650px;
+                float: left;
+                ul {
+                    padding: 0 22px;
+                }
+                ul {
+                    padding: 0 22px;
+                }
+                ul:first-child {
+                    list-style: none;
+                    margin-left: 10px;
+                    margin-top: 30px;
+                    font-size: 30px;
+                    li {
+                        position: relative;
+                        float: left;
+                        background-color: #f1f1f1;
+                        border-radius: 10px;
+                        margin: 0 5px;
+                        width: 135px;
+                        height: 60px;
+                        text-align: center;
+                        line-height: 60px;
+                        color: #e7566c;
+                    }
+                    li.active {
+                        border: 1px solid #e96478;
+                        background: url("../imgs/index/norms.png") no-repeat;
+                        background-size: 45px 45px;
+                        background-position: 100% 100%;
+                    }
+                }
+                ul:nth-of-type(2) {
+                    margin-top: 20px;
+                    margin-left: 45px;
+                    font-size: 22px;
+                    li {
+                        margin: 30px 0;
+                    }
+                }
+                ul:nth-of-type(3) {
+                    list-style: none;
+                    margin-left: 110px;
+                    li {
+                        float: left;
+                        margin: 0 10px;
+                    }
+                    li {
+                        font-size: 30px;
+                        line-height: 56px;
+                    }
+                    li:nth-of-type(2) {
+                        width: 57px;
+                        height: 56px;
+                        background: url("../imgs/index/subtract-gay.png") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                    li:nth-of-type(3) {
+                        width: 110px;
+                        height: 56px;
+                        text-align: center;
+                        line-height: 56px;
+                        background-color: #f1f1f1;
+                        color: #e96478;
+                    }
+                    li:nth-of-type(4) {
+                        width: 57px;
+                        height: 56px;
+                        background: url("../imgs/index/add.png") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                    li.active {
+                        background: url("../imgs/index/subtract.jpg") no-repeat;
+                        background-size: 57px 56px;
+                    }
+                }
+            }
+        }
+        a {
+            display: block;
+            width: 180px;
+            height: 50px;
+            background-color: #e7566c;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+        a:nth-of-type(1) {
+            position: absolute;
+            left: 135px;
+            bottom: 40px;
+        }
+        a:nth-of-type(2) {
+            position: absolute;
+            left: 350px;
+            bottom: 40px;
+        }
+        span {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("../imgs/index/close.png") no-repeat;
+            background-size: cover;
+        }
+    }
+}
