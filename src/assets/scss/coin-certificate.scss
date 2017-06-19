@@ -3,10 +3,9 @@
     height: auto;
     margin: 0 auto;
     .cake-exchange{
-        position: relative;
-        max-width: 750px;
+        position: fixed;
         width: 100%;
-        height: 1137px;
+        height: 100%;
         margin: 0 auto;
         background: url("../imgs/coin-certificate/coin-certificateBg.png") no-repeat;
         background-size: cover;
@@ -17,7 +16,7 @@
             margin-left: -315px;
             margin-top: -187.5px;
             width: 630px;
-            height: 370px;
+            height: 390px;
             border-radius: 10px;
             background: rgba(255,255,255,0.6);
             .head{
@@ -25,7 +24,7 @@
                 height: 60px;
                 text-align: center;
                 line-height: 60px;
-                font-size: 25px;
+                font-size: 25px; /*px*/
                 color: #fff;
                 background: #6d5455;
                 border-radius: 10px 10px 0 0;
@@ -48,26 +47,26 @@
                 margin-top: 20px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 color: #e7566d;
                 text-align: center;
-                margin-top: 30px;
+                margin: 20px 0 10px;
             }
             .foot{
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                height: 60px;
+                height: 80px;
                 a{
                     float: left;
                     display: block;
                     width: 50%;
-                    height: 60px;
-                    line-height: 60px;
+                    height: 80px;
+                    line-height: 80px;
                     text-align: center;
                     color: #fff;
-                    font-size: 25px;
+                    font-size: 25px; /*px*/
                 }
                 a:nth-of-type(1){
                     background: #f2b4be;
@@ -90,7 +89,7 @@
             list-style: none;
             li{
                 width: 350px;
-                height: 490px;
+                height: 500px;
                 float: left;
                 margin: 0 10px;
                 border: 1px solid #dcdcdc;
@@ -123,23 +122,27 @@
                         position: absolute;
                         left: 10px;
                         top: 370px;
-                        font-size: 24px;
+                        font-size: 24px; /*px*/
+                        height: 30px;
+                        line-height: 30px;
                     }
                     span:nth-of-type(2){
                         position: absolute;
                         left: 10px;
-                        top: 400px;
-                        font-size: 14px;
+                        top: 405px;
+                        height: 30px;
+                        font-size: 19px; /*px*/
+                       line-height: 30px;
                     }
                 }
                 >p:nth-of-type(2){
                     >span{
                         position: absolute;
-                        left: 220px;
+                        left: 205px;
                         top: 385px;
-                        font-size: 18px;
+                        font-size: 18px; /*px*/
                         >span{
-                            font-size: 24px;
+                            font-size: 24px; /*px*/
                             color: #e9546b;
                         }
                     }
@@ -239,10 +242,10 @@
             padding-bottom: 50px;
             li{
                 width: 350px;
-                height: 490px;
+                height: 500px;
                 float: left;
                 margin: 0 10px;
-                border: 1px solid #dcdcdc;
+                border: 1px solid #dcdcdc; /*no*/
                 box-shadow: 0 0 5px #dcdcdc;
                 border-radius: 10px;
                 margin-top: 20px;
@@ -272,23 +275,27 @@
                         position: absolute;
                         left: 10px;
                         top: 370px;
-                        font-size: 24px;
+                        font-size: 24px; /*px*/
+                        height: 30px;
+                        line-height: 30px;
                     }
                     span:nth-of-type(2){
                         position: absolute;
                         left: 10px;
-                        top: 400px;
-                        font-size: 14px;
+                        top: 405px;
+                        height: 30px;
+                        font-size: 19px; /*px*/
+                        line-height: 30px;
                     }
                 }
                 >p:nth-of-type(2){
                     >span{
                         position: absolute;
-                        left: 220px;
+                        left: 205px;
                         top: 385px;
-                        font-size: 18px;
+                        font-size: 18px; /*px*/
                         >span{
-                            font-size: 24px;
+                            font-size: 24px; /*px*/
                             color: #e9546b;
                         }
                     }
@@ -424,7 +431,7 @@
         >p{
             text-align: center;
             padding: 20px 0;
-            font-size: 24px;
+            font-size: 24px; /*px*/
         }
         ul{
             list-style: none;
