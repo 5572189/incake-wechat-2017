@@ -1188,6 +1188,10 @@ body{
                 background-size: 50px 50px;
                 background-position: left center;
             }
+            a:nth-of-type(2){
+                background: url("../imgs/order-submit/amend02.png") no-repeat;
+                background-size: 40px 40px;
+            }
         }
     }
     #add-address{
@@ -1341,7 +1345,7 @@ body{
             .inp{
                 position: absolute;
                 right: 85px;
-                top: 35px;
+                top: 20px;
                 width:400px ;
                 height: 60px;
                 border: none;
@@ -1353,7 +1357,7 @@ body{
             li{
                 position: relative;
                 height: 100px;
-                border-bottom: 1px solid #dcdcdc;
+                border-bottom: 1px solid #dcdcdc; /*no*/
                 span:nth-of-type(1){
                     position: absolute;
                     left: 30px;
