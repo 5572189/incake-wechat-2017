@@ -44,21 +44,37 @@
 			$popup_confirm=$(".popup-confirm");
 //		优惠券点击弹框	
 		$discount_coupon.on('click','a',function(){
-			$discount_shade.fadeIn(function(){
+			/*$discount_shade.fadeIn(function(){
 				$discount_popup.animate({ right: '0' });
+			});*/
+			$discount_shade.fadeIn(200, function(){
+				$discount_popup.css({ 
+					'-webkit-transform': 'translateX(0%)',
+					'transform': 'translateX(0%)'
+				});
 			});
 		});
 //		优惠券弹框隐藏
 		$popup_confirm.click(function(){
-			$discount_popup.animate({ right: '-100%' },function(){
+			/*$discount_popup.animate({ right: '-100%' },function(){
 				$discount_shade.fadeOut();
+			});*/
+			$discount_popup.css({ 
+				'-webkit-transform': 'translateX(100%)',
+				'transform': 'translateX(100%)'
 			});
+			$discount_shade.fadeOut(800);
 		});
 		$discount_shade.click(function(e){
 			if(e.target==$discount_shade[0]){
-				$discount_popup.animate({ right: '-100%' },function(){
+				/*$discount_popup.animate({ right: '-100%' },function(){
 					$discount_shade.fadeOut();
+				});*/
+				$discount_popup.css({ 
+					'-webkit-transform': 'translateX(100%)',
+					'transform': 'translateX(100%)'
 				});
+				$discount_shade.fadeOut(800);
 			}
 		});
 //		弹框里优惠券绑定事件
@@ -399,7 +415,8 @@
 //	支付方式选择	
 	
 	function fnInitPayment() {
-		var $oPaymentAction = $('#paymentAction'),
+		var $oPaymentPopup = $('.payment-popup'),
+			$oPaymentAction = $('#paymentAction'),
 			$oBtnPayment = $('#btnPayment'),
 			$payShow = $(".payShow"),
 			$cake = $(".cake-card"),
@@ -412,7 +429,7 @@
 			$oPaymentAction.find('.list').children('li')
 				.filter('li[paytype="' + paytype + '"]')
 				.addClass('active').siblings().removeClass('active');
-
+			$oPaymentPopup.fadeIn();
 			tl.clear();
 			tl.to($oPaymentAction, 0.3, {
 				y: '0%',
@@ -427,10 +444,14 @@
 
 		// 关闭支付方式
 		$oPaymentAction.on('tap click', '.btn-cancel', function() {
+			
 			tl.clear();
 			tl.to($oPaymentAction, 0.3, {
 				y: '100%',
-				ease: Linear.easeOut
+				ease: Linear.easeOut,
+				onComplete: function() {
+					$oPaymentPopup.fadeOut(200);
+				}
 			});
 		});
 
@@ -442,11 +463,14 @@
 				paytype = $oCurrPayment.attr('paytype');
 
 			$oBtnPayment.attr('paytype', paytype).text(txtPayment);
-
+			
 			tl.clear();
 			tl.to($oPaymentAction, 0.3, {
 				y: '100%',
-				ease: Linear.easeOut
+				ease: Linear.easeOut,
+				onComplete: function() {
+					$oPaymentPopup.fadeOut(200);
+				}
 			});
 			
 		});

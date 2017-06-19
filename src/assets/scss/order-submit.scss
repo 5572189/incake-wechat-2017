@@ -18,19 +18,19 @@ body{
         li{
             position: relative;
             border: 1px solid #dcdcdc;
-            height: 220px;
+            height: 230px;
             >a:nth-of-type(1){
                 position: relative;
-                top: 31px;
+                top: 40px;
                 left: 25px;
                 display: block;
                 width: 160px;
-                height: 160px;
+//              height: 160px;
 
             }
             >a:nth-of-type(2){
                 position: absolute;
-                top: 140px;
+                top: 150px;
                 right: 20px;
                 display: block;
                 width: 130px;
@@ -43,7 +43,7 @@ body{
             }
             >a:nth-of-type(3){
                 position: absolute;
-                top: 80px;
+                top: 85px;
                 right: 20px;
                 display: block;
                 width: 130px;
@@ -60,44 +60,56 @@ body{
                 left: 220px;
                 top: 40px;
                 >span:nth-of-type(1){
+                    height: 34px;
                     font-family: "黑体";
-                    font-size: 26px;
+                    font-size: 26px; /*px*/
+                    line-height: 34px;
                 }
                 >span:nth-of-type(2){
                     position: absolute;
                     top: 30px;
                     left: 5px;
                     width: 400px;
+                    height: 34px;
+                    line-height: 34px;
                     font-family: "黑体";
-                    font-size: 14px;
+                    font-size: 18px; /*px*/
                 }
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 430px;
+                    left: 420px;
                     top: 0;
+                    height: 28px;
+                    line-height: 28px;
                     font-family: "黑体";
-                    font-size: 28px;
+                    font-size: 28px; /*px*/
                 }
             }
             >p:nth-of-type(2){
                 position: absolute;
                 left: 220px;
-                top: 100px;
-                font-size: 22px;
+                top: 106px;
+                height: 32px;
+                font-size: 22px; /*px*/
+                line-height: 32px;
                 color: #b4b4b4;
             }
             >p:nth-of-type(3){
                 position: absolute;
                 left: 220px;
-                top: 130px;
-                font-size: 22px;
+                top: 138px;
+                height: 32px;
+                font-size: 22px; /*px*/
+                line-height: 32px;
                 color: #b4b4b4;
             }
             >p:nth-of-type(4){
                 position: absolute;
                 left: 220px;
-                top: 160px;
-                font-size: 22px;
+                top: 170px;
+                height: 32px;
+                font-size: 22px; /*px*/
+                line-height: 32px;
                 color: #b4b4b4;
             }
         }
@@ -111,10 +123,10 @@ body{
         li{
             position: relative;
             border: 1px solid #dcdcdc;
-            height: 220px;
+            height: 230px;
             >a:nth-of-type(1){
                 position: relative;
-                top: 31px;
+                top: 40px;
                 left: 25px;
                 display: block;
                 width: 160px;
@@ -123,7 +135,7 @@ body{
             }
             .drawing{
                 position: absolute;
-                top: 140px;
+                top: 150px;
                 right: 20px;
                 display: block;
                 width: 130px;
@@ -136,7 +148,7 @@ body{
             }
             .mother{
                 position: absolute;
-                top: 80px;
+                top: 85px;
                 right: 20px;
                 display: block;
                 width: 130px;
@@ -153,31 +165,39 @@ body{
                 left: 220px;
                 top: 40px;
                 >span:nth-of-type(1){
+                    height: 34px;
                     font-family: "黑体";
-                    font-size: 26px;
+                    font-size: 26px; /*px*/
+                    line-height: 34px;
                 }
                 >span:nth-of-type(2){
                     position: absolute;
                     top: 30px;
                     left: 5px;
                     width: 400px;
+                    height: 34px;
+                    line-height: 34px;
                     font-family: "黑体";
-                    font-size: 14px;
+                    font-size: 18px; /*px*/
                 }
                 >span:nth-of-type(3){
                     position: absolute;
-                    left: 430px;
+                    left: 420px;
                     top: 0;
+                    height: 28px;
+                    line-height: 28px;
                     font-family: "黑体";
-                    font-size: 28px;
+                    font-size: 28px; /*px*/
 
                 }
             }
             >p:nth-of-type(2){
                 position: absolute;
                 left: 220px;
-                top: 100px;
-                font-size: 22px;
+                top: 106px;
+                height: 32px;
+                line-height: 32px;
+                font-size: 22px; /*px*/
                 color: #b4b4b4;
             }
         }
@@ -190,10 +210,10 @@ body{
         li{
             position: relative;
             border: 1px solid #dcdcdc;
-            height: 220px;
+            height: 230px;
             >a:nth-of-type(1){
                 position: relative;
-                top: 31px;
+                top: 40px;
                 left: 25px;
                 display: block;
                 width: 160px;
@@ -204,31 +224,39 @@ body{
                 left: 220px;
                 top: 40px;
                 >span:nth-of-type(1){
+                    height: 34px;
                     font-family: "黑体";
-                    font-size: 26px;
+                    font-size: 26px; /*px*/
+                    line-height: 34px;
                 }
                 >span:nth-of-type(2){
                     position: absolute;
                     top: 30px;
                     left: 5px;
                     width: 400px;
+                    height: 34px;
                     font-family: "黑体";
-                    font-size: 14px;
+                    font-size: 18px; /*px*/
+                    line-height: 34px;
                 }
                 >span:nth-of-type(3){
                     position: absolute;
                     left: 430px;
                     top: 0;
+                    height: 28px;
                     font-family: "黑体";
-                    font-size: 28px;
+                    font-size: 28px; /*px*/
+                    line-height: 28px;
 
                 }
             }
             >p:nth-of-type(2){
                 position: absolute;
                 left: 220px;
-                top: 100px;
-                font-size: 22px;
+                top: 106px;
+               height: 32px;
+                font-size: 22px; /*px*/
+                line-height: 32px;
                 color: #b4b4b4;
             }
         }
@@ -455,9 +483,9 @@ body{
             width: 100%;
             height: 60px;
             margin: 20px 0;
-            font-size: 22px;
+            font-size: 24px; /*px*/
             span{
-                color: #dcdcdc;
+                color: #b4b4b4;
                 line-height: 70px;
                 margin-left: 40px;
             }
@@ -615,8 +643,11 @@ body{
         >span{
             display: inline-block;
             margin-top: 15px;
-            margin-left: 520px;
+            margin-left: 500px;
             color: #dcdcdc;
+            width: 200px;
+            text-align: right;
+            
         }
     }
 }
@@ -624,8 +655,8 @@ body{
     max-width:750px ;
     width: 100%;
     background: #fff;
-    font-size: 30px;
-    color: #dedede;
+    font-size: 26px; /*px*/
+    color: #b4b4b4;
     margin-bottom: 90px;
     p:nth-of-type(1){
         padding-top: 30px;
@@ -878,14 +909,17 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(255,255,255, .7);
-    font-size: 22px;
+    font-size: 19px; /*px*/
     .surprised-popup{
         position: absolute;
         left: 50%;
-        top:50px;
-        margin-left: -300px;
+        top:50%;
         width: 600px;
         height: 660px;
+        margin-left: -300px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+//      margin-top: -330px;
         background: #fff;
         border: 1px solid #e7566d;
         border-radius: 10px;
@@ -960,34 +994,39 @@ body{
     background: rgba(0,0,0, .7);
     .discount-popup{
         position: absolute;
-        right: -100%;
+//      right: -100%;
+        right: 0;
         top: 0;
         width: 550px;
         background: #f2f2f2;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        transition: transform 0.3s linear;
         >p:nth-of-type(1){
             margin-left: 40px;
             margin-top: 90px;
-            font-size: 24px;
+            font-size: 24px; /*px*/
             font-weight: bold;
         }
         ul:nth-of-type(1){
             list-style: none;
             margin-left: 40px;
-            border-bottom: 2px solid #dcdcdc;
+            border-bottom: 2px solid #dcdcdc; /*no*/
             padding-bottom: 40px;
             li{
                 position: relative;
-                width: 155px;
-                height: 80px;
+                width: 235px;
+                height: 100px;
                 float: left;
                 margin-top: 20px;
                 margin-right: 10px;
                 background: url("../imgs/order-submit/surprised-bg.png") no-repeat;
-                background-size: 155px 80px;
+                background-size: 235px 100px;
                 >p{
-                    font-size: 14px;
+                    font-size: 18px; /*px*/
                     margin-top: 20px;
-                    margin-left: 28px;
+//                  margin-left: 28px;
+                    text-align: center;
                     color: #fff;
                 }
                 a{
@@ -996,7 +1035,7 @@ body{
                     height: 31px;
                     background: url("../imgs/order-submit/surprised-bg02.png") no-repeat;
                     background-size: 31px 31px;
-                    margin-left: 60px;
+                    margin-left: 102px;
                     margin-top: 10px;
                 }
                 &:after {
@@ -1018,7 +1057,7 @@ body{
                     display: block;
                     background: url("../imgs/order-submit/surprised-bg01.png") no-repeat;
                     background-size: 31px 31px;
-                    margin-left: 60px;
+                    margin-left: 102px;
                     margin-top: 10px;
                 }
             }
@@ -1037,16 +1076,18 @@ body{
             li:nth-of-type(1){
                 width: 450px;
                 height: 65px;
-                border: 1px solid #dcdcdc;
+//              border: 1px solid #dcdcdc;
                 margin-left: 20px;
                 margin-top: 30px;
                 input{
                     width: 450px;
                     height: 65px;
                     outline: none;
+                    border: 1px solid #b4b4b4; /*no*/
                     border-radius:10px ;
-                    font-size: 22px;
+                    font-size: 22px; /*px*/
                     text-indent: 10px;
+                    outline: none;
                 }
             }
             li:nth-of-type(2){
@@ -1172,7 +1213,15 @@ body{
         }
     }
 }
-
+.payment-popup {
+    position: fixed;
+    top: 0;left: 0;
+    display: none;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .7);
+}
 .action-sheet {
     position: fixed;
     bottom: 0;
@@ -1509,10 +1558,10 @@ body{
             list-style: none;
             width: 695px;
             margin: 0 auto;
-            border-bottom: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc; /*no*/
             padding-bottom: 60px;
             li:nth-child(even){
-                margin-left: 25px;
+                margin-left: 24px;
                 margin-bottom: 10px;
             }
             li{
@@ -1551,6 +1600,7 @@ body{
                 input{
                     width: 695px;
                     height: 80px;
+                    border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
                     font-size: 22px;
@@ -1561,6 +1611,7 @@ body{
                 input{
                     width: 380px;
                     height: 80px;
+                    border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
                     font-size: 22px;
