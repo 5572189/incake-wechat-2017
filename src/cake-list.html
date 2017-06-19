@@ -21,7 +21,7 @@
 			<ul id="flower-list" class="clearfix"></ul>
 			<script type="text/html" id="tplCake">
 				{{each list as item i}}
-					<li data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}">
+					<li data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}" >
 						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
 						<a class="like" href="javascript:;"></a>
 						<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
@@ -53,9 +53,9 @@
 							<ul class="clearfix poundage-surprised">
 							{{each sc as sitem sidx}}
 								{{if sidx === 0}}
-								<li data-comment="{{sitem.comment | commentFormat}}" class="active">{{sitem.pound}}磅</li>
+								<li data-comment="{{sitem.comment | commentFormat}}"data-prices="{{sitem.price}}"   class="active">{{sitem.pound}}磅</li>
 								{{else}}
-								<li data-comment="{{sitem.comment | commentFormat}}">{{sitem.pound}}磅</li>
+								<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}" >{{sitem.pound}}磅</li>
 								{{/if}}
 							{{/each}}
 							</ul>
@@ -68,6 +68,7 @@
 								<li>数量</li>
 								<li class="subtract-surprised"></li>
 								<li class="number-surprised">1</li>
+								<li class="cost">189</li>
 								<li class="add-surprised"></li>
 							</ul>
 						</div>
@@ -77,9 +78,9 @@
 							<ul class="clearfix poundage-normal">
 							{{each regular as ritem ridx}}
 								{{if ridx === 0}}
-								<li data-comment="{{ritem.comment | commentFormat}}" class="active">{{ritem.pound}}磅</li>
+								<li data-comment="{{ritem.comment | commentFormat}}"data-prices="{{ritem.price}}"  class="active">{{ritem.pound}}磅</li>
 								{{else}}
-								<li data-comment="{{ritem.comment | commentFormat}}">{{ritem.pound}}磅</li>
+								<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}" >{{ritem.pound}}磅</li>
 								{{/if}}
 							{{/each}}
 							</ul>
@@ -92,6 +93,7 @@
 								<li>数量</li>
 								<li class="subtract-normal"></li>
 								<li class="number-normal">1</li>
+								<li class="prices">189</li>
 								<li class="add-normal"></li>
 							</ul>
 						</div>

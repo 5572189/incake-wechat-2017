@@ -404,6 +404,7 @@
 			},
 			price: '189',
 			pound: '1.5磅',
+			sell:true,
 			specs: {
 				sc: [{
 						pound: 1.5,
@@ -464,6 +465,7 @@
 			},
 			price: '189',
 			pound: '1.5磅',
+			sold:true,
 			specs: {
 				sc: [],
 				regular: [{

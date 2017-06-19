@@ -48,16 +48,20 @@
 			$(".dish-number").val(amout);
 		});
 		$subtract.click(function(){
+			if(amout === 1){
+				return false;
+			}
 			if($(this).hasClass("disabled")){
 				return false;
 			}
 			amout = parseInt($(".dish-number").val());
 			amout--;
+			
 			if(amout <= 1){
 				$(this).addClass('disabled').css("background","#b5c6d1");
 			}
 			$(".dish-number").val(amout);
-		})
+		});
 	})();
 	
 	
@@ -280,6 +284,9 @@
 				return false;
 			}
 			var amout = parseInt($(this).closest('ul').find(".number").val());
+			if(amout == 1){
+				return false;
+			}
 			amout--;
 			if(amout <= 1){
 				$(this).addClass('disabled').css("background","#b5c6d1");

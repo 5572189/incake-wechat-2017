@@ -67,7 +67,7 @@
 				<a href="javascript:;" class="sweetmeats">
 					<img src="assets/imgs/index/sweetmeats.png"/>
 				</a>
-				<a href="javascript:;" class="surprise">
+				<a href="javascript:;" class="surprise coming-soon">
 					<img src="assets/imgs/index/surprise.png"/>
 				</a>
 				<a href="javascript:;"class="raccoon-dog">
@@ -108,10 +108,22 @@
 				{{each list as item i}}
 				<div class="box" data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}">
 					<div class="pic">
-						<a href="{{item.link}}" class="box-item">
-							<img src="{{item.img}}" class="cake-kind"/>
-							<span class="collect"></span>
-						</a>
+						{{if item.sell}}
+							<a href="{{item.link}}" class="box-item sell-out">
+								<img src="{{item.img}}" class="cake-kind"/>
+								<span class="collect"></span>
+							</a>
+						{{else if  item.sold}}
+							<a href="{{item.link}}" class="box-item sold-out">
+								<img src="{{item.img}}" class="cake-kind"/>
+								<span class="collect"></span>
+							</a>
+						{{else}}
+							<a href="{{item.link}}" class="box-item">
+								<img src="{{item.img}}" class="cake-kind"/>
+								<span class="collect"></span>
+							</a>
+						{{/if}}
 						<div class="box-text">
 							<p class="change">{{item.name.cn}}<span>{{item.name.en}}</span></p>
 							<p class="label"> {{item.label.one}} <span class="rotate">|</span> {{item.label.two}} <span class="rotate">|</span> {{item.label.three}}</p>

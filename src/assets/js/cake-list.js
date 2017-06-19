@@ -88,6 +88,7 @@
 	$("#normsShade").on('click','.poundage-surprised li',function() {
 			$(this).addClass("active").siblings().removeClass("active");
 			var data = $(this).attr('data-comment');
+			var prices = $(this).attr('data-prices');
 			var data_norms = $(this).attr('data-comment').split("||");
 			var li_one = $(".pound-surprised").find('li:eq(0)');
 			var li_two = $(".pound-surprised").find('li:eq(1)');
@@ -97,12 +98,14 @@
 			li_three.text(data_norms[2]);
 			$(".subtract-surprised").removeClass('active');
 			$(".number-surprised").text(1);
+			$(".cost").text(prices);
 	});
 	
 	//常规
 	$("#normsShade").on('click','.poundage-normal li',function() {
 			$(this).addClass("active").siblings().removeClass("active");
 			var data = $(this).attr('data-comment');
+			var prices = $(this).attr('data-prices');
 			var data_norms = $(this).attr('data-comment').split("||");
 			var li_one = $(".pound-normal").find('li:eq(0)');
 			var li_two = $(".pound-normal").find('li:eq(1)');
@@ -112,11 +115,13 @@
 			li_three.text(data_norms[2]);
 			$(".subtract-normal").removeClass('active');
 			$(".number-normal").text(1);
+			$(".prices").text(prices);
 	});
 	
 	//蛋糕规则切换
 	$("#normsShade").on('click', '#surprised', function() {
 		$(this).addClass("active").siblings().removeClass("active");
+		$('.poundage-surprised li:first-child').click();
 		tl.clear();
 		tl.to($(".parcel"),0.5,{
 			'left':0
@@ -127,6 +132,7 @@
 		if($(this).attr('disabled') === "disabled"){
 			return false;
 		}
+		$('.poundage-normal li:first-child').click();
 		$(this).addClass("active").siblings().removeClass("active");
 		tl.clear();
 		tl.to($(".parcel"),0.5,{
