@@ -200,40 +200,77 @@
 		$cake_mountings.html(cake_mountings);
 //		叉盘弹框
 		$cake_mountings.on("click",'.dish-buy',function(){
-			$dish_shade.fadeIn(function(){
+			/*$dish_shade.fadeIn(function(){
 				$dish.animate({'bottom':'0px'});
+			});*/
+			$dish_shade.fadeIn(200, function(){
+				$dish.css({ 
+					'-webkit-transform': 'translateY(0%)',
+					'transform': 'translateY(0%)'
+				});
 			});
 			touchmove();
 		});
 //		取消叉盘
 		$dish_cancel.click(function(){
-			$dish.animate({'bottom':'-100%'},function(){
+			/*$dish.animate({'bottom':'-100%'},function(){
 				$dish_shade.fadeOut();
+			});*/
+			$dish.css({ 
+				'-webkit-transform': 'translateY(100%)',
+				'transform': 'translateY(100%)'
 			});
+			$dish_shade.fadeOut(800);
+			removeTouchmove();
 		});
 //		确定叉盘
 		$dish_confirm.click(function(){
-			$dish.animate({'bottom':'-100%'},function(){
+			/*$dish.animate({'bottom':'-100%'},function(){
 				$dish_shade.fadeOut();
+			});*/
+			$dish.css({ 
+				'-webkit-transform': 'translateY(100%)',
+				'transform': 'translateY(100%)'
 			});
+			$dish_shade.fadeOut(800);
+			removeTouchmove();
 		});
 //		数字蜡烛弹框
 		$cake_mountings.on("click",'.candle-buy',function(){
-			$candle_shade.fadeIn(function(){
+			/*$candle_shade.fadeIn(function(){
 				$candle.animate({'bottom':'0px'});
+			});*/
+			$candle_shade.fadeIn(200, function(){
+				$candle.css({ 
+					'-webkit-transform': 'translateY(0%)',
+					'transform': 'translateY(0%)'
+				});
 			});
+			touchmove();
 		});
 //		取消蜡烛
 		$candle_cancl.click(function(){
-			$candle.animate({'bottom':'-100%'},function(){
+			/*$candle.animate({'bottom':'-100%'},function(){
 				$candle_shade.fadeOut();
+			});*/
+			$candle.css({ 
+				'-webkit-transform': 'translateY(100%)',
+				'transform': 'translateY(100%)'
 			});
+			$candle_shade.fadeOut(800);
+			removeTouchmove();
 		});
 //		确定蜡烛
 		$candle_confirm.click(function(){
-			$candle.animate({'bottom':'-100%'},function(){
+			/*$candle.animate({'bottom':'-100%'},function(){
 				$candle_shade.fadeOut();
+			});*/
+			$candle.css({ 
+				'-webkit-transform': 'translateY(100%)',
+				'transform': 'translateY(100%)'
 			});
+			$candle_shade.fadeOut(800);
+			removeTouchmove();
 		});
 	})();
 //	数字蜡烛

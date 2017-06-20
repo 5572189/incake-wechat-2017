@@ -338,14 +338,18 @@
     .dish{
         position: absolute;
         left: 0;
-        bottom: -340px;
+//      bottom: -340px;
+        bottom: 0;
         width: 750px;
-        background-color:rgba(255,255,255,0.9);
+        background-color:#fff;
         height: 340px;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        transition: transform 0.3s linear;
         >p{
             text-align: center;
-            margin-top: 70px;
-            font-size: 24px;
+            margin-top: 50px;
+            font-size: 28px; /*px*/
         }
         ul{
             list-style: none;
@@ -354,37 +358,40 @@
                 margin-right: 25px;
             }
             li:nth-of-type(1){
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
                 background: #b5c6d1;
-                border-radius: 100%;
+                border-radius: 50%;
                 text-align: center;
-                line-height: 42px;
+                line-height: 60px;
                 color: #fff;
-                font-size: 50px;
+                font-size: 40px; /*px*/
+                margin-top: 10px;
                 margin-left: 180px;
             }
             li:nth-of-type(2){
                 width: 245px;
-                height: 60px;
+                height: 80px;
                 input{
                     width: 245px;
-                    height: 50px;
+                    height: 80px;
                     border: none;
                     outline: none;
+                    font-size: 30px; /*px*/
                     text-align: center;
-                    background: #fff;
+                    background: #f0f0f0;
                 }
             }
             li:nth-of-type(3){
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
                 background: #45515d;
-                border-radius: 100%;
+                border-radius: 50%;
                 text-align: center;
-                line-height: 42px;
+                line-height: 60px;
                 color: #fff;
-                font-size: 50px;
+                margin-top: 10px;
+                font-size: 40px; /*px*/
             }
         }
         a:nth-of-type(1){
@@ -393,10 +400,11 @@
             left: 0;
             bottom: 0;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             background: #f1b4be;
+            font-size: 26px; /*px*/
             color: #fff;
         }
         a:nth-of-type(2){
@@ -405,10 +413,11 @@
             right: 0;
             bottom: 0;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             background: #e9546b;
+            font-size: 26px; /*px*/
             color: #fff;
         }
     }
@@ -424,14 +433,18 @@
     z-index: 999;
     .candle{
         position: absolute;
-        bottom: -670px;
+//      bottom: -670px;
+        bottom: 0;
         width: 100%;
-        height: 670px;
-        background: #f1eee9;
+        height: 690px;
+        background: #fff;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        transition: transform 0.3s linear;
         >p{
             text-align: center;
-            padding: 20px 0;
-            font-size: 24px; /*px*/
+            padding: 20px 0 10px;
+            font-size: 28px; /*px*/
         }
         ul{
             list-style: none;
@@ -488,9 +501,9 @@
             left: 0;
             bottom: 0;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             background: #f1b4be;
             color: #fff;
         }
@@ -500,9 +513,9 @@
             right: 0;
             bottom: 0;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             background: #e9546b;
             color: #fff;
         }
