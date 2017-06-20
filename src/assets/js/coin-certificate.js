@@ -37,7 +37,7 @@
 	(function(){
 		var $add = $(".dish-add"),
 			$subtract = $(".dish-subtract"),
-			num = 0;
+			amout = 0;
 		
 		$add.click(function(){
 			amout = parseInt($(".dish-number").val());
@@ -48,7 +48,7 @@
 			$(".dish-number").val(amout);
 		});
 		$subtract.click(function(){
-			if(amout === 1){
+			if(amout === 0){
 				return false;
 			}
 			if($(this).hasClass("disabled")){
@@ -57,7 +57,7 @@
 			amout = parseInt($(".dish-number").val());
 			amout--;
 			
-			if(amout <= 1){
+			if(amout <= 0){
 				$(this).addClass('disabled').css("background","#b5c6d1");
 			}
 			$(".dish-number").val(amout);
@@ -274,21 +274,17 @@
 				$(this).siblings(".subtract").removeClass('disabled').css("background","#45515e");
 			}
 			$(this).closest('ul').find(".number").val(amout);
-			if(amout <= 1){
-				$(this).addClass('disabled').css("background","#b5c6d1");
-			}
-			$(this).closest('ul').find(".number").val(amout);
 		});
 		$number_candle.on("click",".subtract",function(){
 			if($(this).hasClass("disabled")){
 				return false;
 			}
 			var amout = parseInt($(this).closest('ul').find(".number").val());
-			if(amout == 1){
+			if(amout === 0){
 				return false;
 			}
 			amout--;
-			if(amout <= 1){
+			if(amout <= 0){
 				$(this).addClass('disabled').css("background","#b5c6d1");
 			}
 			$(this).closest('ul').find(".number").val(amout);
