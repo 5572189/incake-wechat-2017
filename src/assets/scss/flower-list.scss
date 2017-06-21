@@ -38,23 +38,33 @@
                background-size: 50px 50px; 
             }
             p:nth-of-type(1){
-                margin: 15px;
+                margin: 15px 15px 0;
+                span {
+                    display: block;
+                    width: 320px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
                 span:first-child{
                     font-size: 26px; /*px*/
+                    line-height: 36px;
                 }
                 span:last-child{
                     font-size: 18px; /*px*/
+                   line-height: 36px;
                 }
             }
             p:nth-of-type(2){
-                margin: 15px;
-                font-size: 18px; /*px*/
-                color: #dcdcdc;
+                margin: 0 15px;
+                font-size: 20px; /*px*/
+                color: #b4b4b4;
             }
             p:nth-of-type(3){
                 margin: 15px;
+                font-size: 26px; /*px*/
                 span{
-                    font-size: 18px; /*px*/
+                    font-size: 20px; /*px*/
                 }
             }
             >span{
