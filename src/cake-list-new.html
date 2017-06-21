@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,32 +10,34 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 蛋糕列表页</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/cake-list-new.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/cake-list-new.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div class="layout">
-			<ul id="flower-list" class="clearfix"></ul>
-			<script type="text/html" id="tplCake">
-				{{each list as item i}}
-					<li>
-						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
-						<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
-						<p>标签1 / 标签2 / 标签3</p>
-						<p>{{item.price}}/<span>{{item.number}}</span></p>
-					</li>
-				{{/each}}
-			</script>
-			
-		</div>
-		
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="assets/plugins/artTemplate/dist/template.js"></script>
-		<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
-		<script src="assets/js/cake-list-new.js"></script>
-	</body>
+
+<body>
+	<div class="layout">
+		<ul id="flower-list" class="clearfix"></ul>
+		<script type="text/html" id="tplCake">
+			{{each list as item i}}
+			<li>
+				<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
+				<p>标签1 / 标签2 / 标签3</p>
+				<p>{{item.price}}/<span>{{item.number}}</span></p>
+			</li>
+			{{/each}}
+		</script>
+
+	</div>
+
+	<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+	<script src="assets/plugins/artTemplate/dist/template.js"></script>
+	<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
+	<script src="assets/js/cake-list-new.js"></script>
+</body>
+
 </html>

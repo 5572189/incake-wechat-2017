@@ -1,0 +1,134 @@
+html,body{
+    background: #f5f5f5;
+}
+.layout{
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    .evaluate{
+        background: #fff;
+        overflow: hidden;
+        .cake-message{
+            position: relative;
+            padding-top: 20px;
+            margin-left: 32px;
+            width: 100%;
+            height: 78px;
+            a{
+                display: block;
+                width: 78px;
+                height: 78px;
+            }
+            p:nth-of-type(1){
+                position: absolute;
+                left: 110px;
+                top: 30px;
+                color: #505050;
+                span:nth-of-type(1){
+                    font-size: 22px;
+                }
+                span:nth-of-type(2){
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+            }
+            p:nth-of-type(2){
+                position: absolute;
+                left: 110px;
+                top: 65px;
+                font-size: 18px;
+                color: #c7c7c7;
+            }
+        }
+        .serve,.taste,.appearance{
+            position: relative;
+            >span{
+                display: inline-block;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                padding-left: 32px;
+                font-size: 24px;
+                color: #505050;
+            }
+            ul{
+                position: absolute;
+                left: 115px;
+                top: 35px;
+                list-style: none;
+                li{
+                    float: left;
+                    margin-right: 35px;
+                    width: 40px;
+                    height: 40px;
+                    background: url("../imgs/icons/smiling-gray.png") no-repeat;
+                    background-size: 40px 40px;
+                }
+                li.active{
+                    background: url("../imgs/icons/smiling-red.png") no-repeat;
+                    background-size: 40px 40px;
+                }
+            }
+        }
+        .overall-evaluate{
+            position: relative;
+            >span{
+                display: inline-block;
+                padding-top: 40px;
+                padding-bottom: 50px;
+                padding-left: 32px;
+                font-size: 24px;
+                color: #505050;
+            }
+            ul{
+                position: absolute;
+                left: 115px;
+                top: 35px;
+                list-style: none;
+                li{
+                    float: left;
+                    margin-right: 35px;
+                    width: 40px;
+                    height: 40px;
+                    background: url("../imgs/icons/star-gray.png") no-repeat;
+                    background-size: cover;
+                }
+                li.active{
+                    background: url("../imgs/icons/star-red.png") no-repeat;
+                    background-size: 40px 40px;
+                }
+            }
+        }
+        .comment{
+            margin: 0 auto;
+            width: 690px;
+            height: 155px;
+            font-size: 24px;
+            color: #b5b5b5;
+            textarea{
+                width: 100%;
+                height: 150px;
+                border: 0;
+                outline: none;
+                resize:none 
+            }
+        }
+        .publish{
+            width: 100%;
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+            text-align: right;
+            a{
+                display: inline-block;
+                width: 180px;
+                height: 70px;
+                text-align: center;
+                line-height: 70px;
+                font-size: 28px;
+                background: #eb5169;
+                color: #fff;
+                margin: 25px 50px 25px 0;
+            }
+        }
+    }
+}

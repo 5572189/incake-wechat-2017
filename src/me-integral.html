@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+
+	<title>INCAKE | 我的积分</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/me-integral.css" />
+</head>
+
+<body>
+	<div class="layout">
+		<div id="integral">
+			<ul>
+				<li class="active">全部积分</li>
+				<li>已获积分</li>
+				<li>消费积分</li>
+			</ul>
+		</div>
+		<div id="me-integral">
+			<ul id="integral-inquire"></ul>
+			<script id="telIntegral" type="text/html">
+				{{each list as item i}}
+				<li class="clearfix">
+					<a href="javascript:;">
+						<p><span>+</span><span>{{item.integral}}</span></p>
+					</a>
+					<div class="integral-message">
+						<p>系统，积分+<span>{{item.integral}}</span></p>
+						<p>日期: <span>{{item.datatime}}</span></p>
+						<p>有效日期: <span>{{item.effectivetime}}</span></p>
+					</div>
+				</li>
+				{{/each}}
+			</script>
+		</div>
+	</div>
+
+</body>
+<script src="assets/plugins/LABjs/LAB.min.js"></script>
+<script>
+	$LAB
+		.script('assets/plugins/artTemplate/dist/template.js').wait()
+		.script('assets/jquery/jquery-1.8.3.min.js').wait()
+		.script('assets/plugins/swiper/js/swiper.min.js').wait()
+		.script('assets/plugins/underscore/underscore-min.js').wait()
+		.script('assets/js/me-integral.js');
+</script>

@@ -1,162 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta content="yes" name="apple-mobile-web-app-capable">
-		<meta content="yes" name="apple-touch-fullscreen">
-		<meta content="telephone=no,email=no" name="format-detection">
-		<!-- flexible.js 建议做内联处理，请勿移动位置 -->
-		<script src="assets/plugins/lib-flexible/flexible.js"></script>
-		<link rel="apple-touch-icon" href="favicon.png">
-		<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-		
-		<title>INCAKE | 兑换券</title>
-		<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-		<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-		<link rel="stylesheet" href="assets/css/coin-certificate.css"/>
-		<link rel="shortcut icon" href="favicon.ico" /> 
-	</head>
-	<body>
-		<div class="coin-certificate-layout">
-			<div class="cake-exchange">
-				<div class="center">
-					<div class="head">蛋糕卡兑换</div>
-					<p>请输入卡券后五位 <input type="text" /></p>
-					<p>请输入兑换卡密码 <input type="text" /></p>
-					<p>您输入的卡号或密码不正确，请核对后重新输入！</p>
-					<div class="foot clearfix" >
-						<a href="javascript:;">取消</a>
-						<a href="javascript:;" class="skip">确定</a>
-					</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+
+	<title>INCAKE | 兑换券</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/coin-certificate.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+	<div class="coin-certificate-layout">
+		<div class="cake-exchange">
+			<div class="center">
+				<div class="head">蛋糕卡兑换</div>
+				<p>请输入卡券后五位 <input type="text" /></p>
+				<p>请输入兑换卡密码 <input type="text" /></p>
+				<p>您输入的卡号或密码不正确，请核对后重新输入！</p>
+				<div class="foot clearfix">
+					<a href="javascript:;">取消</a>
+					<a href="javascript:;" class="skip">确定</a>
 				</div>
 			</div>
-			
-			<div class="layout">
-				<div class="coin-certificate">
-					<ul id="coin-certificate" class="clearfix"></ul>
-				</div>
-				<script id="tplCoin-certificate" type="text/html">
-						{{if list.length != 0}}	
-							{{each list as item i}}
-								{{if i<6}}
-									{{if item.collect}}
-										<li class="active">
-									{{else}}
-										<li>
-									{{/if}}
-											<a href="javascript:;">
+		</div>
+
+		<div class="layout">
+			<div class="coin-certificate">
+				<ul id="coin-certificate" class="clearfix"></ul>
+			</div>
+			<script id="tplCoin-certificate" type="text/html">
+				{{if list.length != 0}} {{each list as item i}} {{if i
+				<6}} {{if item.collect}} <li class="active">
+					{{else}}
+					<li>
+						{{/if}}
+						<a href="javascript:;">
 												<img src="{{item.img}}"/>
 											</a>
-											<p>
-												<span>{{item.name.cn}}</span>
-												<span>{{item.name.en}}</span>
-											</p>
-											<p>
-												<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
-											</p>
-											{{if item.collect}}
-												<a href="javascript:;" class="immediately">取消购买</a>
-											{{else}}
-												<a href="javascript:;" class="immediately">立即购买</a>
-											{{/if}}
-										</li>
-								{{else}}
-									{{if item.collect}}
-										<li class="conceal active hide">
-									{{else}}
-										<li class="conceal hide">
-									{{/if}}
-										<a href="javascript:;">
+						<p>
+							<span>{{item.name.cn}}</span>
+							<span>{{item.name.en}}</span>
+						</p>
+						<p>
+							<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
+						</p>
+						{{if item.collect}}
+						<a href="javascript:;" class="immediately">取消购买</a> {{else}}
+						<a href="javascript:;" class="immediately">立即购买</a> {{/if}}
+					</li>
+					{{else}} {{if item.collect}}
+					<li class="conceal active hide">
+						{{else}}
+						<li class="conceal hide">
+							{{/if}}
+							<a href="javascript:;">
 											<img src="{{item.img}}"/>
 										</a>
-										<p>
-											<span>{{item.name.cn}}</span>
-											<span>{{item.name.en}}</span>
-										</p>
-										<p>
-											<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
-										</p>
-										<a href="javascript:;" class="immediately">立即购买</a>
-									</li>
-								{{/if}}
-								
-							{{/each}}
-						{{/if}}
-					</script>
-				<p class="look-over"><a href="javascript:;" class="more">查看更多</a></p>
-				<div class="mountings">
-					<span>配件添加</span>
-				</div>
-				<div class="cake-mountings">
-					<ul id="cake-mountings" class="clearfix"></ul>
-					<script id="tplCake-mountings" type="text/html">
-						{{each list as item i}}
-						    <li>
-								<a href="javascript:;">
+							<p>
+								<span>{{item.name.cn}}</span>
+								<span>{{item.name.en}}</span>
+							</p>
+							<p>
+								<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
+							</p>
+							<a href="javascript:;" class="immediately">立即购买</a>
+						</li>
+						{{/if}} {{/each}} {{/if}}
+			</script>
+			<p class="look-over"><a href="javascript:;" class="more">查看更多</a></p>
+			<div class="mountings">
+				<span>配件添加</span>
+			</div>
+			<div class="cake-mountings">
+				<ul id="cake-mountings" class="clearfix"></ul>
+				<script id="tplCake-mountings" type="text/html">
+					{{each list as item i}}
+					<li>
+						<a href="javascript:;">
 									<img src="{{item.img}}"/>
 								</a>
-								<p>
-									<span>{{item.name.cn}}</span>
-									<span>{{item.name.en}}</span>
-								</p>
-								<p>
-									<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
-								</p>
-								{{if item.dish}}
-									<a href="javascript:;" class="dish-buy">立即购买</a>
-								{{else}}
-									<a href="javascript:;" class="candle-buy">立即购买</a>
-								{{/if}}
-							</li>
-						{{/each}}
-					</script>
-				</div>
-				<a href="javascript:;" class="settlement">去结算</a>
-				
-				<!--餐盘弹框-->
-				<div class="dish-shade">
-					<div class="dish">
-						<p>刀叉盘</p>
-						<ul class="clearfix">
-							<li class="dish-subtract">-</li>
-							<li><input type="number"value="0" class="dish-number" disabled="disabled"/></li>
-							<li class="dish-add">+</li>
-						</ul>
-						<a href="javascript:;" class="dish-cancel">取&nbsp;&nbsp;消</a>
-						<a href="javascript:;" class="dish-confirm">确&nbsp;&nbsp;定</a>
-					</div>
-				</div>
-			
-				<!--蜡烛弹框-->
-				<div class="candle-shade">
-					<div class="candle">
-						<p>数字蜡烛</p>
-						<div id="number-candle" class="clearfix"></div>
-						<script id="tplCandle" type="text/html">
-							{{each list as item i}}
-								<ul>
-									<li><img src="{{item.img}}"/></li>
-									<li class="subtract">-</li>
-									<li><input type="number"value="0" class="number" disabled="disabled"/></li>
-									<li class="add">+</li>
-								</ul>
-							{{/each}}	
-						</script>
-						<a href="javascript:;" class="candle-cancl">取消</a>
-						<a href="javascript:;" class="candle-confirm">确定</a>
-					</div>
+						<p>
+							<span>{{item.name.cn}}</span>
+							<span>{{item.name.en}}</span>
+						</p>
+						<p>
+							<span><span>￥{{item.cost}}</span>/{{item.poundage}}磅</span>
+						</p>
+						{{if item.dish}}
+						<a href="javascript:;" class="dish-buy">立即购买</a> {{else}}
+						<a href="javascript:;" class="candle-buy">立即购买</a> {{/if}}
+					</li>
+					{{/each}}
+				</script>
+			</div>
+			<a href="javascript:;" class="settlement">去结算</a>
+
+			<!--餐盘弹框-->
+			<div class="dish-shade">
+				<div class="dish">
+					<p>刀叉盘</p>
+					<ul class="clearfix">
+						<li class="dish-subtract">-</li>
+						<li><input type="number" value="0" class="dish-number" disabled="disabled" /></li>
+						<li class="dish-add">+</li>
+					</ul>
+					<a href="javascript:;" class="dish-cancel">取&nbsp;&nbsp;消</a>
+					<a href="javascript:;" class="dish-confirm">确&nbsp;&nbsp;定</a>
 				</div>
 			</div>
-			
+
+			<!--蜡烛弹框-->
+			<div class="candle-shade">
+				<div class="candle">
+					<p>数字蜡烛</p>
+					<div id="number-candle" class="clearfix"></div>
+					<script id="tplCandle" type="text/html">
+						{{each list as item i}}
+						<ul>
+							<li><img src="{{item.img}}" /></li>
+							<li class="subtract">-</li>
+							<li><input type="number" value="0" class="number" disabled="disabled" /></li>
+							<li class="add">+</li>
+						</ul>
+						{{/each}}
+					</script>
+					<a href="javascript:;" class="candle-cancl">取消</a>
+					<a href="javascript:;" class="candle-confirm">确定</a>
+				</div>
+			</div>
 		</div>
-		<script src="assets/plugins/LABjs/LAB.min.js"></script>
-		<script>
-			$LAB
+
+	</div>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
 			.script('assets/jquery/jquery-1.8.3.min.js').wait()
 			.script('assets/js/coin-certificate.js');
-		</script>	
-	</body>
+	</script>
+</body>
+
 </html>

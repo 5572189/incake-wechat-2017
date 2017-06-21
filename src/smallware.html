@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,160 +10,160 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 小商品</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/smallware.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/smallware.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div class="layout">
-			<div class="warm-hint">
-				<p>温馨提示</p>
-				<p>小商品选择规则</p>
-				<span class="close"></span>
-			</div>
-			<!--添加赠品-->
-			<ul id="add-gift" class="clearfix"></ul>
-			<script type="text/html" id="tplCake-gift">
-				{{each list as item i}}
-					{{if item.like}}
-						<li class="activeBorder">
-							<a href="javascript:;">
+
+<body>
+	<div class="layout">
+		<div class="warm-hint">
+			<p>温馨提示</p>
+			<p>小商品选择规则</p>
+			<span class="close"></span>
+		</div>
+		<!--添加赠品-->
+		<ul id="add-gift" class="clearfix"></ul>
+		<script type="text/html" id="tplCake-gift">
+			{{each list as item i}} {{if item.like}}
+			<li class="activeBorder">
+				<a href="javascript:;">
 								<img src="{{item.linkimg}}"/>
 								<span class="like"></span>
 							</a>
-							<div class="message">
-								<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
-								<p>标签1 / 标签2 / 标签3</p>
-								<p><span>{{item.price}}</span>/<span>{{item.number}}</span></p>
-								<ul class="add" class="clearfix">
-									<li class="subtract"></li>
-									<li class="number">1</li>
-									<li class="addNumber"></li>
-								</ul>
-							</div>
-						</li>
-					{{else}}
-						<li>
-							<a href="javascript:;">
+				<div class="message">
+					<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
+					<p>标签1 / 标签2 / 标签3</p>
+					<p><span>{{item.price}}</span>/<span>{{item.number}}</span></p>
+					<ul class="add" class="clearfix">
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+				</div>
+			</li>
+			{{else}}
+			<li>
+				<a href="javascript:;">
 								<img src="{{item.linkimg}}"/>
 								<span class="like"></span>
 							</a>
-							<div class="message">
-								<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
-								<p>标签1 / 标签2 / 标签3</p>
-								<p><span>{{item.price}}</span>/<span>{{item.number}}</span></p>
-								<ul class="add" class="clearfix">
-									<li class="subtract"></li>
-									<li class="number">1</li>
-									<li class="addNumber"></li>
-								</ul>
-							</div>
-						</li>
-					{{/if}}
-				{{/each}}
-			</script>
-			<!--底部悬浮-->
-			<div class="confirm">
-				<a href="javascript:;" class="candle-dish">请选择数字蜡烛和餐盘</a>
-				<a href="javascript:;">确认组合</a>
-			</div>
-			<!--餐盘蜡烛-->
-			<div class="shade">
-				<div class="parcel">
-					<div class="candle clearfix">
-						<p>数字蜡烛</p>
-						<ul class="candle01">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle02">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle03">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle04">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle05">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle06">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle07">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle08">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle09">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-						<ul class="candle00">
-							<li></li>
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-					</div>
-					<div class="dish">
-						<p>盘叉</p>
-						<ul class="clearfix">
-							<li class="subtract"></li>
-							<li class="number">1</li>
-							<li class="addNumber"></li>
-						</ul>
-					</div>
-					<a href="javascript:;" class="cancel">取  &nbsp; 消</a>
-					<a href="javascript:;">确  &nbsp; 定</a>
+				<div class="message">
+					<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
+					<p>标签1 / 标签2 / 标签3</p>
+					<p><span>{{item.price}}</span>/<span>{{item.number}}</span></p>
+					<ul class="add" class="clearfix">
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
 				</div>
-			</div>
-			<!--没有选择赠品提示-->
-			<div class="gift-shade">
-				<div class="no-gift">
-					<p>您还没有选择赠品呢。</p>
-					<a href="javascript:;">确定</a>
+			</li>
+			{{/if}} {{/each}}
+		</script>
+		<!--底部悬浮-->
+		<div class="confirm">
+			<a href="javascript:;" class="candle-dish">请选择数字蜡烛和餐盘</a>
+			<a href="javascript:;">确认组合</a>
+		</div>
+		<!--餐盘蜡烛-->
+		<div class="shade">
+			<div class="parcel">
+				<div class="candle clearfix">
+					<p>数字蜡烛</p>
+					<ul class="candle01">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle02">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle03">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle04">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle05">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle06">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle07">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle08">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle09">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
+					<ul class="candle00">
+						<li></li>
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
 				</div>
-				<div class="limit-gift">
-					<p>赠品只可以选择两个哟。</p>
-					<a href="javascript:;">确定</a>
+				<div class="dish">
+					<p>盘叉</p>
+					<ul class="clearfix">
+						<li class="subtract"></li>
+						<li class="number">1</li>
+						<li class="addNumber"></li>
+					</ul>
 				</div>
+				<a href="javascript:;" class="cancel">取  &nbsp; 消</a>
+				<a href="javascript:;">确  &nbsp; 定</a>
 			</div>
 		</div>
-		
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="assets/plugins/artTemplate/dist/template.js"></script>
-		<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
-		<script src="assets/js/smallware.js"></script>
-	</body>
+		<!--没有选择赠品提示-->
+		<div class="gift-shade">
+			<div class="no-gift">
+				<p>您还没有选择赠品呢。</p>
+				<a href="javascript:;">确定</a>
+			</div>
+			<div class="limit-gift">
+				<p>赠品只可以选择两个哟。</p>
+				<a href="javascript:;">确定</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+	<script src="assets/plugins/artTemplate/dist/template.js"></script>
+	<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
+	<script src="assets/js/smallware.js"></script>
+</body>
+
 </html>

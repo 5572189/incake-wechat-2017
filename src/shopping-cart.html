@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,227 +10,236 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 购物车</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/shopping-cart.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" type="text/css" href="assets/plugins/cropper/cropper.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/shopping-cart.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div id="layout">
-			
-			<div id="cake_list">
-				<ul class="surprised">
-					<li>
-						<span class="pitch-on"></span>
-						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus01">-</span><span class="number01">1</span><span class="add01">+</span></p>
-						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
-					</li>
-					<li>
-						<span class="pitch-on"></span>
-						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus02">-</span><span class="number02">1</span><span class="add02">+</span></p>
-						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
-					</li>
-				</ul>
-				<ul class="convention">
-					<li class="li-one" pid="001">
-						<span class="pitch-on"></span>
-						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus03">-</span><span class="number03">1</span><span class="add03">+</span></p>
-						<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
-					</li>
-					<li class="li-two" pid="002">
-						<span class="pitch-on active"></span>
-						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus04">-</span><span class="number04">1</span><span class="add04">+</span></p>
-						<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
-					</li>
-				</ul>
-				<ul class="commodity">
-					<li>
-						<span class="active"></span>
-						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
-					</li>
-					<li>
-						<span></span>
-						<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a><br />
-						<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
-						<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
-						<p><span class="minus07">-</span><span class="number07">1</span><span class="add07">+</span></p>
-					</li>
-				</ul>
-			</div>
-			<div class="other">
-				<ul>
-					<li class="active">数字蜡烛</li>
-					<li >餐盘</li>
-				</ul>
-				
-			</div>
-			<div class="swiper-container swiper-container01 lists">
-		        <div class="swiper-wrapper "id="number-swiper"></div>
-		        <script id="tplnumber" type="text/html">
-			    	{{each list as item i}}
-			    		<div class="swiper-slide">
-			    			<a href="javascript:;">
+
+<body>
+	<div id="layout">
+
+		<div id="cake_list">
+			<ul class="surprised">
+				<li>
+					<span class="pitch-on"></span>
+					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus01">-</span><span class="number01">1</span><span class="add01">+</span></p>
+					<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
+				</li>
+				<li>
+					<span class="pitch-on"></span>
+					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus02">-</span><span class="number02">1</span><span class="add02">+</span></p>
+					<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
+				</li>
+			</ul>
+			<ul class="convention">
+				<li class="li-one" pid="001">
+					<span class="pitch-on"></span>
+					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus03">-</span><span class="number03">1</span><span class="add03">+</span></p>
+					<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
+				</li>
+				<li class="li-two" pid="002">
+					<span class="pitch-on active"></span>
+					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus04">-</span><span class="number04">1</span><span class="add04">+</span></p>
+					<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
+				</li>
+			</ul>
+			<ul class="commodity">
+				<li>
+					<span class="active"></span>
+					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
+				</li>
+				<li>
+					<span></span>
+					<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a><br />
+					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
+					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
+					<p><span class="minus07">-</span><span class="number07">1</span><span class="add07">+</span></p>
+				</li>
+			</ul>
+		</div>
+		<div class="other">
+			<ul>
+				<li class="active">数字蜡烛</li>
+				<li>餐盘</li>
+			</ul>
+
+		</div>
+		<div class="swiper-container swiper-container01 lists">
+			<div class="swiper-wrapper " id="number-swiper"></div>
+			<script id="tplnumber" type="text/html">
+				{{each list as item i}}
+				<div class="swiper-slide">
+					<a href="javascript:;">
 			            		<img src="{{item.img}}"/>
 			            	</a>
-			            	<div>
-			            		<p>{{item.name}}</p>
-			            		<p>{{item.nameEn}}</p>
-			            		<p>￥{{item.cost}}/{{item.price}}磅</p>
-			            		<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
-			            	</div>
-			    		</div>
-			    	{{/each}}
-			    </script>
-		    </div>
-		    
-		    <div class="swiper-container swiper-container02 lists">
-		    	
-		        <div class="swiper-wrapper" id="tableware"></div>
-		    	<script id="tplTableware" type="text/html">
-			    	{{each list as item i}}
-			    		<div class="swiper-slide">
-			    			<a href="javascript:;">
+					<div>
+						<p>{{item.name}}</p>
+						<p>{{item.nameEn}}</p>
+						<p>￥{{item.cost}}/{{item.price}}磅</p>
+						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+					</div>
+				</div>
+				{{/each}}
+			</script>
+		</div>
+
+		<div class="swiper-container swiper-container02 lists">
+
+			<div class="swiper-wrapper" id="tableware"></div>
+			<script id="tplTableware" type="text/html">
+				{{each list as item i}}
+				<div class="swiper-slide">
+					<a href="javascript:;">
 			            		<img src="{{item.aimg}}"/>
 			            	</a>
-			            	<div>
-			            		<p>{{item.name}}</p>
-			            		<p>{{item.nameEn}}</p>
-			            		<p>￥{{item.cost}}/{{item.price}}磅</p>
-			            		<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
-			            	</div>
-			    		</div>
-			    	{{/each}}
-			    </script>
-		    </div>
-		    <div class="close">
-		    	<span>已选<span>1</span>件商品</span>
-		    	<span>共<span><span>￥</span><span>189</span>.00</span></span>
-		    	<a href="javascript:;">去结算</a>
-		    </div>
-			
-			
-			<!--底部-->
-			<div id="navbar">
-				<a href="index.html" class="link">
-					<div class="home"></div>
-				</a>
-				<a href="javascript:;" class="link">
-					<div class="shopping-basket active"></div>
-					<span>2</span>
-				</a>
-				<a href="me.html" class="link">
-					<div class="mine"></div>
-				</a>
-			</div>
-		</div>
-		
-		<!--预览-->
-		<div class="picture-shade">
-			<div class="picture">
-				<div class="picture-img">
-					<img src="assets/imgs/order-submit/head.png" class="imagesrc"/>
+					<div>
+						<p>{{item.name}}</p>
+						<p>{{item.nameEn}}</p>
+						<p>￥{{item.cost}}/{{item.price}}磅</p>
+						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+					</div>
 				</div>
-				<a href="javascript:;" class="picture-close">关闭</a>
-				<a href="javascript:;">重新上传<input class="inputFile" type="file" name="" id="file" /></a>
+				{{/each}}
+			</script>
+		</div>
+		<div class="close">
+			<span>已选<span>1</span>件商品</span>
+			<span>共<span><span>￥</span><span>189</span>.00</span>
+			</span>
+			<a href="javascript:;">去结算</a>
+		</div>
+
+
+		<!--底部-->
+		<div id="navbar">
+			<a href="index.html" class="link">
+				<div class="home"></div>
+			</a>
+			<a href="javascript:;" class="link">
+				<div class="shopping-basket active"></div>
+				<span>2</span>
+			</a>
+			<a href="me.html" class="link">
+				<div class="mine"></div>
+			</a>
+		</div>
+	</div>
+
+	<!--预览-->
+	<div class="picture-shade">
+		<div class="picture">
+			<div class="picture-img">
+				<img src="assets/imgs/order-submit/head.png" class="imagesrc" />
+			</div>
+			<a href="javascript:;" class="picture-close">关闭</a>
+			<a href="javascript:;">重新上传<input class="inputFile" type="file" name="" id="file" /></a>
+		</div>
+	</div>
+	<!--加入购物车-->
+	<div class="shopping-cart">
+		<div class="shopping">
+			<p>Incake想对您说：</p>
+			<p>您挑选的是惊喜款蛋糕，但是还没</p>
+			<p>有添加惊喜哟，快去打包惊喜吧！</p>
+			<a href="javascript:;" class="shopping-here">惊喜在这里!</a>
+		</div>
+	</div>
+	<!--惊喜遮罩-->
+	<div id="shade">
+		<div class="shade-list">
+			<p>想要的惊喜在这里:</p>
+			<p>想要给惊喜的Ta，Ta是谁？</p>
+			<ul>
+				<li class="active">朋友</li>
+				<li>亲人</li>
+				<li>恋人</li>
+				<li>领导</li>
+				<li>客户</li>
+				<li>Baby</li>
+				<li class="shade-other01">其它</li>
+				<input class="last-li last-li01" type="text" name="" id="" value="" />
+			</ul>
+			<p>想在什么场景给Ta惊喜？</p>
+			<ul>
+				<li class="active">生日/祝寿</li>
+				<li>聚会</li>
+				<li>浪漫约会</li>
+				<li>商业合作</li>
+				<li>探病慰问</li>
+				<li>开业典庆</li>
+				<li>致歉</li>
+				<li class="shade-other shade-other02">其它</li>
+				<input class="last-li last-li02" type="text" name="" id="" value="" />
+			</ul>
+			<p>填写您的惊喜定制需求：</p>
+			<div>
+				<textarea class="txt-summary" placeholder="请写下您想要的惊喜，我们为您达成！"></textarea>
+			</div>
+			<p>有照片有惊喜！（非必填）</p>
+			<div id="div" class="import-image">
+				<img src="assets/imgs/shopping-cart/head.png" class="imagesrc01" />
+				<input class="inputFile01" type="file" name="" id="file01" value="" />
+			</div>
+			<p>点击图标上传图片</p>
+			<a href="javascript:;" class="delete-picture">删除</a>
+			<div class="confirm">
+				<a href="javascript:;">确定</a>
 			</div>
 		</div>
-		<!--加入购物车-->
-		<div class="shopping-cart">
-			<div class="shopping">
-				<p>Incake想对您说：</p>
-				<p>您挑选的是惊喜款蛋糕，但是还没</p>
-				<p>有添加惊喜哟，快去打包惊喜吧！</p>
-				<a href="javascript:;" class="shopping-here">惊喜在这里!</a>
-			</div>
+	</div>
+	<!--图片裁剪-->
+	<div class="container">
+		<div class="img-container">
+			<img id="image" src="assets/imgs/shopping-cart/head.png" //>
 		</div>
-		<!--惊喜遮罩-->
-		<div id="shade">
-			<div class="shade-list">
-				<p>想要的惊喜在这里:</p>
-				<p>想要给惊喜的Ta，Ta是谁？</p>
-				<ul>
-					<li class="active">朋友</li><li>亲人</li>
-					<li>恋人</li><li>领导</li>
-					<li>客户</li><li>Baby</li>
-					<li class="shade-other01">其它</li>
-					<input class="last-li last-li01" type="text" name="" id="" value="" />
-				</ul>
-				<p>想在什么场景给Ta惊喜？</p>
-				<ul>
-					<li class="active">生日/祝寿</li><li>聚会</li>
-					<li>浪漫约会</li><li>商业合作</li>
-					<li>探病慰问</li><li>开业典庆</li><li>致歉</li>
-					<li class="shade-other shade-other02">其它</li>
-					<input class="last-li last-li02" type="text" name="" id="" value="" />
-				</ul>
-				<p>填写您的惊喜定制需求：</p>
-				<div>
-					<textarea class="txt-summary" placeholder="请写下您想要的惊喜，我们为您达成！"></textarea>
-				</div>
-				<p>有照片有惊喜！（非必填）</p>
-				<div id="div"class="import-image">
-					<img src="assets/imgs/shopping-cart/head.png" class="imagesrc01"/>
-					<input class="inputFile01" type="file" name="" id="file01" value="" />
-				</div>
-				<p>点击图标上传图片</p>
-				<a href="javascript:;" class="delete-picture">删除</a>
-				<div class="confirm">
-					<a href="javascript:;">确定</a>
-				</div>
-			</div>
+		<a href="javascript:;" class="reupload-image">取消</a>
+		<a href="javascript:;" class="tailor">完成</a>
+	</div>
+	<div class="container01">
+		<div class="img-container01">
+			<img id="image01" src="assets/imgs/shopping-cart/head.png" //>
 		</div>
-		<!--图片裁剪-->
-		<div class="container">
-	  		<div class="img-container">
-		        <img  id="image" src="assets/imgs/shopping-cart/head.png"//>
-		    </div>	
-		    <a href="javascript:;" class="reupload-image">取消</a>
-		    <a href="javascript:;" class="tailor">完成</a>
+		<a href="javascript:;" class="reupload-image01">取消</a>
+		<a href="javascript:;" class="tailor01">完成</a>
+	</div>
+	<!--打包惊喜，画影弹框-->
+	<div class="build-surprised">
+		<div class="build">
+			<p>Incake想对您说：</p>
+			<p>您挑选的是惊喜款蛋糕，但是还没</p>
+			<p>有添加惊喜哟，快去打包惊喜吧！</p>
+			<a href="javascript:;">惊喜在这里</a>
 		</div>
-		<div class="container01">
-	  		<div class="img-container01">
-		        <img  id="image01" src="assets/imgs/shopping-cart/head.png"//>
-		    </div>	
-		    <a href="javascript:;" class="reupload-image01">取消</a>
-		    <a href="javascript:;" class="tailor01">完成</a>
+		<div class="drawing">
+			<p>小IN想对您说：</p>
+			<p>您挑选的画影蛋糕还没设置照片</p>
+			<p>哦，现在就去上传照片吧！</p>
+			<a href="javascript:;">惊喜在这里</a>
 		</div>
-		<!--打包惊喜，画影弹框-->
-		<div class="build-surprised">
-			<div class="build">
-				<p>Incake想对您说：</p>
-				<p>您挑选的是惊喜款蛋糕，但是还没</p>
-				<p>有添加惊喜哟，快去打包惊喜吧！</p>
-				<a href="javascript:;">惊喜在这里</a>
-			</div>
-			<div class="drawing">
-				<p>小IN想对您说：</p>
-				<p>您挑选的画影蛋糕还没设置照片</p>
-				<p>哦，现在就去上传照片吧！</p>
-				<a href="javascript:;">惊喜在这里</a>
-			</div>
-		</div>
-<script src="assets/plugins/LABjs/LAB.min.js"></script>
-		<script>
-			$LAB
+	</div>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
 			.script('assets/jquery/jquery-1.8.3.min.js').wait()
 			.script('assets/plugins/swiper/js/swiper.min.js').wait()
@@ -238,7 +248,7 @@
 			.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
 			.script('assets/plugins/cropper/cropper.js').wait()
 			.script('assets/js/shopping-cart.js');
-		</script>
-	</body>
+	</script>
+</body>
 
 </html>

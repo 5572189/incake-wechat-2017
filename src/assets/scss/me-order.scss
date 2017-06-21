@@ -24,7 +24,9 @@ body{
         }
     }
 }
-
+#await{
+    display: none;
+}
 .data{
     max-width: 750px;
     margin: 0 auto;
@@ -190,6 +192,25 @@ body{
                 text-align: center;
                 line-height: 70px;
                 color: #fff;
+            }
+        }
+        .discuss{
+            p{
+                width: 100%;
+                padding: 43px 0;
+                span{
+                    margin-left: 50px;
+                }
+                a{
+                    display: inline-block;
+                    width: 115px;
+                    height: 70px;
+                    text-align: center;
+                    line-height: 70px;
+                    border: 1px solid #e9546b;
+                    color: #e9546b;
+                    margin-left: 150px;
+                }
             }
         }
     }

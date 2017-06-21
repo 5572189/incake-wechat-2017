@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 	var tl = new TimelineLite();
 	$(".candle-dish").click(function(){
 		tl.clear();
@@ -36,7 +36,7 @@
 			$(this).removeClass('activeBorder');
 		}
 	});
-	
+
 	//头部商品渲染
 	var data = {
 			list:[{
@@ -47,12 +47,12 @@
 				number:'1个'
 			}]
 	}
-	
+
 	var $cake = $("#cake-gift");
 		var _html = template('tplCake', data);
 		$cake.append(_html);
-		
-	//添加赠品模板渲染	
+
+	//添加赠品模板渲染
 	var cake_data = {
 		list: [{
 			linkimg:"assets/imgs/cake-gift/flower.png",
@@ -84,16 +84,16 @@
 	var $cake_gift = $("#add-gift");
 		var cake_html = template('tplCake-gift', cake_data);
 		$cake_gift.append(cake_html);
-	//商品加减	
+	//商品加减
 	(function(){
 		var amout = 0;
 		$("#add-gift").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
+
 			if(amout > 1){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
@@ -102,8 +102,8 @@
 		$("#add-gift").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
@@ -117,7 +117,7 @@
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 	//蜡烛加减
 	;(function(){
@@ -125,10 +125,10 @@
 		$(".candle").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
+
 			if(amout > 1){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
@@ -137,8 +137,8 @@
 		$(".candle").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
@@ -152,7 +152,7 @@
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 	//盘叉加减
 	;(function(){
@@ -160,10 +160,10 @@
 		$(".dish").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
+
 			if(amout > 1){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
@@ -172,8 +172,8 @@
 		$(".dish").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
@@ -187,6 +187,6 @@
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 })();
