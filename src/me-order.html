@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,97 +10,132 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 全部</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/me-order.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/me-order.css" />
 </head>
-	<body>
-		<div id="nav">
+
+<body>
+	<div id="nav">
+		<ul>
+			<li class="active">全部</li>
+			<li>待支付</li>
+			<li>待发货</li>
+			<li class="no-evaluate">待评价</li>
+		</ul>
+	</div>
+	<div id="content"></div>
+	<script id="tplList" type="text/html">
+		{{each list as item i}}
+		<div class="data">
 			<ul>
-				<li class="active">全部</li>
-				<li>待支付</li>
-				<li>待发货</li>
-				<li>待评价</li>
-			</ul>
-		</div>
-		<div id="content">
-			
-		</div>
-		<script id="tplList" type="text/html">
-			{{each list as item i}}
-				<div class="data">
+				<li class="cake">
+					<p><span><a href="javascript:;">{{item.ordernumber}}</a></span><span>完成</span></p>
 					<ul>
-						<li class="cake">
-							<p><span><a href="javascript:;">{{item.ordernumber}}</a></span><span>完成</span></p>
-							<ul>
-								<li class="cake-li">
-									<a href="javascript:;"><img src="{{item.textimg}}"/></a>
-									<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-									<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
-								</li>
-								<li class="cake-li two">
-									<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
-									<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-									<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
-								</li>
-								<li class="price">
-									<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
-									<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>{{item.paid.yj}}</span></span></p>
-								</li>
-							</ul>
+						<li class="cake-li">
+							<a href="javascript:;"><img src="{{item.textimg}}"/></a>
+							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
 						</li>
-						<li class="time">
-							<span class="span-time">配送时间：2017-09-08  <span>11：11</span></span>
-							<p class="clearfix">
-								<a href="javacript:;">追加评论</a>
-								<a href="javascript:;" class="cancel-order">取消订单</a>
-								<a href="javascript:;" class="affirm-pay">确认支付</a>
+						<li class="cake-li two">
+							<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
+							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+							<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
+						</li>
+						<li class="price">
+							<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
+							<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>{{item.paid.yj}}</span></span>
 							</p>
-							
 						</li>
 					</ul>
-				</div>
-			{{/each}}
-		</script>
-		<!--取消订单弹框-->
-		<div class="cancel-shade">
-			<div class="cancel">
-				<p>您确定要取消该订单吗？取消订单后，不能恢复。</p>
-				<p>选择取消订单的理由：</p>
-				<span class="active">我不想买了</span>
-				<span>信息填写错误，重新下单</span>
-				<span>商品价格较贵</span>
-				<span>更换或添加新商品</span>
-				<span>其他原因</span>
-				<a href="javascript:;" class="affirm">确定</a>
-				<a href="javascript:;" class="abolish">取消</a>
-			</div>
+				</li>
+				<li class="time">
+					<span class="span-time">配送时间：2017-09-08  <span>11：11</span></span>
+					<p class="clearfix">
+						<a href="javacript:;">追加评论</a>
+						<a href="javascript:;" class="cancel-order">取消订单</a>
+						<a href="javascript:;" class="affirm-pay">确认支付</a>
+					</p>
+
+				</li>
+			</ul>
 		</div>
-		<!--支付方式-->
-		<div class="pay-shade">
-			<div class="pay">
-				<p>请选择支付方式</p>
-				<ul class="clearfix">
-					<li class="active">快钱支付</li>
-					<li>招行银联</li>
-					<li>微信支付</li>
-					<li>中国银联</li>
-				</ul>
-				<a href="javascript:;" class="cancel-buy">取消</a>
-				<a href="javascript:;" class="affirm-buy">确认支付</a>
-			</div>
+		{{/each}}
+	</script>
+	<div id="await"></div>
+	<script id="tplAwait" type="text/html">
+		{{each list as item i}}
+		<div class="data">
+			<ul>
+				<li class="cake">
+					<p><span><a href="javascript:;">{{item.ordernumber}}</a></span><span>完成</span></p>
+					<ul>
+						<li class="cake-li">
+							<a href="javascript:;"><img src="{{item.textimg}}"/></a>
+							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
+						</li>
+						<li class="cake-li two">
+							<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
+							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
+							<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
+						</li>
+						<li class="price">
+							<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
+							<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>{{item.paid.yj}}</span></span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="discuss">
+					<p class="clearfix">
+						<span class="span-time">配送时间：2017-09-08  <span>11：11</span></span>
+						<a href="javacript:;">评论</a>
+					</p>
+				</li>
+			</ul>
 		</div>
-		
-	</body>
-	<script src="assets/plugins/LABjs/LAB.min.js"></script>
-	<script>
-		$LAB
+		{{/each}}
+	</script>
+	<!--取消订单弹框-->
+	<div class="cancel-shade">
+		<div class="cancel">
+			<p>您确定要取消该订单吗？取消订单后，不能恢复。</p>
+			<p>选择取消订单的理由：</p>
+			<span class="active">我不想买了</span>
+			<span>信息填写错误，重新下单</span>
+			<span>商品价格较贵</span>
+			<span>更换或添加新商品</span>
+			<span>其他原因</span>
+			<a href="javascript:;" class="affirm">确定</a>
+			<a href="javascript:;" class="abolish">取消</a>
+		</div>
+	</div>
+	<!--支付方式-->
+	<div class="pay-shade">
+		<div class="pay">
+			<p>请选择支付方式</p>
+			<ul class="clearfix">
+				<li class="active">快钱支付</li>
+				<li>招行银联</li>
+				<li>微信支付</li>
+				<li>中国银联</li>
+			</ul>
+			<a href="javascript:;" class="cancel-buy">取消</a>
+			<a href="javascript:;" class="affirm-buy">确认支付</a>
+		</div>
+	</div>
+
+</body>
+<script src="assets/plugins/LABjs/LAB.min.js"></script>
+<script>
+	$LAB
 		.script('assets/plugins/artTemplate/dist/template.js').wait()
 		.script('assets/jquery/jquery-1.8.3.min.js').wait()
 		.script('assets/plugins/swiper/js/swiper.min.js').wait()
 		.script('assets/plugins/underscore/underscore-min.js').wait()
 		.script('assets/js/me-order.js').wait();
-	</script>
+</script>

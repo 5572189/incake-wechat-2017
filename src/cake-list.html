@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,106 +10,103 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 蛋糕列表页</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/cake-list.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/cake-list.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div class="layout">
-			<ul id="flower-list" class="clearfix"></ul>
-			<script type="text/html" id="tplCake">
-				{{each list as item i}}
-					<li data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}" >
-						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
-						<a class="like" href="javascript:;"></a>
-						<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
-						<p>标签1 / 标签2 / 标签3</p>
-						<p>{{item.price}}/<span>{{item.number}}</span></p>
-						<span class="car"></span>
-					</li>
-				{{/each}}
-			</script>
-			
-			<!--蛋糕规则弹框-->
-			<div class="norms-shade" id="normsShade"></div>
-			
-			<script id="tplNormsShade" type="text/html">
-				<div class="norms">
+
+<body>
+	<div class="layout">
+		<ul id="flower-list" class="clearfix"></ul>
+		<script type="text/html" id="tplCake">
+			{{each list as item i}}
+			<li data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}">
+				<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+				<a class="like" href="javascript:;"></a>
+				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
+				<p>标签1 / 标签2 / 标签3</p>
+				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<span class="car"></span>
+			</li>
+			{{/each}}
+		</script>
+
+		<!--蛋糕规则弹框-->
+		<div class="norms-shade" id="normsShade"></div>
+
+		<script id="tplNormsShade" type="text/html">
+			<div class="norms">
+				{{if sc.length > 0}}
+				<ul class="clearfix headline">
+					<li id="surprised" class="active">惊喜款</li>
+					<li id="normal">常规款</li>
+				</ul>
+				{{else}}
+				<ul class="clearfix headline no-sc">
+					<li id="normal" class="active" disabled="disabled">常规款</li>
+				</ul>
+				{{/if}}
+				<div class="parcel">
 					{{if sc.length > 0}}
-					<ul class="clearfix headline">
-						<li id="surprised" class="active">惊喜款</li>
-						<li id="normal">常规款</li>
-					</ul>
-					{{else}}
-					<ul class="clearfix headline no-sc">
-						<li id="normal" class="active" disabled="disabled">常规款</li>
-					</ul>
-					{{/if}}
-					<div class="parcel">
-						{{if sc.length > 0}}
-						<div class="surprised">
-							<ul class="clearfix poundage-surprised">
-							{{each sc as sitem sidx}}
-								{{if sidx === 0}}
-								<li data-comment="{{sitem.comment | commentFormat}}"data-prices="{{sitem.price}}"   class="active">{{sitem.pound}}磅</li>
-								{{else}}
-								<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}" >{{sitem.pound}}磅</li>
-								{{/if}}
-							{{/each}}
-							</ul>
-							<ul class="clearfix pound-surprised">
+					<div class="surprised">
+						<ul class="clearfix poundage-surprised">
+							{{each sc as sitem sidx}} {{if sidx === 0}}
+							<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}" class="active">{{sitem.pound}}磅</li>
+							{{else}}
+							<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}">{{sitem.pound}}磅</li>
+							{{/if}} {{/each}}
+						</ul>
+						<ul class="clearfix pound-surprised">
 							{{each sc[0].comment as comment cidx}}
-								<li>{{comment}}</li>
+							<li>{{comment}}</li>
 							{{/each}}
-							</ul>
-							<ul class="clearfix">
-								<li>数量</li>
-								<li class="subtract-surprised"></li>
-								<li class="number-surprised">1</li>
-								<li class="cost">189</li>
-								<li class="add-surprised"></li>
-							</ul>
-						</div>
-						{{/if}}
-						{{if regular.length > 0}}
-						<div class="normal">
-							<ul class="clearfix poundage-normal">
-							{{each regular as ritem ridx}}
-								{{if ridx === 0}}
-								<li data-comment="{{ritem.comment | commentFormat}}"data-prices="{{ritem.price}}"  class="active">{{ritem.pound}}磅</li>
-								{{else}}
-								<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}" >{{ritem.pound}}磅</li>
-								{{/if}}
-							{{/each}}
-							</ul>
-							<ul class="clearfix pound-normal">
-							{{each regular[0].comment as comment cidx}}
-								<li>{{comment}}</li>
-							{{/each}}
-							</ul>
-							<ul class="clearfix">
-								<li>数量</li>
-								<li class="subtract-normal"></li>
-								<li class="number-normal">1</li>
-								<li class="prices">189</li>
-								<li class="add-normal"></li>
-							</ul>
-						</div>
-						{{/if}}
+						</ul>
+						<ul class="clearfix">
+							<li>数量</li>
+							<li class="subtract-surprised"></li>
+							<li class="number-surprised">1</li>
+							<li class="cost">189</li>
+							<li class="add-surprised"></li>
+						</ul>
 					</div>
-					<a href="javascript:;">立即购买</a>
-					<a href="javascript:;">加入购物车</a>
-					<span class="close"></span>
+					{{/if}} {{if regular.length > 0}}
+					<div class="normal">
+						<ul class="clearfix poundage-normal">
+							{{each regular as ritem ridx}} {{if ridx === 0}}
+							<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}" class="active">{{ritem.pound}}磅</li>
+							{{else}}
+							<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}">{{ritem.pound}}磅</li>
+							{{/if}} {{/each}}
+						</ul>
+						<ul class="clearfix pound-normal">
+							{{each regular[0].comment as comment cidx}}
+							<li>{{comment}}</li>
+							{{/each}}
+						</ul>
+						<ul class="clearfix">
+							<li>数量</li>
+							<li class="subtract-normal"></li>
+							<li class="number-normal">1</li>
+							<li class="prices">189</li>
+							<li class="add-normal"></li>
+						</ul>
+					</div>
+					{{/if}}
 				</div>
-			</script>
-		</div>
-		
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="assets/plugins/artTemplate/dist/template.js"></script>
-		<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
-		<script src="assets/js/cake-list.js"></script>
-	</body>
+				<a href="javascript:;">立即购买</a>
+				<a href="javascript:;">加入购物车</a>
+				<span class="close"></span>
+			</div>
+		</script>
+	</div>
+
+	<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+	<script src="assets/plugins/artTemplate/dist/template.js"></script>
+	<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
+	<script src="assets/js/cake-list.js"></script>
+</body>
+
 </html>

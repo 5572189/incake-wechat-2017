@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,284 +10,277 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 首页</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
 	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/index.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/index.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div id="project">
-			<!-- 头部 -->
-			<header id="idxHeader">
-				<input type="hidden" name="city_id" id="cityId" value=""> 
-				<div class="location" id="showCity">上海市</div>
-				<div class="logo"></div>
-			</header>
-			<!--轮播-->
-			<div class="swiper-container">
-		        <div class="swiper-wrapper">
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
+
+<body>
+	<div id="project">
+		<!-- 头部 -->
+		<header id="idxHeader">
+			<input type="hidden" name="city_id" id="cityId" value="">
+			<div class="location" id="showCity">上海市</div>
+			<div class="logo"></div>
+		</header>
+		<!--轮播-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="javascript:;">
 		            		<img src="assets/imgs/index/banner01.png"/>
 		            	</a>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
 		            		<img src="assets/imgs/index/banner01.png"/>
 		            	</a>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
 		            		<img src="assets/imgs/index/banner01.png"/>
 		            	</a>
-		            </div>
-		            <div class="swiper-slide">
-		            	<a href="javascript:;">
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
 		            		<img src="assets/imgs/index/banner01.png"/>
 		            	</a>
-		            </div>
-		        </div>
-		        <!-- Add Pagination -->
-		        <div class="swiper-pagination"></div>
-	    	</div>
-			
-			<!--新品上架-->
-			<div id="idxSection">
-				<a href="javascript:;" class="new-product">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+
+		<!--新品上架-->
+		<div id="idxSection">
+			<a href="javascript:;" class="new-product">
 					<img src="assets/imgs/index/new-product.png"/>
 				</a>
-				<a href="flower-list.html" class="flower">
+			<a href="flower-list.html" class="flower">
 					<img src="assets/imgs/index/flower.png"/>
 				</a>
-				<a href="javascript:;" class="drink">
+			<a href="javascript:;" class="drink">
 					<img src="assets/imgs/index/drink.png"/>
 				</a>
-				<a href="javascript:;" class="sweetmeats">
+			<a href="javascript:;" class="sweetmeats">
 					<img src="assets/imgs/index/sweetmeats.png"/>
 				</a>
-				<a href="javascript:;" class="surprise coming-soon">
+			<a href="javascript:;" class="surprise coming-soon">
 					<img src="assets/imgs/index/surprise.png"/>
 				</a>
-				<a href="javascript:;"class="raccoon-dog">
+			<a href="javascript:;" class="raccoon-dog">
 					<img src="assets/imgs/index/raccoon-dog.png"/>
 				</a>
+		</div>
+
+		<!--筛选遮罩-->
+		<div id="idscreen">
+			<a href="javascript:;" class="all">全部</a>
+			<a href="javascript:;" class="love active">情人节爱阿</a>
+			<div class="screen">
+				<dl>
+					<dt><img src="assets/imgs/index/screen.png"/></dt>
+					<dd>筛选</dd>
+				</dl>
 			</div>
-		
-			<!--筛选遮罩-->
-			<div id="idscreen">
-				<a href="javascript:;" class="all">全部</a>
-				<a href="javascript:;" class="love active">情人节爱阿</a>
-				<div class="screen">
-					<dl>
-						<dt><img src="assets/imgs/index/screen.png"/></dt>
-						<dd>筛选</dd>
-					</dl>
-				</div>
-			</div>
-			
-			<!--瀑布流-->
-			<div id="main" class="clearfix">
-				<div class="box-left">
-					<div class="box">
-						<a href="javascript:;"class="img">
+		</div>
+
+		<!--瀑布流-->
+		<div id="main" class="clearfix">
+			<div class="box-left">
+				<div class="box">
+					<a href="javascript:;" class="img">
 							<img src="assets/imgs/index/01.png"/>
 						</a>
-					</div>
-				</div>
-				<div class="box-right">
-				</div>
-			</div>	
-			<div id="loading">
-				<div>
-					<img src="assets/imgs/icons/loading.gif"/>
 				</div>
 			</div>
-			<script id="tplList" type="text/html">
-				{{each list as item i}}
-				<div class="box" data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}">
-					<div class="pic">
-						{{if item.sell}}
-							<a href="{{item.link}}" class="box-item sell-out">
+			<div class="box-right">
+			</div>
+		</div>
+		<div id="loading">
+			<div>
+				<img src="assets/imgs/icons/loading.gif" />
+			</div>
+		</div>
+		<script id="tplList" type="text/html">
+			{{each list as item i}}
+			<div class="box" data-sc="{{item.specs.sc | specFormat}}" data-regular="{{item.specs.regular | specFormat}}">
+				<div class="pic">
+					{{if item.sell}}
+					<a href="{{item.link}}" class="box-item sell-out">
 								<img src="{{item.img}}" class="cake-kind"/>
 								<span class="collect"></span>
-							</a>
-						{{else if  item.sold}}
-							<a href="{{item.link}}" class="box-item sold-out">
+							</a> {{else if item.sold}}
+					<a href="{{item.link}}" class="box-item sold-out">
 								<img src="{{item.img}}" class="cake-kind"/>
 								<span class="collect"></span>
-							</a>
-						{{else}}
-							<a href="{{item.link}}" class="box-item">
+							</a> {{else}}
+					<a href="{{item.link}}" class="box-item">
 								<img src="{{item.img}}" class="cake-kind"/>
 								<span class="collect"></span>
-							</a>
-						{{/if}}
-						<div class="box-text">
-							<p class="change">{{item.name.cn}}<span>{{item.name.en}}</span></p>
-							<p class="label"> {{item.label.one}} <span class="rotate">|</span> {{item.label.two}} <span class="rotate">|</span> {{item.label.three}}</p>
-							<p class="price"><span class="span-price">￥{{item.price}}</span><span class="rotate">|</span><span>{{item.pound}}</span></p>
-							<a href="{{item.textlink}}" class="icon-add">
+							</a> {{/if}}
+					<div class="box-text">
+						<p class="change">{{item.name.cn}}<span>{{item.name.en}}</span></p>
+						<p class="label"> {{item.label.one}} <span class="rotate">|</span> {{item.label.two}} <span class="rotate">|</span> {{item.label.three}}</p>
+						<p class="price"><span class="span-price">￥{{item.price}}</span><span class="rotate">|</span><span>{{item.pound}}</span></p>
+						<a href="{{item.textlink}}" class="icon-add">
 								<img src="{{item.textimg}}"/>
 							</a>
-						</div>
-					</div>
-				</div>	
-				{{/each}}
-			</script>
-			
-			
-			<!--筛选-->
-			<div id="shade">
-				<div class="list">
-					<div class="list-one">
-						<p>商品</p>
-						<ul>
-							<li><a href="javascript:;" class="own">全部</a></li>
-						</ul>
-					</div>
-					<div class="list-two">
-						<p>口味</p>
-						<ul>
-							<li><a href="javascript:;" class="kind">鲜奶</a></li>
-							<li><a href="javascript:;" class="coffee kind">咖啡</a></li>
-							<li><a href="javascript:;" class="kind">芝士</a></li>
-							<li><a href="javascript:;" class="kind">慕斯</a></li>
-						</ul>
-					</div>
-					<div class="list-three">
-						<p>更多</p>
-						<ul>
-							<li><a href="javascript:;" class="kind">星座</a></li>
-							<li><a href="javascript:;" class="kind">水果</a></li>
-							<li><a href="javascript:;" class="loves kind">情人节</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
-			<!--城市定位-->
-			<div class="city-shade">
-				<div class="city">
-					<div class="city-one">
-						<h4>请选择配送城市</h4>
-						<p>当前城市：<a href="jvavascript:;" class="citySelected">上海</a></p>
-					</div>
-					<div class="city-two">
-						<ul>
-							<li><a href="javascript:;" >北京市</a></li>
-							<li><a href="javascript:;" >南京市</a></li>
-							<li><a href="javascript:;" >杭州市</a></li>
-							<li><a href="javascript:;" >青岛市</a></li>
-							<li><a href="javascript:;" >扬州市</a></li>
-							<li><a href="javascript:;" >福州市</a></li>
-							<li><a href="javascript:;" >苏州市</a></li>
-							<li><a href="javascript:;" >昆山市</a></li>
-							<li><a href="javascript:;" >厦门市</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-				
-			
-			<!--底部-->
-			<div id="navbar">
-				<a href="javascript:;" class="link">
-					<div class="home active"></div>
-				</a>
-				<a href="shopping-cart.html" class="link">
-					<div class="shopping-basket"></div>
-				</a>
-				<a href="me.html" class="link">
-					<div class="mine"></div>
-				</a>
-			</div>
-			
-			<!--蛋糕规则弹框-->
-			<div class="norms-shade" id="normsShade"></div>
-			
-			<script id="tplNormsShade" type="text/html">
-				<div class="norms">
-					{{if sc.length > 0}}
-					<ul class="clearfix headline">
-						<li id="surprised" class="active">惊喜款</li>
-						<li id="normal">常规款</li>
+			{{/each}}
+		</script>
+
+
+		<!--筛选-->
+		<div id="shade">
+			<div class="list">
+				<div class="list-one">
+					<p>商品</p>
+					<ul>
+						<li><a href="javascript:;" class="own">全部</a></li>
 					</ul>
-					{{else}}
-					<ul class="clearfix headline no-sc">
-						<li id="normal" class="active" disabled="disabled">常规款</li>
-					</ul>
-					{{/if}}
-					<div class="parcel">
-						{{if sc.length > 0}}
-						<div class="surprised">
-							<ul class="clearfix poundage-surprised item-rule">
-							{{each sc as sitem sidx}}
-								{{if sidx === 0}}
-								<li data-comment="{{sitem.comment | commentFormat}}"data-prices="{{sitem.price}}" class="active">{{sitem.pound}}磅</li>
-								{{else}}
-								<li data-comment="{{sitem.comment | commentFormat}}"data-prices="{{sitem.price}}">{{sitem.pound}}磅</li>
-								{{/if}}
-							{{/each}}
-							</ul>
-							<ul class="clearfix pound-surprised">
-							{{each sc[0].comment as comment cidx}}
-								<li>{{comment}}</li>
-							{{/each}}
-							</ul>
-							<ul class="clearfix">
-								<li>数量</li>
-								<li class="subtract-surprised"></li>
-								<li class="number-surprised">1</li>
-								<li class="cost">189</li>
-								<li class="add-surprised"></li>
-							</ul>
-						</div>
-						{{/if}}
-						{{if regular.length > 0}}
-						<div class="normal">
-							<ul class="clearfix poundage-normal item-rule">
-							{{each regular as ritem ridx}}
-								{{if ridx === 0}}
-								<li data-comment="{{ritem.comment | commentFormat}}"data-prices="{{ritem.price}}"  class="active">{{ritem.pound}}磅</li>
-								{{else}}
-								<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}">{{ritem.pound}}磅</li>
-								{{/if}}
-							{{/each}}
-							</ul>
-							<ul class="clearfix pound-normal">
-							{{each regular[0].comment as comment cidx}}
-								<li>{{comment}}</li>
-							{{/each}}
-							</ul>
-							<ul class="clearfix">
-								<li>数量</li>
-								<li class="subtract-normal"></li>
-								<li class="number-normal">1</li>
-								<li class="prices">189</li>
-								<li class="add-normal"></li>
-							</ul>
-						</div>
-						{{/if}}
-					</div>
-					<a href="javascript:;">立即购买</a>
-					<a href="javascript:;">加入购物车</a>
-					<span class="close"></span>
 				</div>
-			</script>
+				<div class="list-two">
+					<p>口味</p>
+					<ul>
+						<li><a href="javascript:;" class="kind">鲜奶</a></li>
+						<li><a href="javascript:;" class="coffee kind">咖啡</a></li>
+						<li><a href="javascript:;" class="kind">芝士</a></li>
+						<li><a href="javascript:;" class="kind">慕斯</a></li>
+					</ul>
+				</div>
+				<div class="list-three">
+					<p>更多</p>
+					<ul>
+						<li><a href="javascript:;" class="kind">星座</a></li>
+						<li><a href="javascript:;" class="kind">水果</a></li>
+						<li><a href="javascript:;" class="loves kind">情人节</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<script src="assets/plugins/LABjs/LAB.min.js"></script>
-		<script>
-			$LAB
+		<!--城市定位-->
+		<div class="city-shade">
+			<div class="city">
+				<div class="city-one">
+					<h4>请选择配送城市</h4>
+					<p>当前城市：<a href="jvavascript:;" class="citySelected">上海</a></p>
+				</div>
+				<div class="city-two">
+					<ul>
+						<li><a href="javascript:;">北京市</a></li>
+						<li><a href="javascript:;">南京市</a></li>
+						<li><a href="javascript:;">杭州市</a></li>
+						<li><a href="javascript:;">青岛市</a></li>
+						<li><a href="javascript:;">扬州市</a></li>
+						<li><a href="javascript:;">福州市</a></li>
+						<li><a href="javascript:;">苏州市</a></li>
+						<li><a href="javascript:;">昆山市</a></li>
+						<li><a href="javascript:;">厦门市</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!--底部-->
+		<div id="navbar">
+			<a href="javascript:;" class="link">
+				<div class="home active"></div>
+			</a>
+			<a href="shopping-cart.html" class="link">
+				<div class="shopping-basket"></div>
+			</a>
+			<a href="me.html" class="link">
+				<div class="mine"></div>
+			</a>
+		</div>
+
+		<!--蛋糕规则弹框-->
+		<div class="norms-shade" id="normsShade"></div>
+
+		<script id="tplNormsShade" type="text/html">
+			<div class="norms">
+				{{if sc.length > 0}}
+				<ul class="clearfix headline">
+					<li id="surprised" class="active">惊喜款</li>
+					<li id="normal">常规款</li>
+				</ul>
+				{{else}}
+				<ul class="clearfix headline no-sc">
+					<li id="normal" class="active" disabled="disabled">常规款</li>
+				</ul>
+				{{/if}}
+				<div class="parcel">
+					{{if sc.length > 0}}
+					<div class="surprised">
+						<ul class="clearfix poundage-surprised item-rule">
+							{{each sc as sitem sidx}} {{if sidx === 0}}
+							<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}" class="active">{{sitem.pound}}磅</li>
+							{{else}}
+							<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}">{{sitem.pound}}磅</li>
+							{{/if}} {{/each}}
+						</ul>
+						<ul class="clearfix pound-surprised">
+							{{each sc[0].comment as comment cidx}}
+							<li>{{comment}}</li>
+							{{/each}}
+						</ul>
+						<ul class="clearfix">
+							<li>数量</li>
+							<li class="subtract-surprised"></li>
+							<li class="number-surprised">1</li>
+							<li class="cost">189</li>
+							<li class="add-surprised"></li>
+						</ul>
+					</div>
+					{{/if}} {{if regular.length > 0}}
+					<div class="normal">
+						<ul class="clearfix poundage-normal item-rule">
+							{{each regular as ritem ridx}} {{if ridx === 0}}
+							<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}" class="active">{{ritem.pound}}磅</li>
+							{{else}}
+							<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}">{{ritem.pound}}磅</li>
+							{{/if}} {{/each}}
+						</ul>
+						<ul class="clearfix pound-normal">
+							{{each regular[0].comment as comment cidx}}
+							<li>{{comment}}</li>
+							{{/each}}
+						</ul>
+						<ul class="clearfix">
+							<li>数量</li>
+							<li class="subtract-normal"></li>
+							<li class="number-normal">1</li>
+							<li class="prices">189</li>
+							<li class="add-normal"></li>
+						</ul>
+					</div>
+					{{/if}}
+				</div>
+				<a href="javascript:;">立即购买</a>
+				<a href="javascript:;">加入购物车</a>
+				<span class="close"></span>
+			</div>
+		</script>
+	</div>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
 			.script('assets/jquery/jquery-1.8.3.min.js').wait()
 			.script('assets/plugins/swiper/js/swiper.min.js').wait()
 			.script('assets/plugins/underscore/underscore-min.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
 			.script('assets/js/index.js');
-		</script>	
-	</body>
-	
-	
+	</script>
+</body>
+
+
 </html>

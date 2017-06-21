@@ -50,10 +50,9 @@
                     position: absolute;
                     bottom: 20px;
                     right: 15px;
-                    display: none;
                     width: 42px;
                     height: 42px;
-                    background: url("../imgs/cake-gift/like.png") no-repeat;
+                    background: url("../imgs/cake-gift/no-like.png") no-repeat;
                     background-size: cover;
                 }
             }
@@ -127,7 +126,8 @@
         .activeBorder{
             border-color:#e9546b ;
             .like{
-                display: block;
+                background: url("../imgs/cake-gift/like.png") no-repeat;
+                background-size: cover;
             }
             .message{
                 .add{

@@ -1,0 +1,90 @@
+.layout{
+    max-width: 750px;
+    margin: 0 auto;
+    ul{
+        width: 720px;
+        height: 244px;
+        margin: 20px auto;
+        list-style: none;
+        li{
+            margin: 20px 0;
+            a{
+                position: relative;
+                float: left;
+                display: block;
+                width: 244px;
+                height: 244px;
+                z-index: 9999;
+                .like{
+                    position: absolute;
+                    left: 16px;
+                    top: 18px;
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background: url("../imgs/index/live.png") no-repeat;
+                    background-size: cover;
+                }
+                span.active{
+                    background: url("../imgs/index/like.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+            div{
+                position: relative;
+                height: 244px;
+                p:nth-of-type(1){
+                    padding-left: 264px;
+                    padding-top: 15px;
+                    color: #505050;
+                    span:first-child{
+                        font-size: 26px;
+                    }
+                    span:last-child{
+                        font-size: 14px;
+                        margin-left: 20px;
+                    }
+                }
+                p:nth-of-type(2){
+                    font-size: 18px;
+                    margin-top: 15px;
+                    padding-left: 264px;
+                    color: #c7c7c7;
+                }
+                p:nth-of-type(3){
+                    font-size: 18px;
+                    color: #c7c7c7;
+                    padding-left: 264px;
+                    margin-top: 30px;
+                }
+                p:nth-of-type(4){
+                    font-size: 18px;
+                    color: #c7c7c7;
+                    padding-left: 264px;
+                    margin-top: 10px;
+                }
+                p:nth-of-type(5){
+                    margin-top: 25px;
+                    padding-left: 264px;
+                    color: #505050;
+                    span:first-child{
+                        font-size: 18px;
+                    }
+                    span:last-child{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .shopping-car{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                display: block;
+                width: 41px;
+                height: 38px;
+                background: url("../imgs/icons/shopping-car.png") no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}

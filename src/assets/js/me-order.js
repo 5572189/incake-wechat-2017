@@ -2,6 +2,16 @@
 	$("#nav ul").on("click", "li", function() {
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
+		if($(".no-evaluate").hasClass('active')){
+			$("#content").fadeOut(function(){
+				$("#await").fadeIn();
+			});
+		}else{
+			$("#await").fadeOut(function(){
+				$("#content").fadeIn()
+			})
+		}
+		
 	});
 //	取消弹框
 	$("#content").on('click','.cancel-order',function(){
@@ -75,6 +85,10 @@
 		var $content = $("#content");
 		var _html = template('tplList', data);
 		$content.append(_html);
+		
+		var $content = $("#await");
+		var await = template('tplAwait', data);
+		$content.append(await);
 	}
 	Data();
 })()

@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta content="yes" name="apple-mobile-web-app-capable">
-		<meta content="yes" name="apple-touch-fullscreen">
-		<meta content="telephone=no,email=no" name="format-detection">
-		<!-- flexible.js 建议做内联处理，请勿移动位置 -->
-		<script src="assets/plugins/lib-flexible/flexible.js"></script>
-		<link rel="apple-touch-icon" href="favicon.png">
-		<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-		
-		<title>INCAKE | 订单详情</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/order-detail.css"/>
-		<link rel="shortcut icon" href="favicon.ico" /> 
-	</head>
-	<body>
-		<div class="order-detail-layout">
-			<div class="order">
-				<p>订单编号: <span>SHP0919713</span> </p>
-				<p>下单时间: <span>2017-06-02</span> <span>10:52</span></p>
-				<p>收货时间: <span>2017-06-03</span> <span>15:30~16:30</span></p>
-			</div>
-			<div class="gather">
-				<p>收货信息: <span>特朗普 (13904112571)</span> </p>
-				<p>收货地址: <span>我也发泄发泄</span> </p>
-			</div>
-			<div class="order-me">
-				<ul class="surprised" id="surprised-ul"></ul>
-				<script id="tplSurprise" type="text/html">
-					{{each list as item i}}
-						<li>
-							<a href="{{item.link}}"><img src="{{item.img}}"/></a>
-							<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
-							<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
-							<p>数量：<span>1</span></p>
-							<p>
-								{{each item.attrs as attr}}
-									<span>{{attr}}&nbsp;</span>
-								{{/each}}
-							</p>
-						</li>	
-					{{/each}}
-				</script>
-			</div>
-		
-			<div class="order-center">
-				<ul>
-					<li>支付方式 <span>微信支付</span> </li>
-					<li>优惠信息 <span>无</span> </li>
-					<li>生日牌 <span>无</span> </li>
-					<li>贺卡 <span>无</span> </li>
-					<li>发票信息 <span>无</span> </li>
-					<li>订单备注 <span>无</span> </li>
-				</ul>
-			</div>
-			<div class="order-foot">
-				<p>现计:<span>￥189.00</span></p>
-				<p>运费:<span>￥0.00</span></p>
-				<p>蛋糕卡:<span>￥0.00</span></p>
-				<p>共优惠金额:<span>￥0.00</span></p>
-				<p>还需支付金额:<span>￥189.00</span></p>
-			</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+
+	<title>INCAKE | 订单详情</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/order-detail.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+	<div class="order-detail-layout">
+		<div class="order">
+			<p>订单编号: <span>SHP0919713</span> </p>
+			<p>下单时间: <span>2017-06-02</span> <span>10:52</span></p>
+			<p>收货时间: <span>2017-06-03</span> <span>15:30~16:30</span></p>
 		</div>
-		
+		<div class="gather">
+			<p>收货信息: <span>特朗普 (13904112571)</span> </p>
+			<p>收货地址: <span>我也发泄发泄</span> </p>
+		</div>
+		<div class="order-me">
+			<ul class="surprised" id="surprised-ul"></ul>
+			<script id="tplSurprise" type="text/html">
+				{{each list as item i}}
+				<li>
+					<a href="{{item.link}}"><img src="{{item.img}}"/></a>
+					<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
+					<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
+					<p>数量：<span>1</span></p>
+					<p>
+						{{each item.attrs as attr}}
+						<span>{{attr}}&nbsp;</span> {{/each}}
+					</p>
+				</li>
+				{{/each}}
+			</script>
+		</div>
+
+		<div class="order-center">
+			<ul>
+				<li>支付方式 <span>微信支付</span> </li>
+				<li>优惠信息 <span>无</span> </li>
+				<li>生日牌 <span>无</span> </li>
+				<li>贺卡 <span>无</span> </li>
+				<li>发票信息 <span>无</span> </li>
+				<li>订单备注 <span>无</span> </li>
+			</ul>
+		</div>
+		<div class="order-foot">
+			<p>现计:<span>￥189.00</span></p>
+			<p>运费:<span>￥0.00</span></p>
+			<p>蛋糕卡:<span>￥0.00</span></p>
+			<p>共优惠金额:<span>￥0.00</span></p>
+			<p>还需支付金额:<span>￥189.00</span></p>
+		</div>
+	</div>
+
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>
 	<script>
 		$LAB
-		.script('assets/plugins/artTemplate/dist/template.js').wait()
-		.script('assets/jquery/jquery-1.8.3.min.js').wait()
-		.script('assets/js/order-detail.js');
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/jquery/jquery-1.8.3.min.js').wait()
+			.script('assets/js/order-detail.js');
 	</script>
-	</body>
+</body>
+
 </html>

@@ -1,0 +1,71 @@
+html,body{
+    background: #f5f5f5;
+}
+.layout{
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    .invoice-details{
+        background: #fff;
+        div{
+            position: relative;
+            border-bottom: 1px solid #dcdcdc;
+            background: url("../imgs/icons/center-bottom.png") no-repeat;
+            background-size: 26px 14px;
+            background-position: 690px 45px;
+            span{
+                display: inline-block;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+            span:first-child{
+                font-size: 24px;
+                color: #b4b4b4;
+                padding-left: 30px;
+            }
+            span:last-child{
+                font-size: 26px;
+                color: #505050;
+                width: 550px;
+                padding-left: 45px;
+                select{
+                    width: 500px;
+                    border: 0;
+                    outline: none;
+                    appearance:none;
+                }
+                input{
+                    border: 0;
+                    outline: none;
+                }
+            }
+        }
+        div:nth-of-type(2){
+            #showbill{
+                display: inline-block;
+                width: 550px;
+            }
+        }
+        .name{
+            display: none;
+        }
+    }
+    .submit{
+        position: fixed;
+        bottom: 0;
+        max-width: 750px;
+        width: 100%;
+        height: 100px;
+        a{
+         display: block;
+         width: 100%;
+         height: 100px;
+         text-align: center;
+         line-height: 100px;
+         color: #fff;
+         background: #e9546b;
+         font-size: 28px;   
+        }
+    }
+}

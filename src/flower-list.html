@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,53 +10,55 @@
 	<script src="assets/plugins/lib-flexible/flexible.js"></script>
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-	
+
 	<title>INCAKE | 鲜花列表页</title>
-	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/global.css"/>
-	<link rel="stylesheet" href="assets/css/flower-list.css"/>
-	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/flower-list.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-	<body>
-		<div class="layout">
-			<ul id="flower-list" class="clearfix">
-			</ul>
-			<script type="text/html" id="tplCake">
-				{{each list as item i}}
-					<li>
-						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
-						<a class="like" href="javascript:;"></a>
-						<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
-						<p>标签1 / 标签2 / 标签3</p>
-						<p>{{item.price}}/<span>{{item.number}}</span></p>
-						<span class="car"></span>
-					</li>
-				{{/each}}
-			</script>
-			
-			<!--鲜花弹框-->
-			<div class="flower-shade">
-				<div>
-					<p>选择您要订购的鲜花颜色</p>
-					<ul class="clearfix colors">
-						<li>粉色</li>
-						<li class="active">蓝色</li>
-					</ul>
-					<ul class="clearfix">
-						<li>数量</li>
-						<li class="subtract-flower"></li>
-						<li class="number-flower">1</li>
-						<li class="add-flower"></li>
-					</ul>
-					<a href="javascript:;">立即购买</a>
-					<a href="javascript:;">加入购物车</a>
-					<span class="flower-close"></span>
-				</div>
+
+<body>
+	<div class="layout">
+		<ul id="flower-list" class="clearfix">
+		</ul>
+		<script type="text/html" id="tplCake">
+			{{each list as item i}}
+			<li>
+				<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+				<a class="like" href="javascript:;"></a>
+				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
+				<p>标签1 / 标签2 / 标签3</p>
+				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<span class="car"></span>
+			</li>
+			{{/each}}
+		</script>
+
+		<!--鲜花弹框-->
+		<div class="flower-shade">
+			<div>
+				<p>选择您要订购的鲜花颜色</p>
+				<ul class="clearfix colors">
+					<li>粉色</li>
+					<li class="active">蓝色</li>
+				</ul>
+				<ul class="clearfix">
+					<li>数量</li>
+					<li class="subtract-flower"></li>
+					<li class="number-flower">1</li>
+					<li class="add-flower"></li>
+				</ul>
+				<a href="javascript:;">立即购买</a>
+				<a href="javascript:;">加入购物车</a>
+				<span class="flower-close"></span>
 			</div>
 		</div>
-		
-		<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-		<script src="assets/plugins/artTemplate/dist/template.js"></script>
-		<script src="assets/js/flower-list.js"></script>
-	</body>
+	</div>
+
+	<script src="assets/jquery/jquery-3.1.1.min.js"></script>
+	<script src="assets/plugins/artTemplate/dist/template.js"></script>
+	<script src="assets/js/flower-list.js"></script>
+</body>
+
 </html>
