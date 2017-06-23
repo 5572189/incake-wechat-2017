@@ -17,17 +17,17 @@ html , body{
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 color: #efa02e;
                 text-align: center;
                 margin-top: 40px;
                 span{
-                    font-size: 36px;
+                    font-size: 36px; /*px*/
                 }
             }
             p:nth-of-type(2){
                 text-align: center;
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-top: 15px;
                 color: #515151;
             }
@@ -38,19 +38,19 @@ html , body{
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 30px;
             }
             p:nth-of-type(2){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 10px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-left: 25px;
                 margin-top: 20px;
                 color: #c7c7c7;
@@ -74,14 +74,14 @@ html , body{
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 36px;
+                font-size: 36px; /*px*/
                 color: #f35bad;
                 text-align: center;
                 margin-top: 40px;
             }
             p:nth-of-type(2){
                 text-align: center;
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-top: 15px;
                 color: #515151;
             }
@@ -92,19 +92,19 @@ html , body{
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 30px;
             }
             p:nth-of-type(2){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 10px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-left: 25px;
                 margin-top: 20px;
                 color: #c7c7c7;
@@ -128,17 +128,17 @@ html , body{
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 color: #47aede;
                 text-align: center;
                 margin-top: 40px;
                 span{
-                    font-size: 36px;
+                    font-size: 36px; /*px*/
                 }
             }
             p:nth-of-type(2){
                 text-align: center;
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-top: 15px;
                 color: #515151;
             }
@@ -149,19 +149,19 @@ html , body{
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 30px;
             }
             p:nth-of-type(2){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 10px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-left: 25px;
                 margin-top: 20px;
                 color: #c7c7c7;
@@ -185,19 +185,22 @@ html , body{
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 color: #8db31a;
                 text-align: center;
                 margin-top: 40px;
                 span{
-                    font-size: 36px;
+                    font-size: 36px; /*px*/
                 }
             }
             p:nth-of-type(2){
                 text-align: center;
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-top: 15px;
                 color: #515151;
+            }
+            p:nth-of-type(3){
+                font-size: 20px; /*px*/
             }
         }
         li:nth-of-type(2){
@@ -206,19 +209,19 @@ html , body{
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 30px;
             }
             p:nth-of-type(2){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 10px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-left: 25px;
                 margin-top: 20px;
                 color: #c7c7c7;
@@ -242,21 +245,21 @@ html , body{
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 26px;
+                font-size: 26px; /*px*/
                 color: #8db31a;
                 text-align: center;
                 margin-top: 40px;
                 color: #f55c87;
             }
             p:nth-of-type(2){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 text-align: center;
                 margin-top: 5px;
                 color: #f55c87;
             }
             p:nth-of-type(3){
                 text-align: center;
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-top: 10px;
                 color: #515151;
             }
@@ -267,19 +270,19 @@ html , body{
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
             p:nth-of-type(1){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 30px;
             }
             p:nth-of-type(2){
-                font-size: 20px;
+                font-size: 20px; /*px*/
                 color: #515151;
                 margin-left: 25px;
                 margin-top: 10px;
             }
             p:nth-of-type(3){
-                font-size: 18px;
+                font-size: 20px; /*px*/
                 margin-left: 25px;
                 margin-top: 20px;
                 color: #c7c7c7;

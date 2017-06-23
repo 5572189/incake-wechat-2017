@@ -20,12 +20,12 @@ html,body{
         }
     }
     .surprise-center{
-        border-bottom:1px solid #dcdcdc;
+        border-bottom:1px solid #dcdcdc;/*no*/
         p{
             color: #fff;
-            font-size:16px ;
+            font-size:22px;/*px*/
             text-align: center;
-            margin: 20px 0;
+            margin: 20px;
         }
         ul{
             list-style: none;

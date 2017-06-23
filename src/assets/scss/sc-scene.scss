@@ -15,11 +15,11 @@
         }
         >div{
             width: 690px;
-            border-bottom: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc; /*no*/
             margin: 0 auto;
-            font-size: 22px;
+            font-size: 24px; /*px*/
             margin-top: 20px;
-            padding-bottom: 50px;
+            padding-bottom: 40px;
         }
     }
     .center{
@@ -28,13 +28,14 @@
         border-bottom: 1px solid #dcdcdc;
         padding-bottom: 60px;
         >p{
-            font-size: 26px;
+            font-size: 26px; /*px*/
+           padding-bottom: 20px;
             text-align: center;
             color: #45515e;
         }
         .require{
             span{
-                font-size: 22px;
+                font-size: 24px;/*px*/
                 color: #505050;
             }
             textarea{
@@ -42,11 +43,11 @@
                 width: 630px;
                 height: 160px;
                 resize: none;
-                border: 1px solid #dcdcdc;
+                border: 1px solid #dcdcdc; /*no*/
                 border-radius: 10px;
                 padding: 10px 20px;
-                font-size: 22px;
-                color: #b5b5b5;
+                font-size: 22px; /*px*/
+                color: #666;
                 outline: none;
             }
         }
@@ -72,7 +73,7 @@
                     right: 0;
                     width: 400px;
                     height: 60px;
-                    border: 1px solid #dcdcdc;
+                    border: 1px solid #dcdcdc;/*no*/
                     border-radius: 10px;
                     margin-left: 10px;
                     text-indent: 20px;
@@ -87,7 +88,7 @@
                     top: 0;
                     width: 270px;
                     height: 60px;
-                    border: 1px solid #dcdcdc;
+                    border: 1px solid #dcdcdc;/*no*/
                     border-radius: 10px 0 0 10px;
                     text-indent: 20px;
                     outline: none;
@@ -102,8 +103,8 @@
                     text-align: center;
                     line-height: 60px;
                     color: #fff;
-                    font-size: 22px;
-                    border: 1px solid #caa5a5;
+                    font-size: 22px;/*px*/
+                    border: 1px solid #caa5a5;/*no*/
                     background-color: #caa5a5;
                     border-radius: 0 10px 10px 0;
                 }
@@ -115,7 +116,7 @@
                     top: 0;
                     width: 190px;
                     height: 60px;
-                    border: 1px solid #dcdcdc;
+                    border: 1px solid #dcdcdc;/*no*/
                     border-radius: 10px;
                     margin-left: 10px;
                     text-indent: 20px;

@@ -62,19 +62,19 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        margin-left: -223px;
+        margin-left: -230px;
         margin-top: -280px;
-        width: 446px;
+        width: 480px;
         height: 280px;
-        border: 1px solid #e7566d;
+        border: 1px solid #e7566d; /*no*/
         overflow: hidden;
         border-radius: 10px;
         >div{
             position: absolute;
             left: 0;
             top: 0;
-            width: 446px;
-            height: 220px;
+            width: 480px;
+            height: 240px;
             p{
                 position: absolute;
                 left: 0;
@@ -83,7 +83,7 @@
                 bottom: 0;
                 display: table;
                 margin:auto;
-                font-size: 22px;
+                font-size: 20px; /*px*/
                 width: 100%;
                 text-align: center;
             }
@@ -93,10 +93,10 @@
            position: absolute;
            left: 0;
            bottom: 0;
-            height: 60px;
+            height: 80px;
             width: 100%;
             text-align: center;
-            line-height: 60px;
+            line-height: 80px;
             color: #fff; 
             background: #e7566d;
         }
