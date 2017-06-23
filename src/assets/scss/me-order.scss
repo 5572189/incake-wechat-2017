@@ -104,28 +104,38 @@ body{
                     height: 120px;
                     p:first-child{
                        position: relative;
+                       height: 60px;
+                       margin: 0 60px;
+                       span {
+                           display: inline-block;
+                           height: 60px;
+                           line-height: 60px;
+                       }
                        .num{
                            position: absolute;
                            left: 260px;
-                           top: 25px;
+                           top: 0;
                        }
                        span:nth-of-type(2){
                            position: absolute;
                            left: 450px;
-                           top: 25px;
+                           top: 0;
                        }
                        span:nth-of-type(3){
                            color: #e9546b;
                            position: absolute;
                            left: 550px;
-                           top: 25px;
+                           top: 0;
                        }
                     }
                     p:last-child{
                         position: relative;
-                        left: 0px;
-                        top: 45px;
                         color: #b4b4b4;
+                        span {
+                            display: inline-block;
+                            height: 60px;
+                            line-height: 60px;
+                        }
                         .total{
                             position: absolute;
                             top: 0;
@@ -139,7 +149,7 @@ body{
                         .paid{
                             position: absolute;
                             top: 0;
-                            left: 540px;
+                            left: 520px;
                         }
                     }
                 }
@@ -232,7 +242,7 @@ body{
         left: 50%;
         top: 50%;
         margin-left: -300px;
-        margin-top: -500px;
+        margin-top: -250px;
         width: 600px;
         height: 500px;
         border: 1px solid #e7566d;
@@ -241,7 +251,7 @@ body{
         overflow: hidden;
         p{
             margin-left: 25px;
-            font-size: 26px;
+            font-size: 22px; /*px*/
             line-height: 48px;
         }
         p:nth-of-type(1){
@@ -249,7 +259,7 @@ body{
         }
         span{
             display: block;
-            font-size: 22px;
+            font-size: 24px; /*px*/
             line-height: 50px;
             margin-left: 25px;
             text-indent: 50px;
@@ -265,9 +275,9 @@ body{
         a{
             display: block;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             color: #fff;
         }
         a:nth-of-type(1){
@@ -307,30 +317,31 @@ body{
         border-radius: 10px;
         background-color: #fff;
         p{
-            font-size: 26px;
+            font-size: 26px; /*px*/
             text-align: center;
             margin-top: 40px;
         }
         ul{
             list-style: none;
-            margin-top: 30px;
-            padding-bottom: 100px;
+            margin-top: 20px;
+            padding-bottom: 150px;
             li{
                 position: relative;
                 width: 235px;
-                height: 50px;
+                height: 60px;
                 border: 1px solid #45515d;
                 float: left;
                 margin-left: 30px;
-                margin-top: 20px;
+                margin-top: 30px;
                 text-align: center;
-                line-height: 50px;
+                line-height: 60px;
+                font-size: 24px; /*px*/
             }
             li.active{
                 color: #e7566d;
                 border: 1px solid #e7566d;
                 background: url("../imgs/me-order/pay.png") no-repeat;
-                background-size: cover cover;
+                background-size: contain;
                 background-position-x: 100%;
                 background-position-y: 100%;
             }
@@ -338,9 +349,9 @@ body{
         a{
             display: block;
             width: 50%;
-            height: 70px;
+            height: 90px;
             text-align: center;
-            line-height: 70px;
+            line-height: 90px;
             color: #fff;
         }
          a:nth-of-type(1){

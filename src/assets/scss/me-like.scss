@@ -38,50 +38,50 @@
                     padding-top: 15px;
                     color: #505050;
                     span:first-child{
-                        font-size: 26px;
+                        font-size: 26px;/*px*/
                     }
                     span:last-child{
-                        font-size: 14px;
+                        font-size: 18px;/*px*/
                         margin-left: 20px;
                     }
                 }
                 p:nth-of-type(2){
-                    font-size: 18px;
+                    font-size: 18px;/*px*/
                     margin-top: 15px;
                     padding-left: 264px;
-                    color: #c7c7c7;
+                    color: #888;
                 }
                 p:nth-of-type(3){
-                    font-size: 18px;
-                    color: #c7c7c7;
+                    font-size: 16px;/*px*/
+                    color: #888;
                     padding-left: 264px;
-                    margin-top: 30px;
+                    margin-top: 15px;
                 }
                 p:nth-of-type(4){
-                    font-size: 18px;
-                    color: #c7c7c7;
+                    font-size: 16px;/*px*/
+                    color: #888;
                     padding-left: 264px;
                     margin-top: 10px;
                 }
                 p:nth-of-type(5){
-                    margin-top: 25px;
+                    margin-top: 15px;
                     padding-left: 264px;
                     color: #505050;
                     span:first-child{
-                        font-size: 18px;
+                        font-size: 20px;/*px*/
                     }
                     span:last-child{
-                        font-size: 14px;
+                        font-size: 18px;/*px*/
                     }
                 }
             }
             .shopping-car{
                 position: absolute;
-                right: 0;
-                bottom: 0;
+                right: 10px;
+                bottom: 5px;
                 display: block;
-                width: 41px;
-                height: 38px;
+                width: 42px;
+                height: 40px;
                 background: url("../imgs/icons/shopping-car.png") no-repeat;
                 background-size: cover;
             }

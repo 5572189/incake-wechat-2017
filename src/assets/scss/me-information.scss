@@ -23,8 +23,8 @@ html , body{
                 p{
                     padding: 40px 0;
                     span:nth-of-type(1){
-                        font-size: 24px;
-                        color: #b4b4b4;
+                        font-size: 24px; /*px*/
+                        color: #787878;
                         padding-left: 30px;
                     }
                 }
@@ -38,8 +38,8 @@ html , body{
                         right:75px ;
                         top: 20px;
                         display: block;
-                        width: 63px;
-                        height: 63px;
+                        width: 68px;
+                        height: 68px;
                     }
                 }
             }
@@ -50,7 +50,7 @@ html , body{
                 p{
                     input{
                         width: 480px;
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         text-align: right;
                         margin-left: 100px;
@@ -67,7 +67,7 @@ html , body{
                 background-position: 700px 48px;
                 p{
                     span:nth-of-type(2){
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         margin-left: 560px;
                     }
@@ -79,7 +79,7 @@ html , body{
                 background: none;
                 p{
                     #showDate{
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         span{
                             position: relative;
@@ -114,7 +114,7 @@ html , body{
                 p{
                     input{
                         width: 480px;
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         text-align: right;
                         margin-left: 110px;
@@ -130,7 +130,7 @@ html , body{
                 p{
                     input{
                         width: 480px;
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         text-align: right;
                         margin-left: 65px;
@@ -146,7 +146,7 @@ html , body{
                 p{
                     input{
                         width: 480px;
-                        font-size: 24px;
+                        font-size: 24px;/*px*/
                         color: #505050;
                         text-align: right;
                         margin-left: 110px;
