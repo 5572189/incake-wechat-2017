@@ -1,25 +1,26 @@
 ;(function($, window, document) {
 	$(function(){
-//	蛋糕款式渲染
+		function touchmove(){
+			$("body").on('touchmove.mask', function(event) {
+				//去掉默认
+				event.preventDefault();
+				//终止事件的传播
+				event.stopPropagation();
+			});
+		}
+		function removeTouchmove(){
+			//解绑事件：
+			$("body").off(".mask");
+		}
+        //蛋糕款式渲染
 		intiData();
-//	母亲节留言弹框,惊喜弹框		
+		//母亲节留言弹框,惊喜弹框
 		mother();
-		
+
 		fnInitPayment();
 	});
-	function touchmove(){
-		$("body").on('touchmove.mask', function(event) {
-			//去掉默认
-			event.preventDefault();
-			//终止事件的传播
-			event.stopPropagation();
-		});
-	}
-	function removeTouchmove(){
-		//解绑事件：
-		$("body").off(".mask");
-	}
-	
+
+
 
 //	母亲节留言弹框,惊喜弹框
 	function mother(){
@@ -35,14 +36,14 @@
 			$surprised_shade=$(".surprised-shade"),
 			$surprised_popup=$(".surprised-popup"),
 			$surprised_confirm=$(".surprised-confirm"),
-			
+
 			$discount_shade=$(".discount-shade"),
 			$discount_popup=$(".discount-popup"),
 			$discount_coupon=$(".discount-coupon"),
 			$discount_ul=$("#discount-ul"),
 			$cash_coupon=$("#cash-coupon"),
 			$popup_confirm=$(".popup-confirm");
-//		优惠券点击弹框	
+//		优惠券点击弹框
 		$discount_coupon.on('click','a',function(){
 			/*$discount_shade.fadeIn(function(){
 				$discount_popup.animate({ right: '0' });
@@ -59,7 +60,7 @@
 			/*$discount_popup.animate({ right: '-100%' },function(){
 				$discount_shade.fadeOut();
 			});*/
-			$discount_popup.css({ 
+			$discount_popup.css({
 				'-webkit-transform': 'translateX(100%)',
 				'transform': 'translateX(100%)'
 			});
@@ -70,7 +71,7 @@
 				/*$discount_popup.animate({ right: '-100%' },function(){
 					$discount_shade.fadeOut();
 				});*/
-				$discount_popup.css({ 
+				$discount_popup.css({
 					'-webkit-transform': 'translateX(100%)',
 					'transform': 'translateX(100%)'
 				});
@@ -84,11 +85,11 @@
 			}else{
 				$(this).removeClass("active");
 			}
-			
+
 		});
 		$cash_coupon.on('click','li',function(){
 			$(this).addClass("active").siblings().removeClass("active");
-			
+
 		});
 //		惊喜弹框
 		$surprise.click(function(){
@@ -280,7 +281,7 @@
 	$picture_shade.click(function(e){
 		if(e.target==$picture_shade[0]){
 			$picture_shade.fadeOut();
-			
+
 		}
 		removeTouchmove();
 	});
@@ -294,7 +295,7 @@
 	$cakeCard.click(function(){
 		$cake_card.fadeIn();
 	});
-	
+
 	$cake_card.click(function(e){
 		if(e.target == $cake_card[0]){
 			$cake_card.fadeOut();
@@ -316,7 +317,7 @@
   			$file = $("#file"),
  			$page = $("body"),
  			$imagesrc = $(".imagesrc");
-	 			
+
 	 	$image.cropper({
 	 		aspectRatio: 1 / 1,
         	autoCropArea: 1,
@@ -332,7 +333,7 @@
 	        $inputImage = $(this);
 	        var URL = window.URL || window.webkitURL;
 	        var blobURL;
-		
+
 	        if (URL) {
 	            $inputImage.change(function() {
 	                var files = this.files;
@@ -341,14 +342,14 @@
 	                if (!$image.data('cropper')) {
 	                    return;
 	                }
-	
+
 	                if (files && files.length) {
 	                    file = files[0];
-	
+
 	                    if (/^image\/\w+$/.test(file.type)) {
 	                        blobURL = URL.createObjectURL(file);
 	                        $image.one('built.cropper', function() {
-	
+
 	                            // Revoke when load complete
 	                            URL.revokeObjectURL(blobURL);
 	                        }).cropper('reset').cropper('replace', blobURL);
@@ -373,11 +374,11 @@
 	  	$(".reupload-image").click(function(){
 	  		$(".container").fadeOut();
 	  	})
-			
+
 	})();
-	
-	
-	
+
+
+
 
 //	生日牌选择
 	;(function(){
@@ -387,11 +388,11 @@
 	    var birthdayIdDom = document.querySelector('#birthdayId');
 	    var birthdayWrite = document.getElementsByClassName("birthday-write");
 	    showbirthdayDom.addEventListener('click', function () {
-	    	
-	        var bankSelect = new IosSelect(1, 
+
+	        var bankSelect = new IosSelect(1,
 	            [databirthday],
 	            {
-	            	
+
 	                title: '生日牌',
 	                // 每一项的高度，可选，默认 35
 	                itemHeight: 0.7,
@@ -400,7 +401,7 @@
 	                callback: function (selectOneObj) {
 	                    birthdayIdDom.value = selectOneObj.id;
 	                    showbirthdayDom.innerHTML = selectOneObj.value;
-	                    
+
 	                    showbirthdayDom.dataset['id'] = selectOneObj.id;
 	                    showbirthdayDom.dataset['value'] = selectOneObj.value;
 	                    if(selectOneObj.value==='自定义'){
@@ -412,8 +413,8 @@
 	        });
 	    });
 	})();
-//	支付方式选择	
-	
+//	支付方式选择
+
 	function fnInitPayment() {
 		var $oPaymentPopup = $('.payment-popup'),
 			$oPaymentAction = $('#paymentAction'),
@@ -444,7 +445,7 @@
 
 		// 关闭支付方式
 		$oPaymentAction.on('tap click', '.btn-cancel', function() {
-			
+
 			tl.clear();
 			tl.to($oPaymentAction, 0.3, {
 				y: '100%',
@@ -463,7 +464,7 @@
 				paytype = $oCurrPayment.attr('paytype');
 
 			$oBtnPayment.attr('paytype', paytype).text(txtPayment);
-			
+
 			tl.clear();
 			tl.to($oPaymentAction, 0.3, {
 				y: '100%',
@@ -472,7 +473,7 @@
 					$oPaymentPopup.fadeOut(200);
 				}
 			});
-			
+
 		});
 	}
 //	发票选择
@@ -484,11 +485,11 @@
 	    var bill_privately = document.getElementsByClassName("bill-privately");
 	    var bill_company = document.getElementsByClassName("bill-company");
 	    showbill.addEventListener('click', function () {
-	    	
-	        var bankSelect = new IosSelect(1, 
+
+	        var bankSelect = new IosSelect(1,
 	            [bill],
 	            {
-	            	
+
 	                title: '发票',
 	                // 每一项的高度，可选，默认 35
 	                itemHeight: 0.7,
@@ -497,7 +498,7 @@
 	                callback: function (selectOneObj) {
 	                    billId.value = selectOneObj.id;
 	                    showbill.innerHTML = selectOneObj.value;
-	                    
+
 	                    showbill.dataset['id'] = selectOneObj.id;
 	                    showbill.dataset['value'] = selectOneObj.value;
 	                    if(selectOneObj.value==='个人'){
@@ -512,11 +513,11 @@
 					    }
 	                }
 	        });
-	        
+
 	    });
-	    
+
 	})();
-//	订单备注选择	
+//	订单备注选择
 	;(function(){
 		window.adaptive.desinWidth = 750;
         window.adaptive.init();
@@ -524,11 +525,11 @@
 	    var orderComment = document.querySelector('#orderComment');
 	    var order_write = document.getElementsByClassName("order-comment-write");
 	    orderComment_span.addEventListener('click', function () {
-	    	
-	        var bankSelect = new IosSelect(1, 
+
+	        var bankSelect = new IosSelect(1,
 	            [order],
 	            {
-	            	
+
 	                title: '发票',
 	                // 每一项的高度，可选，默认 35
 	                itemHeight: 0.7,
@@ -537,7 +538,7 @@
 	                callback: function (selectOneObj) {
 	                    orderComment.value = selectOneObj.id;
 	                    orderComment_span.innerHTML = selectOneObj.value;
-	                    
+
 	                    orderComment_span.dataset['id'] = selectOneObj.id;
 	                    orderComment_span.dataset['value'] = selectOneObj.value;
 	                    if(selectOneObj.value==='需要'){
@@ -547,16 +548,16 @@
 					    }
 	                }
 	        });
-	        
+
 	    });
-	    
-	})();	
+
+	})();
 
 //	时间选择
 	;(function() {
 	window.adaptive.desinWidth = 750;
     window.adaptive.init();
-    
+
 	var selectContactDom = $('#select_contact');
 	var showContactDom = $('#show_contact');
 	var contactProvinceCodeDom = $('#contact_province_code');
@@ -568,8 +569,8 @@
 		var oneLevelId = showContactDom.attr('data-province-code');
 		var twoLevelId = showContactDom.attr('data-city-code');
 		var threeLevelId = showContactDom.attr('data-district-code');
-		var iosSelect = new IosSelect(3, 
-			[year, month, day], 
+		var iosSelect = new IosSelect(3,
+			[year, month, day],
 			{
 				title: '时间选择',
                 itemHeight: 0.933333,
@@ -601,11 +602,11 @@
 	    var birthdayIdDom = document.querySelector('#birthdayinput');
 	    var birthday_card_write = document.getElementsByClassName("birthday-card-write");
 	    showbirthdayDom.addEventListener('click', function () {
-	    	
-	        var bankSelect = new IosSelect(1, 
+
+	        var bankSelect = new IosSelect(1,
 	            [birthdayCard],
 	            {
-	            	
+
 	                title: '生日贺卡',
 	                // 每一项的高度，可选，默认 35
 	                itemHeight: 0.7,
@@ -614,7 +615,7 @@
 	                callback: function (selectOneObj) {
 	                    birthdayIdDom.value = selectOneObj.id;
 	                    showbirthdayDom.innerHTML = selectOneObj.value;
-	                    
+
 	                    showbirthdayDom.dataset['id'] = selectOneObj.id;
 	                    showbirthdayDom.dataset['value'] = selectOneObj.value;
 	                    if(selectOneObj.value==='生日卡'){
@@ -624,9 +625,9 @@
 					    }
 	                }
 	        });
-	        
+
 	    });
-	    
+
 	})();
 
 //	城市选择
@@ -638,11 +639,11 @@
 				$(this).addClass("active");
 			}
 		});
-		
+
 		(function() {
 			window.adaptive.desinWidth = 750;
 	        window.adaptive.init();
-	        
+
 			var selectContactDom = $('#selectContact');
 			var showContactDom = $('#showContact');
 			var contactProvinceCodeDom = $('#contact_province_code');
@@ -650,12 +651,12 @@
 			selectContactDom.bind('click', function() {
 				var sccode = showContactDom.attr('data-city-code');
 				var scname = showContactDom.attr('data-city-name');
-	
+
 				var oneLevelId = showContactDom.attr('data-province-code');
 				var twoLevelId = showContactDom.attr('data-city-code');
 				var threeLevelId = showContactDom.attr('data-district-code');
-				var iosSelect = new IosSelect(3, 
-					[iosProvinces, iosCitys, iosCountys], 
+				var iosSelect = new IosSelect(3,
+					[iosProvinces, iosCitys, iosCountys],
 					{
 						title: '地址选择',
 	                    itemHeight: 0.933333,
@@ -670,7 +671,7 @@
 							contactProvinceCodeDom.attr('data-province-name', selectOneObj.value);
 							contactCityCodeDom.val(selectTwoObj.id);
 							contactCityCodeDom.attr('data-city-name', selectTwoObj.value);
-		
+
 							showContactDom.attr('data-province-code', selectOneObj.id);
 							showContactDom.attr('data-city-code', selectTwoObj.id);
 							showContactDom.attr('data-district-code', selectThreeObj.id);
