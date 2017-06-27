@@ -1,17 +1,20 @@
 ;(function($, window, document) {
+
+	function touchmove(){
+		$("body").on('touchmove.mask', function(event) {
+			//去掉默认
+			event.preventDefault();
+			//终止事件的传播
+			event.stopPropagation();
+		});
+	}
+	function removeTouchmove(){
+		//解绑事件：
+		$("body").off(".mask");
+	}
+
 	$(function(){
-		function touchmove(){
-			$("body").on('touchmove.mask', function(event) {
-				//去掉默认
-				event.preventDefault();
-				//终止事件的传播
-				event.stopPropagation();
-			});
-		}
-		function removeTouchmove(){
-			//解绑事件：
-			$("body").off(".mask");
-		}
+
         //蛋糕款式渲染
 		intiData();
 		//母亲节留言弹框,惊喜弹框
@@ -49,11 +52,12 @@
 				$discount_popup.animate({ right: '0' });
 			});*/
 			$discount_shade.fadeIn(200, function(){
-				$discount_popup.css({ 
+				$discount_popup.css({
 					'-webkit-transform': 'translateX(0%)',
 					'transform': 'translateX(0%)'
 				});
 			});
+			touchmove();
 		});
 //		优惠券弹框隐藏
 		$popup_confirm.click(function(){
@@ -65,6 +69,7 @@
 				'transform': 'translateX(100%)'
 			});
 			$discount_shade.fadeOut(800);
+			removeTouchmove();
 		});
 		$discount_shade.click(function(e){
 			if(e.target==$discount_shade[0]){
@@ -77,6 +82,7 @@
 				});
 				$discount_shade.fadeOut(800);
 			}
+			removeTouchmove();
 		});
 //		弹框里优惠券绑定事件
 		$discount_ul.on('click','li',function(){
@@ -294,6 +300,7 @@
 		$cake_complete = $(".cake-complete");
 	$cakeCard.click(function(){
 		$cake_card.fadeIn();
+		touchmove();
 	});
 
 	$cake_card.click(function(e){
@@ -310,6 +317,7 @@
 	});
 	$cake_complete.click(function(){
 		$cake_card.fadeOut();
+		removeTouchmove();
 	});
 	//	裁剪
 	(function(){
@@ -436,6 +444,7 @@
 				y: '0%',
 				ease: Linear.easeIn
 			});
+			touchmove();
 		});
 
 		// 支付方式切换
@@ -454,6 +463,7 @@
 					$oPaymentPopup.fadeOut(200);
 				}
 			});
+			removeTouchmove();
 		});
 
 		// 确定支付方式
@@ -473,7 +483,7 @@
 					$oPaymentPopup.fadeOut(200);
 				}
 			});
-
+			removeTouchmove();
 		});
 	}
 //	发票选择
@@ -513,7 +523,6 @@
 					    }
 	                }
 	        });
-
 	    });
 
 	})();
@@ -563,6 +572,7 @@
 	var contactProvinceCodeDom = $('#contact_province_code');
 	var contactCityCodeDom = $('#contact_city_code');
 	selectContactDom.bind('click', function() {
+
 		var sccode = showContactDom.attr('data-city-code');
 		var scname = showContactDom.attr('data-city-name');
 
