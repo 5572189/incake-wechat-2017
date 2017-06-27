@@ -647,7 +647,7 @@ body{
             color: #dcdcdc;
             width: 200px;
             text-align: right;
-
+            
         }
     }
 }
@@ -986,11 +986,9 @@ body{
 }
 .discount-shade{
     position: fixed;
-    top: 0;
-    margin: 0 auto;
+    top: 0;left: 0;
     display: none;
     z-index: 9998;
-    max-width: 750px;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0, .7);
@@ -1221,11 +1219,9 @@ body{
 }
 .payment-popup {
     position: fixed;
-    top: 0;
-    margin: 0 auto;
+    top: 0;left: 0;
     display: none;
     z-index: 9998;
-    max-width: 750px;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0, .7);
@@ -1700,4 +1696,20 @@ body{
             color: #fff;
         }
     }
+}
+
+.ios-select-widget-box #iosSelectTitle {
+    font-size: 28px; /*px*/    
+}
+.ios-select-widget-box header.iosselect-header a {
+    font-size: 26px; /*px*/    
+}
+.ios-select-widget-box ul li.at {
+    font-size: 26px; /*px*/
+}
+.ios-select-widget-box ul li.side1 {
+    font-size: 24px; /*px*/
+}
+.ios-select-widget-box ul li.side2 {
+    font-size: 24px; /*px*/
 }
