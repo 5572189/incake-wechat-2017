@@ -61,13 +61,13 @@ body{
                } 
                div{
                    color: #505050;
-                   font-size: 20px;
+                   font-size: 24px; /*px*/
                    p{
                        text-align: right;
                        margin-right: 40px;
                    }
                    p:nth-of-type(1){
-                       padding-top: 35px;
+                       padding-top: 20px;
                    }
                    p:nth-of-type(2),p:nth-of-type(3){
                        padding-top: 10px;

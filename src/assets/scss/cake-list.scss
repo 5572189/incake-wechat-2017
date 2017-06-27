@@ -38,19 +38,32 @@
                background-size: 50px 50px;
             }
             p:nth-of-type(1){
+<<<<<<< HEAD
                 margin: 15px;
                 white-space:nowrap;
                 overflow: hidden;
                 text-overflow :ellipsis; 
+=======
+                margin: 15px 15px 0;
+                span {
+                    display: block;
+                    width: 320px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+>>>>>>> 64b96d7ce8116fe156c3dd715ec2826737d1310d
                 span:first-child{
                     font-size: 26px; /*px*/
+                    line-height: 36px;
                 }
                 span:last-child{
-                    font-size: 14px; /*px*/
+                    font-size: 18px; /*px*/
+                   line-height: 36px;
                 }
             }
             p:nth-of-type(2){
-                margin: 15px;
+                margin: 0 15px;
                 font-size: 20px; /*px*/
                 color: #b4b4b4;
             }
