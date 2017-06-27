@@ -38,12 +38,6 @@
                background-size: 50px 50px;
             }
             p:nth-of-type(1){
-<<<<<<< HEAD
-                margin: 15px;
-                white-space:nowrap;
-                overflow: hidden;
-                text-overflow :ellipsis; 
-=======
                 margin: 15px 15px 0;
                 span {
                     display: block;
@@ -52,7 +46,6 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                 }
->>>>>>> 64b96d7ce8116fe156c3dd715ec2826737d1310d
                 span:first-child{
                     font-size: 26px; /*px*/
                     line-height: 36px;
