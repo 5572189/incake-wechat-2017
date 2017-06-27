@@ -8,6 +8,7 @@ html,body{
     height: 100%;
     margin: 0 auto;
     .invoice{
+        display: none;
         position: relative;
         background: #fff;
         border-bottom:1px solid #dcdcdc ;
@@ -49,8 +50,10 @@ html,body{
     }
     .add-invoice{
         position: fixed;
-        left: 0;
+        left: 50%;
         bottom: 0;
+        margin-left: -375px;
+        max-width: 750px;
         width: 100%;
         height: 100px;
         a{
@@ -63,5 +66,16 @@ html,body{
             background: #e9546b;
             font-size: 28px;
         }
+    }
+}
+.no-invoice{
+    padding-top: 180px;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    p{
+        text-align: center;
+        font-size: 26px;
+        color: #b4b4b4;
     }
 }

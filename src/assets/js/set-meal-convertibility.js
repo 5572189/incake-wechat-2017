@@ -36,13 +36,13 @@
 			$(this).removeClass('activeBorder');
 		}
 	});
-	
+
 	//头部提示关闭
 	$(".close").click(function(){
 		$(".warm-hint").fadeOut();
 	});
-		
-	//添加赠品模板渲染	
+
+	//添加赠品模板渲染
 	var cake_data = {
 		list: [{
 			linkimg:"assets/imgs/cake-gift/flower.png",
@@ -74,16 +74,16 @@
 	var $cake_gift = $("#add-gift");
 		var cake_html = template('tplCake-gift', cake_data);
 		$cake_gift.append(cake_html);
-	//商品加减	
+	//商品加减
 	(function(){
 		var amout = 0;
 		$("#add-gift").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
+
 			if(amout > 1){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
@@ -92,8 +92,8 @@
 		$("#add-gift").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
@@ -107,7 +107,7 @@
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 	//蜡烛加减
 	;(function(){
@@ -115,11 +115,11 @@
 		$(".candle").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
-			if(amout > 1){
+
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -127,22 +127,22 @@
 		$(".candle").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 	//盘叉加减
 	;(function(){
@@ -150,11 +150,11 @@
 		$(".dish").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
-			if(amout > 1){
+
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -162,21 +162,21 @@
 		$(".dish").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 })();

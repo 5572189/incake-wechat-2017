@@ -1,6 +1,6 @@
 ;(function(){
-	
-	
+
+
 	;(function(){
 		var sex_select = document.querySelector('#sex-select');
 		var sex = document.querySelector('#sex');
@@ -8,8 +8,8 @@
 	    sex_select.addEventListener('click', function () {
 	        var bankId = sex.dataset['id'];
 	        var bankName = sex.dataset['value'];
-	
-	        var bankSelect = new IosSelect(1, 
+
+	        var bankSelect = new IosSelect(1,
 	            [data],
 	            {
 	                container: '.container',
@@ -29,9 +29,9 @@
 	    var data = [
 		    {'id': '10001', 'value': '男'},
 		    {'id': '10002', 'value': '女'}
-		];		
+		];
 	})();
-	
+
 	;(function(){
 		var selectDateDom = $('#selectDate');
 	    var showDateDom = $('#showDate');
@@ -104,13 +104,13 @@
 	                throw new Error('month is illegal');
 	            }
 	        });
-	       
+
 	    };
 	    selectDateDom.bind('click', function () {
 	        var oneLevelId = showDateDom.attr('data-year');
 	        var twoLevelId = showDateDom.attr('data-month');
 	        var threeLevelId = showDateDom.attr('data-date');
-	        var iosSelect = new IosSelect(3, 
+	        var iosSelect = new IosSelect(3,
 	            [yearData, monthData, dateData],
 	            {
 	                title: '时间选择',
@@ -130,6 +130,75 @@
 	                }
 	        });
 	    });
-	})()
+	})();
 
-})()
+	//	裁剪
+	(function(){
+		var $image = $('#image'),
+  			$file = $("#file"),
+ 			$page = $("body"),
+ 			$imagesrc = $(".imagesrc"),
+ 			$picture_shade=$(".picture-shade"),
+ 			$picture=$(".picture");
+
+	 	$image.cropper({
+	 		aspectRatio: 1 / 1,
+        	autoCropArea: 1,
+			movable: false,
+	        zoomable: false,
+	        rotatable: false,
+	        scalable: false,
+	        background:false,
+	        modal:false,
+        	minContainerHeight:500
+		});
+		$page.on('click', '.inputFile', function(e) {
+	        $inputImage = $(this);
+	        var URL = window.URL || window.webkitURL;
+	        var blobURL;
+	        if (URL) {
+	            $inputImage.change(function() {
+	                var files = this.files;
+	                var file;
+					$(".container-picture").fadeIn();
+	                if (!$image.data('cropper')) {
+	                    return;
+	                }
+
+	                if (files && files.length) {
+	                    file = files[0];
+
+	                    if (/^image\/\w+$/.test(file.type)) {
+	                        blobURL = URL.createObjectURL(file);
+	                        $image.one('built.cropper', function() {
+
+	                            // Revoke when load complete
+	                            URL.revokeObjectURL(blobURL);
+	                        }).cropper('reset').cropper('replace', blobURL);
+	                        $inputImage.val('');
+	                        // show imgcropper container
+	                        //$imgCropper.show();
+	                    } else {
+	                        window.alert('Please choose an image file.');
+	                    }
+	                }
+	            });
+	        }
+	    });
+
+	  	$(".tailor").click(function(){
+	  		var img = $image.cropper('getCroppedCanvas', {
+	        width: 600,
+	        height: 600
+	    	}).toDataURL('image/jpeg');
+	    	$imagesrc.attr("src",img);
+	    	$(".container-picture").fadeOut();
+	  	});
+	  	$(".reupload-image").click(function(){
+	  		$(".container-picture").fadeOut();
+	  	});
+
+	})();
+
+
+})();

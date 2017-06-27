@@ -129,7 +129,7 @@
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
 
-			if(amout > 1){
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -143,12 +143,12 @@
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -164,7 +164,7 @@
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
 
-			if(amout > 1){
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -178,15 +178,16 @@
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
 		});
 	})();
+
 })();

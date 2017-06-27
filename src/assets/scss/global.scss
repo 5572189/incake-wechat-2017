@@ -29,9 +29,12 @@ input {
 #navbar{
     max-width: 750px;
     overflow: hidden;
-    margin: 0 auto;
-    width: 100%;height: 95px;
-    position: fixed; bottom: 0;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -375px;
     border-top: 1px solid #ccc;
     background: #fff;
     .link{
@@ -53,14 +56,14 @@ input {
             color: #fff;
         }
     }
-    
+
     .home{
         position: absolute;
         left: 100px;top: 25px;
         width: 50px;height: 50px;
         background: url("../imgs/icons/home01.png") no-repeat;
         background-size: cover;
-        
+
         &.active{
             background: url("../imgs/icons/home.png") no-repeat;
             background-size: cover;
@@ -83,7 +86,7 @@ input {
         width: 50px;height: 50px;
         background: url("../imgs/icons/mine.png") no-repeat;
         background-size: cover;
-        
+
         &.active{
             background: url("../imgs/icons/mine01.png") no-repeat;
             background-size: cover;

@@ -1,79 +1,95 @@
-.layout{
+.layout {
     max-width: 750px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    #cake-gift{
+
+    #cake-gift {
         list-style: none;
         margin: 15px 0 30px 15px;
-        li{
+
+        li {
             position: relative;
             width: 100%;
             height: 102px;
             margin: 10px 0;
-            a{
+
+            a {
                 display: block;
                 width: 102px;
                 height: 102px;
             }
-            p:nth-of-type(1){
+
+            p:nth-of-type(1) {
                 position: absolute;
                 top: 0;
                 left: 120px;
                 color: #505050;
-                span:first-child{
+
+                span:first-child {
                     font-size: 22px;
                 }
-                span:last-child{
+
+                span:last-child {
                     font-size: 14px;
                     margin-left: 10px;
                 }
             }
-            p:nth-of-type(2){
+
+            p:nth-of-type(2) {
                 position: absolute;
                 left: 120px;
                 top: 35px;
                 font-size: 18px;
                 color: #e3e3e3;
             }
-            p:nth-of-type(3){
+
+            p:nth-of-type(3) {
                 position: absolute;
                 bottom: 0;
                 left: 120px;
                 color: #505050;
-                span:first-child{
+
+                span:first-child {
                     font-size: 22px;
                 }
-                span:last-child{
+
+                span:last-child {
                     font-size: 16px;
                 }
             }
         }
     }
-    >p{
+
+    > p {
         width: 716px;
         margin: 10px auto;
     }
-    #add-gift{
+
+    #add-gift {
         list-style: none;
         margin-left: 15px;
         padding-bottom: 200px;
-        >li:nth-child(2n){
+
+        > li:nth-child(2n) {
             margin-left: 10px;
         }
-        >li{
+
+        > li {
             float: left;
             width: 350px;
             border: 1px solid #dcdcdc;
             border-radius: 10px;
             margin: 10px 0;
             overflow: hidden;
-            >a{
+
+            > a {
                 position: relative;
                 display: block;
                 width: 350px;
                 height: 350px;
-                .like{
+
+                .like {
                     position: absolute;
                     bottom: 20px;
                     right: 15px;
@@ -83,65 +99,79 @@
                     background-size: cover;
                 }
             }
-            .message{
+
+            .message {
                 position: relative;
                 width: 350px;
-                p:nth-of-type(1){
+
+                p:nth-of-type(1) {
                     margin: 17px;
-                    span:first-child{
+
+                    span:first-child {
                         font-size: 26px;
                         color: #505050;
                     }
-                    span:last-child{
+
+                    span:last-child {
                         font-size: 14px;
                         margin-left: 10px;
                     }
                 }
-                p:nth-of-type(2){
+
+                p:nth-of-type(2) {
                     margin: 17px;
                     font-size: 18px;
                     color: #e3e3e3;
                 }
-                p:nth-of-type(3){
+
+                p:nth-of-type(3) {
                     margin: 17px;
                     color: #505050;
-                    span:first-child{
+
+                    span:first-child {
                         font-size: 22px;
                     }
-                    span:last-child{
+
+                    span:last-child {
                         font-size: 16px;
                     }
                 }
-                .add{
+
+                .add {
                     position: absolute;
                     bottom: -10px;
                     right: 10px;
                     list-style: none;
                     display: none;
-                    li{
+
+                    li {
                         float: left;
                         margin: 0 5px;
                     }
-                    li:nth-of-type(1){
+
+                    li:nth-of-type(1) {
                         width: 40px;
                         height: 40px;
                         background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
                         background-size: cover;
                     }
-                    li:nth-of-type(2){
+
+                    li:nth-of-type(2) {
                         width: 80px;
                         height: 40px;
                         border: 1px solid #dcdcdc;
                         text-align: center;
                         line-height: 40px;
                     }
-                    li:nth-of-type(3){
+
+                    li:nth-of-type(3) {
                         width: 40px;
                         height: 40px;
                         background: url("../imgs/cake-gift/add.png") no-repeat;
                         background-size: cover;
                     }
-                    li.active{
+
+                    li.active {
                         width: 40px;
                         height: 40px;
                         background: url("../imgs/cake-gift/subtract.png") no-repeat;
@@ -150,27 +180,32 @@
                 }
             }
         }
-        .activeBorder{
-            border-color:#e9546b ;
-            .like{
+
+        .activeBorder {
+            border-color: #e9546b;
+
+            .like {
                 background: url("../imgs/cake-gift/like.png") no-repeat;
                 background-size: cover;
             }
-            .message{
-                .add{
+
+            .message {
+                .add {
                     display: block;
                 }
             }
         }
     }
-    .confirm{
+
+    .confirm {
         position: fixed;
         bottom: 0;
-        margin:  0 auto;
+        margin: 0 auto;
         max-width: 750px;
         width: 100%;
         height: 160px;
-        a:nth-of-type(1){
+
+        a:nth-of-type(1) {
             display: block;
             width: 100%;
             height: 79px;
@@ -181,18 +216,20 @@
             font-size: 24px;
             background: #fff;
         }
-        a:nth-of-type(2){
+
+        a:nth-of-type(2) {
             display: block;
             width: 100%;
             height: 80px;
             background: #e9546b;
             text-align: center;
             line-height: 80px;
-            font-size:30px ;
+            font-size: 30px;
             color: #fff;
         }
     }
-    .shade{
+
+    .shade {
         display: none;
         position: fixed;
         top: 0;
@@ -201,7 +238,8 @@
         width: 100%;
         height: 100%;
         background: rgba(0,0,0,0.5);
-        .parcel{
+
+        .parcel {
             position: absolute;
             bottom: -100%;
             margin: 0 auto;
@@ -209,48 +247,59 @@
             width: 100%;
             height: 920px;
             background: #f2f1f1;
-            .candle{
+
+            .candle {
                 width: 715px;
                 height: 619px;
                 margin: 0 auto;
                 border-bottom: 1px dashed #dcdcdc;
-                >p{
+
+                > p {
                     width: 100%;
                     text-align: center;
                     padding: 40px 0;
                     font-size: 24px;
                 }
-                ul:nth-child(odd){
+
+                ul:nth-child(odd) {
                     margin-left: 20px;
                 }
-                ul{
+
+                ul {
                     float: left;
                     list-style: none;
                     height: 70px;
                     margin: 15px 0;
-                    li{
+
+                    li {
                         float: left;
                         margin-right: 15px;
                     }
-                    li:nth-of-type(1){
+
+                    li:nth-of-type(1) {
                         width: 70px;
                         height: 70px;
                         border: 1px solid #dcdcdc;
                     }
-                    li:nth-of-type(2),li:nth-of-type(4){
+
+                    li:nth-of-type(2),
+                    li:nth-of-type(4) {
                         width: 50px;
                         height: 50px;
                         margin-top: 10px;
                     }
-                    li:nth-of-type(2){
+
+                    li:nth-of-type(2) {
                         background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
                         background-size: cover;
                     }
-                    li:nth-of-type(4){
+
+                    li:nth-of-type(4) {
                         background: url("../imgs/cake-gift/add.png") no-repeat;
                         background-size: cover;
                     }
-                    li:nth-of-type(3){
+
+                    li:nth-of-type(3) {
                         width: 100px;
                         height: 60px;
                         text-align: center;
@@ -258,109 +307,135 @@
                         border: 1px solid #000000;
                         margin-top: 3px;
                     }
-                    li.active{
+
+                    li.active {
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/subtract.png") no-repeat;
                         background-size: cover;
-                    } 
+                    }
                 }
-                .candle01{
-                    li:nth-of-type(1){
+
+                .candle01 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle01.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle02{
-                    li:nth-of-type(1){
+
+                .candle02 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle02.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle03{
-                    li:nth-of-type(1){
+
+                .candle03 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle03.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle04{
-                    li:nth-of-type(1){
+
+                .candle04 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle04.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle05{
-                    li:nth-of-type(1){
+
+                .candle05 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle05.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle06{
-                    li:nth-of-type(1){
+
+                .candle06 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle06.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle07{
-                    li:nth-of-type(1){
+
+                .candle07 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle07.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle08{
-                    li:nth-of-type(1){
+
+                .candle08 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle08.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle09{
-                    li:nth-of-type(1){
+
+                .candle09 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle09.png") no-repeat;
                         background-size: cover;
                     }
                 }
-                .candle00{
-                    li:nth-of-type(1){
+
+                .candle00 {
+                    li:nth-of-type(1) {
                         background: url("../imgs/cake-gift/candle00.png") no-repeat;
                         background-size: cover;
                     }
-                } 
+                }
             }
-            .dish{
-                p{
+
+            .dish {
+                p {
                     text-align: center;
                     padding: 40px 0;
                     font-size: 24px;
                 }
-                ul{
-                    margin-left: 180px;
+
+                ul {
+                    margin-left: 130px;
                     list-style: none;
-                    li{
+
+                    li {
                         float: left;
                         margin-right: 20px;
                     }
-                    li:nth-of-type(1){
+
+                    li:nth-of-type(1) {
+                        width: 71px;
+                        height: 71px;
+                        background: url("../imgs/icons/dish.png") no-repeat;
+                        background-size: cover;
+                    }
+
+                    li:nth-of-type(2) {
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
                         background-size: cover;
-                        margin-top: 3px;
+                        margin-top: 10px;
                     }
-                    li:nth-of-type(2){
+
+                    li:nth-of-type(3) {
                         width: 240px;
                         height: 55px;
                         text-align: center;
                         line-height: 55px;
                         border: 1px solid #000;
+                        margin-top: 5px;
                     }
-                    li:nth-of-type(3){
+
+                    li:nth-of-type(4) {
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/add.png") no-repeat;
                         background-size: cover;
-                        margin-top: 3px;
+                        margin-top: 10px;
                     }
-                    li.active{
+
+                    li.active {
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/subtract.png") no-repeat;
@@ -368,7 +443,8 @@
                     }
                 }
             }
-            a:nth-of-type(1){
+
+            a:nth-of-type(1) {
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -381,7 +457,8 @@
                 color: #fff;
                 font-size: 30px;
             }
-            a:nth-of-type(2){
+
+            a:nth-of-type(2) {
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -396,7 +473,8 @@
             }
         }
     }
-    .gift-shade{
+
+    .gift-shade {
         display: none;
         position: fixed;
         left: 0;
@@ -404,22 +482,24 @@
         width: 100%;
         height: 100%;
         background: rgba(255,255,255,0.7);
-        .no-gift{
+
+        .no-gift {
             display: none;
             position: absolute;
             left: 50%;
             top: 30%;
-            margin-left:-278px;
+            margin-left: -278px;
             width: 556px;
             border: 1px solid #e7566d;
             background: #fff;
             border-radius: 10px;
-            p{
-                padding: 100px 0 150px 0;
-                padding-left: 45px;
+
+            p {
+                padding: 100px 0 150px 45px;
                 font-size: 26px;
             }
-            a{
+
+            a {
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -432,21 +512,23 @@
                 color: #fff;
             }
         }
-        .limit-gift{
+
+        .limit-gift {
             position: absolute;
             left: 50%;
             top: 30%;
-            margin-left:-278px;
+            margin-left: -278px;
             width: 556px;
             border: 1px solid #e7566d;
             background: #fff;
             border-radius: 10px;
-            p{
-                padding: 100px 0 150px 0;
-                padding-left: 45px;
+
+            p {
+                padding: 100px 0 150px 45px;
                 font-size: 26px;
             }
-            a{
+
+            a {
                 position: absolute;
                 left: 0;
                 bottom: 0;

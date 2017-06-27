@@ -135,7 +135,7 @@ $loc-triangle-bgcolor: #f0f0f0;
     }
     .flower {
         position: absolute;
-        top: 0;
+        top: 680px;
         right: 0;
         display: block;
         width: 350px;
@@ -143,21 +143,21 @@ $loc-triangle-bgcolor: #f0f0f0;
     }
     .drink {
         position: absolute;
-        top: 245px;
+        top: 345px;
         right: 0;
         width: 350px;
         height: 320px;
     }
     .sweetmeats {
         position: absolute;
-        top: 415px;
+        top: 682px;
         left: 0;
         width: 350px;
         height: 230px;
     }
     .surprise {
         position: absolute;
-        top: 580px;
+        top: 0;
         right: 0;
         width: 350px;
         height: 330px;
@@ -175,7 +175,7 @@ $loc-triangle-bgcolor: #f0f0f0;
     }
     .raccoon-dog {
         position: absolute;
-        top: 660px;
+        top: 415px;
         left: 0;
         width: 350px;
         height: 265px;
@@ -327,6 +327,9 @@ $loc-triangle-bgcolor: #f0f0f0;
                 .change {
                     margin-top: 15px;
                     font-size: 26px;
+                    white-space:nowrap;
+                    overflow: hidden;
+                    text-overflow :ellipsis;
                     span {
                         margin-left: 20px;
                         font-size: 14px;
@@ -380,7 +383,7 @@ $loc-triangle-bgcolor: #f0f0f0;
         background: url("../imgs/index/sold-out.png") no-repeat;
         background-size: cover;
     }
-    
+
     .box-right {
         width: 350px;
         margin-bottom: 20px;
@@ -431,6 +434,9 @@ $loc-triangle-bgcolor: #f0f0f0;
                 .change {
                     margin-top: 15px;
                     font-size: 26px;
+                    white-space:nowrap;
+                    overflow: hidden;
+                    text-overflow :ellipsis;
                     span {
                         margin-left: 20px;
                         font-size: 14px;

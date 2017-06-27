@@ -31,13 +31,15 @@
 			</li>
 			{{/each}}
 		</script>
-
 	</div>
-
-	<script src="assets/jquery/jquery-3.1.1.min.js"></script>
-	<script src="assets/plugins/artTemplate/dist/template.js"></script>
-	<script src="assets/plugins/tweenmax/TweenMax.min.js"></script>
-	<script src="assets/js/cake-list-new.js"></script>
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+			.script('assets/jquery/jquery-3.1.1.min.js').wait()
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
+			.script('assets/js/cake-list-new.js');
+	</script>
 </body>
 
 </html>

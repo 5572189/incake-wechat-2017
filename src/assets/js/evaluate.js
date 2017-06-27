@@ -1,5 +1,5 @@
 ;(function(){
-	
+
 	var rating = (function(){
 		//点亮
 		var lightOn = function($item,num){
@@ -14,16 +14,12 @@
 		var init = function(el,num){
 			var $rating = $(el),
 				$item = $rating.find('.rating-item');
-			
+
 			//初始化
 			lightOn($item,num);
 			//事件绑定
-			$rating.on('mouseover','.rating-item',function(){
+			$rating.on('click','.rating-item',function(){
 				lightOn($item,$(this).index()+1);
-			}).on('click','.rating-item',function(){
-				num = $(this).index()+1;
-			}).on('mouseout',function(){
-				lightOn($item,num);
 			});
 		}
 		//jQuery插件
@@ -37,10 +33,11 @@
 		return {
 			init:init
 		}
-		
+
 	})();
-	rating.init('#rating01',1);
-	$("#rating02").rating(1);
-	$("#rating03").rating(1);
-	$("#rating04").rating(1);
+	// rating.init('.rating01',1);
+	$(".rating01").rating(1);
+	$(".rating02").rating(1);
+	$(".rating03").rating(1);
+	$(".rating04").rating(1);
 })();

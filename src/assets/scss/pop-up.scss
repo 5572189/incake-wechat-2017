@@ -5,17 +5,19 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    background: rgba(0,0,0,0.6);
     .pop-up{
         position: absolute;
         left: 50%;
         top: 50%;
         margin-left: -223px;
-        margin-top: -280px;
+        margin-top: -140px;
         width: 446px;
         height: 280px;
         border: 1px solid #e7566d;
         overflow: hidden;
         border-radius: 10px;
+        background: #fff;
         >div{
             position: absolute;
             left: 0;
@@ -63,12 +65,13 @@
         left: 50%;
         top: 50%;
         margin-left: -223px;
-        margin-top: -280px;
+        margin-top: -140px;
         width: 446px;
         height: 280px;
         border: 1px solid #e7566d;
         overflow: hidden;
         border-radius: 10px;
+        background: #fff;
         >div{
             position: absolute;
             left: 0;

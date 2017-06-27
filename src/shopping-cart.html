@@ -26,7 +26,7 @@
 		<div id="cake_list">
 			<ul class="surprised">
 				<li>
-					<span class="pitch-on"></span>
+					<span class="pitch-on icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
@@ -34,7 +34,7 @@
 					<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
 				</li>
 				<li>
-					<span class="pitch-on"></span>
+					<span class="pitch-on icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
@@ -44,7 +44,7 @@
 			</ul>
 			<ul class="convention">
 				<li class="li-one" pid="001">
-					<span class="pitch-on"></span>
+					<span class="pitch-on icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
@@ -52,7 +52,7 @@
 					<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
 				</li>
 				<li class="li-two" pid="002">
-					<span class="pitch-on active"></span>
+					<span class="pitch-on active icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
@@ -62,14 +62,14 @@
 			</ul>
 			<ul class="commodity">
 				<li>
-					<span class="active"></span>
+					<span class="icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 					<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
 				</li>
 				<li>
-					<span></span>
+					<span class="icons"></span>
 					<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a><br />
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
@@ -90,13 +90,13 @@
 				{{each list as item i}}
 				<div class="swiper-slide">
 					<a href="javascript:;">
-			            		<img src="{{item.img}}"/>
-			            	</a>
+	            		<img src="{{item.img}}"/>
+	            	</a>
 					<div>
 						<p>{{item.name}}</p>
 						<p>{{item.nameEn}}</p>
 						<p>￥{{item.cost}}/{{item.price}}磅</p>
-						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+						<a href="javascript:;" class="select-parcel"><img src="{{item.linkimg}}"/></a>
 					</div>
 				</div>
 				{{/each}}
@@ -105,46 +105,58 @@
 
 		<div class="swiper-container swiper-container02 lists">
 
-			<div class="swiper-wrapper" id="tableware"></div>
-			<script id="tplTableware" type="text/html">
+			<div class="swiper-wrapper" id="tableware">
+				<div class="swiper-slide">
+					<a href="javascript:;">
+	            		<img src="assets/imgs/shopping-cart/dish.jpg"/>
+	            	</a>
+					<div>
+						<p>芒果拿破仑</p>
+						<p>Mango Napoleon</p>
+						<p>￥189/1.5磅</p>
+						<a href="javascript:;" class="select-dish"><img src="assets/imgs/shopping-cart/shopping.png"/></a>
+					</div>
+				</div>
+			</div>
+			<!-- <script id="tplTableware" type="text/html">
 				{{each list as item i}}
 				<div class="swiper-slide">
 					<a href="javascript:;">
-			            		<img src="{{item.aimg}}"/>
-			            	</a>
+	            		<img src="{{item.aimg}}"/>
+	            	</a>
 					<div>
 						<p>{{item.name}}</p>
 						<p>{{item.nameEn}}</p>
 						<p>￥{{item.cost}}/{{item.price}}磅</p>
-						<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+						<a href="javascript:;" class="select-dish"><img src="{{item.linkimg}}"/></a>
 					</div>
 				</div>
 				{{/each}}
-			</script>
+			</script> -->
 		</div>
 		<div class="close">
+			<a href="javascript:;" class="all-select"></a>
+			<span>全选</span>
 			<span>已选<span>1</span>件商品</span>
 			<span>共<span><span>￥</span><span>189</span>.00</span>
 			</span>
 			<a href="javascript:;">去结算</a>
 		</div>
 
-
-		<!--底部-->
-		<div id="navbar">
-			<a href="index.html" class="link">
-				<div class="home"></div>
-			</a>
-			<a href="javascript:;" class="link">
-				<div class="shopping-basket active"></div>
-				<span>2</span>
-			</a>
-			<a href="me.html" class="link">
-				<div class="mine"></div>
-			</a>
-		</div>
 	</div>
-
+	<!--底部-->
+	<div id="navbar">
+		<a href="index.html" class="link">
+			<div class="home"></div>
+		</a>
+		<a href="javascript:;" class="link">
+			<div class="shopping-basket active"></div>
+			<span>2</span>
+		</a>
+		<a href="me.html" class="link">
+			<div class="mine"></div>
+		</a>
+	</div>
 	<!--预览-->
 	<div class="picture-shade">
 		<div class="picture">
@@ -210,17 +222,100 @@
 	<!--图片裁剪-->
 	<div class="container">
 		<div class="img-container">
-			<img id="image" src="assets/imgs/shopping-cart/head.png" //>
+			<img id="image" src="assets/imgs/shopping-cart/cake.png" //>
 		</div>
 		<a href="javascript:;" class="reupload-image">取消</a>
 		<a href="javascript:;" class="tailor">完成</a>
 	</div>
 	<div class="container01">
 		<div class="img-container01">
-			<img id="image01" src="assets/imgs/shopping-cart/head.png" //>
+			<img id="image01" src="assets/imgs/shopping-cart/cake.png" //>
 		</div>
 		<a href="javascript:;" class="reupload-image01">取消</a>
 		<a href="javascript:;" class="tailor01">完成</a>
+	</div>
+	<!--添加餐盘蜡烛-->
+	<div class="shade">
+		<div class="parcel">
+			<div class="candle clearfix">
+				<p>数字蜡烛</p>
+				<ul class="candle01">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle02">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle03">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle04">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle05">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle06">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle07">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle08">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle09">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+				<ul class="candle00">
+					<li></li>
+					<li class="subtract"></li>
+					<li class="number">0</li>
+					<li class="addNumber"></li>
+				</ul>
+			</div>
+			<a href="javascript:;" class="cancel">取  &nbsp; 消</a>
+			<a href="javascript:;" class="confirm-select">确  &nbsp; 定</a>
+		</div>
+
+		<div class="dish">
+			<p>餐盘</p>
+			<ul class="clearfix">
+				<li><img src="assets/imgs/icons/dish.png" alt=""></li>
+				<li class="subtract"></li>
+				<li class="number">0</li>
+				<li class="addNumber"></li>
+			</ul>
+			<a href="javascript:;" class="cancel">取  &nbsp; 消</a>
+			<a href="javascript:;" class="confirm-select">确  &nbsp; 定</a>
+		</div>
+
 	</div>
 	<!--打包惊喜，画影弹框-->
 	<div class="build-surprised">
@@ -237,6 +332,18 @@
 			<a href="javascript:;">惊喜在这里</a>
 		</div>
 	</div>
+
+	<!--购物篮里没有物品显示的页面-->
+	<div class="no-commodity">
+		<div class="commodity">
+			<div>
+				<img src="assets/imgs/shopping-cart/hint.png" />
+			</div>
+			<a href="javascript:;" class="stroll">
+				<img src="assets/imgs/shopping-cart/stroll.png"/>
+			</a>
+		</div>
+	</div>
 	<script src="assets/plugins/LABjs/LAB.min.js"></script>
 	<script>
 		$LAB
@@ -246,6 +353,7 @@
 			.script('assets/plugins/underscore/underscore-min.js').wait()
 			.script('assets/plugins/maxlength/jquery.plugin.min.js').wait()
 			.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
+			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
 			.script('assets/plugins/cropper/cropper.js').wait()
 			.script('assets/js/shopping-cart.js');
 	</script>

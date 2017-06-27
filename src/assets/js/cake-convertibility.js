@@ -29,7 +29,7 @@
 			});
 		}
 	});
-	
+
 	//为每个li添加点击事件
 	$("#cake-list").on('click','li',function(){
 		if(!$(this).hasClass('active')){
@@ -38,18 +38,18 @@
 			$(this).removeClass('active');
 		}
 	});
-	
+
 	//蜡烛加减
 	;(function(){
 		var amout = 0;
 		$(".candle").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
-			if(amout > 1){
+
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -57,22 +57,22 @@
 		$(".candle").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
 	//盘叉加减
 	;(function(){
@@ -80,11 +80,11 @@
 		$(".dish").on("click",".addNumber",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
+			var $this = $(this);
 			amout = parseInt($this.siblings('.number').text());
 			amout++;
-			
-			if(amout > 1){
+
+			if(amout > 0){
 				$this.siblings('.subtract').removeClass('disabled').addClass('active');
 			}
 			$this.siblings('.number').text(amout);
@@ -92,24 +92,24 @@
 		$(".dish").on("click",".subtract",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			var $this = $(this); 
-			
+			var $this = $(this);
+
 			if($this.hasClass("disabled")) {
 				return false;
 			}
 			amout = parseInt($this.siblings('.number').text());
-			if(amout === 1) {
+			if(amout === 0) {
 				$this.addClass('disabled').removeClass('active');
 				return false;
 			}
 			amout--;
-			if(amout <= 1) {
+			if(amout <= 0) {
 				$this.addClass('disabled').removeClass('active');
 			}
 			$this.siblings('.number').text(amout);
-		});		
+		});
 	})();
-	
+
 	var data = {
 			list:[{
 				linkimg:"assets/imgs/index/cake.png",
@@ -150,11 +150,11 @@
 				number:'1个'
 			}]
 	}
-	
+
 	var $cake = $("#cake-list");
 		var _html = template('tplCake', data);
 		$cake.append(_html);
-		
-	
-	
+
+
+
 })();

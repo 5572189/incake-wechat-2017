@@ -164,7 +164,7 @@
                         height: 50px;
                         background: url("../imgs/cake-gift/subtract.png") no-repeat;
                         background-size: cover;
-                    } 
+                    }
                 }
                 .candle01{
                     li:nth-of-type(1){
@@ -225,7 +225,7 @@
                         background: url("../imgs/cake-gift/candle00.png") no-repeat;
                         background-size: cover;
                     }
-                } 
+                }
             }
             .dish{
                 p{
@@ -234,27 +234,33 @@
                     font-size: 24px;
                 }
                 ul{
-                    margin-left: 180px;
+                    margin-left: 130px;
                     list-style: none;
                     li{
                         float: left;
                         margin-right: 20px;
                     }
                     li:nth-of-type(1){
+                        width: 71px;
+                        height: 71px;
+                        background: url("../imgs/icons/dish.png") no-repeat;
+                        background-size: cover;
+                    }
+                    li:nth-of-type(2){
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
                         background-size: cover;
                         margin-top: 3px;
                     }
-                    li:nth-of-type(2){
+                    li:nth-of-type(3){
                         width: 240px;
                         height: 55px;
                         text-align: center;
                         line-height: 55px;
                         border: 1px solid #000;
                     }
-                    li:nth-of-type(3){
+                    li:nth-of-type(4){
                         width: 50px;
                         height: 50px;
                         background: url("../imgs/cake-gift/add.png") no-repeat;
@@ -362,4 +368,3 @@
         }
     }
 }
-

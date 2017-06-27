@@ -16,7 +16,7 @@
 		}
 		return str;
 	});
-	
+
 	/**
 	 * 对规格备注进行格式化
 	 * @param  spec    要格式化的规格备注
@@ -30,7 +30,7 @@
         }
         return str;
     });
-	
+
 	$(function() {
 		var tl = new TimelineLite();
 		//加载图片
@@ -52,7 +52,7 @@
 
 		//筛选，出现遮罩
 		$(".screen").click(function() {
-			
+
 			tl.clear();
 			tl.to($(".list"), 0.5, {
 				right: '0%',
@@ -61,7 +61,7 @@
 				}
 //				onComplete: function() {}
 			});
-			
+
 			$("body").on('touchmove.mask', function(event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -177,7 +177,7 @@
 				event.stopPropagation();
 			});
 		});
-		
+
 		$(".city a").click(function() {
 			$("#showCity").html($(this).html());
 			$(this).addClass("citySelected");
@@ -201,7 +201,7 @@
 				'left':0
 			});
 		});
-		
+
 		$("#normsShade").on('click', '#normal', function() {
 			if($(this).attr('disabled') === "disabled"){
 				return false;
@@ -212,11 +212,11 @@
 			tl.to($(".parcel"),0.5,{
 				'left':'-100%'
 			});
-			
+
 		});
-		 
-		
-		
+
+
+
 		//关闭
 		$("#normsShade").on('click','.close',function() {
 			$(".norms-shade").fadeOut();
@@ -224,19 +224,19 @@
 
 		//数据绑定
 		$("#main").on('click', '.icon-add', function() {
-			
+
 			var strSc = $(this).closest('.box').attr('data-sc').trim(),
 				strRegular = $(this).closest('.box').attr('data-regular').trim(),
 				hasSc = strSc === '' ? false : true,
 				hasRegular = strRegular === '' ? false : true;
-				
+
 			var data = {
 				sc: [],
 				regular: []
 			};
 			var groupTmp = [],
 				itemTmp = [];
-			
+
 			if(hasSc) {
 				groupTmp = strSc.split('|***|');
 				for(var i = 0, len = groupTmp.length; i < len; i++) {
@@ -248,7 +248,7 @@
 					});
 				}
 			}
-			
+
 			if(hasRegular) {
 				groupTmp = strRegular.split('|***|');
 				for(var i = 0, len = groupTmp.length; i < len; i++) {
@@ -260,7 +260,6 @@
 					});
 				}
 			}
-			
 			//惊喜常规规格
 			$("#normsShade").on('click','.poundage-surprised li',function() {
 					$(this).addClass("active").siblings().removeClass("active");
@@ -277,7 +276,7 @@
 					$(".number-surprised").text(1);
 					$(".cost").text(prices);
 			});
-			
+
 			//常规
 			$("#normsShade").on('click','.poundage-normal li',function() {
 					$(this).addClass("active").siblings().removeClass("active");
@@ -294,15 +293,15 @@
 					$(".number-normal").text(1);
 					$(".prices").text(prices);
 			});
-			
+
 			handle4BindShade(data);
 		});
-		
+
 		// 绑定加入购物车弹框数据
 		function handle4BindShade(data) {
 			var _html = template('tplNormsShade', data);
 			$('#normsShade').html(_html);
-			
+
 			$(".norms-shade").fadeIn();
 		}
 
@@ -313,7 +312,7 @@
 		var $add_normal = $(".add-normal"),
 			$subtract_normal = $(".subtract-normal"),
 			$number_normal = $(".number-normal");
-		
+
 		//加减惊喜
 		$("#normsShade").on("click",'.add-surprised',function() {
 			amout = parseInt($(".number-surprised").text());

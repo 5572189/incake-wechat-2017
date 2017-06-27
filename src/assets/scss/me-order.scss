@@ -39,7 +39,7 @@ body{
         li{
             max-width: 750px;
             width: 100%;
-            margin: 0 auto; 
+            margin: 0 auto;
         }
         .cake{
             border-bottom: 1px solid #dcdcdc;
@@ -54,7 +54,7 @@ body{
                 span:nth-of-type(2){
                     color: #e9546b;
                 }
-                
+
             }
             ul{
                 list-style: none;
@@ -79,7 +79,7 @@ body{
                         position: absolute;
                         top: 30px;
                         left: 190px;
-                        
+
                         span:nth-of-type(2){
                             position: absolute;
                             top: 0;
@@ -198,8 +198,11 @@ body{
             p{
                 width: 100%;
                 padding: 43px 0;
-                span{
-                    margin-left: 50px;
+                text-align: right;
+                >span{
+                    span{
+                        margin-right: 130px;
+                    }
                 }
                 a{
                     display: inline-block;
@@ -209,7 +212,7 @@ body{
                     line-height: 70px;
                     border: 1px solid #e9546b;
                     color: #e9546b;
-                    margin-left: 150px;
+                    margin-right: 30px;
                 }
             }
         }

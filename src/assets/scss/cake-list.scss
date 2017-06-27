@@ -35,10 +35,13 @@
             }
             a.active{
                background: url("../imgs/flower-list/like.png") no-repeat;
-               background-size: 50px 50px; 
+               background-size: 50px 50px;
             }
             p:nth-of-type(1){
                 margin: 15px;
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow :ellipsis; 
                 span:first-child{
                     font-size: 26px; /*px*/
                 }

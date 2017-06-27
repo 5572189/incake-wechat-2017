@@ -94,8 +94,8 @@
 			<div class="box-left">
 				<div class="box">
 					<a href="javascript:;" class="img">
-							<img src="assets/imgs/index/01.png"/>
-						</a>
+						<img src="assets/imgs/index/01.png"/>
+					</a>
 				</div>
 			</div>
 			<div class="box-right">
@@ -112,24 +112,24 @@
 				<div class="pic">
 					{{if item.sell}}
 					<a href="{{item.link}}" class="box-item sell-out">
-								<img src="{{item.img}}" class="cake-kind"/>
-								<span class="collect"></span>
-							</a> {{else if item.sold}}
+						<img src="{{item.img}}" class="cake-kind"/>
+						<span class="collect"></span>
+					</a> {{else if item.sold}}
 					<a href="{{item.link}}" class="box-item sold-out">
-								<img src="{{item.img}}" class="cake-kind"/>
-								<span class="collect"></span>
-							</a> {{else}}
+						<img src="{{item.img}}" class="cake-kind"/>
+						<span class="collect"></span>
+					</a> {{else}}
 					<a href="{{item.link}}" class="box-item">
-								<img src="{{item.img}}" class="cake-kind"/>
-								<span class="collect"></span>
-							</a> {{/if}}
+						<img src="{{item.img}}" class="cake-kind"/>
+						<span class="collect"></span>
+					</a> {{/if}}
 					<div class="box-text">
 						<p class="change">{{item.name.cn}}<span>{{item.name.en}}</span></p>
 						<p class="label"> {{item.label.one}} <span class="rotate">|</span> {{item.label.two}} <span class="rotate">|</span> {{item.label.three}}</p>
 						<p class="price"><span class="span-price">￥{{item.price}}</span><span class="rotate">|</span><span>{{item.pound}}</span></p>
 						<a href="{{item.textlink}}" class="icon-add">
-								<img src="{{item.textimg}}"/>
-							</a>
+							<img src="{{item.textimg}}"/>
+						</a>
 					</div>
 				</div>
 			</div>

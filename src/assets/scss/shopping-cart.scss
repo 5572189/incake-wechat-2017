@@ -1,25 +1,30 @@
-body{
-    background: #f5f5f5;
+body {
+    background: #fff;
 }
-#layout{
+
+#layout {
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-   
+    background: #f5f5f5;
 }
-#cake_list{
-     background: #fff;
-    .surprised{
+
+#cake_list {
+    background: #fff;
+
+    .surprised {
         list-style: none;
         background: url("../imgs/shopping-cart/surprised.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
-        li:nth-of-type(1){
+
+        li{
             position: relative;
             border: 1px solid #dcdcdc;
             height: 220px;
-            >span:nth-of-type(1){
+
+            > span:nth-of-type(1) {
                 position: absolute;
                 left: 20px;
                 top: 100px;
@@ -27,19 +32,22 @@ body{
                 height: 41px;
                 background: url("../imgs/shopping-cart/no-like.png") no-repeat;
                 background-size: cover;
-                &.active{
+
+                &.active {
                     background: url("../imgs/shopping-cart/like.png") no-repeat;
-                    background-size:40px 40px;
+                    background-size: 40px 40px;
                 }
             }
-            >a:nth-of-type(1){
+
+            > a:nth-of-type(1) {
                 position: relative;
                 top: 31px;
                 left: 80px;
                 display: block;
                 width: 160px;
                 height: 160px;
-                &.active:after{
+
+                &.active:after {
                     display: block;
                     position: absolute;
                     top: 0;
@@ -52,29 +60,35 @@ body{
                     background-size: 160px 160px;
                 }
             }
-            >p:nth-of-type(1){
+
+            > p:nth-of-type(1) {
                 position: absolute;
                 left: 270px;
                 top: 40px;
-                >span:nth-of-type(1){
+                width: 100%;
+
+                > span:nth-of-type(1) {
                     font-family: "黑体";
                     font-size: 26px;
-                }  
-                >span:nth-of-type(2){
+                }
+
+                > span:nth-of-type(2) {
                     position: absolute;
                     top: 30px;
                     left: 0;
                     font-family: "黑体";
                     font-size: 14px;
-                } 
-                >span:nth-of-type(3){
+                }
+
+                > span:nth-of-type(3) {
                     position: absolute;
                     left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
                 }
-                >span:nth-of-type(4){
+
+                > span:nth-of-type(4) {
                     display: block;
                     position: absolute;
                     left: 430px;
@@ -85,14 +99,16 @@ body{
                     background-size: 26px 32px;
                 }
             }
-            >p:nth-of-type(2){
+
+            > p:nth-of-type(2) {
                 position: absolute;
                 left: 270px;
                 top: 100px;
                 font-size: 22px;
                 color: #b4b4b4;
             }
-            >p:nth-of-type(3){
+
+            > p:nth-of-type(3) {
                 position: absolute;
                 left: 270px;
                 top: 150px;
@@ -100,30 +116,35 @@ body{
                 display: block;
                 width: 225px;
                 height: 40px;
-                span{
-                     display: inline-block;
+
+                span {
+                    display: inline-block;
                 }
-                span:nth-of-type(1){
+
+                span:nth-of-type(1) {
                     width: 40px;
                     height: 40px;
                     text-align: center;
-                    line-height:40px;
-                    border-right:1px solid #dcdcdc ;
+                    line-height: 40px;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(2){
+
+                span:nth-of-type(2) {
                     width: 140px;
                     height: 40px;
                     text-align: center;
                     line-height: 40px;
-                    border-right:1px solid #dcdcdc ;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(3){
+
+                span:nth-of-type(3) {
                     width: 40px;
                     text-align: center;
                     line-height: 40px;
                 }
             }
-            a:nth-of-type(2){
+
+            a:nth-of-type(2) {
                 position: absolute;
                 right: 0;
                 top: 160px;
@@ -135,7 +156,8 @@ body{
                 line-height: 50px;
                 background: #e9546b;
                 border-radius: 50px 0 0 50px;
-                span:first-child{
+
+                span:first-child {
                     position: absolute;
                     left: 17px;
                     top: 8px;
@@ -143,148 +165,28 @@ body{
                     width: 33px;
                     height: 33px;
                 }
-                span:last-child{
+
+                span:last-child {
                     margin-left: 50px;
                 }
             }
         }
-        li:nth-of-type(2){
-            position: relative;
-            border: 1px solid #dcdcdc;
-            height: 220px;
-            >span:nth-of-type(1){
-                position: absolute;
-                left: 20px;
-                top: 100px;
-                width: 41px;
-                height: 41px;
-                background: url("../imgs/shopping-cart/no-like.png") no-repeat;
-                background-size: cover;
-                &.active{
-                    background: url("../imgs/shopping-cart/like.png") no-repeat;
-                    background-size:40px 40px;
-                }
-            }
-            >a:nth-of-type(1){
-                position: relative;
-                top: 31px;
-                left: 80px;
-                display: block;
-                width: 160px;
-                height: 160px;
-                
-            }
-            >p:nth-of-type(1){
-                position: absolute;
-                left: 270px;
-                top: 40px;
-                >span:nth-of-type(1){
-                    font-family: "黑体";
-                    font-size: 26px;
-                }  
-                >span:nth-of-type(2){
-                    position: absolute;
-                    top: 30px;
-                    left: 0;
-                    font-family: "黑体";
-                    font-size: 14px;
-                } 
-                >span:nth-of-type(3){
-                    position: absolute;
-                    left: 330px;
-                    display: inline-block;
-                    width: 150px;
-                    top: 15px;
-                    font-family: "黑体";
-                    font-size: 28px;
-                    
-                }
-                >span:nth-of-type(4){
-                    display: block;
-                    position: absolute;
-                    left: 430px;
-                    top: 14px;
-                    width: 26px;
-                    height: 32px;
-                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
-                    background-size: 26px 32px;
-                }
-            }
-            >p:nth-of-type(2){
-                position: absolute;
-                left: 270px;
-                top: 100px;
-                font-size: 22px;
-                color: #b4b4b4;
-            }
-            >p:nth-of-type(3){
-                position: absolute;
-                left: 270px;
-                top: 150px;
-                border: 1px solid #dcdcdc;
-                display: block;
-                width: 225px;
-                height: 40px;
-                span{
-                     display: inline-block;
-                }
-                span:nth-of-type(1){
-                   
-                    width: 40px;
-                    height: 40px;
-                    text-align: center;
-                    line-height:40px;
-                    border-right:1px solid #dcdcdc ;
-                }
-                span:nth-of-type(2){
-                    width: 140px;
-                    height: 40px;
-                    text-align: center;
-                    line-height: 40px;
-                    border-right:1px solid #dcdcdc ;
-                }
-                span:nth-of-type(3){
-                    width: 40px;
-                    text-align: center;
-                    line-height: 40px;
-                }
-            }
-            a:nth-of-type(2){
-                position: absolute;
-                right: 0;
-                top: 160px;
-                display: block;
-                width: 160px;
-                height: 50px;
-                color: #fff;
-                text-align: center;
-                line-height: 50px;
-                background: #e9546b;
-                border-radius: 50px 0 0 50px;
-                span:first-child{
-                    position: absolute;
-                    left: 17px;
-                    top: 8px;
-                    display: inline-block;
-                    width: 33px;
-                    height: 33px;
-                }
-                span:last-child{
-                    margin-left: 50px;
-                }
-            }
-        }
+
+        
     }
-    .convention{
+
+    .convention {
         list-style: none;
         background: url("../imgs/shopping-cart/convention.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
-        li{
+
+        li {
             position: relative;
             border: 1px solid #dcdcdc;
             height: 220px;
-            >span:nth-of-type(1){
+
+            > span:nth-of-type(1) {
                 position: absolute;
                 left: 20px;
                 top: 100px;
@@ -292,19 +194,22 @@ body{
                 height: 40px;
                 background: url("../imgs/shopping-cart/no-like.png") no-repeat;
                 background-size: cover;
-                &.active{
+
+                &.active {
                     background: url("../imgs/shopping-cart/like.png") no-repeat;
-                    background-size:40px 40px;
+                    background-size: 40px 40px;
                 }
             }
-            >a:nth-of-type(1){
+
+            > a:nth-of-type(1) {
                 position: relative;
                 top: 31px;
                 left: 80px;
                 display: block;
                 width: 160px;
                 height: 160px;
-                &.active:after{
+
+                &.active:after {
                     display: block;
                     position: absolute;
                     top: 0;
@@ -316,9 +221,9 @@ body{
                     background-repeat: no-repeat;
                     background-size: 160px 160px;
                 }
-                
             }
-            >a:nth-of-type(2){
+
+            > a:nth-of-type(2) {
                 position: absolute;
                 right: 0;
                 top: 160px;
@@ -330,7 +235,8 @@ body{
                 line-height: 50px;
                 opacity: 0.5;
                 border-radius: 50px 0 0 50px;
-                >input{
+
+                > input {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -339,30 +245,35 @@ body{
                     opacity: 0;
                 }
             }
-            >p:nth-of-type(1){
+
+            > p:nth-of-type(1) {
                 position: absolute;
                 left: 270px;
                 top: 40px;
-                >span:nth-of-type(1){
+                width: 100%;
+
+                > span:nth-of-type(1) {
                     font-family: "黑体";
                     font-size: 26px;
-                }  
-                >span:nth-of-type(2){
+                }
+
+                > span:nth-of-type(2) {
                     position: absolute;
                     top: 30px;
                     left: 0;
                     font-family: "黑体";
                     font-size: 14px;
-                } 
-                >span:nth-of-type(3){
+                }
+
+                > span:nth-of-type(3) {
                     position: absolute;
                     left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
-                    
                 }
-                >span:nth-of-type(4){
+
+                > span:nth-of-type(4) {
                     display: block;
                     position: absolute;
                     left: 430px;
@@ -373,14 +284,16 @@ body{
                     background-size: 26px 32px;
                 }
             }
-            >p:nth-of-type(2){
+
+            > p:nth-of-type(2) {
                 position: absolute;
                 left: 270px;
                 top: 100px;
                 font-size: 22px;
                 color: #b4b4b4;
             }
-            >p:nth-of-type(3){
+
+            > p:nth-of-type(3) {
                 position: absolute;
                 left: 270px;
                 top: 150px;
@@ -388,31 +301,35 @@ body{
                 display: block;
                 width: 225px;
                 height: 40px;
-                span{
-                     display: inline-block;
+
+                span {
+                    display: inline-block;
                 }
-                span:nth-of-type(1){
-                   
+
+                span:nth-of-type(1) {
                     width: 40px;
                     height: 40px;
                     text-align: center;
-                    line-height:40px;
-                    border-right:1px solid #dcdcdc ;
+                    line-height: 40px;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(2){
+
+                span:nth-of-type(2) {
                     width: 140px;
                     height: 40px;
                     text-align: center;
                     line-height: 40px;
-                    border-right:1px solid #dcdcdc ;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(3){
+
+                span:nth-of-type(3) {
                     width: 40px;
                     text-align: center;
                     line-height: 40px;
                 }
             }
-            a:nth-of-type(2){
+
+            a:nth-of-type(2) {
                 position: absolute;
                 right: 0;
                 top: 160px;
@@ -429,16 +346,19 @@ body{
             }
         }
     }
-    .commodity{
+
+    .commodity {
         list-style: none;
         background: url("../imgs/shopping-cart/commodity.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
-        li{
+
+        li {
             position: relative;
             border: 1px solid #dcdcdc;
             height: 220px;
-            >span:nth-of-type(1){
+
+            > span:nth-of-type(1) {
                 position: absolute;
                 left: 20px;
                 top: 100px;
@@ -446,19 +366,22 @@ body{
                 height: 41px;
                 background: url("../imgs/shopping-cart/no-like.png") no-repeat;
                 background-size: cover;
-                &.active{
+
+                &.active {
                     background: url("../imgs/shopping-cart/like.png") no-repeat;
                     background-size: cover;
                 }
             }
-            >a:nth-of-type(1){
+
+            > a:nth-of-type(1) {
                 position: relative;
                 top: 31px;
                 left: 80px;
                 display: block;
                 width: 160px;
                 height: 160px;
-                &.active:after{
+
+                &.active:after {
                     display: block;
                     position: absolute;
                     top: 0;
@@ -470,32 +393,36 @@ body{
                     background-repeat: no-repeat;
                     background-size: 160px 160px;
                 }
-                
             }
-            >p:nth-of-type(1){
+
+            > p:nth-of-type(1) {
                 position: absolute;
                 left: 270px;
                 top: 40px;
-                >span:nth-of-type(1){
+                width: 100%;
+
+                > span:nth-of-type(1) {
                     font-family: "黑体";
                     font-size: 26px;
-                }  
-                >span:nth-of-type(2){
+                }
+
+                > span:nth-of-type(2) {
                     position: absolute;
                     top: 30px;
                     left: 0;
                     font-family: "黑体";
                     font-size: 14px;
-                } 
-                >span:nth-of-type(3){
+                }
+
+                > span:nth-of-type(3) {
                     position: absolute;
                     left: 330px;
                     top: 15px;
                     font-family: "黑体";
                     font-size: 28px;
-                    
                 }
-                >span:nth-of-type(4){
+
+                > span:nth-of-type(4) {
                     display: block;
                     position: absolute;
                     left: 430px;
@@ -506,14 +433,16 @@ body{
                     background-size: 26px 32px;
                 }
             }
-            >p:nth-of-type(2){
+
+            > p:nth-of-type(2) {
                 position: absolute;
                 left: 270px;
                 top: 100px;
                 font-size: 22px;
                 color: #b4b4b4;
             }
-            >p:nth-of-type(3){
+
+            > p:nth-of-type(3) {
                 position: absolute;
                 left: 270px;
                 top: 150px;
@@ -521,31 +450,35 @@ body{
                 display: block;
                 width: 225px;
                 height: 40px;
-                span{
-                     display: inline-block;
+
+                span {
+                    display: inline-block;
                 }
-                span:nth-of-type(1){
-                   
+
+                span:nth-of-type(1) {
                     width: 40px;
                     height: 40px;
                     text-align: center;
-                    line-height:40px;
-                    border-right:1px solid #dcdcdc ;
+                    line-height: 40px;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(2){
+
+                span:nth-of-type(2) {
                     width: 140px;
                     height: 40px;
                     text-align: center;
                     line-height: 40px;
-                    border-right:1px solid #dcdcdc ;
+                    border-right: 1px solid #dcdcdc;
                 }
-                span:nth-of-type(3){
+
+                span:nth-of-type(3) {
                     width: 40px;
                     text-align: center;
                     line-height: 40px;
                 }
             }
-            a:nth-of-type(2){
+
+            a:nth-of-type(2) {
                 position: absolute;
                 right: 0;
                 top: 160px;
@@ -562,59 +495,73 @@ body{
             }
         }
     }
-    
 }
-.other{
+
+.other {
     width: 100%;
     height: 100px;
     margin-top: 40px;
     background: #fff;
     border-top: 1px solid #dcdcdc;
-    ul{
+
+    ul {
         list-style: none;
-        li{
+
+        li {
             float: left;
             font-size: 24px;
             width: 50%;
             height: 95px;
             text-align: center;
             line-height: 140px;
-            &.active{
+
+            &.active {
                 color: #e9546b;
                 border-bottom: 5px solid #e9546b;
             }
         }
     }
 }
-.swiper-container{
+
+.swiper-container {
     background: #fff;
     height: 500px;
     margin-bottom: 250px;
 }
+
 .swiper-slide {
     width: 290px;
     background: #fff;
-    >a:nth-of-type(1){
+
+    > a:nth-of-type(1) {
         display: block;
         width: 290px;
         height: 290px;
     }
-    div{
+
+    div {
         width: 290px;
-        p{text-align: center;}
-        p:nth-of-type(1){
+
+        p {
+            text-align: center;
+        }
+
+        p:nth-of-type(1) {
             margin-top: 20px;
             font-size: 26px;
         }
-        p:nth-of-type(2){
+
+        p:nth-of-type(2) {
             font-size: 14px;
             margin-top: 10px;
         }
-        p:nth-of-type(3){
+
+        p:nth-of-type(3) {
             margin-top: 30px;
             color: #e9667a;
         }
-        a{
+
+        a {
             display: block;
             width: 50px;
             height: 50px;
@@ -623,7 +570,8 @@ body{
         }
     }
 }
-.close{
+
+.close {
     position: fixed;
     bottom: 95px;
     left: auto;
@@ -632,24 +580,53 @@ body{
     border-top: 1px solid #dcdcdc;
     background: #fff;
     line-height: 90px;
-    >span:nth-of-type(1){
-       position: absolute;
-       left: 150px;
-       top: 8px;
-    }
-    >span:nth-of-type(2){
+
+    a:nth-of-type(1) {
         position: absolute;
-        left: 325px;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 90px;
+        background: url('../imgs/shopping-cart/no-like.png') no-repeat;
+        background-size: 41px 41px;
+        background-position: 25px 25px;
+    }
+
+    a.active {
+        background: url('../imgs/shopping-cart/like.png') no-repeat;
+        background-size: 41px 41px;
+        background-position: 25px 25px;
+    }
+
+    > span:nth-of-type(1) {
+        position: absolute;
+        left: 100px;
+        top: 0;
+        color: #d42237;
+    }
+
+    > span:nth-of-type(2) {
+        position: absolute;
+        left: 170px;
+        top: 0;
+    }
+
+    > span:nth-of-type(3) {
+        position: absolute;
+        left: 340px;
+        top: -7px;
         font-size: 24px;
-        >span{
-           color: #d42237; 
+
+        > span {
+            color: #d42237;
         }
-        span:nth-of-type(2){
+
+        span:nth-of-type(2) {
             font-size: 40px;
-            
         }
     }
-    a{
+
+    a:nth-of-type(2) {
         position: absolute;
         right: 0;
         top: 0;
@@ -659,21 +636,24 @@ body{
         background: #e9546b;
         color: #fff;
         display: block;
-        width: 240px;
+        width: 230px;
         height: 90px;
-        
     }
 }
 
-#shade{
+#shade {
     position: fixed;
-    top: 0;left: 0;
+    top: 0;
+    left: 50%;
+    margin-left: -375px;
     display: none;
+    max-width: 750px;
     z-index: 9998;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0, .7);
-    .shade-list{
+
+    .shade-list {
         width: 550px;
         height: 100%;
         background: #f2f2f2;
@@ -682,26 +662,30 @@ body{
         right: -550px;
         z-index: 9999;
         overflow: auto;
-        >p:nth-of-type(1){
+
+        > p:nth-of-type(1) {
             margin-top: 90px;
             margin-left: 40px;
             font-size: 24px;
             font-weight: 600;
         }
-        >p:nth-of-type(2){
+
+        > p:nth-of-type(2) {
             margin-top: 45px;
             margin-left: 40px;
             font-size: 24px;
             font-weight: 550;
         }
-        ul:nth-of-type(1){
+
+        ul:nth-of-type(1) {
             list-style: none;
             position: relative;
             height: 285px;
             margin-top: 25px;
             margin-left: 40px;
             border-bottom: 1px solid #545454;
-            li{
+
+            li {
                 float: left;
                 width: 140px;
                 height: 60px;
@@ -710,12 +694,14 @@ body{
                 line-height: 60px;
                 margin: 20px 20px 0 0;
                 border-radius: 50px;
-                &.active{
+
+                &.active {
                     background: #e9546b;
                     color: #fff;
                 }
             }
-            .last-li{
+
+            .last-li {
                 position: absolute;
                 left: 160px;
                 top: 185px;
@@ -725,17 +711,20 @@ body{
                 border-radius: 10px;
             }
         }
-        >p:nth-of-type(3){
-            margin: 40px 40px;
+
+        > p:nth-of-type(3) {
+            margin: 40px;
         }
-        ul:nth-of-type(2){
+
+        ul:nth-of-type(2) {
             position: relative;
             list-style: none;
             height: 375px;
             margin-top: 25px;
             margin-left: 40px;
             border-bottom: 1px solid #545454;
-            li{
+
+            li {
                 float: left;
                 width: 140px;
                 height: 60px;
@@ -744,17 +733,20 @@ body{
                 line-height: 60px;
                 margin: 20px 20px 0 0;
                 border-radius: 50px;
-                &.active{
+
+                &.active {
                     background: #e9546b;
                     color: #fff;
                 }
             }
-            .shade-other{
+
+            .shade-other {
                 position: absolute;
                 top: 250px;
                 left: 0;
             }
-            .last-li{
+
+            .last-li {
                 position: absolute;
                 left: 160px;
                 top: 270px;
@@ -764,17 +756,20 @@ body{
                 border-radius: 10px;
             }
         }
-        >p:nth-of-type(4){
+
+        > p:nth-of-type(4) {
             margin: 40px;
         }
-        >div:nth-of-type(1){
+
+        > div:nth-of-type(1) {
             width: 470px;
             height: 155px;
             margin-left: 40px;
             border: 1px solid #dcdcdc;
             border-radius: 10px;
             margin-bottom: 80px;
-            textarea{
+
+            textarea {
                 width: 470px;
                 height: 155px;
                 padding: 10px;
@@ -785,18 +780,21 @@ body{
                 line-height: 20px;
                 border-radius: 10px;
             }
-            .maxlength-feedback{
+
+            .maxlength-feedback {
                 margin-left: 305px;
                 color: #c8c8c8;
             }
         }
-        >p:nth-of-type(5){
+
+        > p:nth-of-type(5) {
             border-top: 1px solid #545454;
             width: 510px;
             margin: 40px 0 0 40px;
             line-height: 100px;
         }
-        >a:nth-of-type(2){
+
+        > a:nth-of-type(2) {
             display: block;
             width: 150px;
             height: 50px;
@@ -808,7 +806,8 @@ body{
             margin-top: 20px;
             border-radius: 50px;
         }
-        >div:nth-of-type(2){
+
+        > div:nth-of-type(2) {
             position: relative;
             width: 134px;
             height: 134px;
@@ -816,11 +815,13 @@ body{
             padding: 10px;
             background: #fff;
             overflow: hidden;
-            img{
+
+            img {
                 width: 134px;
                 height: 134px;
             }
-            input{
+
+            input {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -829,11 +830,13 @@ body{
                 height: 100%;
             }
         }
-        >div:nth-of-type(3){
+
+        > div:nth-of-type(3) {
             margin-top: 40px;
             width: 550px;
             height: 70px;
-            >a{
+
+            > a {
                 display: block;
                 width: 550px;
                 height: 70px;
@@ -843,39 +846,45 @@ body{
                 background: #ea6378;
             }
         }
-        >p:nth-of-type(6){
+
+        > p:nth-of-type(6) {
             font-size: 24px;
             color: #c8c8c8;
             margin-top: 10px;
             margin-left: 180px;
         }
-        .delete-picture{
+
+        .delete-picture {
             display: none;
             width: 150px;
             height: 50px;
             border: 1px solid #a0a0a0;
-            margin:0 auto ;
+            margin: 0 auto;
             text-align: center;
             line-height: 50px;
             color: #a5a5a5;
-            border-radius:50px ;
+            border-radius: 50px;
             margin-top: 20px;
         }
     }
 }
-.container{
+
+.container {
     position: fixed;
     display: none;
-    left: 0;
-    top: 0;   
+    top: 0;
     z-index: 9999;
+    margin: 0 auto;
+    max-width: 750px;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-    .cropper-container{
+
+    .cropper-container {
         margin-top: 100px;
     }
-    a:nth-of-type(1){
+
+    a:nth-of-type(1) {
         display: block;
         position: absolute;
         left: 20px;
@@ -889,7 +898,8 @@ body{
         text-align: center;
         line-height: 50px;
     }
-    a:nth-of-type(2){
+
+    a:nth-of-type(2) {
         display: block;
         position: absolute;
         right: 20px;
@@ -903,17 +913,18 @@ body{
         text-decoration: none;
     }
 }
-.container01{
+
+.container01 {
     position: fixed;
     display: none;
     left: 0;
-    top: 0;   
+    top: 0;
     z-index: 9999;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-    
-    a:nth-of-type(1){
+
+    a:nth-of-type(1) {
         display: block;
         position: absolute;
         left: 20px;
@@ -927,7 +938,8 @@ body{
         text-align: center;
         line-height: 50px;
     }
-    a:nth-of-type(2){
+
+    a:nth-of-type(2) {
         display: block;
         position: absolute;
         right: 20px;
@@ -941,16 +953,18 @@ body{
         text-decoration: none;
     }
 }
-.shopping-cart{
+
+.shopping-cart {
     display: none;
     position: fixed;
     left: 0;
-    top: 0;   
+    top: 0;
     z-index: 9995;
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,0.7);
-    .shopping{
+
+    .shopping {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -963,22 +977,24 @@ body{
         border-radius: 8px;
         border: 3px solid #e7566d;
         background: #fff;
-        p{
+
+        p {
             margin-left: 30px;
             margin-top: 10px;
             font-size: 26px;
         }
-        p:nth-of-type(1){
+
+        p:nth-of-type(1) {
             margin-top: 50px;
-            
         }
-        a{
+
+        a {
             position: absolute;
             left: 0;
-            bottom:0 ;
+            bottom: 0;
             width: 445px;
             height: 70px;
-            text-align:center ;
+            text-align: center;
             line-height: 70px;
             background: #e7566d;
             border-radius: 0 0 8px 8px;
@@ -986,15 +1002,18 @@ body{
         }
     }
 }
-.privilege{
+
+.privilege {
     position: fixed;
     display: none;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     z-index: 999;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0, .7);
-    .privilege-commodity{
+
+    .privilege-commodity {
         width: 550px;
         height: 930px;
         background: #fff;
@@ -1003,59 +1022,69 @@ body{
         right: -550px;
         z-index: 9999;
         overflow: auto;
-        >p:nth-of-type(1){
+
+        > p:nth-of-type(1) {
             font-size: 24px;
             font-weight: bold;
             margin-top: 88px;
             margin-left: 40px;
         }
-        ul{
+
+        ul {
             margin-top: 30px;
             list-style: none;
-            li{
+
+            li {
                 position: relative;
                 border-bottom: 1px solid #dcdcdc;
                 padding: 20px;
-                >span{
-                   position: absolute;
+
+                > span {
+                    position: absolute;
                     left: 40px;
                     top: 80px;
                     width: 41px;
                     height: 41px;
                     background: url("../imgs/shopping-cart/no-like.png") no-repeat;
                     background-size: cover;
-                    &.active{
+
+                    &.active {
                         background: url("../imgs/shopping-cart/like.png") no-repeat;
                         background-size: cover;
                     }
                 }
-              a{
-                  display: block;
-                  width: 160px;
-                  height: 160px;
-                  margin-left: 98px;
-                }  
-                P:nth-of-type(1){
+
+                a {
+                    display: block;
+                    width: 160px;
+                    height: 160px;
+                    margin-left: 98px;
+                }
+
+                P:nth-of-type(1) {
                     position: absolute;
                     left: 300px;
                     top: 30px;
                     font-size: 26px;
                 }
-                p:nth-of-type(2){
+
+                p:nth-of-type(2) {
                     position: absolute;
                     left: 305px;
                     top: 60px;
                     font-size: 14px;
                     font-family: "黑体";
                 }
-                p:nth-of-type(3){
+
+                p:nth-of-type(3) {
                     position: absolute;
                     left: 300px;
                     top: 90px;
                     font-size: 22px;
                     color: #c0c0c0;
                 }
-                p:nth-of-type(4){
+
+                p:nth-of-type(4) {
                     position: absolute;
                     left: 475px;
                     top: 140px;
@@ -1063,7 +1092,8 @@ body{
                 }
             }
         }
-        >.btn{
+
+        > .btn {
             display: block;
             z-index: 9999;
             position: absolute;
@@ -1079,15 +1109,18 @@ body{
         }
     }
 }
-.picture-shade{
+
+.picture-shade {
     position: fixed;
     display: none;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     z-index: 9998;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255, .8);  
-    .picture{
+    background: rgba(255,255,255, .8);
+
+    .picture {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -1095,39 +1128,44 @@ body{
         margin-top: -350px;
         width: 600px;
         height: 700px;
-        border: 1px solid #e7566d;border-radius: 10px;
+        border: 1px solid #e7566d;
+        border-radius: 10px;
         background: url("../imgs/order-submit/image_cake_wrapper.jpg") no-repeat;
         background-size: 600px 600px;
     }
-    .picture-img{
+
+    .picture-img {
         position: absolute;
         left: 108px;
         top: 108px;
         width: 384px;
         height: 384px;
-        
     }
-    a{
+
+    a {
         display: block;
         width: 150px;
         height: 44px;
         text-align: center;
         line-height: 44px;
-        border: 1px solid #e7566d;;
+        border: 1px solid #e7566d;
     }
-    a:nth-of-type(1){
+
+    a:nth-of-type(1) {
         position: absolute;
         left: 130px;
         bottom: 30px;
         background-color: #e7566d;
         color: #fff;
     }
-    a:nth-of-type(2){
+
+    a:nth-of-type(2) {
         position: absolute;
         left: 320px;
         bottom: 30px;
         color: #e7566d;
-        input{
+
+        input {
             position: absolute;
             left: 0;
             top: 0;
@@ -1137,7 +1175,8 @@ body{
         }
     }
 }
-.build-surprised{
+
+.build-surprised {
     display: none;
     position: fixed;
     top: 0;
@@ -1146,10 +1185,13 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,0.8);
-    .build{
+
+    .build {
         display: none;
     }
-    .build,.drawing{
+
+    .build,
+    .drawing {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -1161,15 +1203,17 @@ body{
         border-radius: 10px;
         background-color: #fff;
         overflow: hidden;
-        p{
+
+        p {
             font-size: 26px;
-            margin: 10px 0;
-            margin-left: 30px;
+            margin: 10px 0 10px 30px;
         }
-        p:first-child{
+
+        p:first-child {
             margin-top: 40px;
         }
-        a{
+
+        a {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -1179,7 +1223,322 @@ body{
             text-align: center;
             line-height: 70px;
             color: #fff;
-            background-color:#e7566d ;
+            background-color: #e7566d;
         }
-    }  
+    }
+}
+
+.shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -375px;
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    .parcel {
+        display: none;
+        position: absolute;
+        bottom: -100%;
+        margin: 0 auto;
+        max-width: 750px;
+        width: 100%;
+        height: 730px;
+        background: #f2f1f1;
+
+        .candle {
+            width: 715px;
+            height: 619px;
+            margin: 0 auto;
+
+            > p {
+                width: 100%;
+                text-align: center;
+                padding: 40px 0;
+                font-size: 24px;
+            }
+
+            ul:nth-child(odd) {
+                margin-left: 20px;
+            }
+
+            ul {
+                float: left;
+                list-style: none;
+                height: 70px;
+                margin: 15px 0;
+
+                li {
+                    float: left;
+                    margin-right: 15px;
+                }
+
+                li:nth-of-type(1) {
+                    width: 70px;
+                    height: 70px;
+                    border: 1px solid #dcdcdc;
+                }
+
+                li:nth-of-type(2),
+                li:nth-of-type(4) {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 10px;
+                }
+
+                li:nth-of-type(2) {
+                    background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
+                    background-size: cover;
+                }
+
+                li:nth-of-type(4) {
+                    background: url("../imgs/cake-gift/add.png") no-repeat;
+                    background-size: cover;
+                }
+
+                li:nth-of-type(3) {
+                    width: 100px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    border: 1px solid #000000;
+                    margin-top: 3px;
+                }
+
+                li.active {
+                    width: 50px;
+                    height: 50px;
+                    background: url("../imgs/cake-gift/subtract.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle01 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle01.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle02 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle02.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle03 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle03.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle04 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle04.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle05 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle05.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle06 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle06.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle07 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle07.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle08 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle08.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle09 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle09.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .candle00 {
+                li:nth-of-type(1) {
+                    background: url("../imgs/cake-gift/candle00.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+        a:nth-of-type(1) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 50%;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            background: #fb657d;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        a:nth-of-type(2) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 50%;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            background: #e9546b;
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+
+    .dish {
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: -100%;
+        margin-left: -375px;
+        max-width: 750px;
+        width: 100%;
+        background: #f2f1f1;
+
+        p {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 24px;
+        }
+
+        ul {
+            margin-left: 130px;
+            list-style: none;
+            padding-bottom: 120px;
+
+            li {
+                float: left;
+                margin-right: 20px;
+            }
+
+            li:nth-of-type(1) {
+                width: 71px;
+                height: 71px;
+            }
+
+            li:nth-of-type(2) {
+                width: 50px;
+                height: 50px;
+                background: url("../imgs/cake-gift/subtract-gray.png") no-repeat;
+                background-size: cover;
+                margin-top: 10px;
+            }
+
+            li:nth-of-type(3) {
+                width: 240px;
+                height: 55px;
+                text-align: center;
+                line-height: 55px;
+                border: 1px solid #000;
+                margin-top: 5px;
+            }
+
+            li:nth-of-type(4) {
+                width: 50px;
+                height: 50px;
+                background: url("../imgs/cake-gift/add.png") no-repeat;
+                background-size: cover;
+                margin-top: 10px;
+            }
+
+            li.active {
+                width: 50px;
+                height: 50px;
+                background: url("../imgs/cake-gift/subtract.png") no-repeat;
+                background-size: cover;
+            }
+        }
+
+        a:nth-of-type(1) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 50%;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            background: #fb657d;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        a:nth-of-type(2) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 50%;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            background: #e9546b;
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+}
+
+.no-commodity {
+    display: none;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+
+    .commodity {
+        position: relative;
+        top: 300px;
+        width: 100%;
+        height: 400px;
+
+        a {
+            position: absolute;
+            bottom: 0;
+            left: 240px;
+            display: block;
+            width: 272px;
+            height: 100px;
+        }
+    }
+}
+
+#tableware {
+    position: relative;
+}
+
+#tableware .swiper-slide {
+    position: absolute;
+    left: 50%;
+    margin-left: -145px;
 }
