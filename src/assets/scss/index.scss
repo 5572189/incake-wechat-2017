@@ -338,7 +338,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 .label {
                     font-size: 18px;
                     margin-top: 12px;
-                    color: #ccc;
                 }
                 .price {
                     margin-top: 25px;
@@ -426,10 +425,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 p {
                     margin: 0;
                     padding: 0;
-                    .rotate {
-                        display: inline-block;
-                        transform: rotate(30deg);
-                    }
                 }
                 .change {
                     margin-top: 15px;
@@ -445,7 +440,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 .label {
                     font-size: 18px;
                     margin-top: 12px;
-                    color: #ccc;
                 }
                 .price {
                     margin-top: 25px;
@@ -533,7 +527,7 @@ $loc-triangle-bgcolor: #f0f0f0;
             }
         }
         .loves {
-            border: #e9546b;
+            border-color: #e9546b;
             background: #e9546b;
             color: #fff;
         }
@@ -613,8 +607,8 @@ $loc-triangle-bgcolor: #f0f0f0;
             }
         }
         .citySelected {
-            border: #e9546b;
-            background: #e9546b;
+            border-color: #e9546b;
+            background-color: #e9546b;
             color: #fff;
         }
     }
@@ -710,6 +704,7 @@ $loc-triangle-bgcolor: #f0f0f0;
                         text-align: center;
                         line-height: 60px;
                         color: #e7566c;
+                        border: 1px solid #f1f1f1;
                     }
                     li.active {
                         border: 1px solid #e96478;
@@ -793,6 +788,7 @@ $loc-triangle-bgcolor: #f0f0f0;
                         text-align: center;
                         line-height: 60px;
                         color: #e7566c;
+                        border: 1px solid #f1f1f1;
                     }
                     li.active {
                         border: 1px solid #e96478;
@@ -804,11 +800,8 @@ $loc-triangle-bgcolor: #f0f0f0;
                 ul:nth-of-type(2) {
                     margin-top: 20px;
                     margin-left: 45px;
-<<<<<<< HEAD
                     font-size: 24px;/*px*/
-=======
-                    font-size: 24px; /*px*/
->>>>>>> 86bdac19ab23211c0653eafce5197ab28987ff91
+
                     li {
                         margin: 30px 0;
                     }

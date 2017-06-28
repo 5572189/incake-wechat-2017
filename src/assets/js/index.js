@@ -274,7 +274,7 @@
 					li_three.text(data_norms[2]);
 					$(".subtract-surprised").removeClass('active');
 					$(".number-surprised").text(1);
-					$(".cost").text(prices);
+					$(".cost").text(parseInt(prices, 10));
 			});
 
 			//常规
@@ -291,7 +291,7 @@
 					li_three.text(data_norms[2]);
 					$(".subtract-normal").removeClass('active');
 					$(".number-normal").text(1);
-					$(".prices").text(prices);
+					$(".prices").text(parseInt(prices, 10));
 			});
 
 			handle4BindShade(data);
