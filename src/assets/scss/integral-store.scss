@@ -12,43 +12,56 @@ html , body{
             float: left;
         }
         li:nth-of-type(1){
+            position: relative;
             width: 196px;
             height: 155px;
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
-                font-size: 20px; /*px*/
-                color: #efa02e;
-                text-align: center;
-                margin-top: 40px;
-                span{
-                    font-size: 36px; /*px*/
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
+                p:nth-of-type(1){
+                    font-size: 28px; /*px*/
+                    color: #efa02e;
+                    text-align: center;
+                }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 20px; /*px*/
+                    color: #515151;
                 }
             }
-            p:nth-of-type(2){
-                text-align: center;
-                font-size: 20px; /*px*/
-                margin-top: 15px;
-                color: #515151;
-            }
+            
         }
         li:nth-of-type(2){
+            position: relative;
             width: 427px;
             height: 155px;
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
                 font-size: 20px; /*px*/
                 color: #515151;
-                margin-left: 25px;
-                margin-top: 50px;
+                p{
+                    line-height: 30px;
+                    padding-left: 30px;
+                } 
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                color: #515151;
-                margin-left: 25px;
-                margin-top: 10px;
-            }
+            
         }
         li:nth-of-type(3){
             width: 68px;
@@ -63,40 +76,56 @@ html , body{
             float: left;
         }
         li:nth-of-type(1){
+            position: relative;
             width: 196px;
             height: 155px;
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
-                font-size: 36px; /*px*/
-                color: #f35bad;
-                text-align: center;
-                margin-top: 50px;
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
+                p:nth-of-type(1){
+                    font-size: 28px; /*px*/
+                    color: #f35bad;
+                    text-align: center;
+                }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 20px; /*px*/
+                    color: #515151;
+                }
             }
-            p:nth-of-type(2){
-                text-align: center;
-                font-size: 20px; /*px*/
-                margin-top: 15px;
-                color: #515151;
-            }
+            
         }
         li:nth-of-type(2){
+            position: relative;
             width: 427px;
             height: 155px;
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
                 font-size: 20px; /*px*/
                 color: #515151;
-                margin-left: 25px;
-                margin-top: 50px;
+                p{
+                    line-height: 30px;
+                    padding-left: 30px;
+                } 
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                color: #515151;
-                margin-left: 25px;
-                margin-top: 10px;
-            }
+            
         }
         li:nth-of-type(3){
             width: 68px;
@@ -111,43 +140,56 @@ html , body{
             float: left;
         }
         li:nth-of-type(1){
+            position: relative;
             width: 196px;
             height: 155px;
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
-                font-size: 20px; /*px*/
-                color: #47aede;
-                text-align: center;
-                margin-top: 40px;
-                span{
-                    font-size: 36px; /*px*/
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
+                 p:nth-of-type(1){
+                    font-size: 28px; /*px*/
+                    color: #47aede;
+                    text-align: center;
                 }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 20px; /*px*/
+                    color: #515151;
+                }               
             }
-            p:nth-of-type(2){
-                text-align: center;
-                font-size: 20px; /*px*/
-                margin-top: 15px;
-                color: #515151;
-            }
+
         }
         li:nth-of-type(2){
+            position: relative;
             width: 427px;
             height: 155px;
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
                 font-size: 20px; /*px*/
                 color: #515151;
-                margin-left: 25px;
-                margin-top: 50px;
+                p{
+                    line-height: 30px;
+                    padding-left: 30px;
+                } 
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                color: #515151;
-                margin-left: 25px;
-                margin-top: 10px;
-            }
+            
         }
         li:nth-of-type(3){
             width: 68px;
@@ -162,46 +204,59 @@ html , body{
             float: left;
         }
         li:nth-of-type(1){
+            position: relative;
             width: 196px;
             height: 155px;
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
-                font-size: 20px; /*px*/
-                color: #8db31a;
-                text-align: center;
-                margin-top: 40px;
-                span{
-                    font-size: 36px; /*px*/
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
+                 p:nth-of-type(1){
+                    font-size: 28px; /*px*/
+                    color: #8db31a;
+                    text-align: center;
+                }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 20px; /*px*/
+                    color: #515151;
+                }
+                p:nth-of-type(3){
+                    font-size: 20px; /*px*/
                 }
             }
-            p:nth-of-type(2){
-                text-align: center;
-                font-size: 20px; /*px*/
-                margin-top: 15px;
-                color: #515151;
-            }
-            p:nth-of-type(3){
-                font-size: 20px; /*px*/
-            }
+           
         }
         li:nth-of-type(2){
+            position: relative;
             width: 427px;
             height: 155px;
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
                 font-size: 20px; /*px*/
                 color: #515151;
-                margin-left: 25px;
-                margin-top: 50px;
+                p{
+                    line-height: 30px;
+                    padding-left: 30px;
+                } 
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                color: #515151;
-                margin-left: 25px;
-                margin-top: 10px;
-            }
+            
         }
         li:nth-of-type(3){
             width: 68px;
@@ -216,47 +271,62 @@ html , body{
             float: left;
         }
         li:nth-of-type(1){
+            position: relative;
             width: 196px;
             height: 155px;
             background: url("../imgs/integral-store/left.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
-                font-size: 26px; /*px*/
-                color: #8db31a;
-                text-align: center;
-                margin-top: 40px;
-                color: #f55c87;
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
+                p:nth-of-type(1){
+                    font-size: 28px; /*px*/
+                    color: #8db31a;
+                    text-align: center;
+                    color: #f55c87;
+                }
+                p:nth-of-type(2){
+                    font-size: 20px; /*px*/
+                    text-align: center;
+                    color: #f55c87;
+                }
+                p:nth-of-type(3){
+                    text-align: center;
+                    font-size: 20px; /*px*/
+                    color: #515151;
+                }
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                text-align: center;
-                margin-top: 5px;
-                color: #f55c87;
-            }
-            p:nth-of-type(3){
-                text-align: center;
-                font-size: 20px; /*px*/
-                margin-top: 10px;
-                color: #515151;
-            }
+            
         }
         li:nth-of-type(2){
+            position: relative;
             width: 427px;
             height: 155px;
             background: url("../imgs/integral-store/center.png") no-repeat;
             background-size: cover;
-            p:nth-of-type(1){
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: table;
+                margin:auto;
+                width: 100%;
                 font-size: 20px; /*px*/
                 color: #515151;
-                margin-left: 25px;
-                margin-top: 50px;
+                p{
+                    line-height: 30px;
+                    padding-left: 30px;
+                } 
             }
-            p:nth-of-type(2){
-                font-size: 20px; /*px*/
-                color: #515151;
-                margin-left: 25px;
-                margin-top: 10px;
-            }
+            
         }
         li:nth-of-type(3){
             width: 68px;

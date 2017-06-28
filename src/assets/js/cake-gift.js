@@ -1,4 +1,17 @@
 ;(function($, window, document){
+		function touchmove() {
+            $("body").on('touchmove.mask', function(event) {
+                //去掉默认
+                event.preventDefault();
+                //终止事件的传播
+                event.stopPropagation();
+            });
+        }
+
+        function removeTouchmove() {
+            //解绑事件：
+            $("body").off(".mask");
+        }
 	$(function(){
 		var tl = new TimelineLite();
 		$(".candle-dish").click(function(){
@@ -9,6 +22,7 @@
 					$(".shade").fadeIn();
 				}
 			});
+			touchmove();
 		});
 		$(".cancel").click(function(){
 			tl.clear();
@@ -18,6 +32,7 @@
 					$(".shade").fadeOut();
 				}
 			});
+			removeTouchmove();
 		});
 		$(".shade").click(function(e){
 			if(e.target===$(".shade")[0]){
@@ -29,6 +44,7 @@
 					}
 				});
 			}
+			removeTouchmove();
 		});
 		$("#add-gift").on('click','li',function(){
 			if(!$(this).hasClass('activeBorder')){

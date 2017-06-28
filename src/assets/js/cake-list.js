@@ -394,4 +394,4 @@
         });
     });
 
-})();
+})(jQuery, window, document);

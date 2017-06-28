@@ -168,6 +168,7 @@ body {
 
                 span:last-child {
                     margin-left: 50px;
+                font-size: 22px;/*px*/
                 }
             }
         }
@@ -782,7 +783,8 @@ body {
             }
 
             .maxlength-feedback {
-                margin-left: 305px;
+                display: block;
+                text-align: right;
                 color: #c8c8c8;
             }
         }

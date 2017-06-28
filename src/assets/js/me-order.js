@@ -1,5 +1,18 @@
 (function($, window, document) {
+	
+	function touchmove() {
+            $("body").on('touchmove.mask', function(event) {
+                //去掉默认
+                event.preventDefault();
+                //终止事件的传播
+                event.stopPropagation();
+            });
+        }
 
+        function removeTouchmove() {
+            //解绑事件：
+            $("body").off(".mask");
+        }
 	$(function(){
 		$("#nav ul").on("click", "li", function() {
 			$(this).addClass("active");
@@ -18,12 +31,15 @@
 	    //取消弹框
 		$("#content").on('click','.cancel-order',function(){
 			$(".cancel-shade").fadeIn();
+			touchmove();
 		});
 		$(".affirm").click(function(){
 			$(".cancel-shade").fadeOut();
+			removeTouchmove();
 		});
 		$(".abolish").click(function(){
 			$(".cancel-shade").fadeOut();
+			removeTouchmove();
 		});
 
 		$(".cancel").on('click','span',function(){
@@ -37,12 +53,15 @@
 		//支付弹框
 		$("#content").on('click','.affirm-pay',function(){
 			$(".pay-shade").fadeIn();
+			touchmove();
 		});
 		$(".affirm-buy").click(function(){
 			$(".pay-shade").fadeOut();
+			removeTouchmove();
 		});
 		$(".cancel-buy").click(function(){
 			$(".pay-shade").fadeOut();
+			removeTouchmove();
 		});
 
 		Data();

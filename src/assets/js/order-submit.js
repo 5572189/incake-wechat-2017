@@ -1,7 +1,7 @@
 ;(function($, window, document) {
 
 	function touchmove(){
-		$("body").on('touchmove.mask', function(event) {
+		$(document).on('touchmove.mask', function(event) {
 			//去掉默认
 			event.preventDefault();
 			//终止事件的传播
@@ -10,8 +10,20 @@
 	}
 	function removeTouchmove(){
 		//解绑事件：
-		$("body").off(".mask");
+		$(document).off(".mask");
 	}
+	
+//	// 禁用滚动
+//	function fnDisableScroll(fn) {
+//		$('body').css('overflow', 'hidden');
+//		fn && fn();
+//	}
+//	
+//	// 启用滚动
+//	function fnEnableScroll(fn) {
+//		$('body').css('overflow', 'auto');
+//		fn && fn();
+//	}
 
 	$(function(){
 
@@ -91,7 +103,7 @@
 			}else{
 				$(this).removeClass("active");
 			}
-
+			removeTouchmove();
 		});
 		$cash_coupon.on('click','li',function(){
 			$(this).addClass("active").siblings().removeClass("active");
@@ -126,6 +138,7 @@
 			$mother_popup.fadeOut(function(){
 				$mother_shade.fadeOut();
 			});
+			removeTouchmove();
 		});
 		$mother_word.maxlength({
 	        max: 50,
@@ -403,8 +416,8 @@
 
 	                title: '生日牌',
 	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
+	                itemHeight: 1,
+	                headerHeight: 1,
 	                cssUnit: 'rem',
 	                callback: function (selectOneObj) {
 	                    birthdayIdDom.value = selectOneObj.id;
@@ -502,8 +515,8 @@
 
 	                title: '发票',
 	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
+	                itemHeight: 1,
+	                headerHeight: 1,
 	                cssUnit: 'rem',
 	                callback: function (selectOneObj) {
 	                    billId.value = selectOneObj.id;
@@ -541,8 +554,8 @@
 
 	                title: '发票',
 	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
+	                itemHeight: 1,
+	                headerHeight: 1,
 	                cssUnit: 'rem',
 	                callback: function (selectOneObj) {
 	                    orderComment.value = selectOneObj.id;
@@ -557,7 +570,6 @@
 					    }
 	                }
 	        });
-
 	    });
 
 	})();
@@ -619,8 +631,8 @@
 
 	                title: '生日贺卡',
 	                // 每一项的高度，可选，默认 35
-	                itemHeight: 0.7,
-	                headerHeight: 0.88,
+	                itemHeight: 1,
+	                headerHeight: 1,
 	                cssUnit: 'rem',
 	                callback: function (selectOneObj) {
 	                    birthdayIdDom.value = selectOneObj.id;
@@ -669,8 +681,8 @@
 					[iosProvinces, iosCitys, iosCountys],
 					{
 						title: '地址选择',
-	                    itemHeight: 0.933333,
-	                    headerHeight: 1.18,
+	                    itemHeight: 1,
+	                    headerHeight: 1,
 	                	cssUnit: 'rem',
 						relation: [1, 1, 0],
 						oneLevelId: oneLevelId,

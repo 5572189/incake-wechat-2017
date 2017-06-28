@@ -1,7 +1,6 @@
 ;
 (function($, window, document) {
-    $(function() {
-        function touchmove() {
+	 	function touchmove() {
             $("body").on('touchmove.mask', function(event) {
                 //去掉默认
                 event.preventDefault();
@@ -14,6 +13,9 @@
             //解绑事件：
             $("body").off(".mask");
         }
+	
+    $(function() {
+       
         var $certificate = $("#coin-certificate"),
             $cake_exchange = $(".cake-exchange"),
             $skip = $(".skip"),

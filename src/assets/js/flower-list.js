@@ -1,4 +1,17 @@
 (function($, window, documnet){
+	function touchmove() {
+            $("body").on('touchmove.mask', function(event) {
+                //去掉默认
+                event.preventDefault();
+                //终止事件的传播
+                event.stopPropagation();
+            });
+        }
+
+        function removeTouchmove() {
+            //解绑事件：
+            $("body").off(".mask");
+        }
 
 	$(function(){
 		$("#flower-list").on('click','.like',function(){
@@ -42,12 +55,14 @@
 
 		$(".car").click(function(){
 			$(".flower-shade").fadeIn();
+			touchmove();
 		})
 		$(".colors").on('click','li',function(){
 			$(this).addClass("active").siblings().removeClass("active");
 		});
 		$(".flower-close").click(function(){
 			$(".flower-shade").fadeOut();
+			removeTouchmove();
 		});
 
 		var $add_flower = $(".add-flower"),
