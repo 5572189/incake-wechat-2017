@@ -777,9 +777,6 @@ $loc-triangle-bgcolor: #f0f0f0;
                 ul {
                     padding: 0 22px;
                 }
-                ul {
-                    padding: 0 22px;
-                }
                 ul:first-child {
                     list-style: none;
                     margin-left: 10px;
@@ -807,7 +804,11 @@ $loc-triangle-bgcolor: #f0f0f0;
                 ul:nth-of-type(2) {
                     margin-top: 20px;
                     margin-left: 45px;
+<<<<<<< HEAD
                     font-size: 24px;/*px*/
+=======
+                    font-size: 24px; /*px*/
+>>>>>>> 86bdac19ab23211c0653eafce5197ab28987ff91
                     li {
                         margin: 30px 0;
                     }
@@ -861,12 +862,12 @@ $loc-triangle-bgcolor: #f0f0f0;
         a {
             display: block;
             width: 180px;
-            height: 50px;
+            height: 60px;
             background-color: #e7566c;
             color: #fff;
             text-align: center;
-            line-height: 50px;
-            font-size: 24px;
+            line-height: 60px;
+            font-size: 24px; /*px*/
             border-radius: 5px;
         }
         a:nth-of-type(1) {
