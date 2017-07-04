@@ -71,6 +71,16 @@ $loc-triangle-bgcolor: #f0f0f0;
             position: center center;
         }
     }
+    >span{
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: table;
+        color: #fff;
+        font-size: 22px;/*px*/
+    }
 }
 
 .swiper-container {

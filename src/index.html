@@ -26,6 +26,7 @@
 			<input type="hidden" name="city_id" id="cityId" value="">
 			<div class="location" id="showCity">上海市</div>
 			<div class="logo"></div>
+			<span>股票代码:837489</span>
 		</header>
 		<!--轮播-->
 		<div class="swiper-container">
@@ -112,15 +113,15 @@
 				<div class="pic">
 					{{if item.sell}}
 					<a href="{{item.link}}" class="box-item sell-out">
-						<img src="{{item.img}}" class="cake-kind"/>
+						<img class="lazy" data-original="{{item.img}}" class="cake-kind"/>
 						<span class="collect"></span>
 					</a> {{else if item.sold}}
 					<a href="{{item.link}}" class="box-item sold-out">
-						<img src="{{item.img}}" class="cake-kind"/>
+						<img class="lazy" data-original="{{item.img}}" class="cake-kind"/>
 						<span class="collect"></span>
 					</a> {{else}}
 					<a href="{{item.link}}" class="box-item">
-						<img src="{{item.img}}" class="cake-kind"/>
+						<img class="lazy" data-original="{{item.img}}" class="cake-kind"/>
 						<span class="collect"></span>
 					</a> {{/if}}
 					<div class="box-text">
@@ -275,6 +276,8 @@
 		$LAB
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
 			.script('assets/jquery/jquery-1.8.3.min.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/plugins/lazyload/lazyload.transpiled.min.js').wait()
 			.script('assets/plugins/swiper/js/swiper.min.js').wait()
 			.script('assets/plugins/underscore/underscore-min.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
