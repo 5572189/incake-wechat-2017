@@ -103,10 +103,11 @@
             .message {
                 position: relative;
                 width: 350px;
-
                 p:nth-of-type(1) {
                     margin: 17px;
-
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                     span:first-child {
                         font-size: 26px;
                         color: #505050;
@@ -497,6 +498,7 @@
             p {
                 padding: 100px 0 150px 45px;
                 font-size: 26px;
+                padding-left: 0.6rem;
             }
 
             a {
@@ -526,6 +528,7 @@
             p {
                 padding: 100px 0 150px 45px;
                 font-size: 26px;
+                padding-left: 0.6rem;
             }
 
             a {

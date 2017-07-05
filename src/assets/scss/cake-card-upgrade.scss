@@ -28,15 +28,13 @@ body{
             }
         }
         .upgrade{
-            width: 390px;
-            height: 90px;
             font-size: 82px;
             float: left;
             width: 390px;
             height: 90px;
             line-height: 90px;
             font-family: "微软雅黑";
-            
+
         }
     }
     .doll{
@@ -133,7 +131,7 @@ body{
                 background-image: url(../imgs/icons/icon_basket_radio_circle.png);
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: center center;
+                background-position: 50%;
             }
         }
         p.checked:before{

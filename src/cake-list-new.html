@@ -24,7 +24,7 @@
 		<script type="text/html" id="tplCake">
 			{{each list as item i}}
 			<li>
-				<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
+				<a href="javascript:;"><img class="lazy" data-original="{{item.img}}" src="{{item.lazyimg}}"/></a>
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
@@ -37,6 +37,8 @@
 		$LAB
 			.script('assets/jquery/jquery-3.1.1.min.js').wait()
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/plugins/lazyload/lazyload.transpiled.min.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
 			.script('assets/js/cake-list-new.js');
 	</script>

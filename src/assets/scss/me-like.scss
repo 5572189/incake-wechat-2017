@@ -33,8 +33,13 @@
             div{
                 position: relative;
                 height: 244px;
+                p{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
                 p:nth-of-type(1){
-                    padding-left: 264px;
+                    padding-left: 10px;
                     padding-top: 15px;
                     color: #505050;
                     span:first-child{
@@ -48,24 +53,24 @@
                 p:nth-of-type(2){
                     font-size: 20px;/*px*/
                     margin-top: 15px;
-                    padding-left: 264px;
+                    padding-left: 10px;
                     color: #888;
                 }
                 p:nth-of-type(3){
                     font-size: 20px;/*px*/
                     color: #888;
-                    padding-left: 264px;
+                    padding-left: 10px;
                     margin-top: 15px;
                 }
                 p:nth-of-type(4){
                     font-size: 20px;/*px*/
                     color: #888;
-                    padding-left: 264px;
+                    padding-left: 10px;
                     margin-top: 10px;
                 }
                 p:nth-of-type(5){
                     margin-top: 15px;
-                    padding-left: 264px;
+                    padding-left: 10px;
                     color: #505050;
                     span:first-child{
                         font-size: 20px;/*px*/
@@ -87,4 +92,9 @@
             }
         }
     }
+}
+.note {
+font-size:0.4444rem;
+text-align:center;
+margin-top:3.33rem;
 }

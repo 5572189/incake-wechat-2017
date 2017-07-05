@@ -198,3 +198,66 @@
         }
     }
 }
+#shade {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9995;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#shade .shade_shopping {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5.946667rem;
+    height: 3.813333rem;
+    z-index: 9999;
+    overflow: hidden;
+    margin-left: -2.973333rem;
+    margin-top: -1.906667rem;
+    border-radius: 0.106667rem;
+    border: 0.04rem solid #e7566d;
+}
+
+#shade .shade_shopping div {
+    width: 100%;
+    height: 2.8rem;
+    background: #ffffff;
+    border-radius: 0.106667rem 0.106667rem 0 0;
+}
+
+#shade .shade_shopping div span:first-child {
+    display: inline-block;
+    width: 1.146667rem;
+    height: 0.8rem;
+    background: url("../imgs/list/face.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 0.733333rem;
+    margin-top: 1.066667rem;
+}
+
+#shade .shade_shopping div span:last-child {
+    display: inline-block;
+    width: 2.96rem;
+    margin-left: 0.333333rem;
+}
+
+#shade .shade_shopping a {
+    display: block;
+    float: left;
+    width: 2.973333rem;
+    height: 1.013333rem;
+    text-align: center;
+    line-height: 1.013333rem;
+    color: #fff;
+    background: #f1b4be;
+    font-size: 0.32rem;
+}
+
+#shade .shade_shopping a:last-child {
+    background: #e7566d;
+}

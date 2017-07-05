@@ -405,6 +405,7 @@
         var data = [{
             link: 'detail.html',
             textlink: 'javascript:;',
+            lazyimg: 'assets/imgs/img_preloading.gif',
             textimg: 'assets/imgs/icons/car.png',
             img: 'assets/imgs/index/cake.png',
             name: {
@@ -467,6 +468,7 @@
             link: 'detail.html',
             textlink: 'javascript:;',
             textimg: 'assets/imgs/icons/car.png',
+            lazyimg: 'assets/imgs/img_preloading.gif',
             img: 'assets/imgs/index/cake.png',
             name: {
                 cn: '百变魔方',
@@ -508,6 +510,7 @@
             link: 'detail.html',
             textlink: 'javascript:;',
             textimg: 'assets/imgs/icons/car.png',
+            lazyimg: 'assets/imgs/img_preloading.gif',
             img: 'assets/imgs/index/cake.png',
             name: {
                 cn: '百变魔方',
@@ -568,6 +571,7 @@
             link: 'detail.html',
             textlink: 'javascript:;',
             textimg: 'assets/imgs/icons/car.png',
+            lazyimg: 'assets/imgs/img_preloading.gif',
             img: 'assets/imgs/index/cake.png',
             name: {
                 cn: '百变魔方',

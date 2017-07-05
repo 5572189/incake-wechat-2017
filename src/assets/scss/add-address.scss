@@ -7,9 +7,6 @@ body{
     margin: 0 auto;
 }
 #add-address{
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
     overflow: hidden;
     background: #fff;
     ul{
@@ -26,7 +23,7 @@ body{
             outline-style: none;
         }
     }
-    ul:nth-of-type(1){
+    ul:first-of-type{
         li{
             position: relative;
             height: 100px;
@@ -47,7 +44,7 @@ body{
             height: 110px;
             border-bottom: 1px solid #dcdcdc;
         }
-        li:nth-of-type(1){
+        li:first-of-type{
             ul{
                 list-style: none;
                 .city-select{
@@ -72,7 +69,7 @@ body{
                         background-position-y: center;
                         background-size: 25px 15px;
                     }
-                    
+
                 }
             }
         }
@@ -99,7 +96,7 @@ body{
             padding-left: 30px;
             border-right: 1px solid #dcdcdc;
             background: url("../imgs/add-address/down.png") no-repeat;
-            background-position-x: 200px; 
+            background-position-x: 200px;
             background-position-y: center;
             background-size: 25px 15px;
         }
@@ -146,7 +143,7 @@ body{
             height: 100px;
             line-height: 100px;
             float: left;
-        
+
         }
         .delivery-area{
             margin-left: 30px;
@@ -166,7 +163,7 @@ body{
             position: absolute;
             right: 30px;
             top: 0;
-            
+
             a{
                 width: 250px;
                 height: 100px;
@@ -186,7 +183,7 @@ body{
             }
         }
     }
-    
+
 }
 
 
@@ -210,5 +207,3 @@ body{
         color: #fff;
     }
 }
-
-

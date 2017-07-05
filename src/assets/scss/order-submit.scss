@@ -39,6 +39,9 @@ body{
                 line-height: 50px;
                 color: #e9546b;
                 border-radius:5px ;
+                span:last-child{
+                    font-size: 22px ;/*px*/
+                }
             }
             >a:nth-of-type(3){
                 position: absolute;
@@ -330,9 +333,6 @@ body{
         text-indent: 25px;
         >span{
             color: #b4b4b4;
-            span:nth-of-type(1){
-                margin-left: 30px;
-            }
             span:nth-of-type(3){
                 position: absolute;
                 left: 460px;
@@ -427,6 +427,16 @@ body{
             width: 400px;
         }
     }
+}
+.bill-privately p input {
+    width: 5.973333rem;
+    height: 0.8rem;
+    border-radius: 0.133333rem;
+    outline: none;
+    color: #dcdcdc;
+    text-indent: 0.266667rem;
+    border: 0.013333rem solid #dcdcdc;
+     margin-left: 0.466667rem;
 }
 .bill{
     max-width:750px ;
@@ -1729,4 +1739,10 @@ body{
 }
 .ios-select-widget-box.three-level-box .three-level-contain{
     width: 30%;
+}
+#userAddressList .none {
+    padding-top: 2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 0;
 }

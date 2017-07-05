@@ -630,6 +630,7 @@ $loc-triangle-bgcolor: #f0f0f0;
     padding-bottom: 200px;
     position: relative;
     margin-top: -100px;
+    z-index: -1;
     div {
         width: 100px;
         height: 100px;
