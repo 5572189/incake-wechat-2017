@@ -1,6 +1,6 @@
 ;
 (function($, window, document) {
-    
+
     $(function() {
         var tl = new TimelineLite();
 
@@ -320,10 +320,11 @@
             var $image = $('#image'),
                 $file = $("#file"),
                 $page = $("body"),
-                $imagesrc = $(".imagesrc"),
+                $imagesrc = $(".imagesrc-convention"),
                 $uploading = $(".uploading"),
                 $picture_shade = $(".picture-shade"),
-                $picture = $(".picture"),
+                $picture_convention = $(".picture-convention"),
+                $picture_love = $(".picture-love"),
                 $picture_close = $(".picture-close"),
                 pid = "0";
 
@@ -384,19 +385,36 @@
                 var currentli = $('.convention').children('li[pid=' + pid + ']');
                 currentli.attr("viewImage", img);
                 currentli.find('.uploading').text('预览');
+                currentli.find('.uploading-love').text('预览');
             });
 
             $(".uploading").click(function() {
                 var $this = $(this);
                 if ($this.text() === '预览') {
-                    $(".picture-img").children().removeAttr('src');
+                    $(".picture-img-convention").children().removeAttr('src');
                     var viewimage = $this.closest('li').attr('viewimage');
-                    $(".picture-img").children().attr('src', viewimage);
+                    $(".picture-img-convention").children().attr('src', viewimage);
                     $picture_shade.fadeIn(function() {
-                        $picture.fadeIn();
+                        $picture_love.fadeOut(function(){
+                            $picture_convention.fadeIn();
+                        });
                     });
                 }
             });
+
+            $(".uploading-love").click(function() {
+                var $this = $(this);
+                if ($this.text() === '预览') {
+                    $picture_convention.fadeOut();
+                    $(".picture-img-love").children().removeAttr('src');
+                    var viewimage = $this.closest('li').attr('viewimage');
+                    $(".picture-img-love").children().attr('src', viewimage);
+                    $picture_shade.fadeIn(function() {
+                        $picture_love.fadeIn();
+                    });
+                }
+            });
+
             $(".reupload-image").click(function() {
                 $(".container").fadeOut();
             });

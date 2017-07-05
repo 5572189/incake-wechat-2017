@@ -32,6 +32,7 @@
 			{{/each}}
 		</script>
 		<p><img src="assets/imgs/cake-gift/add-gift.png" /></p>
+		<p>本券可免费兑换一份甜点呦</p>
 		<!--添加赠品-->
 		<ul id="add-gift" class="clearfix"></ul>
 		<script type="text/html" id="tplCake-gift">
@@ -73,6 +74,7 @@
 		</script>
 		<!--底部悬浮-->
 		<div class="confirm">
+			<p>温馨提示：已免费赠送5套餐具、生日牌，如增加餐具需额外付款购买</p>
 			<a href="javascript:;" class="candle-dish">请选择数字蜡烛和餐盘</a>
 			<a href="javascript:;">确认组合</a>
 		</div>
@@ -158,11 +160,21 @@
 		<!--没有选择赠品提示-->
 		<div class="gift-shade">
 			<div class="no-gift">
-				<p>您还没有选择赠品呢。</p>
+				<div>
+					<p>您还没有选择赠品呢。</p>
+				</div>
 				<a href="javascript:;">确定</a>
 			</div>
 			<div class="limit-gift">
-				<p>赠品只可以选择两个哟。</p>
+				<div>
+					<p>赠品只可以选择两个哟。</p>
+				</div>
+				<a href="javascript:;">确定</a>
+			</div>
+			<div class="selected-gift">
+				<div>
+					<p>您的兑换券只可以选择1个赠品哟</p>
+				</div>
 				<a href="javascript:;">确定</a>
 			</div>
 		</div>

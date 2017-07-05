@@ -63,13 +63,16 @@
 
     > p {
         width: 716px;
-        margin: 10px auto;
+        margin: 20px auto;
+        text-align: center ;
+        color: #e9546b;
+        font-size: 20px;/*px*/
     }
 
     #add-gift {
         list-style: none;
         margin-left: 15px;
-        padding-bottom: 200px;
+        padding-bottom: 280px;
 
         > li:nth-child(2n) {
             margin-left: 10px;
@@ -204,8 +207,11 @@
         margin: 0 auto;
         max-width: 750px;
         width: 100%;
-        height: 160px;
-
+        p{
+            padding: 20px 0 20px 17px;
+            color: #e9546b;
+            background-color: #fde9ec;
+        }
         a:nth-of-type(1) {
             display: block;
             width: 100%;
@@ -490,15 +496,27 @@
             left: 50%;
             top: 30%;
             margin-left: -278px;
+            margin-top: -140px;
             width: 556px;
+            height: 280px;
             border: 1px solid #e7566d;
             background: #fff;
             border-radius: 10px;
-
-            p {
-                padding: 100px 0 150px 45px;
-                font-size: 26px;
-                padding-left: 0.6rem;
+            div{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 556px;
+                height: 210px;
+                p {
+                    position: absolute;
+                    left: 50px;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: table;
+                }
             }
 
             a {
@@ -514,21 +532,75 @@
                 color: #fff;
             }
         }
-
-        .limit-gift {
+        .selected-gift{
+            display: none;
             position: absolute;
             left: 50%;
             top: 30%;
             margin-left: -278px;
+            margin-top: -140px;
             width: 556px;
+            height: 280px;
             border: 1px solid #e7566d;
             background: #fff;
             border-radius: 10px;
+            div{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 556px;
+                height: 210px;
+                p {
+                    position: absolute;
+                    left: 50px;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: table;
+                }
+            }
 
-            p {
-                padding: 100px 0 150px 45px;
-                font-size: 26px;
-                padding-left: 0.6rem;
+            a {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 70px;
+                text-align: center;
+                line-height: 70px;
+                background: #e7566d;
+                color: #fff;
+            }
+        }
+        .limit-gift {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            margin-left: -278px;
+            margin-top: -140px;
+            width: 556px;
+            height: 280px;
+            border: 1px solid #e7566d;
+            background: #fff;
+            border-radius: 10px;
+            div{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 556px;
+                height: 210px;
+                p {
+                    position: absolute;
+                    left: 50px;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: table;
+                }
             }
 
             a {

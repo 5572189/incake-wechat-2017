@@ -11,58 +11,55 @@
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
 
-	<title>INCAKE | 账号登录</title>
+	<title>INCAKE | 登录</title>
 	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
-	<link rel="stylesheet" href="assets/css/login.css" />
+	<link rel="stylesheet" href="assets/css/zx-login.css" />
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
-
 
 <body>
 	<!-- login page begin -->
 	<div class="login-page">
 		<!-- page wrapper begin -->
 		<div class="page-wrapper">
-			<div class="page-header">
-				<img src="assets/imgs/login/login_header.jpg" alt="">
-			</div>
 			<div class="page-container">
-				<ul class="form-wrapper">
+				<ul class="form-wrapper register-form">
 					<li>
 						<input type="text" class="txt-mobile" placeholder="请输入您的手机号码">
 					</li>
-					<li>
-						<input type="password" class="txt-password" placeholder="请输入密码">
+					<li class="clearfix">
+						<input type="text" class="txt-imgcode" placeholder="请输入图形验证码">
+						<a href="javascript:;" class="imgcode">
+								<img src="assets/imgs/login/img_code.jpg" alt="">
+							</a>
 					</li>
 					<li class="clearfix">
-						<a href="password-reset.html" class="forget-password">忘记密码 &gt;</a>
+						<input type="text" class="txt-msgcode" placeholder="请输入短信验证码">
+						<a href="javascript:;" class="btn-msgcode">获取短信验证码</a>
 					</li>
-					<li class="no-margin clearfix">
-						<span class="auto-login checked">下次自动登录</span>
-					</li>
-					<li>
-						<a href="javascript:;" class="btn btn-login">登 录</a>
+					<li class="hint">
+						<p>校验码输入有误，请重新输入</p>
 					</li>
 					<li>
-						<a href="register.html" class="btn btn-reg">立即注册</a>
-					</li>
-					<li class="clearfix">
-						<a href="signin.html" class="fast-login">快速登录 &gt;</a>
+						<a href="javascript:;" class="btn btn-register">注 册</a>
 					</li>
 				</ul>
 			</div>
-			<div class="page-footer">
-				<div class="wechat-login">
-					<a href="javascript:;" class="img">
-
-							<img src="assets/imgs/login/wechat_login.png" alt="">
-						</a>
-					<p class="text">微信</p>
-				</div>
-			</div>
 		</div>
 		<!-- page wrapper end -->
+
+		<!-- shade begin-->
+		<div class="shade">
+			<div class="shade-message">
+				<div>
+					<p>您是第一次使用VIP登录通道，会员卡绑定成功后才能打折哟</p>
+				</div>
+				<a href="javascript:;">去绑卡</a>
+				<a href="javascript:;">普通登录</a>
+			</div>
+		</div>
+		<!-- shade end-->
 	</div>
 	<!-- login page end -->
 	<!-- loading scripts begin -->

@@ -66,7 +66,7 @@
 		config = {
 			remUnit: 75
 		};
-		
+
 		/*
 		 *===========================================
 		 *开发阶段Tasks
@@ -102,7 +102,8 @@
 			browserSync.init({
 				server:{
 					baseDir:paths.source.root
-				}
+				},
+				open:"external"  //自己浏览器的IP
 			});
 		});
 		//清理src/assets/css文件夹 Task
@@ -115,13 +116,13 @@
 			gulp.watch(paths.source.root+'**/*.html',browserSync.reload);
 			gulp.watch(paths.source.scripts+'**/*.js',browserSync.reload);
 		});
-		
+
 		/*
 		 *===================================
 		 *构建阶段 Tasks
 		 *===================================
 		 */
-		
+
 		//压缩js和css Task
 		gulp.task('useref',function(){
 			return gulp.src(paths.source.root+'**/*.html')
@@ -188,6 +189,6 @@
 		gulp.task('default',function(cb){
 			runSequence(['sass','hint','liveload','watch'],cb);
 		});
-		
-		
+
+
 })();

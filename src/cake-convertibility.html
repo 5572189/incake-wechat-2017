@@ -25,22 +25,24 @@
 			{{each list as item i}} {{if item.like}}
 			<li class="active">
 				<a href="javascript:;">
-								<img src="{{item.linkimg}}"/>
-								<span></span>
-							</a>
+					<img src="{{item.linkimg}}"/>
+					<span></span>
+				</a>
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<a href="javascript:;" class="confirm-btn">确定</a>
+				<a href="javascript:;" class="cancel-btn">取消</a>
 			</li>
 			{{else}}
 			<li>
 				<a href="javascript:;">
-								<img src="{{item.linkimg}}"/>
-								<span></span>
-							</a>
+					<img src="{{item.linkimg}}"/>
+				</a>
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<a href="javascript:;" class="confirm-btn">确定</a>
 			</li>
 			{{/if}} {{/each}}
 		</script>

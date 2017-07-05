@@ -732,23 +732,58 @@ body{
     height: 100%;
     background: rgba(255,255,255, .8);
     .picture{
+        display: none;
         position: absolute;
         left: 50%;
         top: 50%;
         margin-left: -300px;
-        margin-top: -350px;
+        margin-top: -300px;
         width: 600px;
         height: 600px;
         border: 1px solid #e7566d;border-radius: 10px;
         background: url("../imgs/order-submit/image_cake_wrapper.jpg") no-repeat;
         background-size: 600px 600px;
+        .picture-img{
+            position: absolute;
+            left: 108px;
+            top: 108px;
+            width: 384px;
+            height: 384px;
+        }
     }
-    .picture-img{
+    .picture-love{
+        display: none;
         position: absolute;
-        left: 108px;
-        top: 108px;
-        width: 384px;
-        height: 384px;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -300px;
+        width: 600px;
+        height: 600px;
+        border: 1px solid #e7566d;
+        border-radius: 10px;
+
+        .picture-img-love {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 600px;
+            height: 600px;
+            &:after{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 600px;
+                height: 600px;
+                content: '';
+                background-image: url(../imgs/order-submit/adventures_cake_wrapper.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
     }
 }
 .container{

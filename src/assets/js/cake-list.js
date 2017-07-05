@@ -157,7 +157,7 @@
         var data = {
             list: [{
                 linkimg: "assets/imgs/index/cake.png",
-                na: '以爱之名以爱之名以爱之名以爱之名',
+                na: '以爱之名',
                 en: 'All About LoveLoveLoveLoveLoveLove',
                 price: '￥69',
                 number: '1个',
