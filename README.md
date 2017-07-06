@@ -1,10 +1,28 @@
 # incake-wechat-2017
 The newly website UI about wap.incake.net of version 2017.
-### 兑换方式            convertibility-way
+### 增加收货地址       add-address
 
-### 套餐兑换            set-meal-convertibility
+### 地址              address
 
-### 小商品              smallware
+### 蛋糕卡升级         cake-card-upgrade
+
+### 蛋糕列表           cake-list
+
+### 兑换券             coin-certificate
+
+### 详情页             detail
+
+### 蛋糕列表新的页面 --- cake-list-new
+
+### 蛋糕加赠品 ---      cake-gift
+
+### 蛋糕兑换   ---      cake-convertibility      
+
+### 兑换方式    ---     convertibility-way
+
+### 套餐兑换   ---      set-meal-convertibility
+
+### 小商品  ---         smallware
 
 ### 鲜花列表            flower-list
 
