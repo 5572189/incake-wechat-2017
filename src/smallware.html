@@ -22,7 +22,7 @@
 	<div class="layout">
 		<div class="warm-hint">
 			<p>温馨提示</p>
-			<p>小商品选择规则</p>
+			<p>请按照兑换券提示的数量进行商品点选</p>
 			<span class="close"></span>
 		</div>
 		<!--添加赠品-->
@@ -31,9 +31,9 @@
 			{{each list as item i}} {{if item.like}}
 			<li class="activeBorder">
 				<a href="javascript:;">
-								<img src="{{item.linkimg}}"/>
-								<span class="like"></span>
-							</a>
+					<img src="{{item.linkimg}}"/>
+					<span class="like"></span>
+				</a>
 				<div class="message">
 					<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
 					<p>标签1 / 标签2 / 标签3</p>
@@ -43,14 +43,15 @@
 						<li class="number">1</li>
 						<li class="addNumber"></li>
 					</ul>
+					<a href="javascript:;">确 定</a>
 				</div>
 			</li>
 			{{else}}
 			<li>
 				<a href="javascript:;">
-								<img src="{{item.linkimg}}"/>
-								<span class="like"></span>
-							</a>
+					<img src="{{item.linkimg}}"/>
+					<span class="like"></span>
+				</a>
 				<div class="message">
 					<p><span>{{item.na}}</span><span>{{item.en}}</span></p>
 					<p>标签1 / 标签2 / 标签3</p>
@@ -60,6 +61,7 @@
 						<li class="number">1</li>
 						<li class="addNumber"></li>
 					</ul>
+					<a href="javascript:;">确 定</a>
 				</div>
 			</li>
 			{{/if}} {{/each}}

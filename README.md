@@ -62,4 +62,4 @@ The newly website UI about wap.incake.net of version 2017.
 
 ### 中信VIP绑定        zx-member
 
-### 中信蛋糕管         被修改的cake-list
+### 中信蛋糕管         zx-cake-list

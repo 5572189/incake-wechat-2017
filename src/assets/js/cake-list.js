@@ -34,6 +34,21 @@
     $(function() {
         var tl = new TimelineLite();
 
+        // 图片懒加载
+        var imgLazyLoad = new LazyLoad({
+            elements_selector: ".lazy"
+        });
+
+        // 节流函数，减少更新频率
+        var imgsThrottle = _.throttle(updateViewport, 200);
+        $(window).on('scroll', imgsThrottle);
+
+        function updateViewport() {
+            imgLazyLoad.update();
+        }
+
+        fnBindCakeData(updateViewport);
+
         $("#flower-list").on('click', '.car', function() {
 
             var strSc = $(this).closest('li').attr('data-sc').trim(),
@@ -154,6 +169,61 @@
             }
         });
 
+
+
+
+
+        //加减惊喜
+        $("#normsShade").on("click", '.add-surprised', function() {
+            amout = parseInt($(".number-surprised").text());
+            amout++;
+            if (amout > 1) {
+                $(".subtract-surprised").removeClass('disabled').addClass('active');
+            }
+            $(".number-surprised").text(amout);
+        });
+        $("#normsShade").on("click", '.subtract-surprised', function() {
+            if ($(this).hasClass("disabled")) {
+                return false;
+            }
+            amout = parseInt($(".number-surprised").text());
+            if (amout === 1) {
+                $(this).addClass('disabled').removeClass('active');
+                return false;
+            }
+            amout--;
+            if (amout <= 1) {
+                $(this).addClass('disabled').removeClass('active');
+            }
+            $(".number-surprised").text(amout);
+        });
+        //加减常规
+        $("#normsShade").on("click", '.add-normal', function() {
+            amout = parseInt($(".number-normal").text());
+            amout++;
+            if (amout > 1) {
+                $(".subtract-normal").removeClass('disabled').addClass('active');
+            }
+            $(".number-normal").text(amout);
+        });
+        $("#normsShade").on("click", '.subtract-normal', function() {
+            if ($(this).hasClass("disabled")) {
+                return false;
+            }
+            amout = parseInt($(".number-normal").text());
+            if (amout === 1) {
+                $(this).addClass('disabled').removeClass('active');
+                return false;
+            }
+            amout--;
+            if (amout <= 1) {
+                $(this).addClass('disabled').removeClass('active');
+            }
+            $(".number-normal").text(amout);
+        });
+    });
+
+    function fnBindCakeData(cb4Updateviewport) {
         var data = {
             list: [{
                 linkimg: "assets/imgs/index/cake.png",
@@ -335,6 +405,206 @@
                         }
                     ]
                 }
+            }, {
+                linkimg: "assets/imgs/index/cake.png",
+                na: '以爱之名',
+                en: 'All About Love',
+                price: '￥69',
+                number: '1个',
+                specs: {
+                    sc: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ],
+                    regular: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ]
+                }
+            }, {
+                linkimg: "assets/imgs/index/cake.png",
+                na: '以爱之名',
+                en: 'All About Love',
+                price: '￥69',
+                number: '1个',
+                specs: {
+                    sc: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ],
+                    regular: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ]
+                }
+            }, {
+                linkimg: "assets/imgs/index/cake.png",
+                na: '以爱之名',
+                en: 'All About Love',
+                price: '￥69',
+                number: '1个',
+                specs: {
+                    sc: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ],
+                    regular: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ]
+                }
+            }, {
+                linkimg: "assets/imgs/index/cake.png",
+                na: '以爱之名',
+                en: 'All About Love',
+                price: '￥69',
+                number: '1个',
+                specs: {
+                    sc: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ],
+                    regular: [{
+                            pound: 1.5,
+                            price: 189,
+                            comment: ['14CM*14CM*4.5CM≈6寸，约510g', '免费赠送5份餐具', '适合2~3人食用']
+                        },
+                        {
+                            pound: 2.5,
+                            price: 279,
+                            comment: ['17.5CM*17.5CM*4.5CM≈8寸，约1.0kg', '免费赠送10份餐具', '适合7~8人食用']
+                        },
+                        {
+                            pound: 3.5,
+                            price: 429,
+                            comment: ['23CM*23CM*4.5CM≈12寸，约1.5kg', '免费赠送15份餐具', '适合11~12人食用']
+                        },
+                        {
+                            pound: 5.5,
+                            price: 709,
+                            comment: ['30CM*30CM*4.5CM≈14寸，约2.4kg', '免费赠送20份餐具', '适合15~20人食用']
+                        }
+                    ]
+                }
             }]
         }
 
@@ -342,56 +612,6 @@
         var _html = template('tplCake', data);
         $cake.append(_html);
 
-
-
-        //加减惊喜
-        $("#normsShade").on("click", '.add-surprised', function() {
-            amout = parseInt($(".number-surprised").text());
-            amout++;
-            if (amout > 1) {
-                $(".subtract-surprised").removeClass('disabled').addClass('active');
-            }
-            $(".number-surprised").text(amout);
-        });
-        $("#normsShade").on("click", '.subtract-surprised', function() {
-            if ($(this).hasClass("disabled")) {
-                return false;
-            }
-            amout = parseInt($(".number-surprised").text());
-            if (amout === 1) {
-                $(this).addClass('disabled').removeClass('active');
-                return false;
-            }
-            amout--;
-            if (amout <= 1) {
-                $(this).addClass('disabled').removeClass('active');
-            }
-            $(".number-surprised").text(amout);
-        });
-        //加减常规
-        $("#normsShade").on("click", '.add-normal', function() {
-            amout = parseInt($(".number-normal").text());
-            amout++;
-            if (amout > 1) {
-                $(".subtract-normal").removeClass('disabled').addClass('active');
-            }
-            $(".number-normal").text(amout);
-        });
-        $("#normsShade").on("click", '.subtract-normal', function() {
-            if ($(this).hasClass("disabled")) {
-                return false;
-            }
-            amout = parseInt($(".number-normal").text());
-            if (amout === 1) {
-                $(this).addClass('disabled').removeClass('active');
-                return false;
-            }
-            amout--;
-            if (amout <= 1) {
-                $(this).addClass('disabled').removeClass('active');
-            }
-            $(".number-normal").text(amout);
-        });
-    });
-
+        cb4Updateviewport && cb4Updateviewport();
+    }
 })(jQuery, window, document);

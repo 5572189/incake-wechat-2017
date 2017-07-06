@@ -40,9 +40,10 @@
                 color: #fff;
                 font-size: 18px;/*px*/
                 background-color: #e7566d;
+                border-radius: 5px;
             }
             a:nth-of-type(3){
-                display: block;
+                display: none;
                 position: absolute;
                 bottom: 10px;
                 right: 10px;
@@ -50,9 +51,11 @@
                 height: 35px;
                 text-align: center;
                 line-height: 35px;
-                color: #fff;
+                color: #e7566d;
                 font-size: 18px;/*px*/
-                background-color: #e7566d;
+                background-color: #fff;
+                border: 1px solid #e7566d;
+                border-radius: 5px;
             }
             p:nth-of-type(1) {
                 margin: 15px;
@@ -83,6 +86,12 @@
 
         li.active {
             border: 1px solid #e7566d;
+            .confirm-btn{
+                display: none;
+            }
+            .cancel-btn{
+                display: block;
+            }
         }
     }
 

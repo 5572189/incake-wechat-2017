@@ -47,11 +47,12 @@
 			removeTouchmove();
 		});
 		$("#add-gift").on('click','li',function(){
-			if(!$(this).hasClass('activeBorder')){
-				$(this).addClass('activeBorder');
-			}else{
-				$(this).removeClass('activeBorder');
-			}
+			// if(!$(this).hasClass('activeBorder')){
+			// 	$(this).addClass('activeBorder');
+			// }else{
+			// 	$(this).removeClass('activeBorder');
+			// }
+			$(this).toggleClass('activeBorder',!$(this).hasClass('activeBorder'));
 		});
 
 		//头部商品渲染

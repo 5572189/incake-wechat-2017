@@ -21,84 +21,101 @@
         var data = {
             list: [{
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
+
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
+
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',
                 number: '1个'
             }, {
                 linkimg: "assets/imgs/index/cake.png",
+                describe:"芝士系列口味；免费赠送5套餐具、生日牌（生日牌中文字不超过10个，英文字母不超过20个）",
+                
                 na: '以爱之名',
                 en: 'All About Love',
                 price: '￥69',

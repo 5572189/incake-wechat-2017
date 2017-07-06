@@ -20,14 +20,16 @@
 
 <body>
 	<div class="layout">
+		<p class="select">请选择您要兑换的蛋糕</p>
 		<ul id="flower-list" class="clearfix"></ul>
 		<script type="text/html" id="tplCake">
 			{{each list as item i}}
 			<li>
 				<a href="javascript:;"><img class="lazy" data-original="{{item.linkimg}}" src="assets/imgs/img_preloading.gif"/></a>
+				<p>{{item.describe}}</p>
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
-				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<a href="javascript:;">确定</a>
 			</li>
 			{{/each}}
 		</script>

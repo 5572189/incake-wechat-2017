@@ -3,6 +3,12 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    .select{
+        text-align: center;
+        color: #e9546b;
+        font-size: 20px;/*px*/
+        padding: 30px 0 15px 0;
+    }
     #flower-list{
         overflow: hidden;
         list-style: none;
@@ -13,7 +19,7 @@
         li{
             position: relative;
             float: left;
-            border: 1px solid #dcdcdc;
+            border: 1px solid #dcdcdc;/*no*/
             border-radius: 10px;
             width: 350px;
             margin: 10px 0;
@@ -23,22 +29,39 @@
                 width: 350px;
                 height: 350px;
             }
+            a:nth-of-type(2){
+                display: block;
+                position: absolute;
+                right: 10px;
+                bottom: 15px;
+                width: 70px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                color: #fff;
+                background-color: #e7566d;
+                font-size: 18px;/*px*/
+            }
             p:nth-of-type(1){
+                font-size: 18px;/*px*/
+                color: #b6b6b6;
+                margin: 15px;
+                height: 80px;
+                white-space: pre-wrap;
+                overflow: hidden;
+                text-overflow :ellipsis;
+            }
+            p:nth-of-type(2){
                 margin: 15px;
                 white-space:nowrap;
                 overflow: hidden;
-                text-overflow :ellipsis; 
+                text-overflow :ellipsis;
                 span:first-child{
                     font-size: 26px;
                 }
                 span:last-child{
                     font-size: 14px;
                 }
-            }
-            p:nth-of-type(2){
-                margin: 15px;
-                font-size: 18px;
-                color: #dcdcdc;
             }
             p:nth-of-type(3){
                 margin: 15px;
