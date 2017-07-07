@@ -12,13 +12,13 @@
 		//解绑事件：
 		$(document).off(".mask");
 	}
-	
+
 //	// 禁用滚动
 //	function fnDisableScroll(fn) {
 //		$('body').css('overflow', 'hidden');
 //		fn && fn();
 //	}
-//	
+//
 //	// 启用滚动
 //	function fnEnableScroll(fn) {
 //		$('body').css('overflow', 'auto');
@@ -304,6 +304,34 @@
 		}
 		removeTouchmove();
 	});
+//  向阳卡
+	var $sunnyCard = $(".sunnyCard"),
+		$sunny_card = $(".sunny-card"),
+		$sunny_complete = $sunny_card.find('.sunny-complete'),
+		$sunny_conversion = $sunny_card.find('.sunny-conversion'),
+		$sunny_number = $sunny_card.find('.sunny-number'),
+		$sunny_add = $sunny_card.find('.sunny-add');
+	$sunnyCard.click(function(){
+		$sunny_card.fadeIn();
+		touchmove();
+	});
+	$sunny_card.click(function(e){
+		if(e.target == $sunny_card[0]){
+			$sunny_card.fadeOut();
+			removeTouchmove();
+		}
+	});
+	$sunny_complete.click(function(){
+		$sunny_card.fadeOut();
+		removeTouchmove();
+	});
+	$sunny_conversion.click(function(){
+		var number = $sunny_number.val();
+		$sunny_add.append("<li>ID:<span>"+number+"</span><span>余额: <span>￥256</span></span><span class='delete-card'></span></li>");
+	});
+	$sunny_card.on('click','.delete-card',function(){
+		$(this).parent().remove();
+	});
 //	蛋糕卡
 	var $cake_conversion = $(".cake-conversion"),
 		$cake_number = $(".cake-number"),
@@ -319,6 +347,7 @@
 	$cake_card.click(function(e){
 		if(e.target == $cake_card[0]){
 			$cake_card.fadeOut();
+			removeTouchmove();
 		}
 	})
 	$cake_conversion.click(function(){

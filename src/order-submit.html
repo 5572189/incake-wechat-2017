@@ -44,7 +44,8 @@
 				{{/each}}
 			</script>
 			<!--常规款-->
-			<ul class="convention" id="convention-ul"></ul>
+			<ul class="convention" id="convention-ul">
+			</ul>
 			<script id="tplConvention" type="text/html">
 				{{each list as item i}}
 				<li>
@@ -59,6 +60,16 @@
 				</li>
 				{{/each}}
 			</script>
+			<div class="warm-hint">
+				<p>温馨提示： 若您有事外出不方便收花，收花日期可往后延期，请至少<b>提前3天</b>联系我们为您暂停（与截单时间一致），临时要求请恕无法安排。</p>
+				<div class="clearfix">
+					<a href="javascript:;"><img src="assets/imgs/order-submit/horologe.png" alt=""></a>
+					<div>
+						<p>［ 周一收花］ 请于周五16:00前下单</p>
+						<p>［ 周六收花］ 请于周三16:00前下单</p>
+					</div>
+				</div>
+			</div>
 			<!--小商品-->
 			<ul class="commodity" id="commodity-ul"></ul>
 			<script id="tplCommodity" type="text/html">
@@ -97,6 +108,10 @@
 		<div class="cakeCard">
 			<a herf="javascript:;">蛋糕卡<span>请选择</span></a>
 		</div>
+		<!-- 向阳卡 -->
+		<div class="sunnyCard">
+			<a herf="javascript:;">向阳印克卡券<span>请选择</span></a>
+		</div>
 		<!--优惠券-->
 		<div class="discount-coupon">
 			<a herf="javascript:;">优惠券/码<span>请选择</span></a>
@@ -104,8 +119,8 @@
 		<!--支付方式-->
 		<div class="pay-method">
 			<a herf="javascript:;">支付方式
-					<span  class="btn btn-payment" id="btnPayment" paytype="wechat">不需要</span>
-				</a>
+				<span  class="btn btn-payment" id="btnPayment" paytype="wechat">不需要</span>
+			</a>
 		</div>
 
 		<!--发票-->
@@ -413,6 +428,21 @@
 				<ul class="clearfix">
 					<li><input class="cake-number" type="text" placeholder="请输入蛋糕卡ID的后5位" /></li>
 					<li><input type="text" placeholder="请输入蛋糕卡密码" /><a class="cake-conversion" href="javascript:;">兑换</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 向阳印克卡券 -->
+		<div class="sunny-card">
+			<div class="sunny-card-payShow">
+				<p><span>向阳印克卡券</span><span class="sunny-complete">完成</span></p>
+				<ul class="sunny-add clearfix">
+					<li>ID:<span>1265646785</span><span>余额: <span>￥256</span></span><span class="delete-card"></span></li>
+					<li>ID:<span>1265646785</span><span>余额: <span>￥256</span></span><span class="delete-card"></span></li>
+				</ul>
+				<ul class="clearfix">
+					<li><input class="sunny-number" type="text" placeholder="请输入蛋糕卡ID的后5位" /></li>
+					<li><input type="text" placeholder="请输入蛋糕卡密码" /><a class="sunny-conversion" href="javascript:;">兑换</a></li>
 				</ul>
 			</div>
 		</div>
