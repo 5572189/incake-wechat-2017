@@ -20,160 +20,182 @@ body {
         background-position: 80px 0;
 
         li{
-            position: relative;
             border: 1px solid #dcdcdc;
-            height: 220px;
-
-            > span:nth-of-type(1) {
-                position: absolute;
-                left: 20px;
-                top: 100px;
-                width: 41px;
-                height: 41px;
-                background: url("../imgs/shopping-cart/no-like.png") no-repeat;
-                background-size: cover;
-
-                &.active {
-                    background: url("../imgs/shopping-cart/like.png") no-repeat;
-                    background-size: 40px 40px;
+            .vertical-reduction{
+                width: 85%;
+                padding-top: 40px;
+                padding-left: 80px;
+                display: flex;
+                justify-content: space-between;
+                >a:first-child{
+                    display: inline-block;
+                    width: 80px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    border: 1px solid #e9546b;
+                    color: #e9546b;
+                    font-size:26px;/*px*/
+                    border-radius: 5px;
+                }
+                >p{
+                    display: inline-block;
+                    width: 85%;
+                    color: #e9546b;
                 }
             }
-
-            > a:nth-of-type(1) {
+            .parcel{
                 position: relative;
-                top: 31px;
-                left: 80px;
-                display: block;
-                width: 160px;
-                height: 160px;
-
-                &.active:after {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    content: '';
-                    background-image: url("../imgs/shopping-cart/soldout_bg.png");
-                    background-repeat: no-repeat;
-                    background-size: 160px 160px;
-                }
-            }
-
-            > p:nth-of-type(1) {
-                position: absolute;
-                left: 270px;
-                top: 40px;
-                width: 100%;
-
+                height: 220px;
                 > span:nth-of-type(1) {
-                    font-family: "黑体";
-                    font-size: 26px;
-                }
-
-                > span:nth-of-type(2) {
                     position: absolute;
-                    top: 30px;
-                    left: 0;
-                    font-family: "黑体";
-                    font-size: 14px;
+                    left: 20px;
+                    top: 100px;
+                    width: 41px;
+                    height: 41px;
+                    background: url("../imgs/shopping-cart/no-like.png") no-repeat;
+                    background-size: cover;
+
+                    &.active {
+                        background: url("../imgs/shopping-cart/like.png") no-repeat;
+                        background-size: 40px 40px;
+                    }
                 }
 
-                > span:nth-of-type(3) {
-                    position: absolute;
-                    left: 330px;
-                    top: 15px;
-                    font-family: "黑体";
-                    font-size: 28px;
-                }
-
-                > span:nth-of-type(4) {
+                > a:nth-of-type(1) {
+                    position: relative;
+                    top: 31px;
+                    left: 80px;
                     display: block;
+                    width: 160px;
+                    height: 160px;
+
+                    &.active:after {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        content: '';
+                        background-image: url("../imgs/shopping-cart/soldout_bg.png");
+                        background-repeat: no-repeat;
+                        background-size: 160px 160px;
+                    }
+                }
+
+                > p:nth-of-type(1) {
                     position: absolute;
-                    right: 270px;
-                    top: 14px;
-                    width: 50px;
+                    left: 270px;
+                    top: 40px;
+                    width: 100%;
+
+                    > span:nth-of-type(1) {
+                        font-family: "黑体";
+                        font-size: 26px;
+                    }
+
+                    > span:nth-of-type(2) {
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        font-family: "黑体";
+                        font-size: 14px;
+                    }
+
+                    > span:nth-of-type(3) {
+                        position: absolute;
+                        left: 330px;
+                        top: 15px;
+                        font-family: "黑体";
+                        font-size: 28px;
+                    }
+
+                    > span:nth-of-type(4) {
+                        display: block;
+                        position: absolute;
+                        right: 270px;
+                        top: 14px;
+                        width: 50px;
+                        height: 50px;
+                        background: url("../imgs/shopping-cart/delete.png") no-repeat;
+                        background-size: 26px 32px;
+                    }
+                }
+
+                > p:nth-of-type(2) {
+                    position: absolute;
+                    left: 270px;
+                    top: 100px;
+                    font-size: 22px;
+                    color: #b4b4b4;
+                }
+
+                > p:nth-of-type(3) {
+                    position: absolute;
+                    left: 270px;
+                    top: 150px;
+                    border: 1px solid #dcdcdc;
+                    display: block;
+                    width: 225px;
+                    height: 40px;
+
+                    span {
+                        display: inline-block;
+                    }
+
+                    span:nth-of-type(1) {
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-right: 1px solid #dcdcdc;
+                    }
+
+                    span:nth-of-type(2) {
+                        width: 140px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-right: 1px solid #dcdcdc;
+                    }
+
+                    span:nth-of-type(3) {
+                        width: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+                }
+
+                a:nth-of-type(2) {
+                    position: absolute;
+                    right: 0;
+                    top: 160px;
+                    display: block;
+                    width: 160px;
                     height: 50px;
-                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
-                    background-size: 26px 32px;
-                }
-            }
-
-            > p:nth-of-type(2) {
-                position: absolute;
-                left: 270px;
-                top: 100px;
-                font-size: 22px;
-                color: #b4b4b4;
-            }
-
-            > p:nth-of-type(3) {
-                position: absolute;
-                left: 270px;
-                top: 150px;
-                border: 1px solid #dcdcdc;
-                display: block;
-                width: 225px;
-                height: 40px;
-
-                span {
-                    display: inline-block;
-                }
-
-                span:nth-of-type(1) {
-                    width: 40px;
-                    height: 40px;
+                    color: #fff;
                     text-align: center;
-                    line-height: 40px;
-                    border-right: 1px solid #dcdcdc;
-                }
+                    line-height: 50px;
+                    background: #e9546b;
+                    border-radius: 50px 0 0 50px;
 
-                span:nth-of-type(2) {
-                    width: 140px;
-                    height: 40px;
-                    text-align: center;
-                    line-height: 40px;
-                    border-right: 1px solid #dcdcdc;
-                }
+                    span:first-child {
+                        position: absolute;
+                        left: 17px;
+                        top: 8px;
+                        display: inline-block;
+                        width: 33px;
+                        height: 33px;
+                    }
 
-                span:nth-of-type(3) {
-                    width: 40px;
-                    text-align: center;
-                    line-height: 40px;
-                }
-            }
-
-            a:nth-of-type(2) {
-                position: absolute;
-                right: 0;
-                top: 160px;
-                display: block;
-                width: 160px;
-                height: 50px;
-                color: #fff;
-                text-align: center;
-                line-height: 50px;
-                background: #e9546b;
-                border-radius: 50px 0 0 50px;
-
-                span:first-child {
-                    position: absolute;
-                    left: 17px;
-                    top: 8px;
-                    display: inline-block;
-                    width: 33px;
-                    height: 33px;
-                }
-
-                span:last-child {
-                    margin-left: 50px;
-                font-size: 22px;/*px*/
+                    span:last-child {
+                        margin-left: 50px;
+                    font-size: 22px;/*px*/
+                    }
                 }
             }
         }
-
-
     }
 
     .convention {
@@ -183,167 +205,191 @@ body {
         background-position: 80px 0;
 
         li {
-            position: relative;
             border: 1px solid #dcdcdc;
-            height: 220px;
-
-            > span:nth-of-type(1) {
-                position: absolute;
-                left: 20px;
-                top: 100px;
-                width: 40px;
-                height: 40px;
-                background: url("../imgs/shopping-cart/no-like.png") no-repeat;
-                background-size: cover;
-
-                &.active {
-                    background: url("../imgs/shopping-cart/like.png") no-repeat;
-                    background-size: 40px 40px;
-                }
-            }
-
-            > a:nth-of-type(1) {
-                position: relative;
-                top: 31px;
-                left: 80px;
-                display: block;
-                width: 160px;
-                height: 160px;
-
-                &.active:after {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    content: '';
-                    background-image: url("../imgs/shopping-cart/soldout_bg.png");
-                    background-repeat: no-repeat;
-                    background-size: 160px 160px;
-                }
-            }
-
-            > a:nth-of-type(2) {
-                position: absolute;
-                right: 0;
-                top: 160px;
-                display: block;
-                width: 160px;
-                height: 50px;
-                color: #fff;
-                text-align: center;
-                line-height: 50px;
-                opacity: 0.5;
-                border-radius: 50px 0 0 50px;
-
-                > input {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                }
-            }
-
-            > p:nth-of-type(1) {
-                position: absolute;
-                left: 270px;
-                top: 40px;
-                width: 100%;
-
-                > span:nth-of-type(1) {
-                    font-family: "黑体";
-                    font-size: 26px;
-                }
-
-                > span:nth-of-type(2) {
-                    position: absolute;
-                    top: 30px;
-                    left: 0;
-                    font-family: "黑体";
-                    font-size: 14px;
-                }
-
-                > span:nth-of-type(3) {
-                    position: absolute;
-                    left: 330px;
-                    top: 15px;
-                    font-family: "黑体";
-                    font-size: 28px;
-                }
-
-                > span:nth-of-type(4) {
-                    display: block;
-                    position: absolute;
-                    right: 270px;
-                    top: 14px;
-                    width: 50px;
-                    height: 50px;
-                    background: url("../imgs/shopping-cart/delete.png") no-repeat;
-                    background-size: 26px 32px;
-                }
-            }
-
-            > p:nth-of-type(2) {
-                position: absolute;
-                left: 270px;
-                top: 100px;
-                font-size: 22px;
-                color: #b4b4b4;
-            }
-
-            > p:nth-of-type(3) {
-                position: absolute;
-                left: 270px;
-                top: 150px;
-                border: 1px solid #dcdcdc;
-                display: block;
-                width: 225px;
-                height: 40px;
-
-                span {
+            .vertical-reduction{
+                width: 85%;
+                padding-top: 40px;
+                padding-left: 80px;
+                display: flex;
+                justify-content: space-between;
+                >a:first-child{
                     display: inline-block;
-                }
-
-                span:nth-of-type(1) {
-                    width: 40px;
-                    height: 40px;
+                    width: 80px;
+                    height: 30px;
                     text-align: center;
-                    line-height: 40px;
-                    border-right: 1px solid #dcdcdc;
+                    line-height: 30px;
+                    border: 1px solid #e9546b;
+                    color: #e9546b;
+                    font-size:26px;/*px*/
+                    border-radius: 5px;
                 }
-
-                span:nth-of-type(2) {
-                    width: 140px;
-                    height: 40px;
-                    text-align: center;
-                    line-height: 40px;
-                    border-right: 1px solid #dcdcdc;
-                }
-
-                span:nth-of-type(3) {
-                    width: 40px;
-                    text-align: center;
-                    line-height: 40px;
+                >p{
+                    display: inline-block;
+                    width: 85%;
+                    color: #e9546b;
                 }
             }
+            .parcel{
+                position: relative;
+                height: 220px;
+                > span:nth-of-type(1) {
+                    position: absolute;
+                    left: 20px;
+                    top: 100px;
+                    width: 40px;
+                    height: 40px;
+                    background: url("../imgs/shopping-cart/no-like.png") no-repeat;
+                    background-size: cover;
 
-            a:nth-of-type(2) {
-                position: absolute;
-                right: 0;
-                top: 160px;
-                display: block;
-                width: 160px;
-                height: 48px;
-                color: #e9546b;
-                text-align: center;
-                line-height: 48px;
-                border-top: 1px solid #e9546b;
-                border-left: 1px solid #e9546b;
-                border-bottom: 1px solid #e9546b;
-                border-radius: 50px 0 0 50px;
+                    &.active {
+                        background: url("../imgs/shopping-cart/like.png") no-repeat;
+                        background-size: 40px 40px;
+                    }
+                }
+
+                > a:nth-of-type(1) {
+                    position: relative;
+                    top: 31px;
+                    left: 80px;
+                    display: block;
+                    width: 160px;
+                    height: 160px;
+
+                    &.active:after {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        content: '';
+                        background-image: url("../imgs/shopping-cart/soldout_bg.png");
+                        background-repeat: no-repeat;
+                        background-size: 160px 160px;
+                    }
+                }
+
+                > a:nth-of-type(2) {
+                    position: absolute;
+                    right: 0;
+                    top: 160px;
+                    display: block;
+                    width: 160px;
+                    height: 50px;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 50px;
+                    opacity: 0.5;
+                    border-radius: 50px 0 0 50px;
+
+                    > input {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                }
+
+                > p:nth-of-type(1) {
+                    position: absolute;
+                    left: 270px;
+                    top: 40px;
+                    width: 100%;
+
+                    > span:nth-of-type(1) {
+                        font-family: "黑体";
+                        font-size: 26px;
+                    }
+
+                    > span:nth-of-type(2) {
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        font-family: "黑体";
+                        font-size: 14px;
+                    }
+
+                    > span:nth-of-type(3) {
+                        position: absolute;
+                        left: 330px;
+                        top: 15px;
+                        font-family: "黑体";
+                        font-size: 28px;
+                    }
+
+                    > span:nth-of-type(4) {
+                        display: block;
+                        position: absolute;
+                        right: 270px;
+                        top: 14px;
+                        width: 50px;
+                        height: 50px;
+                        background: url("../imgs/shopping-cart/delete.png") no-repeat;
+                        background-size: 26px 32px;
+                    }
+                }
+
+                > p:nth-of-type(2) {
+                    position: absolute;
+                    left: 270px;
+                    top: 100px;
+                    font-size: 22px;
+                    color: #b4b4b4;
+                }
+
+                > p:nth-of-type(3) {
+                    position: absolute;
+                    left: 270px;
+                    top: 150px;
+                    border: 1px solid #dcdcdc;
+                    display: block;
+                    width: 225px;
+                    height: 40px;
+
+                    span {
+                        display: inline-block;
+                    }
+
+                    span:nth-of-type(1) {
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-right: 1px solid #dcdcdc;
+                    }
+
+                    span:nth-of-type(2) {
+                        width: 140px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-right: 1px solid #dcdcdc;
+                    }
+
+                    span:nth-of-type(3) {
+                        width: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+                }
+
+                a:nth-of-type(2) {
+                    position: absolute;
+                    right: 0;
+                    top: 160px;
+                    display: block;
+                    width: 160px;
+                    height: 48px;
+                    color: #e9546b;
+                    text-align: center;
+                    line-height: 48px;
+                    border-top: 1px solid #e9546b;
+                    border-left: 1px solid #e9546b;
+                    border-bottom: 1px solid #e9546b;
+                    border-radius: 50px 0 0 50px;
+                }
             }
         }
     }

@@ -62,7 +62,8 @@
             };
 
             var groupTmp = [],
-                itemTmp = [];
+                itemTmp
+                 = [];
 
             if (hasSc) {
                 groupTmp = strSc.split('|***|');
