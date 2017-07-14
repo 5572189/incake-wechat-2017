@@ -19,6 +19,7 @@
 </head>
 
 <body>
+	<input type="hidden" id="hid_username" value="15093570141">
 	<div class="layout">
 		<ul id="flower-list" class="clearfix"></ul>
 		<script type="text/html" id="tplCake">
@@ -28,7 +29,7 @@
 					<img class="lazy" data-original="{{item.linkimg}}" src="assets/imgs/img_preloading.gif"/>
 				</a>
 				<a class="like" href="javascript:;"></a>
-				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
+				<p><span class="change">{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
 				<span class="car"></span>
@@ -41,6 +42,7 @@
 
 		<script id="tplNormsShade" type="text/html">
 			<div class="norms">
+				<input type="hidden" class="hid_htmlname" name="" value="">
 				{{if sc.length > 0}}
 				<ul class="clearfix headline">
 					<li id="surprised" class="active">惊喜款</li>
@@ -53,8 +55,8 @@
 				{{/if}}
 				<div class="parcel">
 					{{if sc.length > 0}}
-					<div class="surprised">
-						<ul class="clearfix poundage-surprised">
+					<div class="surprised spec-box">
+						<ul class="clearfix poundage-surprised item-rule">
 							{{each sc as sitem sidx}} {{if sidx === 0}}
 							<li data-comment="{{sitem.comment | commentFormat}}" data-prices="{{sitem.price}}" class="active">{{sitem.pound}}磅</li>
 							{{else}}
@@ -69,14 +71,14 @@
 						<ul class="clearfix">
 							<li>数量</li>
 							<li class="subtract-surprised"></li>
-							<li class="number-surprised">1</li>
+							<li class="number_en number-surprised">1</li>
 							<li class="cost">189</li>
 							<li class="add-surprised"></li>
 						</ul>
 					</div>
 					{{/if}} {{if regular.length > 0}}
-					<div class="normal">
-						<ul class="clearfix poundage-normal">
+					<div class="normal spec-box">
+						<ul class="clearfix poundage-normal item-rule">
 							{{each regular as ritem ridx}} {{if ridx === 0}}
 							<li data-comment="{{ritem.comment | commentFormat}}" data-prices="{{ritem.price}}" class="active">{{ritem.pound}}磅</li>
 							{{else}}
@@ -91,15 +93,15 @@
 						<ul class="clearfix">
 							<li>数量</li>
 							<li class="subtract-normal"></li>
-							<li class="number-normal">1</li>
+							<li class="number_en number-normal">1</li>
 							<li class="prices">189</li>
 							<li class="add-normal"></li>
 						</ul>
 					</div>
 					{{/if}}
 				</div>
-				<a href="javascript:;">立即购买</a>
-				<a href="javascript:;">加入购物车</a>
+				<a href="javascript:;" class="add-shop">立即购买</a>
+				<a href="javascript:;" class="buy">加入购物车</a>
 				<span class="close"></span>
 			</div>
 		</script>
@@ -112,6 +114,7 @@
 			.script('assets/plugins/underscore/underscore-min.js').wait()
 			.script('assets/plugins/lazyload/lazyload.transpiled.min.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
+			.script('assets/js/common.js').wait()
 			.script('assets/js/cake-list.js');
 	</script>
 </body>

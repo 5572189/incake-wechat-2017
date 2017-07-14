@@ -21,6 +21,7 @@
 
 <body>
 	<div id="project">
+		<input type="hidden" id="hid_username" value="15093570141">
 		<!--轮播-->
 		<div class="swiper-container sell-out">
 			<div class="swiper-wrapper">
@@ -56,11 +57,11 @@
 
 		<div class="name">
 			<div>
-				<p>芒果拿破仑</p>
+				<p class="change">芒果拿破仑</p>
 				<p>Fresh Mango Napoleon</p>
 			</div>
 			<div>
-				<span>￥</span><span>258</span>
+				<span>￥</span><span id="title">258</span>
 			</div>
 			<p class="hint">＊温馨提示：这款蛋糕参加了哪些活动的提示语。这款蛋糕参加了哪些活动的提示语。</p>
 		</div>
@@ -79,8 +80,8 @@
 				<li class="two_li">
 					<p>款项:</p>
 					<ul class="content_li">
-						<li class="active"><span>惊喜款</span><span>￥258</span></li>
-						<li><span>常规款</span><span>￥189</span></li>
+						<li class="active"><span class="name">惊喜款</span>￥<span class="price">258</span></li>
+						<li><span class="name">常规款</span>￥<span class="price">189</span></li>
 					</ul>
 				</li>
 				<li class="three_li">
@@ -245,7 +246,7 @@
 		</div>
 
 		<div id="footer">
-			<a class="heart active heart-shade" href="javascript:;"></a><a class="shop" href="javascript:;"><span>10</span></a><a class="buy" href="javascript:;">立即购买</a><a class="add-shop" href="javascript:;">加入购物车</a>
+			<a class="heart active" href="javascript:;"></a><a class="shop" href="javascript:;"><span>10</span></a><a class="buy" href="javascript:;">立即购买</a><a class="add-shop" href="javascript:;">加入购物车</a>
 		</div>
 	</div>
 
@@ -257,6 +258,7 @@
 			.script('assets/jquery/jquery-1.8.3.min.js').wait()
 			.script('assets/plugins/swiper/js/swiper.min.js').wait()
 			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/js/common.js').wait()
 			.script('assets/js/detail.js');
 	</script>
 </body>

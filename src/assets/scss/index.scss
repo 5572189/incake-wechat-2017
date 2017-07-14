@@ -623,7 +623,72 @@ $loc-triangle-bgcolor: #f0f0f0;
         }
     }
 }
-
+.city-switchover{
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    z-index: 999;
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .7);
+    .switchover{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -276.5px;
+        margin-top: -175px;
+        width: 553px;
+        height: 350px;
+        border: 1px solid #e7566d;
+         overflow: hidden;
+        border-radius: 10px;
+        background-color: #fff;
+        div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 280px;
+            p{
+                position: absolute;
+                left: 70px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                display: table;
+                font-size: 26px;/*px*/
+            }
+        }
+        a:nth-of-type(1){
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 69px;
+            border-top: 1px solid #e7566d;/*no*/
+            text-align: center;
+            line-height: 69px;
+            color: #e9546b;
+            font-size: 24px;/*px*/
+        }
+        a:nth-of-type(2){
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 69px;
+            border-top: 1px solid #e7566d;/*no*/
+            text-align: center;
+            line-height: 69px;
+            color: #fff;
+            background-color: #e9546b;
+            font-size: 24px;/*px*/
+        }
+    }
+}
 #loading {
     width: 100%;
     height: 100px;

@@ -23,6 +23,7 @@
 
 <body>
 	<div id="layout">
+		<input type="hidden" id="hid_username" value="15093570141">
 		<!--蛋糕款式-->
 		<div id="cake_list" class="clearfix">
 			<!--惊喜款-->
@@ -30,9 +31,9 @@
 			</ul>
 			<script id="tplSurprise" type="text/html">
 				{{each list as item i}}
-				<li>
+				<li class="item" data-style="惊喜款" data-name="{{item.name.cn}}" data-price="{{item.cost}}" data-size="{{item.poundage}}" data-amount="1">
 					{{if item.motherDay}}
-					<div class="vertical-reduction">
+					<div class="vertical-reduction clearfix">
 						<a href="javascript:;">立减</a>
 						<p>温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示</p>
 						<a href="javascript:;"class="active">参与活动</a>
@@ -41,7 +42,7 @@
 					<div class="parcel">
 						<a href="{{item.link}}"><img src="{{item.img}}"/></a>
 						<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
-						<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
+						<p>规格：￥<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
 						<p>数量：<span>1</span></p>
 						<p>
 							{{each item.attrs as attr}}
@@ -61,7 +62,7 @@
 			</ul>
 			<script id="tplConvention" type="text/html">
 				{{each list as item i}}
-				<li>
+				<li class="item" data-style="常规款" data-name="{{item.name.cn}}" data-price="{{item.cost}}" data-size="{{item.poundage}}" data-amount="1">
 					{{if item.motherDay}}
 					<div class="vertical-reduction">
 						<a href="javascript:;">立减</a>
@@ -72,7 +73,7 @@
 					<div class="parcel">
 						<a href="{{item.link}}"><img src="{{item.img}}"/></a>
 						<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
-						<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
+						<p>规格：￥<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
 						{{if item.drawing}}
 						<a href="{{item.link}}" class="drawing">预览</a>
 						{{/if}} {{if item.mother}}
@@ -82,24 +83,15 @@
 				</li>
 				{{/each}}
 			</script>
-			<div class="warm-hint">
-				<p>温馨提示： 若您有事外出不方便收花，收花日期可往后延期，请至少<b>提前3天</b>联系我们为您暂停（与截单时间一致），临时要求请恕无法安排。</p>
-				<div class="clearfix">
-					<a href="javascript:;"><img src="assets/imgs/order-submit/horologe.png" alt=""></a>
-					<div>
-						<p>［ 周一收花］ 请于周五16:00前下单</p>
-						<p>［ 周六收花］ 请于周三16:00前下单</p>
-					</div>
-				</div>
-			</div>
+
 			<!--小商品-->
 			<ul class="commodity" id="commodity-ul"></ul>
 			<script id="tplCommodity" type="text/html">
 				{{each list as item i}}
-				<li>
+				<li class="item" data-style="小商品" data-name="{{item.name.cn}}" data-price="{{item.cost}}" data-size="{{item.poundage}}" data-amount="1">
 					<a href="{{item.link}}"><img src="{{item.img}}"/></a>
 					<p><span>{{item.name.cn}}</span><span>{{item.name.en}}</span><span>{{item.cost}}</span></p>
-					<p>规格：<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
+					<p>规格：￥<span>{{item.cost}}</span>/<span>{{item.poundage}}</span>磅</p>
 				</li>
 				{{/each}}
 			</script>
@@ -117,6 +109,18 @@
 				<p><span>上海市</span> <span>静安区</span><span> 广中西路777弄99号506室</span></p>
 			</div>
 			<a href="javascript:;"></a>
+		</div>
+		<div class="warm-hint">
+			<div>
+				<p>温馨提示： 若您有事外出不方便收花，收花日期可往后延期，请至少<b>提前3天</b>联系我们为您暂停（与截单时间一致），临时要求请恕无法安排。</p>
+				<div class="clearfix">
+					<a href="javascript:;"><img src="assets/imgs/order-submit/horologe.png" alt=""></a>
+					<div>
+						<p>［ 周一收花］ 请于周五16:00前下单</p>
+						<p>［ 周六收花］ 请于周三16:00前下单</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--送达时间-->
 		<div class="time time-shade" id="select_contact">
@@ -210,19 +214,18 @@
 		</div>
 		<!--订单信息-->
 		<div class="order-information">
-			<p><span>商品总金额:</span><span>￥288</span></p>
-			<p><span>优惠券:</span><span>￥30.00</span></p>
-			<p><span>蛋糕卡:</span><span>￥0.00</span></p>
-			<p><span>促销:</span><span>￥0.00</span></p>
-			<p><span>补差价:</span><span>￥0.00</span></p>
-			<p><span>运费:</span><span>￥0.00</span></p>
+			<p><span>商品总金额:￥</span><span class="s-total">288</span></p>
+			<p><span>优惠券:￥</span><span class="s-coupon">30.00</span></p>
+			<p><span>蛋糕卡:￥</span><span class="s-card">0.00</span></p>
+			<p><span>促销:￥</span><span class="s-sales">0.00</span></p>
+			<p><span>补差价:￥</span><span class="s-difference">0.00</span></p>
+			<p><span>运费:￥</span><span class="s-freight">0.00</span></p>
 		</div>
 		<!--去结算-->
 		<div class="closes">
-			<p>选择时间立减</p>
-			<span>共<span><span>￥</span><span>189</span>.00</span>
+			<span>共<span><span>￥</span><span class="s-money">189</span>.00</span>
 			</span>
-			<a href="javascript:;">去结算</a>
+			<a href="javascript:;" class="closing">去结算</a>
 		</div>
 
 		<!--画影-->
@@ -509,6 +512,7 @@
 		.script('assets/plugins/iosselect/areaData_v2.js').wait()
 		.script('assets/js/birthdaydata.js').wait()
 		.script('assets/js/timedata.js').wait()
+		.script('assets/js/common.js').wait()
 		.script('assets/js/order-submit.js');
 </script>
 

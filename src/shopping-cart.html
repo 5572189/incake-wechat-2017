@@ -22,10 +22,10 @@
 
 <body>
 	<div id="layout">
-
+		<input type="hidden" id="hid_username" value="15093570141">
 		<div id="cake_list">
 			<ul class="surprised">
-				<li>
+				<li class="item" data-style="惊喜款" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<div class="vertical-reduction">
 						<a href="javascript:;">立减</a>
 						<p>温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示</p>
@@ -39,7 +39,7 @@
 						<a href="javascript:;" class="surprised-here"><span><img src="assets/imgs/shopping-cart/gift.png"/></span><span>惊喜在这</span></a>
 					</div>
 				</li>
-				<li>
+				<li class="item" data-style="惊喜款" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<div class="parcel">
 						<span class="pitch-on icons"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
@@ -50,8 +50,8 @@
 					</div>
 				</li>
 			</ul>
-			<ul class="convention">
-				<li class="li-one" pid="001">
+			<ul class="convention" data-style="常规款">
+				<li class="li-one item" pid="001" data-style="常规款" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<div class="vertical-reduction">
 						<a href="javascript:;">立减</a>
 						<p>温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示</p>
@@ -65,7 +65,7 @@
 						<a href="javascript:;" class="uploading">上传图片<input class="inputFile" type="file" name="" id="file" /></a>
 					</div>
 				</li>
-				<li class="li-two" pid="002">
+				<li class="li-two item" pid="002" data-style="常规款" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<div class="parcel">
 						<span class="pitch-on active icons"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
@@ -76,7 +76,7 @@
 					</div>
 
 				</li>
-				<li class="li-two" pid="003">
+				<li class="li-two item" pid="003" data-style="常规款" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<div class="parcel">
 						<span class="pitch-on active icons"></span>
 						<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
@@ -87,15 +87,15 @@
 					</div>
 				</li>
 			</ul>
-			<ul class="commodity">
-				<li>
+			<ul class="commodity" data-style="小商品">
+				<li class="item" data-style="小商品" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<span class="icons"></span>
 					<a href="javascript:;"><img src="assets/imgs/shopping-cart/cake.png"/></a>
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
 					<p>规格：<span>￥199</span>/<span>2.5</span>磅</p>
 					<p><span class="minus06">-</span><span class="number06">1</span><span class="add06">+</span></p>
 				</li>
-				<li>
+				<li class="item" data-style="小商品" data-name="芒果拿破仑" data-size="2.5磅" data-price="199" data-amount="1">
 					<span class="icons"></span>
 					<a href="javascript:;" class="active"><img src="assets/imgs/shopping-cart/cake.png"/></a><br />
 					<p><span>芒果拿破仑</span><span>Mango Napoleon</span><span>￥189</span><span class="delete"></span></p>
@@ -167,7 +167,7 @@
 			<span>已选<span>1</span>件商品</span>
 			<span>共<span><span>￥</span><span>189</span>.00</span>
 			</span>
-			<a href="javascript:;">去结算</a>
+			<a href="javascript:;" class="closing">去结算</a>
 		</div>
 
 	</div>
@@ -390,6 +390,7 @@
 			.script('assets/plugins/maxlength/jquery.maxlength.min.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
 			.script('assets/plugins/cropper/cropper.js').wait()
+			.script('assets/js/common.js').wait()
 			.script('assets/js/shopping-cart.js');
 	</script>
 </body>
