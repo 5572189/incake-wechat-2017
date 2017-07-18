@@ -13,7 +13,7 @@
         if(!rxStream){
             return false;
         }
-        var $hid_username = $('#hid_username');
+        var $hid_username = $('#userName');
 
         var o_username = '',
             o_mobile = '',
@@ -60,7 +60,7 @@
             b_productprice_d = $('.name').find('#title').html();
             b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
             b_productCount_d = parseInt($amount.find('.number').val(), 10);
-            b_productstyle = $name.find('li.active').find('.name').html().trim();
+            b_productstyle = $name.find('li.active').find('.name').html();
 
             // send to rxstream server
             rxStream.track('add_shoppingcart', {
@@ -99,7 +99,7 @@
             b_productprice_d = $('.name').find('#title').html();
             b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
             b_productCount_d = parseInt($amount.find('.number').val(), 10);
-            b_productstyle = $name.find('li.active').find('.name').html().trim();
+            b_productstyle = $name.find('li.active').find('.name').html();
 
             // send to rxstream server
             rxStream.track('add_shoppingcart', {

@@ -42,8 +42,8 @@
                 b_ad_number = b_ad_number - slidelen;
             }
 
-            b_ad_title = $(this).attr('data-adtitle').trim();
-            b_ad_type = $(this).attr('data-adtype').trim();
+            b_ad_title = $(this).children('a').attr('data-adtitle').trim();
+            b_ad_type = $(this).children('a').attr('data-adtype').trim();
             // console.log(b_ad_title)
             // console.log(b_ad_type)
             // send to rxstream server
@@ -94,12 +94,12 @@
                 $specbox = $wrapper.find('.spec-box').eq(currType),
                 $pounditem = $specbox.find('.item-rule li').filter('.active');
 
-            b_productname = $norms.find('.hid_htmlname').val();
-            b_product_size = $pounditem.html().trim();
-            b_productprice_d = $pounditem.attr('data-prices');
-            b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
-            b_productCount_d = $specbox.find('.number_en').html();
-            b_productstyle = $item.find('li').filter('.active').html().trim();
+                b_productname = $norms.find('.hid_name').val();
+                b_product_size = $pounditem.html();
+                b_productprice_d = $('.spec-box').find('.cost').html();
+                b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
+                b_productCount_d = $specbox.find('.number_en').html();
+                b_productstyle = $item.find('li').filter('.active').html().trim();
             // console.log(b_productname)
             // console.log(b_product_size)
             // console.log(b_productprice_d)
@@ -143,9 +143,9 @@
                 $specbox = $wrapper.find('.spec-box').eq(currType),
                 $pounditem = $specbox.find('.item-rule li').filter('.active');
 
-            b_productname = $norms.find('.hid_htmlname').val();
-            b_product_size = $pounditem.html().trim();
-            b_productprice_d = $pounditem.attr('data-prices');
+            b_productname = $norms.find('.hid_name').val();
+            b_product_size = $pounditem.html();
+            b_productprice_d = $('.spec-box').find('.cost').html();
             b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
             b_productCount_d = $specbox.find('.number_en').html();
             b_productstyle = $item.find('li').filter('.active').html().trim();
@@ -223,7 +223,7 @@
         });
 
         //首页筛选
-        $('.list-two').find('li').click(function(){
+        $('.list-two').find('.kind').click(function(){
             var b_menu ='';
             b_menu = $(this).text().trim();
             //console.log(b_menu);

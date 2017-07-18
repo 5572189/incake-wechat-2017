@@ -54,6 +54,8 @@
 			$cake.append(_html);
 
 		$(".car").click(function(){
+			var cakeName = $(this).closest('li').find('.change').html();
+			$('#cakeName').val(cakeName);
 			$(".flower-shade").fadeIn();
 			touchmove();
 		})

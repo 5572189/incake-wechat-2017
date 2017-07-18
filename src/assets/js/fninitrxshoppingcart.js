@@ -20,7 +20,7 @@
         }
 
         //去结算
-        $('.close').on('click','.closing',function(index, item){
+        $('.close').on('click','#submitOrder',function(index, item){
             var $cake_list = $('#cake_list'),
                 $items = $cake_list.find('.item'),
                 shoppingcart = [];
@@ -39,7 +39,7 @@
                     b_product_size = $(item).attr('data-size').trim();
                     b_productprice_d = $(item).attr('data-price').trim();
                     b_productprice_m = parseFloat($(item).attr('data-price').trim()).toFixed(2);
-                    b_productCount_d = parseInt($(item).attr('data-amount').trim(), 10);
+                    b_productCount_d = parseInt($(item).find('.figure').html());
 
                     shoppingcart.push({
                       b_productstyle: b_productstyle,

@@ -245,7 +245,7 @@
         //数据绑定
         $("#main").on('click', '.icon-add', function() {
 
-            var change = $(this).closest('.box-text').find('.change').html().trim();
+            var cakeName = $(this).closest('.box-text').find('.change').html().trim();
 
 
             var strSc = $(this).closest('.box').attr('data-sc').trim(),
@@ -317,16 +317,16 @@
                 $(".prices").text(parseInt(prices, 10));
             });
 
-            handle4BindShade(data,change);
+            handle4BindShade(data,cakeName);
         });
 
         // 绑定加入购物车弹框数据
-        function handle4BindShade(data,change) {
+        function handle4BindShade(data,cakeName) {
             var _html = template('tplNormsShade', data);
             $('#normsShade').html(_html);
 
             $(".norms-shade").fadeIn(function(){
-                $('.hid_htmlname').val(change);
+                $('.hid_name').val(cakeName);
             });
         }
 

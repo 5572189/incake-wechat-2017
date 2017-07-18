@@ -20,6 +20,8 @@
 
 <body>
 	<div class="layout">
+		<input type="hidden" id="userName" value="15093570141">
+		<input type="hidden" id="cakeName" value="">
 		<ul id="flower-list" class="clearfix">
 		</ul>
 		<script type="text/html" id="tplCake">
@@ -27,7 +29,7 @@
 			<li>
 				<a href="javascript:;"><img src="{{item.linkimg}}"/></a>
 				<a class="like" href="javascript:;"></a>
-				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
+				<p><span class="change">{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
 				<span class="car"></span>
@@ -36,7 +38,7 @@
 		</script>
 
 		<!--鲜花弹框-->
-		<div class="flower-shade">
+		<div class="flower-shade" id="normsShade">
 			<div>
 				<p>选择您要订购的鲜花颜色</p>
 				<ul class="clearfix colors">
@@ -49,8 +51,8 @@
 					<li class="number-flower">1</li>
 					<li class="add-flower"></li>
 				</ul>
-				<a href="javascript:;">立即购买</a>
-				<a href="javascript:;">加入购物车</a>
+				<a href="javascript:;" class="buy_Now">立即购买</a>
+				<a href="javascript:;" class="add_shopCart">加入购物车</a>
 				<span class="flower-close"></span>
 			</div>
 		</div>
@@ -61,6 +63,8 @@
 			.script('assets/jquery/jquery-3.1.1.min.js').wait()
 			.script('assets/plugins/artTemplate/dist/template.js').wait()
 			.script('assets/plugins/tweenmax/TweenMax.min.js').wait()
+			.script('assets/js/common.js').wait()
+			.script('assets/js/fninitrxflowerlist.js').wait()
 			.script('assets/js/flower-list.js');
 	</script>
 </body>

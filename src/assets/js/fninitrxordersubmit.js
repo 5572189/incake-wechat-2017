@@ -20,7 +20,7 @@
         }
 
 		//去结算
-        $('.closes').on('click','.closing',function(index, item){
+        $('.closes').on('click','#submitOrder',function(index, item){
 
             var $cake_list = $('#cake_list'),
 				$sinfo = $('.order-information'),
@@ -36,13 +36,13 @@
 		        discount_type = '无';
 
 				//商品总金额
-				s_total = parseFloat($sinfo.find('.s-total').html().trim()).toFixed(2);
+				s_total = parseFloat($sinfo.find('#totalPrice').html().trim()).toFixed(2);
 				//去结算时的金额
-				s_money = parseFloat($(this).closest('.closes').find('.s-money').html()).toFixed(2);
+				s_money = parseFloat($(this).closest('.closes').find('#cashPay').html()).toFixed(2);
 				//优惠券
-				s_coupon = parseFloat($sinfo.find('.s-coupon').html().trim()).toFixed(2);
+				s_coupon = parseFloat($sinfo.find('#coupons').html().trim()).toFixed(2);
 				//促销价
-				s_sales = parseFloat($sinfo.find('.s-sales').html().trim()).toFixed(2);
+				s_sales = parseFloat($sinfo.find('#cakeCard').html().trim()).toFixed(2);
 
 				if(s_coupon != 0) {
 			        discount_price = s_coupon;
