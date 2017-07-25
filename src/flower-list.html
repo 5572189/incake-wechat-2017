@@ -22,6 +22,7 @@
 	<div class="layout">
 		<input type="hidden" id="userName" value="15093570141">
 		<input type="hidden" id="cakeName" value="">
+		<input type="hidden" id="cakePirce" value="">
 		<ul id="flower-list" class="clearfix">
 		</ul>
 		<script type="text/html" id="tplCake">
@@ -31,7 +32,7 @@
 				<a class="like" href="javascript:;"></a>
 				<p><span class="change">{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
-				<p>{{item.price}}/<span>{{item.number}}</span></p>
+				<p class="pirce">{{item.price}}/<span>{{item.number}}</span></p>
 				<span class="car"></span>
 			</li>
 			{{/each}}

@@ -39,7 +39,7 @@
                     b_product_size = $(item).attr('data-size').trim();
                     b_productprice_d = $(item).attr('data-price').trim();
                     b_productprice_m = parseFloat($(item).attr('data-price').trim()).toFixed(2);
-                    b_productCount_d = parseInt($(item).find('.figure').html());
+                    b_productCount_d = $(item).find('.number').html();
 
                     shoppingcart.push({
                       b_productstyle: b_productstyle,

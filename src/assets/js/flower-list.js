@@ -27,25 +27,25 @@
 					linkimg:"assets/imgs/flower-list/cake.png",
 					na:'以爱之名',
 					en:'All About Love',
-					price:'￥69',
+					price:'69',
 					number:'1个'
 				},{
 					linkimg:"assets/imgs/flower-list/cake.png",
 					na:'以爱之名',
 					en:'All About Love',
-					price:'￥69',
+					price:'69',
 					number:'1个'
 				},{
 					linkimg:"assets/imgs/flower-list/cake.png",
 					na:'以爱之名',
 					en:'All About Love',
-					price:'￥69',
+					price:'69',
 					number:'1个'
 				},{
 					linkimg:"assets/imgs/flower-list/cake.png",
 					na:'以爱之名',
 					en:'All About Love',
-					price:'￥69',
+					price:'69',
 					number:'1个'
 				}]
 		}
@@ -54,7 +54,9 @@
 			$cake.append(_html);
 
 		$(".car").click(function(){
-			var cakeName = $(this).closest('li').find('.change').html();
+			var cakeName = $(this).closest('li').find('.change').html(),
+				cakePirce = $(this).closest('li').find('.pirce').text().split("/")[0];
+			$('#cakePirce').val(cakePirce);
 			$('#cakeName').val(cakeName);
 			$(".flower-shade").fadeIn();
 			touchmove();

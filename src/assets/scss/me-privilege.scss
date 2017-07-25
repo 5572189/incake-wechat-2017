@@ -26,55 +26,51 @@ body{
 }
 #center{
     width: 690px;
-    height: 130px;
     background: #fff;
     margin: 0 auto;
-    position: relative;
     margin: 40px auto;
-    
+    position: relative;
     .text{
         .coupon-code{
-            position: absolute;
-            left: 30px;
-            top: 15px;
+            padding-left: 30px;
             color: #0b57a0;
         }
-        p:nth-of-type(1){
-            font-size: 20px;
-            position: absolute;
-            left: 30px;
-            top:65px;
+        p{
+            width: 60%;
+            padding-left: 30px;
+            font-size: 20px;/*px*/
+            padding-top: 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
-        p:nth-of-type(2){
-            font-size: 20px;
-            position: absolute;
-            left: 30px;
-            top:95px;
+        p:last-child{
+            padding-bottom: 10px;
         }
     }
-    
+
     .privilege{
         width: 230px;
-        height: 130px;
+        height: 100%;
         position: absolute;
         right: 0;
         top: 0;
-        span:nth-of-type(1){
+        img{
+            height: 100%;
+        }
+        >span:nth-of-type(1){
             position: absolute;
-            left: 25px;
-            top: 25px;
+            left: 50px;
+            top: 50px;
             font-size: 40px;
             color: #fff;
-        }
-        span:nth-of-type(2){
-            position: absolute;
-            left: 65px;
-            top: 5px;
-            font-size: 60px;
-            color: #fff;
+            span:nth-of-type(2){
+                font-size: 60px;
+                color: #fff;
+            }
         }
     }
-    
+
 }
 .active{
     &:after{

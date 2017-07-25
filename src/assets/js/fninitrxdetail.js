@@ -57,13 +57,13 @@
 
             b_productname = $('.name').find('.change').html().trim();
             b_product_size = $specifics.find('.content_li').find('li').filter('.active').html().trim();
-            b_productprice_d = $('.name').find('#title').html();
+            b_productprice_d = $('.name').find('#title').html().trim();
             b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
             b_productCount_d = parseInt($amount.find('.number').val(), 10);
             b_productstyle = $name.find('li.active').find('.name').html();
 
             // send to rxstream server
-            rxStream.track('add_shoppingcart', {
+            rxStream.track('buy_Now', {
                 subject: {
                     o_username: o_username,
                     o_mobile: o_mobile
@@ -96,7 +96,7 @@
 
             b_productname = $('.name').find('.change').html().trim();
             b_product_size = $specifics.find('.content_li').find('li').filter('.active').html().trim();
-            b_productprice_d = $('.name').find('#title').html();
+            b_productprice_d = $('.name').find('#title').html().trim();
             b_productprice_m = parseFloat(b_productprice_d, 10).toFixed(2);
             b_productCount_d = parseInt($amount.find('.number').val(), 10);
             b_productstyle = $name.find('li.active').find('.name').html();
@@ -155,6 +155,20 @@
                     b_linkornot: b_linkornot,
                     b_device: b_device
                 }
+            });
+
+            // 继续购物
+            $('#shade').on('click','.visit_again',function(e) {
+              // send to rxstream server
+        			rxStream.track('keepbuy', {
+        				subject: {
+        					o_username: o_username,
+        					o_mobile: o_mobile
+        				},
+        				properties: {
+        					b_device: b_device
+        				}
+        			});
             });
     }
 

@@ -31,11 +31,13 @@
 	</div>
 	<script id="privilegeList" type="text/html">
 		{{each list as item i}}
-		<div id="center" class="active">
+		<div id="center">
 			<div class="text">
 				<span class="coupon-code">{{item.couponcode}}</span>
 				<p>每单限用1张，此券不可与蛋糕卡同时使用。</p>
-				<p>有效期：<span>{{item.time}}</span></p>
+				<p>有效期:<span>{{item.time}}</span></p>
+				<p>最低消费金额: <span>30元</span></p>
+				<p>地区:南京</p>
 			</div>
 			<div class="privilege">
 				<img src="{{item.textimg}}" />

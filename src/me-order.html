@@ -19,6 +19,7 @@
 </head>
 
 <body>
+	<input type="hidden" id="userName" value="15093570141">
 	<div id="nav">
 		<ul>
 			<li class="active">全部</li>
@@ -37,16 +38,16 @@
 					<ul>
 						<li class="cake-li">
 							<a href="javascript:;"><img src="{{item.textimg}}"/></a>
-							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-							<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
+							<p><span class="cakeNake">{{item.name.cn}}</span> <span class="oneCakePirce">￥{{item.price}}</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span class="cakeNumber">{{item.count}}</span></p>
 						</li>
 						<li class="cake-li two">
 							<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
-							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-							<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
+							<p><span class="cakeNake">{{item.name.cn}}</span> <span class="oneCakePirce">￥{{item.price}}</span></p>
+							<p><span>规格：<span>{{item.pound}}</span></span> <span class="cakeNumber">{{item.count}}</span></p>
 						</li>
 						<li class="price">
-							<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
+							<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span class="cakePrice">￥{{item.paid.wz}}</span></p>
 							<p><span class="total">总价：￥<span>189</span></span> <span class="privilege">优惠：￥<span>0.00</span></span> <span class="paid">已付：￥<span>{{item.paid.yj}}</span></span>
 							</p>
 						</li>
@@ -75,13 +76,13 @@
 					<ul>
 						<li class="cake-li">
 							<a href="javascript:;"><img src="{{item.textimg}}"/></a>
-							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-							<p><span>规格：<span>1.2磅</span></span> <span>{{item.count}}</span></p>
+							<p><span class="cakeNake">{{item.name.cn}}</span> <span class="oneCakePirce">￥{{item.price}}</span></p>
+							<p><span>规格：<span>1.2磅</span></span> <span class="cakeNumber">{{item.count}}</span></p>
 						</li>
 						<li class="cake-li two">
 							<a href="javascript:;"><img src="assets/imgs/me-order/cake01.png"/></a>
-							<p><span>{{item.name.cn}}</span> <span>￥{{item.price}}</span></p>
-							<p><span>规格：<span>{{item.pound}}</span></span> <span>{{item.count}}</span></p>
+							<p><span class="cakeNake">{{item.name.cn}}</span> <span class="oneCakePirce">￥{{item.price}}</span></p>
+							<p><span>规格：<span>{{item.pound}}</span></span> <span class="cakeNumber">{{item.count}}</span></p>
 						</li>
 						<li class="price">
 							<p><span class="num">共计<span>{{item.countnumber}}</span>件商品</span><span>应付：</span><span>￥{{item.paid.wz}}</span></p>
@@ -137,5 +138,7 @@
 		.script('assets/jquery/jquery-1.8.3.min.js').wait()
 		.script('assets/plugins/swiper/js/swiper.min.js').wait()
 		.script('assets/plugins/underscore/underscore-min.js').wait()
+		.script('assets/js/common.js').wait()
+		.script('assets/js/fninitrxmeorder.js').wait()
 		.script('assets/js/me-order.js');
 </script>
