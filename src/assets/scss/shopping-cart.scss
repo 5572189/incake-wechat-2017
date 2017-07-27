@@ -12,12 +12,18 @@ body {
 
 #cake_list {
     background: #fff;
-
-    .surprised {
-        list-style: none;
+    .surprised{
         background: url("../imgs/shopping-cart/surprised.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
+    }
+    .inlife{
+        background: url("../imgs/shopping-cart/inlife.png") no-repeat;
+        background-size: 100px 28px;
+        background-position: 80px 0;
+    }
+    .surprised,.inlife {
+        list-style: none;
 
         li{
             border: 1px solid #dcdcdc;
@@ -200,11 +206,19 @@ body {
         }
     }
 
-    .convention {
-        list-style: none;
+    .convention{
         background: url("../imgs/shopping-cart/convention.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
+    }
+    .ali{
+        background: url("../imgs/shopping-cart/ali.png") no-repeat;
+        background-size: 100px 28px;
+        background-position: 80px 0;
+    }
+    .convention,.ali {
+        list-style: none;
+
 
         li {
             border: 1px solid #dcdcdc;
@@ -397,12 +411,19 @@ body {
             }
         }
     }
-
-    .commodity {
-        list-style: none;
+    .commodity{
         background: url("../imgs/shopping-cart/commodity.png") no-repeat;
         background-size: 100px 28px;
         background-position: 80px 0;
+    }
+    .customization{
+        background: url("../imgs/shopping-cart/customization.png") no-repeat;
+        background-size: 100px 28px;
+        background-position: 80px 0;
+    }
+    .commodity ,.customization{
+        list-style: none;
+
 
         li {
             position: relative;

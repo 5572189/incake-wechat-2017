@@ -13,8 +13,17 @@
 			autoplayDisableOnInteraction: false
 		});
 
+		//返回首页小图标
+		var $swiper_container_top = $('.swiper-container').height(),
+			$home = $('.home');
 
-
+		$(window).scroll(function(){
+			if($(window).scrollTop() > $swiper_container_top){
+				$home.show();
+			}else{
+				$home.hide();
+			}
+		});
 		$(".content_li").on("click","li",function(){
 			$(this).addClass("active");
 			$(this).siblings().removeClass("active");
@@ -65,7 +74,7 @@
 				$(this).removeClass("active");
 			}
 
-			
+
 		})
 
 		$(".next_page a").click(function(){
