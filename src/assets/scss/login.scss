@@ -39,16 +39,98 @@ body {
     		padding-top: 50px;
     	}
         li {
+            position: relative;
             width: 100%;
             height: 80px;
             margin-top: 30px;
             color: #505050;
             &.no-margin {
-            	margin-top: 0;
+            	margin-top: 20px;
             }
             .forget{
                 margin-left: 450px;
             }
+            .slider {
+            position: absolute;
+            width: 100%;
+            height: 90px;
+            box-shadow: 0 0 3px #999;
+            background-color: #ddd;
+            top: 50%;
+            left: 0;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .label {
+            background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: slidetounlock 3s infinite;
+            -webkit-text-size-adjust: none;
+            line-height: 90px;
+            height: 90px;
+            text-align: center;
+            font-size: 24px; /* px */
+            width: 100%;
+            color: #aaa;
+        }
+        .button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 90px;
+            height: 90px;
+            background-color: #fff;
+            transition: left 0s;
+            -webkit-transition: left 0s;
+            background: url('../imgs/login/buttonbggary.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .active{
+            background: url('../imgs/login/buttonbg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 15px 1px #e9546a;/*no*/
+        }
+        .button-on {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 90px;
+            height: 90px;
+            background-color: #fff;
+            transition: left 1s;
+            -webkit-transition: left .5s;
+        }
+        .track {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            overflow: hidden;
+            transition: width 0s;
+            -webkit-transition: width 0s;
+        }
+        .track-on {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            overflow: hidden;
+            transition: width 1s;
+            -webkit-transition: width .5s;
+            background: #fbdfe4;
+        }
+        .bg-green {
+            line-height: 90px;
+            height: 90px;
+            text-align: center;
+            font-size: 24px;/*px*/
+            background-color: #fbdfe4;
+        }
             input {
             	width: 100%;
             	height: 80px;
@@ -174,4 +256,13 @@ body {
 			color: #303242;
 		}
 	}
+}
+@keyframes slidetounlock {
+  0% {
+    background-position: -2.666667rem 0;
+  }
+
+  100% {
+    background-position: 2.666667rem 0;
+  }
 }
