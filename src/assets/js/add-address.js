@@ -48,9 +48,33 @@
         })();
     });
 
+    AMap.plugin(['AMap.Autocomplete', 'AMap.PlaceSearch'], function() {
+        var autoOptions = {
+            city: "上海", //城市，默认全国
+            input: "keyword" //使用联想输入的input的id
+        };
+        autocomplete = new AMap.Autocomplete(autoOptions);
+        var placeSearch = new AMap.PlaceSearch({
+            city: '上海',
+            map: map
+        })
+        AMap.event.addListener(autocomplete, "select", function(e) {
+            //TODO 针对选中的poi实现自己的功能
+            placeSearch.search(e.poi.name)
+        });
+    });
 
-
-
-
+    $('.address').on('click',function(){
+        $('.shade-keyword').animate({
+            "left":'0'
+        });
+    });
+    $('#confirmSeek').on('click',function(){
+        var value = $('#keyword').val();
+        $('.selectDistrict').html(value);
+        $('.shade-keyword').animate({
+            "left":'100%'
+        });
+    });
 
 })(jQuery, window, document)

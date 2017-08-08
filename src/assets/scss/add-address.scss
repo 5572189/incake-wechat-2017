@@ -118,6 +118,33 @@ body{
         padding-left: 30px;
         color: #dcdcdc;
     }
+    p{
+        display: inline-block;
+        position: absolute;
+        right: 85px;
+        top: 25px;
+        width:400px ;
+        height: 60px;
+        line-height: 60px;
+        border: none;
+        text-align: right;
+        outline-style: none;
+    }
+}
+.house-number{
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: 110px;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid #dcdcdc;
+    span{
+        line-height: 110px;
+        padding-left: 30px;
+        color: #dcdcdc;
+    }
     input{
         position: absolute;
         right: 85px;
@@ -206,4 +233,41 @@ body{
         line-height: 100px;
         color: #fff;
     }
+}
+.shade-keyword{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.7);
+    input{
+        display: block;
+        width: 500px;
+        height: 60px;
+        border: 0;
+        margin: 50px auto 0;
+        border-radius: 3px;
+        padding-left: 20px;
+        outline: none;
+    }
+    a{
+        display: block;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        margin-left: -275px;
+        width: 550px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 24px;
+        background-color: #e9546b;
+        color: #fff;
+        border-radius: 3px;
+    }
+}
+.auto-item{
+    font-size: 24px;
 }

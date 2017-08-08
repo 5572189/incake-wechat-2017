@@ -96,7 +96,6 @@ $(function() {
                     clearInterval(interval);
                     time = 89;
                     obj.text('向右滑动获取动态验证码');
-                    slider.reset();
                 }
             }, 1000);
         }
