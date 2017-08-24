@@ -244,7 +244,8 @@ body{
     background:rgba(0,0,0,0.7);
     input{
         display: block;
-        width: 500px;
+        max-width: 750px;
+        width: 100%;
         height: 60px;
         border: 0;
         margin: 50px auto 0;
