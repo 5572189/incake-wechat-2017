@@ -4,7 +4,9 @@
   "description": "The newly website UI about wap.incake.net of version 2017.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean:build"
   },
   "repository": {
     "type": "git",
