@@ -1,0 +1,15 @@
+#promotionSection {
+  width: 750px;
+
+  .promotion-banner {
+    display: block;
+    width: 750px;
+    height: 210px;
+    background: {
+      image: url('../imgs/promotion/ad_banner.png');
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    };
+  }
+}
