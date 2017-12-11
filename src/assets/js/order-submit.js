@@ -604,48 +604,224 @@
 
 	})();
 
-//	时间选择
-	;(function() {
-		window.adaptive.desinWidth = 750;
-	    window.adaptive.init();
+	//	时间选择
+  ;(function () {
+      
+      window.adaptive.desinWidth = 750;
+      window.adaptive.init();
+      var selectContactDom = $('#select_contact');
+      var showContactDom = $('#show_contact');
+      var contactProvinceCodeDom = $('#contact_province_code');
+      var contactCityCodeDom = $('#contact_city_code');
 
-		var selectContactDom = $('#select_contact');
-		var showContactDom = $('#show_contact');
-		var contactProvinceCodeDom = $('#contact_province_code');
-		var contactCityCodeDom = $('#contact_city_code');
-		selectContactDom.bind('click', function() {
+      // 初始化时间
+      var now = new Date();
+      var nowYear = now.getFullYear();
+      var nowMonth = now.getMonth() + 1;
+      var nowDate = now.getDate();
 
-			var sccode = showContactDom.attr('data-city-code');
-			var scname = showContactDom.attr('data-city-name');
+      showContactDom
+          .attr('data-year', nowYear)
+          .attr('data-month', nowMonth)
+          .attr('data-date', nowDate);
 
-			var oneLevelId = showContactDom.attr('data-province-code');
-			var twoLevelId = showContactDom.attr('data-city-code');
-			var threeLevelId = showContactDom.attr('data-district-code');
-			var iosSelect = new IosSelect(3,
-				[year, month, day],
-				{
-				title: '时间选择',
-                itemHeight: 0.933333,
-                headerHeight: 1.18,
-            	cssUnit: 'rem',
-				relation: [1, 1, 0],
-				oneLevelId: oneLevelId,
-				twoLevelId: twoLevelId,
-				threeLevelId: threeLevelId,
-				callback: function(selectOneObj, selectTwoObj, selectThreeObj) {
-					contactProvinceCodeDom.val(selectOneObj.id);
-					contactProvinceCodeDom.attr('data-province-name', selectOneObj.value);
-					contactCityCodeDom.val(selectTwoObj.id);
-					contactCityCodeDom.attr('data-city-name', selectTwoObj.value);
+      // 格式化年份
+      function formatYear() {
+          var arr = [];
 
-					showContactDom.attr('data-province-code', selectOneObj.id);
-					showContactDom.attr('data-city-code', selectTwoObj.id);
-					showContactDom.attr('data-district-code', selectThreeObj.id);
-					showContactDom.html('<span>' + selectOneObj.value + '</span><span> ' + selectTwoObj.value + ' </span><span>' + selectThreeObj.value + '</span>');
-				}
-			});
-		});
-	})()
+          arr.push({
+              id: nowYear + '',
+              value: nowYear + '年'
+          });
+
+          // 当前月份是12月，并且当前日期大于1号，则追加上下一年份
+          if (nowMonth == 12 && nowDate > 1) {
+              arr.push({
+                  id: (nowYear + 1) + '',
+                  value: (nowYear + 1) + '年'
+              });
+          }
+          return arr;
+      }
+
+      // 格式化月份
+      function formatMonth(year) {
+          var arr = [];
+          
+          // 如果是当前年
+          if (year == nowYear) {
+              arr.push({
+                  id: nowMonth + '',
+                  value: nowMonth + '月'
+              });
+
+              // // 如果当前日期大于1号并且当前月份不是12月，则追加下一个月
+              if (nowDate > 1 && nowMonth != 12) {
+                  arr.push({
+                      id: (nowMonth + 1) + '',
+                      value: (nowMonth + 1) + '月'
+                  });
+              }
+          } else {
+
+              // 跨年，如果当前日期大于1号，则追加下一年的第一个月
+              if (nowDate > 1) {
+                  arr.push({
+                      id: 1 + '',
+                      value: 1 + '月'
+                  });
+              }
+          }
+
+          return arr;
+      }
+
+      // 格式化日期
+      function formatDate(month, count) {
+          var arr = [];
+
+          if (month == nowMonth) {
+              for (var i = nowDate + 1; i <= count; i++) {
+                  arr.push({
+                      id: i + '',
+                      value: i + '日'
+                  });
+              }
+          } else {
+              for (var i = 1; i <= nowDate - 1; i++) {
+                  arr.push({
+                      id: i + '',
+                      value: i + '日'
+                  });
+              }
+          }
+
+          return arr;
+      }
+
+      // 格式化时间段
+      function formatHour() {
+          var line = -1;
+
+          /*if (isqg == "1" && IsContainFlower) {
+              line = -1;
+          }
+          else {
+              line = parseInt($have.attr("waihuan"));
+              //是否包含布鲁斯冰淇淋蛋糕
+              var isContainIceCake = ContainIceCake();
+              if (isContainIceCake) {
+                  if (line == 0) {
+                      line = 9
+                  }
+                  else if (line == 2) {
+                      line = 10
+                  }
+              }
+
+              if (line == -1) {
+                  return false;
+              }
+          }*/
+
+          return deliveryTimeJson['interval_' + (line + 1)];
+      }
+
+      // 年份数据
+      var yearData = function (callback) {
+          callback(formatYear());
+      }
+
+      // 月份数据
+      var monthData = function (year, callback) {
+          callback(formatMonth(year));
+      };
+
+      // 日期数据
+      var dateData = function (year, month, callback) {
+          if (/^(1|3|5|7|8|10|12)$/.test(month)) {
+              callback(formatDate(month, 31));
+          }
+          else if (/^(4|6|9|11)$/.test(month)) {
+              callback(formatDate(month, 30));
+          }
+          else if (/^2$/.test(month)) {
+              if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                  callback(formatDate(month, 29));
+              }
+              else {
+                  callback(formatDate(month, 28));
+              }
+          }
+          else {
+              throw new Error('month is illegal');
+          }
+      };
+
+      // 时间段数据，方法
+      var hourData = function (year, month, date, callback) {
+          // callback(formatHour(parseInt(line) + 1));
+          callback(formatHour());
+      };
+
+      selectContactDom.bind('click', function () {
+
+          //全国商品且不是鲜花不用选择收获时间
+          /*if (isqg == "1" && !IsContainFlower) {
+              return false;
+          }
+
+          //获取区域
+          var $have = $('.have');
+          if ($have.attr('style') == undefined || $have.attr('style').indexOf('block') < 0) {
+              ShowMessage("请选择收获地址！");
+              return false;
+          }*/
+
+          var oneLevelId = showContactDom.attr('data-year');
+          var twoLevelId = showContactDom.attr('data-month');
+          var threeLevelId = showContactDom.attr('data-date');
+          var fourLevelId = showContactDom.attr('data-hour');
+          var iosSelect = new IosSelect(4,
+              [yearData, monthData, dateData, hourData],
+              {
+                  title: '时间选择',
+                  itemHeight: 0.933333,
+                  headerHeight: 1.18,
+                  cssUnit: 'rem',
+                  relation: [1, 1, 1],
+                  oneLevelId: oneLevelId,
+                  twoLevelId: twoLevelId,
+                  threeLevelId: threeLevelId,
+                  fourLevelId: fourLevelId,
+                  callback: function (selectOneObj, selectTwoObj, selectThreeObj, selectFourObj) {
+                      showContactDom.attr('data-year', selectOneObj.id);
+                      showContactDom.attr('data-month', selectTwoObj.id);
+                      showContactDom.attr('data-date', selectThreeObj.id);
+                      showContactDom.attr('data-hour', selectFourObj.id);
+                      showContactDom.html('<span id="year">' + selectOneObj.value + '</span><span id="month"> ' + selectTwoObj.value + ' </span><span id="date">' + selectThreeObj.value + '</span><span id="hour">' + selectFourObj.value + '</span>');
+                      // AddDeliveryTime(selectOneObj.value, selectTwoObj.value + selectThreeObj.value, selectFourObj.value);
+                  }
+              });
+      });
+
+      function AddDeliveryTime(year, date, hour) { // 2017年 12月10日(星期日) 13:30 - 14:30
+          year = year.replace('年', '');
+          var matches = date.match(/^(\d+)月(\d+).+$/);
+          date = matches[1] + "-" + matches[2];
+          var startHour = hour.split('-')[0];
+          var endHour = hour.split('-')[1];
+          var startDeliveryTime = year + '-' + date + " " + startHour;
+          var endDeliveryTime = year + '-' + date + " " + endHour;
+          $('#deliveryTime').val(year + '/' + date.replace('-', '/') + " " + endHour);
+          var deliveryTime = startDeliveryTime + "/" + endDeliveryTime;
+
+          AddPayTypeToRedis("addDeliveryTime", deliveryTime);
+          //activity
+          CalculateSurpriseCakeDisCount();
+          //activity
+      }
+  })();
 
 //	生日贺卡选择
 	;(function(){
