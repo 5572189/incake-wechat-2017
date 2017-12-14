@@ -890,6 +890,78 @@
 			}
 		});
 
+		// 高德地图智能提示模块代码
+		(function($layout) {
+			// Doms
+			var $addrElem = $layout.find('.address'),
+				$inputElem = $addrElem.find('input'),
+				$listElem = $addrElem.find('.search-addrlist');
+
+			// Amap variables
+			var autocomplete = null;
+			AMap.plugin(['AMap.Autocomplete'], function() {
+				var autoOptions = {
+					city: ''
+				};
+				autocomplete = new AMap.Autocomplete(autoOptions);
+			});
+
+			// 文本改变事件
+			$inputElem.on('input focus', function(e) {
+				var _html = '';
+				var keywords = $(this).val().trim();
+				
+				if (keywords == '') {
+					$listElem.empty().hide();
+					return false;
+				}
+
+				autocomplete.search(keywords, function(status, result) {
+					if (status == 'complete') {
+						var tips = result.tips;
+
+						if (tips.length == 0) {
+							$listElem.empty().hide();
+							return false;
+						}
+
+						tips.forEach(function(tip) {
+							_html += '<li';
+							_html += ' data-adcode="' + tip.adcode + '"';
+							_html += ' data-address="' + tip.address + '"';
+							_html += ' data-district="' + tip.district + '"';
+							_html += ' data-lng="' + tip.location.lng + '"';
+							_html += ' data-lat="' + tip.location.lat + '"';
+							_html += ' data-name="' + tip.name + '"';
+							_html += ' data-typecode="' + tip.typecode + '"';
+							_html += '>' + tip.name + '</li>';
+						});
+
+						$listElem.html(_html).show();
+					}
+				});
+			});
+
+			// 搜索列表项选中事件
+			$listElem.on('click', 'li', function(e) {
+				var $elem = $(this);
+				var data = {
+					adcode: $elem.data('adcode'),
+					address: $elem.data('address'),
+					district: $elem.data('district'),
+					lng: parseFloat($elem.data('lng')),
+					lat: parseFloat($elem.data('lat')),
+					name: $elem.data('name'),
+					typecode: $elem.data('typecode')
+				};
+
+				$inputElem.val(data.name);
+				$listElem.hide();
+				
+				console.log(data);
+			});
+		})($('.add-address-layout'));
+
 		(function() {
 			window.adaptive.desinWidth = 750;
       window.adaptive.init();
@@ -909,9 +981,9 @@
 					[iosProvinces, iosCitys, iosCountys],
 					{
 						title: '地址选择',
-	                    itemHeight: 1,
-	                    headerHeight: 1,
-	                	cssUnit: 'rem',
+            itemHeight: 1,
+            headerHeight: 1,
+          	cssUnit: 'rem',
 						relation: [1, 1, 0],
 						oneLevelId: oneLevelId,
 						twoLevelId: twoLevelId,
@@ -930,5 +1002,6 @@
 				});
 			});
 		})();
+
 	})();
 })(jQuery, window, document);
