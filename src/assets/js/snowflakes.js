@@ -37,7 +37,7 @@
         durationFall = documentHeight * 10 + Math.random() * 5000;
 
       //随机生成
-      var random = Math.floor(Math.random() * 4),
+      var random = Math.floor(Math.random() * icons.length),
         _html = '';
 
       _html = '<img style="width: 100%;" src="' + icons[random] + '" />';

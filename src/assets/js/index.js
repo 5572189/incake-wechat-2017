@@ -33,8 +33,6 @@
 
     $(function() {
 
-
-
         var tl = new TimelineLite();
         //加载图片
         initData();
@@ -387,6 +385,14 @@
             $(".number-normal").text(amout);
         });
 
+        // 判断是从哪个活动链接进来的，如果是 周年庆，自动调到蛋糕列表模块
+        (function() {
+            var $idscreen = $('#idscreen'),
+                iTop = $idscreen.offset().top,
+                isAnniversary = GetQueryString('acttype') == 'anniversary';
+                
+            isAnniversary && $('html, body').animate({ scrollTop: (iTop - 60) }, 500);
+        })();
     });
 
     //scroll事件
@@ -653,4 +659,12 @@
         var _html = template('tplList', rightList);
         $boxRight.append(_html);
     };
+
+    // query string func
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
 })(jQuery, window, document);
