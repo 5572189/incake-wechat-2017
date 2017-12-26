@@ -1,7 +1,12 @@
 ;(function(window, document, $, undefined) {
   $(function() {
-    initCard();
+    verifyCity() && initCard();
   });
+
+  function verifyCity() {
+    var currCity = $('#currentCityCode').val();
+    return (currCity != '' && currCity == '021') ? true : false;
+  }
 
   function initCard() {
     // doms
