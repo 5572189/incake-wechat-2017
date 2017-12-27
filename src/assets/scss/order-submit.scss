@@ -1682,6 +1682,9 @@ body{
                 line-height: 80px;
                 border-bottom: 1px solid #dcdcdc;
                 text-indent: 1em;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
 
                 span {
                     display: inline-block;

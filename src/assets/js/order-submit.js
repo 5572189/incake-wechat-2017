@@ -920,6 +920,11 @@
 					if (status == 'complete') {
 						var tips = result.tips;
 
+						// 过滤掉没有详细地址信息的数据
+						tips = tips.filter(function(tip) {
+							return !(tip.id == '' || location == '');
+						});
+
 						if (tips.length == 0) {
 							$listElem.empty().hide();
 							return false;
@@ -933,8 +938,9 @@
 							_html += ' data-lng="' + tip.location.lng + '"';
 							_html += ' data-lat="' + tip.location.lat + '"';
 							_html += ' data-name="' + tip.name + '"';
-							_html += ' data-typecode="' + tip.typecode + '"';
-							_html += '>' + tip.name + '</li>';
+							_html += ' data-typecode="' + tip.typecode + '">';
+							_html += tip.name + '<span>' + tip.district + '</span>';
+							_html += '</li>';
 						});
 
 						$listElem.html(_html).show();
