@@ -26,13 +26,12 @@
 			<li class="active">
 				<a href="javascript:;">
 					<img src="{{item.linkimg}}"/>
-					<span></span>
 				</a>
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
-				<a href="javascript:;" class="confirm-btn">确定</a>
-				<a href="javascript:;" class="cancel-btn">取消</a>
+				<a href="javascript:;" class="confirm-btn">选择</a>
+				<a href="javascript:;" class="cancel-btn">取消选择</a>
 			</li>
 			{{else}}
 			<li>
@@ -42,13 +41,13 @@
 				<p><span>{{item.na}}</span> <span>{{item.en}}</span> </p>
 				<p>标签1 / 标签2 / 标签3</p>
 				<p>{{item.price}}/<span>{{item.number}}</span></p>
-				<a href="javascript:;" class="confirm-btn">确定</a>
-				<a href="javascript:;" class="btn cancel-btn">取消</a>
+				<a href="javascript:;" class="confirm-btn">选择</a>
+				<a href="javascript:;" class="btn cancel-btn">取消选择</a>
 			</li>
 			{{/if}} {{/each}}
 		</script>
-		<div class="confirm">
-			<a href="javascript:;" class="candle-dish">请选择数字蜡烛和餐盘</a>
+		<div class="confirm clearfix">
+			<a href="javascript:;" class="candle-dish">配件</a>
 			<a href="javascript:;">确认搭配</a>
 		</div>
 
