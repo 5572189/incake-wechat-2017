@@ -5,12 +5,14 @@ body{
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
+    padding-top: 20px;
     overflow: hidden;
 
 }
 #cake_list{
      background: #fff;
     .surprised{
+        padding-top: 15px;
         list-style: none;
         background: url("../imgs/shopping-cart/surprised.png") no-repeat;
         background-size: 100px 28px;
@@ -167,6 +169,7 @@ body{
 
     }
     .convention{
+        padding-top: 15px;
         list-style: none;
         background: url("../imgs/shopping-cart/convention.png") no-repeat;
         background-size: 100px 28px;
@@ -302,6 +305,7 @@ body{
     }
 
     .commodity{
+        padding-top: 15px;
         list-style: none;
         background: url("../imgs/shopping-cart/commodity.png") no-repeat;
         background-size: 100px 28px;
@@ -455,14 +459,17 @@ body{
         background-position: 700px 50px;
         line-height: 125px;
         text-indent: 25px;
-        >span{
+        span{
+            display: inline-block;
             color: #b4b4b4;
-            span:nth-of-type(4){
-                position: absolute;
-                left: 460px;
-                width: 200px;
-                text-align: right;
-            }
+            text-indent: 0.2em;
+        }
+
+        #show_contact {
+            position: absolute;
+            display: inline-block;
+            right: 90px;
+            text-align: right;
         }
     }
 }
@@ -1197,6 +1204,7 @@ body{
         right: 0;
         top: 0;
         width: 550px;
+        min-height: 100%;
         background: #f2f2f2;
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
@@ -1204,13 +1212,13 @@ body{
         >p:nth-of-type(1){
             margin-left: 40px;
             margin-top: 90px;
-            font-size: 24px; /*px*/
+            font-size: 30px; /*px*/
             font-weight: bold;
         }
         ul:nth-of-type(1){
             list-style: none;
             margin-left: 40px;
-            border-bottom: 2px solid #dcdcdc; /*no*/
+            border-bottom: 1px solid #dcdcdc; /*no*/
             padding-bottom: 40px;
             li{
                 position: relative;
@@ -1222,9 +1230,8 @@ body{
                 background: url("../imgs/order-submit/surprised-bg.png") no-repeat;
                 background-size: 235px 100px;
                 >p{
-                    font-size: 18px; /*px*/
+                    font-size: 24px; /*px*/
                     margin-top: 20px;
-//                  margin-left: 28px;
                     text-align: center;
                     color: #fff;
                 }
@@ -1264,7 +1271,7 @@ body{
         p:nth-of-type(2){
             margin-left: 40px;
             margin-top: 20px;
-            font-size: 24px;
+            font-size: 30px;
             font-weight: bold;
         }
         ul:nth-of-type(2){
@@ -1273,18 +1280,16 @@ body{
             border-bottom: 2px solid #c8c8c8;
             padding-bottom: 100px;
             li:nth-of-type(1){
-                width: 450px;
+                width: 480px;
                 height: 65px;
-//              border: 1px solid #dcdcdc;
-                margin-left: 20px;
                 margin-top: 30px;
                 input{
-                    width: 450px;
+                    width: 480px;
                     height: 65px;
                     outline: none;
                     border: 1px solid #b4b4b4; /*no*/
                     border-radius:10px ;
-                    font-size: 22px; /*px*/
+                    font-size: 24px; /*px*/
                     text-indent: 10px;
                     outline: none;
                 }
@@ -1296,7 +1301,7 @@ body{
                     display: block;
                     width: 230px;
                     height: 60px;
-                    font-size: 22px;
+                    font-size: 26px; /* px */
                     text-align: center;
                     line-height: 60px;
                     color: #fff;
@@ -1312,11 +1317,12 @@ body{
             left: 0;
             bottom: 0;
             width: 550px;
-            height: 70px;
+            height: 80px;
             text-align: center;
-            line-height: 70px;
+            line-height: 80px;
             background-color: #e9546b;
             color: #fff;
+            font-size: 30px; /* px */
         }
     }
 }
@@ -1485,7 +1491,7 @@ body{
 
         li {
             width: 100%;
-            padding: 18px 0;
+            padding: 30px 0;
             border-bottom: 1px solid #dcdcdc; /* no */
 
             &:last-of-type {
@@ -1845,8 +1851,8 @@ body{
                     border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
-                    font-size: 22px;
-                    text-indent: 20px;
+                    font-size: 28px;
+                    text-indent: 1em;
                 }
             }
             li:nth-of-type(2){
@@ -1856,8 +1862,8 @@ body{
                     border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
-                    font-size: 22px;
-                    text-indent: 20px;
+                    font-size: 28px;
+                    text-indent: 1em;
                 }
                 a{
                     position: absolute;
@@ -1870,6 +1876,7 @@ body{
                     line-height: 80px;
                     border-radius: 10px;
                     color: #fff;
+                    font-size: 28px;
                     background-color: #e9546b;
                 }
             }
@@ -1953,8 +1960,8 @@ body{
                     border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
-                    font-size: 22px;
-                    text-indent: 20px;
+                    font-size: 28px;
+                    text-indent: 1em;
                 }
             }
             li:nth-of-type(2){
@@ -1964,8 +1971,8 @@ body{
                     border: 1px solid #dcdcdc; /*no*/
                     border-radius: 10px;
                     outline: none;
-                    font-size: 22px;
-                    text-indent: 20px;
+                    font-size: 28px;
+                    text-indent: 1em;
                 }
                 a{
                     position: absolute;
@@ -1978,6 +1985,7 @@ body{
                     line-height: 80px;
                     border-radius: 10px;
                     color: #fff;
+                    font-size: 28px;
                     background-color: #e9546b;
                 }
             }
