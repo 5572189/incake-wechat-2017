@@ -26,7 +26,7 @@
 
 	// 母亲节留言弹框,惊喜弹框
 	function mother(){
-		
+
 		var $mother = $(".mother"),
 			$mother_shade=$(".mother-shade"),
 			$mother_popup=$(".mother-popup"),
@@ -46,7 +46,7 @@
 			$discount_ul=$("#discount-ul"),
 			$cash_coupon=$("#cash-coupon"),
 			$popup_confirm=$(".popup-confirm");
-		
+
 		// 优惠券点击弹框
 		$discount_coupon.on('click','a',function(){
 			$discount_shade.fadeIn(200, function(){
@@ -57,7 +57,7 @@
 			});
 			touchmove();
 		});
-		
+
 		// 优惠券弹框隐藏
 		$popup_confirm.click(function(){
 			$discount_popup.css({
@@ -67,7 +67,7 @@
 			$discount_shade.fadeOut(800);
 			removeTouchmove();
 		});
-		
+
 		$discount_shade.click(function(e){
 			if(e.target==$discount_shade[0]){
 				$discount_popup.css({
@@ -78,7 +78,7 @@
 			}
 			removeTouchmove();
 		});
-		
+
 		// 弹框里优惠券绑定事件
 		$discount_ul.on('click','li',function(){
 			if(!$(this).hasClass("active")){
@@ -88,7 +88,7 @@
 			}
 			removeTouchmove();
 		});
-		
+
 		$cash_coupon.on('click','li',function(){
 			$(this).addClass("active").siblings().removeClass("active");
 		});
@@ -468,7 +468,7 @@
 
     showbirthdayDom.addEventListener('click', function () {
       var bankSelect = new IosSelect(1,
-        [databirthday], 
+        [databirthday],
         {
           title: '生日牌',
           // 每一项的高度，可选，默认 35
@@ -670,7 +670,7 @@
     // 格式化月份
     function formatMonth(year) {
         var arr = [];
-        
+
         // 如果是当前年
         if (year == nowYear) {
             arr.push({
@@ -853,7 +853,7 @@
     var showbirthdayDom = document.querySelector('#birthdayCard');
     var birthdayIdDom = document.querySelector('#birthdayinput');
     var birthday_card_write = document.getElementsByClassName("birthday-card-write");
-	    
+
     showbirthdayDom.addEventListener('click', function () {
 
 	    var bankSelect = new IosSelect(1,
@@ -910,7 +910,7 @@
 			$inputElem.on('input focus', function(e) {
 				var _html = '';
 				var keywords = $(this).val().trim();
-				
+
 				if (keywords == '') {
 					$listElem.empty().hide();
 					return false;
@@ -963,7 +963,7 @@
 
 				$inputElem.val(data.name);
 				$listElem.hide();
-				
+
 				console.log(data);
 			});
 		})($('.add-address-layout'));
