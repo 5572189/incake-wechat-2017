@@ -1,0 +1,228 @@
+ul, li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: top;
+}
+
+.szone-page {
+  width: 100%;
+  background-color: #bb1c22;
+}
+
+.szone-banner {
+  width: 750px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.szone-container {
+  position: relative;
+  width: 750px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 750px;
+    height: 100%;
+    content: '';
+    background: {
+      image: url('../imgs/szone/body_bg.jpg');
+      repeat: no-repeat;
+      size: 100% auto;
+      position: top center;
+    }
+  }
+
+  .category {
+    position: relative;
+    z-index: 10;
+    width: 750px;
+    padding-top: 50px;
+  }
+
+  .category-title {
+    width: 570px;
+    height: 40px;
+    margin: 0 auto;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    }
+
+    &.cake {
+      background-image: url('../imgs/szone/category_title_cake.png');
+    }
+    &.tea {
+      background-image: url('../imgs/szone/category_title_tea.png');
+    }
+  }
+
+  .category-content {
+    width: 750px;
+  }
+
+  .section {
+    width: 750px;
+    padding-top: 60px;
+  }
+
+  .section-title {
+    width: 106px;
+    height: 48px;
+    margin: 0 auto;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    }
+
+    &.new {
+      background-image: url('../imgs/szone/section_title_new.png');
+    }
+    &.hot {
+      background-image: url('../imgs/szone/section_title_hot.png');
+    }
+  }
+
+  .section-content {
+    width: 640px;
+    padding-top: 60px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #ddd;
+
+    .cake {
+      float: left;
+      width: 270px;
+      padding-bottom: 58px;
+      margin: 0 25px;
+    }
+
+    .img {
+      display: block;
+      width: 268px;
+      height: 268px;
+      border: 1px solid #dadada;
+      border-radius: 40px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text {
+      width: 270px;
+      height: 200px;
+      padding-top: 20px;
+    }
+
+    .name {
+      width: 270px;
+
+      .cn {
+        height: 40px;
+        font-size: 28px; /* px */
+        line-height: 40px;
+        text-align: center;
+        color: #e9546b;
+      }
+
+      .en {
+        height: 20px;
+        font-size: 18px; /* px */
+        line-height: 20px;
+        text-align: center;
+        color: #bfbebe;
+      }
+    }
+
+    .unit-price {
+      padding-top: 20px;
+
+      .current {
+        height: 30px;
+        color: #e9546b;
+        line-height: 24px;
+        text-align: center;
+
+        span {
+          display: inline-block;
+        }
+        .price {
+          font-size: 24px; /* px */
+          font-weight: bold;
+
+          i {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px; /* px */
+          }
+        }
+        .pound {
+          font-size: 18px; /* px */
+        }
+      }
+
+      .original {
+        height: 20px;
+        color: #d8d8d8;
+        font-size: 18px; /* px */
+        line-height: 30px;
+        text-align: center;
+        text-decoration: line-through;
+      }
+    }
+
+    .btn-buy {
+      display: block;
+      width: 200px;
+      height: 48px;
+      margin: 20px auto 0;
+      font-size: 24px; /* px */
+      color: #fff;
+      background-color: #497bfc;
+      text-align: center;
+      line-height: 48px;
+      border-radius: 24px;
+    }
+  }
+
+  #teaList {
+    border-bottom: none;
+
+    .text {
+      height: 130px;
+    }
+  }
+}
+
+.szone-rule {
+  width: 750px;
+  background-color: #940f14;
+
+  dl {
+    width: 710px;
+    margin: 0 auto;
+    padding: 50px 0;
+    color: #fff;
+  }
+
+  dt {
+    padding-bottom: 18px;
+    font-size: 28px; /* px */
+    line-height: 40px;
+    text-align: center;
+  }
+  dd {
+    font-size: 20px; /* px */
+    line-height: 40px;
+  }
+}
