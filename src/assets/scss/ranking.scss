@@ -1,0 +1,180 @@
+.ranking-page {
+  width: 100%;
+  background: {
+    image: url('../imgs/ranking/body_bg.jpg');
+  }
+
+  img {
+    border: none;
+    vertical-align: top;
+  }
+}
+
+.ranking-banner {
+  width: 750px;
+}
+
+.top-container {
+  width: 750px;
+
+  &.top3 {
+    width: 690px;
+    margin: 0 auto;
+    padding: 50px 0 100px;
+  }
+
+  &.top-last {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 710px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+}
+
+.top-item {
+  position: relative;
+  width: 306px;
+
+  img {
+    width: 100%;
+  }
+
+  .rank {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    }
+
+    &.rank-01 {
+      background-image: url('../imgs/ranking/icon_top1.png');
+    }
+    &.rank-02 {
+      background-image: url('../imgs/ranking/icon_top2.png');
+    }
+    &.rank-03 {
+      background-image: url('../imgs/ranking/icon_top3.png');
+    }
+    &.rank-04 {
+      background-image: url('../imgs/ranking/icon_top4.png');
+    }
+    &.rank-05 {
+      background-image: url('../imgs/ranking/icon_top5.png');
+    }
+    &.rank-06 {
+      background-image: url('../imgs/ranking/icon_top6.png');
+    }
+    &.rank-07 {
+      background-image: url('../imgs/ranking/icon_top7.png');
+    }
+    &.rank-08 {
+      background-image: url('../imgs/ranking/icon_top8.png');
+    }
+    &.rank-09 {
+      background-image: url('../imgs/ranking/icon_top9.png');
+    }
+  }
+
+  .img {
+    display: block;
+    position: relative;
+    width: 306px;
+    height: 290px;
+  }
+
+  .text {
+    width: 306px;
+    height: 68px;
+  }
+
+  .btn-buy {
+    display: block;
+    width: 210px;
+    height: 52px;
+    background: {
+      image: url('../imgs/ranking/btn_buy.png');
+      repeat: no-repeat;
+      position: 0 0;
+    }
+
+    &:active {
+      background-position: -210px 0;
+    }
+  }
+}
+
+.top3 .top-item {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  margin-top: 100px;
+
+  .rank {
+    width: 110px;
+    height: 110px;
+    top: -84px;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    width: 352px;
+    height: 215px;
+  }
+
+  .text {
+    position: absolute;
+    top: 27px;
+    width: 360px;
+    height: 114px;
+  }
+
+  .btn-buy {
+    position: absolute;
+    top: 140px;
+  }
+
+  &.normal .rank {
+    left: 0;
+  }
+  &.normal .img {
+    left: 0;
+  }
+  &.normal .text {
+    right: 0;
+  }
+  &.normal .btn-buy {
+    right: 75px;
+  }
+
+  &.reverse .rank {
+    right: 0;
+  }
+  &.reverse .img {
+    right: 0;
+  }
+  &.reverse .text {
+    left: 0;
+  }
+  &.reverse .btn-buy {
+    left: 75px;
+  }
+}
+
+.top-last .top-item {
+  padding-bottom: 50px;
+
+  .rank {
+    top: 0;
+    left: 30px;
+  }
+
+  .btn-buy {
+    margin: 10px auto 0;
+  }
+}

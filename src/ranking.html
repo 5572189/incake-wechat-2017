@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<title>INCAKE | 人气排行</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/ranking.css" />
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <!-- ranking page begin -->
+  <div class="page ranking-page" id="rankingPage">
+    <div class="page-container">
+
+        <!-- ranking banner begin -->
+        <div class="ranking-banner">
+          <img src="assets/imgs/ranking/banner.jpg" alt="">
+        </div>
+        <!-- ranking banner end -->
+
+        <!-- top 3 begin -->
+        <div class="top-container top3">
+          <div class="top-item normal">
+            <span class="rank rank-01"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top1.png" alt="Top 1">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top1.png" alt="玛格丽特">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item reverse">
+              <span class="rank rank-02"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top2.png" alt="Top 2">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top2.png" alt="至爱红丝绒">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item normal">
+              <span class="rank rank-03"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top3.png" alt="Top 3">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top3.png" alt="经典奶香">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+        </div>
+        <!-- top 3 end -->
+
+        <!-- top last begin -->
+        <div class="top-container top-last">
+          <div class="top-item">
+            <span class="rank rank-04"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top4.png" alt="Top 4">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top4.png" alt="抹茶利兹">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item">
+            <span class="rank rank-05"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top5.png" alt="Top 5">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top5.png" alt="奶香巧克力">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item">
+            <span class="rank rank-06"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top6.png" alt="Top 6">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top6.png" alt="女王芝士">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item">
+            <span class="rank rank-07"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top7.png" alt="Top 7">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top7.png" alt="提拉米苏">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item">
+            <span class="rank rank-08"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top8.png" alt="Top 8">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top8.png" alt="经典双拼">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+          <div class="top-item">
+            <span class="rank rank-09"></span>
+            <a href="javascript:;" class="img">
+              <img src="assets/imgs/ranking/img_top9.png" alt="Top 9">
+            </a>
+            <div class="text">
+              <img src="assets/imgs/ranking/text_top9.png" alt="爱丁堡之恋">
+            </div>
+            <a href="javascript:;" class="btn-buy"></a>
+          </div>
+        </div>
+        <!-- top last end -->
+
+    </div>
+  </div>
+  <!-- ranking page end -->
+
+  <!-- loading scripts -->
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+			.script('assets/jquery/jquery-3.1.1.min.js').wait()
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/js/common.js').wait();
+	</script>
+</body>
+
+</html>

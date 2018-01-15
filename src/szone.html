@@ -97,7 +97,7 @@
       <script id="tplListHot" type="text/html">
         {{if list.length > 0}}
         <div class="section">
-          <div class="section-title new"></div>
+          <div class="section-title hot"></div>
           <!-- 热卖列表 begin -->
           <ul class="section-content clearfix">
             {{each list as item i}}
@@ -136,9 +136,8 @@
         <div class="category-title tea"></div>
         <div class="category-content">
           <div class="section">
-            <div class="section-title new"></div>
             <!-- 下午茶列表 begin -->
-            <ul class="section-content clearfix">
+            <ul class="section-content clearfix" id="teaList">
               {{each list as item i}}
               <li class="cake">
                 <a class="img" href="{{item.link}}">
