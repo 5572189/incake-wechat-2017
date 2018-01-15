@@ -35,34 +35,12 @@
         <!-- 蛋糕类 begin -->
         <div class="category">
           <div class="category-title cake"></div>
-          <div class="category-content">
-            <div class="section">
-              <div class="section-title new"></div>
-              <!-- 新品列表 begin -->
-              <ul class="section-content clearfix" id="newList"></ul>
-              <!-- 新品列表 end -->
-            </div>
-            <div class="section">
-              <div class="section-title hot"></div>
-              <!-- 热卖列表 begin -->
-              <ul class="section-content clearfix" id="hotList"></ul>
-              <!-- 热卖列表 end -->
-            </div>
-          </div>
+          <div class="category-content" id="cakeCategory"></div>
         </div>
         <!-- 蛋糕类 end -->
 
         <!-- 下午茶 begin -->
-        <div class="category">
-          <div class="category-title tea"></div>
-          <div class="category-content">
-            <div class="section">
-              <!-- 下午茶列表 begin -->
-              <ul class="section-content clearfix" id="teaList"></ul>
-              <!-- 下午茶列表 end -->
-            </div>
-          </div>
-        </div>
+        <div class="category" id="teaCategory"></div>
         <!-- 下午茶 end -->
 
       </div>
@@ -78,33 +56,119 @@
       </div>
       <!-- rule end -->
 
-      <!-- 列表模板 begin -->
-      <script id="tplList" type="text/html">
-        {{each list as item i}}
-        <li class="cake">
-          <a class="img" href="{{item.link}}">
-            <img src="{{item.img}}">
-          </a>
-          <div class="text">
-            <div class="name">
-              <p class="cn">{{item.name.cn}}</p>
-              <p class="en">{{item.name.en}}</p>
-            </div>
-            {{each item.units as unit j}}
-            <div class="unit-price">
-              <p class="current">
-                <span class="price"><i>￥</i>{{unit.currentPrice}}</span>
-                <span class="pound">/{{unit.pound}}</span>
-              </p>
-              <p class="original">￥{{unit.originalPrice}}/{{unit.pound}}</p>
-            </div>
+      <!-- 新品列表模板 begin -->
+      <script id="tplListNew" type="text/html">
+        {{if list.length > 0}}
+        <div class="section">
+          <div class="section-title new"></div>
+          <!-- 新品列表 begin -->
+          <ul class="section-content clearfix">
+            {{each list as item i}}
+            <li class="cake">
+              <a class="img" href="{{item.link}}">
+                <img src="{{item.img}}">
+              </a>
+              <div class="text">
+                <div class="name">
+                  <p class="cn">{{item.name.cn}}</p>
+                  <p class="en">{{item.name.en}}</p>
+                </div>
+                {{each item.units as unit j}}
+                <div class="unit-price">
+                  <p class="current">
+                    <span class="price"><i>￥</i>{{unit.currentPrice}}</span>
+                    <span class="pound">/{{unit.pound}}</span>
+                  </p>
+                  <p class="original">￥{{unit.originalPrice}}/{{unit.pound}}</p>
+                </div>
+                {{/each}}
+              </div>
+              <a href="{{item.link}}" class="btn-buy">立即购买</a>
+            </li>
             {{/each}}
-          </div>
-          <a href="{{item.link}}" class="btn-buy">立即购买</a>
-        </li>
-        {{/each}}
+          </ul>
+          <!-- 新品列表 end -->
+        </div>
+        {{/if}}
       </script>
-      <!-- 列表模板 end -->
+      <!-- 新品列表模板 end -->
+
+      <!-- 热卖列表模板 begin -->
+      <script id="tplListHot" type="text/html">
+        {{if list.length > 0}}
+        <div class="section">
+          <div class="section-title new"></div>
+          <!-- 热卖列表 begin -->
+          <ul class="section-content clearfix">
+            {{each list as item i}}
+            <li class="cake">
+              <a class="img" href="{{item.link}}">
+                <img src="{{item.img}}">
+              </a>
+              <div class="text">
+                <div class="name">
+                  <p class="cn">{{item.name.cn}}</p>
+                  <p class="en">{{item.name.en}}</p>
+                </div>
+                {{each item.units as unit j}}
+                <div class="unit-price">
+                  <p class="current">
+                    <span class="price"><i>￥</i>{{unit.currentPrice}}</span>
+                    <span class="pound">/{{unit.pound}}</span>
+                  </p>
+                  <p class="original">￥{{unit.originalPrice}}/{{unit.pound}}</p>
+                </div>
+                {{/each}}
+              </div>
+              <a href="{{item.link}}" class="btn-buy">立即购买</a>
+            </li>
+            {{/each}}
+          </ul>
+          <!-- 热卖列表 end -->
+        </div>
+        {{/if}}
+      </script>
+      <!-- 热卖列表模板 end -->
+
+      <!-- 下午茶列表模板 begin -->
+      <script id="tplListTea" type="text/html">
+        {{if list.length > 0}}
+        <div class="category-title tea"></div>
+        <div class="category-content">
+          <div class="section">
+            <div class="section-title new"></div>
+            <!-- 下午茶列表 begin -->
+            <ul class="section-content clearfix">
+              {{each list as item i}}
+              <li class="cake">
+                <a class="img" href="{{item.link}}">
+                  <img src="{{item.img}}">
+                </a>
+                <div class="text">
+                  <div class="name">
+                    <p class="cn">{{item.name.cn}}</p>
+                    <p class="en">{{item.name.en}}</p>
+                  </div>
+                  {{each item.units as unit j}}
+                  <div class="unit-price">
+                    <p class="current">
+                      <span class="price"><i>￥</i>{{unit.currentPrice}}</span>
+                      <span class="pound">/{{unit.pound}}</span>
+                    </p>
+                    <p class="original">￥{{unit.originalPrice}}/{{unit.pound}}</p>
+                  </div>
+                  {{/each}}
+                </div>
+                <a href="{{item.link}}" class="btn-buy">立即购买</a>
+              </li>
+              {{/each}}
+            </ul>
+            <!-- 下午茶列表 end -->
+          </div>
+        </div>
+        {{/if}}
+      </script>
+      <!-- 下午茶列表模板 end -->
 
     </div>
   </div>
