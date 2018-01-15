@@ -99,11 +99,8 @@
     background: {
       image: url('../imgs/ranking/btn_buy.png');
       repeat: no-repeat;
-      position: 0 0;
-    }
-
-    &:active {
-      background-position: -210px 0;
+      size: cover;
+      position: center center;
     }
   }
 }
