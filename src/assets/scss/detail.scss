@@ -160,6 +160,26 @@ $loc-triangle-bgcolor: #f0f0f0;
                     line-height: 60px;
                     margin: 0 10px;
                     border-radius: 5px;
+
+                    &.special {
+                        position: relative;
+
+                        &:after {
+                            display: block;
+                            position: absolute;
+                            top: -15px;
+                            right: -16px;
+                            content: '';
+                            width: 48px;
+                            height: 42px;
+                            background: {
+                                image: url('../imgs/detail/icon_special.png');
+                                repeat: no-repeat;
+                                size: cover;
+                                position: center center;
+                            }
+                        }
+                    }
                 }
                 .active{
                     color: #e9546b;
