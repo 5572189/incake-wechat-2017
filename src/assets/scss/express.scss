@@ -180,9 +180,17 @@
         color: #e9546b;
         background-color: #f1f1f1;
         border: 2px solid #f1f1f1;
+        border-radius: 5px;
+        overflow: hidden;
 
         &.active {
-          background-color: #fff;
+          background: {
+            image: url("../imgs/index/norms.png");
+            repeat: no-repeat;
+            size: 45px 45px;
+            position: 100% 100%;
+            color: #fff;
+          }
           border-color: #e9546b;
         }
       }
@@ -239,6 +247,12 @@
           border-radius: 50%;
         }
 
+        span {
+          width: 110px;
+          border-radius: 5px;
+          text-align: center;
+        }
+
         .minus {
           background-image: url('../imgs/index/subtract.png');
 
@@ -251,16 +265,12 @@
         }
 
         .amount {
-          width: 110px;
           font-size: 24px; /* px */
-          text-align: center;
           background-color: #f1f1f1;
         }
 
         .price {
-          width: 110px;
           font-size: 26px; /* px */
-          text-align: center;
           color: #fff;
           background-color: #e9546a;
         }
