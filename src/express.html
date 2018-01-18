@@ -6,7 +6,7 @@
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="yes" name="apple-touch-fullscreen">
 	<meta content="telephone=no,email=no" name="format-detection">
-	<title>INCAKE | 特惠商城</title>
+	<title>INCAKE | 当日送</title>
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="apple-touch-icon" href="favicon.png">
 	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
@@ -33,6 +33,33 @@
       <ul class="express-container clearfix" id="expressContainer"></ul>
       <!-- body end -->
 
+      <!-- modal begin -->
+      <div class="modal" id="modal">
+        <div class="modal-wrapper">
+          <a href="javascript:;" class="modal-close"></a>
+          <h2 class="modal-header"></h2>
+          <div class="modal-container">
+            <p class="tip">请选择您要购买的磅数和数量</p>
+            <ul class="spec"></ul>
+            <ul class="desc"></ul>
+            <div class="count-wrapper clearfix">
+              <div class="title">数量</div>
+              <div class="counter">
+                <a href="javascript:;" class="minus"></a>
+                <span class="amount"></span>
+                <span class="price"></span>
+                <a href="javascript:;" class="add"></a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="javascript:;" class="btn-cancel">取消</a>
+            <a href="javascript:;" class="btn-pay">去结算</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal end -->
+
       <!-- 当日送列表模板 begin -->
       <script id="tplExpress" type="text/html">
         {{each list as item}}
@@ -43,9 +70,9 @@
           <div class="text">
             <p class="cn">{{item.cn}}</p>
             <p class="en">{{item.en}}</p>
-            <p class="pound">{{item.pounds.join('/')}}{{item.unit}}</p>
+            <p class="pound">{{item.pounds.map(function(p){return p.pound;}).join('/')}}{{item.unit}}</p>
           </div>
-          <a href="{{item.link}}" class="btn-buy">立即购买</a>
+          <a href="{{item.link}}" class="btn-buy" data-item="{{item | itemFormat}}">立即购买</a>
         </li>
         {{/each}}
       </script>

@@ -107,3 +107,191 @@
     }
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 590px;
+    padding: 30px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+
+  .modal-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 26px;
+    height: 26px;
+    background: {
+      image: url('../imgs/index/close.png');
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    }
+  }
+
+  .modal-header {
+    width: 100%;
+    font-weight: normal;
+    font-size: 40px; /* px */
+    color: #1090b0;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .modal-container {
+    width: 100%;
+    padding-top: 20px;
+    color: #505050;
+
+    .tip {
+      font-size: 30px; /* px */
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .spec {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      width: 100%;
+      padding: 30px 0;
+
+      li {
+        width: 116px;
+        height: 52px;
+        margin: 0 6px;
+        font-size: 24px; /* px */
+        line-height: 56px;
+        text-align: center;
+        color: #e9546b;
+        background-color: #f1f1f1;
+        border: 2px solid #f1f1f1;
+
+        &.active {
+          background-color: #fff;
+          border-color: #e9546b;
+        }
+      }
+    }
+
+    .desc {
+      width: 510px;
+      margin: 0 auto;
+
+      li {
+        list-style: disc;
+        font-size: 24px; /* px */
+        line-height: 40px;
+      }
+    }
+
+    .count-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 0;
+
+      div {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .title {
+        font-size: 26px; /* px */
+        line-height: 56px;
+      }
+
+      .counter {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        height: 56px;
+
+        a, span {
+          display: block;
+          height: 56px;
+          margin: 0 8px;
+          line-height: 56px;
+        }
+
+        a {
+          width: 56px;
+          background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center center;
+          }
+          border-radius: 50%;
+        }
+
+        .minus {
+          background-image: url('../imgs/index/subtract.png');
+
+          &.disabled {
+            background-image: url('../imgs/index/subtract-gay.png');
+          }
+        }
+        .add {
+          background-image: url('../imgs/index/add.png');
+        }
+
+        .amount {
+          width: 110px;
+          font-size: 24px; /* px */
+          text-align: center;
+          background-color: #f1f1f1;
+        }
+
+        .price {
+          width: 110px;
+          font-size: 26px; /* px */
+          text-align: center;
+          color: #fff;
+          background-color: #e9546a;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+
+    > a {
+      display: block;
+      width: 230px;
+      height: 68px;
+      margin: 0 10px;
+      font-size: 32px; /* px */
+      line-height: 68px;
+      text-align: center;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .btn-cancel {
+      background-color: #f1b3be;
+    }
+    .btn-pay {
+      background-color: #e9546a;
+    }
+  }
+}
