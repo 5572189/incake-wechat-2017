@@ -202,34 +202,6 @@ template.helper('itemFormat', function(item) {
           ],
           unit: '磅',
           link: 'javascript:;'
-        },
-        {
-          id: 8,
-          img: 'assets/imgs/express/cake_08.jpg',
-          cn: '奶香巧克力',
-          en: 'CHOCOLATE CAKE',
-          pounds: [
-            {
-              pound: 1.2,
-              price: 189,
-              desc: [
-                '14CM*14CM*4.5CM≈6寸，约510g',
-                '免费赠送5份餐具',
-                '适合4~5人食用'
-              ]
-            },
-            {
-              pound: 2.2,
-              price: 279,
-              desc: [
-                '17.5CM*17.5CM*4.5CM≈8寸，约950g',
-                '免费赠送10份餐具',
-                '适合7~8人食用'
-              ]
-            }
-          ],
-          unit: '磅',
-          link: 'javascript:;'
         }
       ]
     };
