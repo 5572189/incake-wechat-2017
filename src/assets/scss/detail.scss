@@ -126,6 +126,54 @@ $loc-triangle-bgcolor: #f0f0f0;
         color: #e9546b;
         font-size: 20px;/*px*/
     }
+    .express-tip {
+        width: 750px;
+        margin-top: 10px;
+
+        .content {
+            width: 670px;
+            padding: 0 0 20px 0;
+            margin: 0 auto;
+            background: {
+                image: url('../imgs/detail/express_tip_bg.png');
+                repeat: no-repeat;
+                size: 84px 24px;
+            }
+
+            p {
+                width: 570px;
+                margin-left: auto;
+                font-size: 18px !important; /*px*/
+                line-height: 28px;
+                color: #fa294a;
+            }
+        }
+
+        .link {
+            display: block;
+            width: 750px;
+            background-color: #ffe3e7;
+
+            > span {
+                display: block;
+                width: 670px;
+                margin: 0 auto;
+                padding: 15px 0;
+                line-height: 40px;
+                font-size: 22px;/*px*/
+                color: #333;
+            }
+
+            i {
+                font-style: normal;
+                color: #fa294a;
+            }
+            .arrow {
+                float: right;
+                color: #333;
+            }
+        }
+    }
 }
 
 .name_content{
