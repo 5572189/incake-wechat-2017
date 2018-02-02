@@ -1,0 +1,34 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.hotest-page {
+  width: 750px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #f9edd0;
+}
+
+.page-container {
+  width: 100%;
+
+  img {
+    width: 100%;
+    border: none;
+    vertical-align: top;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .img {
+    width: 579px;
+    margin: 0 auto;
+  }
+
+  .btn-buy {
+    display: block;
+  }
+}
