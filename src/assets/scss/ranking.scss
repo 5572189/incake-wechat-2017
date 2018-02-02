@@ -1,8 +1,7 @@
 .ranking-page {
-  width: 100%;
-  background: {
-    image: url('../imgs/ranking/body_bg.jpg');
-  }
+  width: 750px;
+  margin: 0 auto;
+  background-color: #fff;
 
   img {
     border: none;
@@ -15,33 +14,27 @@
 }
 
 .top-container {
-  width: 750px;
-
-  &.top3 {
-    width: 690px;
-    margin: 0 auto;
-    padding: 50px 0 100px;
-  }
+  width: 660px;
+  margin: 0 auto;
 
   &.top-last {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    width: 710px;
-    margin: 0 auto;
     padding-bottom: 100px;
   }
 }
 
 .top-item {
   position: relative;
-  width: 306px;
+  width: 100%;
+  height: 136px;
+  padding: 20px 0;
+  border-bottom: 1px solid #aaa;
 
   img {
     width: 100%;
   }
 
   .rank {
+    display: none;
     position: absolute;
     width: 84px;
     height: 84px;
@@ -82,20 +75,27 @@
 
   .img {
     display: block;
-    position: relative;
-    width: 306px;
-    height: 290px;
+    position: absolute;
+    top: 20px;
+    left: 48px;
+    width: 136px;
+    height: 136px;
   }
 
   .text {
-    width: 306px;
-    height: 68px;
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    height: 136px;
   }
 
   .btn-buy {
     display: block;
-    width: 210px;
-    height: 52px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 225px;
+    height: 136px;
     background: {
       image: url('../imgs/ranking/btn_buy.png');
       repeat: no-repeat;
@@ -108,70 +108,61 @@
 .top3 .top-item {
   position: relative;
   width: 100%;
-  height: 215px;
-  margin-top: 100px;
+  height: 179px;
 
   .rank {
-    width: 110px;
-    height: 110px;
-    top: -84px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 33px;
+    width: 23px;
+    height: 26px;
+    margin-top: -13px;
   }
 
   .img {
     position: absolute;
-    top: 0;
-    width: 352px;
-    height: 215px;
+    top: 20px;
+    left: 103px;
+    width: 206px;
+    height: 179px;
   }
 
   .text {
     position: absolute;
-    top: 27px;
-    width: 360px;
-    height: 114px;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    height: 120px;
   }
 
   .btn-buy {
+    display: block;
     position: absolute;
     top: 140px;
+    right: 94px;
+    width: 160px;
+    height: 46px;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center center;
+    }
   }
 
-  &.normal .rank {
-    left: 0;
+  &:nth-of-type(1) .btn-buy {
+    background-image: url('../imgs/ranking/btn_buy_01.png');
   }
-  &.normal .img {
-    left: 0;
+  &:nth-of-type(2) .btn-buy {
+    background-image: url('../imgs/ranking/btn_buy_02.png');
   }
-  &.normal .text {
-    right: 0;
-  }
-  &.normal .btn-buy {
-    right: 75px;
-  }
-
-  &.reverse .rank {
-    right: 0;
-  }
-  &.reverse .img {
-    right: 0;
-  }
-  &.reverse .text {
-    left: 0;
-  }
-  &.reverse .btn-buy {
-    left: 75px;
+  &:nth-of-type(3) .btn-buy {
+    background-image: url('../imgs/ranking/btn_buy_03.png');
   }
 }
 
 .top-last .top-item {
-  padding-bottom: 50px;
-
-  .rank {
-    top: 0;
-    left: 30px;
-  }
-
-  .btn-buy {
-    margin: 10px auto 0;
+  .text {
+    left: 184px;
   }
 }
