@@ -377,7 +377,6 @@
 					</li>
 				</ul>
 			</div>
-
 			<div class="form-item item-line" id="selectContact">
 				<div class="pc-box">
 					<input type="hidden" name="contact_province_code" data-id="0001" id="contact_province_code" value="" data-province-name="">
@@ -392,6 +391,9 @@
 					<li>江裕大厦</li>
 				</ul>
 			</div>
+			<div class="address-ext">
+				<input type="text" placeholder="请输入门牌号">
+			</div>
 			<div id="center">
 				<ul class="clearfix">
 					<li class="delivery-area">
@@ -405,6 +407,26 @@
 			<div class="footer">
 				<a href="javascript:;">提交</a>
 			</div>
+
+			<!-- 地址不在配送范围提示框 -->
+			<div class="out-service-tip">
+				<div class="out-service">
+					<p>对不起，您选择的地址不在配送范围内，请重新选择！</p>
+					<a href="javascript:;" class="btn-confirm">确定</a>
+				</div>
+			</div>
+
+			<!-- 地址与选择的不匹配提示框 -->
+			<div class="unmatch-tip">
+				<div class="unmatch">
+					<p>您填入的地址与下拉框中的不一致，是否将下拉框中的地址切换到您选择的地址？</p>
+					<div class="btns clearfix">
+						<a href="javascript:;" class="btn-cancel">取消</a>
+						<a href="javascript:;" class="btn-switch">确认切换</a>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 

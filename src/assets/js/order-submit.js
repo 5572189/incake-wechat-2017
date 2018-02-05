@@ -895,7 +895,10 @@
 			// Doms
 			var $addrElem = $layout.find('.address'),
 				$inputElem = $addrElem.find('input'),
-				$listElem = $addrElem.find('.search-addrlist');
+				$listElem = $addrElem.find('.search-addrlist'),
+				$submitElem = $layout.find('.footer a'),
+				$outServiceElem = $layout.find('.out-service-tip'),
+				$unmatchElem = $layout.find('.unmatch-tip');
 
 			// Amap variables
 			var autocomplete = null;
@@ -943,6 +946,11 @@
 							_html += '</li>';
 						});
 
+						// 将提交按钮禁用
+						$submitElem.addClass('disabled').on('click.disabled', function(e) {
+							e.preventDefault();
+							e.stopPropagation();
+						});
 						$listElem.html(_html).show();
 					}
 				});
@@ -961,10 +969,42 @@
 					typecode: $elem.data('typecode')
 				};
 
+				// 验证地址合法性
+				// 1.是否在配送范围内
+				var isInService = true;
+				if (!isInService) {
+					$outServiceElem.fadeIn();
+					return false;
+				}
+
+				// 2.与下拉框选择的市/区是否匹配
+				var isMatch = false;
+				if (!isMatch) {
+					$unmatchElem.fadeIn();
+					return false;
+				}
+
 				$inputElem.val(data.name);
 				$listElem.hide();
 
+				// 启用提交按钮
+				$submitElem.removeClass('disabled').off('.disabled');
 				console.log(data);
+			});
+
+			// 关闭超出配送范围提示
+			$outServiceElem.on('click', '.btn-confirm', function(e) {
+				$outServiceElem.fadeOut();
+			});
+
+			// 关闭地址不匹配提示
+			$unmatchElem.on('click', '.btn-cancel', function(e) {
+				$unmatchElem.fadeOut();
+			});
+
+			// 地址不匹配，确定切换
+			$unmatchElem.on('click', '.btn-switch', function(e) {
+				// todo 切换逻辑
 			});
 		})($('.add-address-layout'));
 

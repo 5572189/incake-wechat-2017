@@ -1620,26 +1620,26 @@ body{
         background: #fff;
         overflow: hidden;
         .data{
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                border-bottom: 1px solid #dcdcdc;
-            }
-            .data span{
-                display: block;
-                width: 248px;
-                height: 110px;
-                line-height: 110px;
-                padding-left: 30px;
-                border-right: 1px solid #dcdcdc;
-                background: url("../imgs/add-address/down.png") no-repeat;
-                background-position-x: 200px;
-                background-position-y: center;
-                background-size: 25px 15px;
-            }
-            .data span:last-child{
-                border: none;
-            }
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: 1px solid #dcdcdc;
+        }
+        .data span{
+            display: block;
+            width: 248px;
+            height: 110px;
+            line-height: 110px;
+            padding-left: 30px;
+            border-right: 1px solid #dcdcdc;
+            background: url("../imgs/add-address/down.png") no-repeat;
+            background-position-x: 200px;
+            background-position-y: center;
+            background-size: 25px 15px;
+        }
+        .data span:last-child{
+            border: none;
+        }
     }
     .address{
         position: relative;
@@ -1649,6 +1649,7 @@ body{
         height: 110px;
         background: #fff;
         border-top: 1px solid #dcdcdc;
+        border-bottom: none;
         span{
             line-height: 110px;
             padding-left: 30px;
@@ -1695,6 +1696,28 @@ body{
                     line-height: 80px;
                 }
             }
+        }
+    }
+    .address-ext {
+        position: relative;
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+        height: 110px;
+        background: #fff;
+        border-top: 1px solid #dcdcdc;
+
+        input{
+            position: absolute;
+            // right: 85px;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            border: none;
+            // text-align: right;
+            outline-style: none;
+            text-indent: 1em;
         }
     }
     #center{
@@ -1760,7 +1783,6 @@ body{
         margin-top: 100px;
         height: 100px;
         overflow: hidden;
-        background: #e9546b;
         a{
             display: block;
             max-width: 750px;
@@ -1769,6 +1791,110 @@ body{
             text-align: center;
             line-height: 100px;
             color: #fff;
+            background: #e9546b;
+
+            &.disabled {
+                background-color: #ddd;
+                color: #333;
+            }
+        }
+    }
+
+    .out-service-tip {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+
+        .out-service {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #e7566d;
+            border-radius: 5px;
+
+            p {
+                width: 540px;
+                margin: 0 auto;
+                padding: 50px 0;
+                font-size: 26px; /* px */
+                line-height: 40px;
+                text-align: center;
+                color: #333;
+            }
+            a {
+                display: block;
+                width: 220px;
+                height: 60px;
+                margin: 30px auto;
+                line-height: 60px;
+                text-align: center;
+                color: #fff;
+                background-color: #e7566d;
+            }
+        }
+    }
+
+    .unmatch-tip {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+
+        .unmatch {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #e7566d;
+            border-radius: 5px;
+
+            p {
+                width: 540px;
+                margin: 0 auto;
+                padding: 50px 0;
+                font-size: 26px; /* px */
+                line-height: 40px;
+                text-align: center;
+                color: #333;
+            }
+            .btns {
+                width: 100%;
+                padding-top: 30px;
+
+                a {
+                    display: block;
+                    width: 50%;
+                    height: 80px;
+                    line-height: 80px;
+                    text-align: center;
+                    color: #fff;
+
+                    &.btn-cancel {
+                        float: left;
+                        background-color: #f1b4be;
+                    }
+                    &.btn-switch {
+                        float: right;
+                        background-color: #e7566d;
+                    }
+                }
+            }
         }
     }
 }
