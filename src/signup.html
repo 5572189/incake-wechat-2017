@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+
+	<title>INCAKE | 新用户注册</title>
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/signup.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+
+	<!-- signup page begin -->
+	<div class="signup-page">
+    <div class="banner">
+      <img src="assets/imgs/signup/banner.jpg" alt="">
+    </div>
+    <ul class="signup-form" id="signupForm">
+      <li class="input-group">
+        <input type="number" class="txt-mobile" placeholder="请输入手机号">
+      </li>
+      <li class="input-group vcode clearfix">
+        <input type="number" class="txt-vcode" placeholder="请输入验证码">
+        <a href="javascript:;" class="btn-vcode">获取验证码</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="btn-confirm">点击领取</a>
+      </li>
+    </ul>
+    <p class="tip">此优惠券，仅限正价产品订购使用</p>
+    <p class="flavor">关注 “INCAKE订购” 公众号，更多优惠等你来！</p>
+	</div>
+  <!-- signup page end -->
+
+  <!-- 领取成功提示 -->
+  <div class="success-tip" id="succTip">
+    <div class="success">
+      <img src="assets/imgs/signup/success_msg.jpg" alt="">
+      <a href="javascript:;" class="btn-ok">确定</a>
+    </div>
+  </div>
+
+	<!-- loading scripts begin -->
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+			.script('assets/plugins/jquery/jquery-3.1.1.min.js').wait()
+			.script('assets/js/common.js').wait()
+			.script('assets/js/signup.js');
+	</script>
+	<!-- loading scripts end -->
+</body>
+
+</html>
