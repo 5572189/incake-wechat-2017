@@ -1,0 +1,66 @@
+.valentine-page {
+  width: 750px;
+
+  img {
+    width: 100%;
+    border: none;
+    vertical-align: top;
+  }
+}
+
+.valentine-banner {
+  width: 750px;
+}
+
+.valentine-container {
+  width: 750px;
+
+  .cake {
+    position: relative;
+    width: 750px;
+
+    .btn {
+      display: block;
+      position: absolute;
+      z-index: 9;
+      width: 140px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 22px; /* px */
+      text-align: center;
+      color: #fff;
+      background-color: #ec243f;
+      border-radius: 5px;
+    }
+
+    &.cake01 {
+      .fire {
+        position: absolute;
+        top: 0;
+        left: -40px;
+        z-index: 1;
+        width: 412px;
+        height: 412px;
+      }
+      .btn {
+        right: 190px;
+        bottom: 106px;
+        transform: rotate(-4deg);
+      }
+    }
+    &.cake02 {
+      .btn {
+        left: 190px;
+        bottom: 106px;
+        transform: rotate(4deg);
+      }
+    }
+    &.cake03 {
+      .btn {
+        right: 190px;
+        bottom: 226px;
+        transform: rotate(-4deg);
+      }
+    }
+  }
+}

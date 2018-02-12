@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<title>INCAKE | 情人节</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="assets/plugins/normalize/normalize.css" />
+	<link rel="stylesheet" href="assets/css/global.css" />
+	<link rel="stylesheet" href="assets/css/valentine.css" />
+	<!-- flexible.js 建议做内联处理，请勿移动位置 -->
+	<script src="assets/plugins/lib-flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <!-- valentine page begin -->
+  <div class="page valentine-page" id="valentinePage">
+    <div class="page-container">
+
+        <!-- valentine banner begin -->
+        <div class="valentine-banner">
+          <img src="assets/imgs/valentine/banner.jpg" alt="">
+        </div>
+        <!-- valentine banner end -->
+
+        <!-- valentine container begin -->
+        <div class="valentine-container">
+          <div class="cake cake01">
+            <img src="assets/imgs/valentine/cake_01.jpg" alt="">
+            <img src="assets/imgs/valentine/fire.gif" alt="" class="fire">
+            <a href="javascript:;" class="btn">立即购买</a>
+          </div>
+          <div class="cake cake02">
+            <img src="assets/imgs/valentine/cake_02.jpg" alt="">
+            <a href="javascript:;" class="btn">立即购买</a>
+          </div>
+          <div class="cake cake03">
+            <img src="assets/imgs/valentine/cake_03.jpg" alt="">
+            <a href="javascript:;" class="btn">立即购买</a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+  <!-- valentine page end -->
+
+  <!-- loading scripts -->
+	<script src="assets/plugins/LABjs/LAB.min.js"></script>
+	<script>
+		$LAB
+			.script('assets/plugins/jquery/jquery-3.1.1.min.js').wait()
+			.script('assets/plugins/artTemplate/dist/template.js').wait()
+			.script('assets/plugins/underscore/underscore-min.js').wait()
+			.script('assets/js/common.js').wait();
+	</script>
+</body>
+
+</html>
